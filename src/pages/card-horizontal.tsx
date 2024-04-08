@@ -3,7 +3,7 @@ import { MainNav } from "@/components/main-nav"
 import { ThemeProvider } from "@/components/theme-provider"
 import '../app/globals.css'
 import CardComponent from "@/components/ui/cardcomponent";
-import CardComponentWrap from "@/components/ui/cardcomponentWrap";
+import CardComponentWrapHorizontal from "@/components/ui/cardcomponentWrapHorizontal";
 
 const travel = [
     {
@@ -157,7 +157,7 @@ const visaThailand = [
 export default function Card() {
   return (
     <>
-    <div className="gray-background">
+
     <ThemeProvider
         attribute="class"
         defaultTheme="dark"
@@ -165,50 +165,48 @@ export default function Card() {
         disableTransitionOnChange
     >
     <MainNav/>
-    <main className="flex flex-row items-start p-3" style={{columnGap:"10px"}}>
+    <main className="flex flex-col items-start p-3" style={{rowGap:"0px"}}>
 
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="🗺 Travel Essentials"
             data={travel}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="🛌 Accomodation"
             data={accomodation}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="😷 Health Insurance"
             data={healthinsurance}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="🛂 Visa"
             data={visa}
         />
-        </main>
-        <div className="flex flex-row items-start p-3" style={{columnGap:"10px"}}>
-        <CardComponentWrap
+
+        <CardComponentWrapHorizontal
             heading="Facebook Groups"
             data={facebook}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="Reddit"
             data={reddit}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="👨‍💻👩‍💻 Coworking"
             data={coworking}
         />
-        <CardComponentWrap
+        <CardComponentWrapHorizontal
             heading="📱 Apps"
             data={apps}
         />
-        {/* <CardComponentWrap
+        {/* <CardComponentWrapHorizontal
             heading="🛂 Visa"
             data={visaThailand}
         /> */}
+    </main>
 
-    </div>
     </ThemeProvider>
-    </div>
     </>
   );
 }

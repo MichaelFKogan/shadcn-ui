@@ -1,0 +1,22 @@
+.gray-background{
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity)); */
+}
+
+.card__description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    display: none;
+}
+
+.card-wrapper{
+    /* --tw-bg-opacity: 1;
+    background-color: rgb(245 245 244 / var(--tw-bg-opacity)); */
+}
+
+.card{
+    /* background:white; */
+}

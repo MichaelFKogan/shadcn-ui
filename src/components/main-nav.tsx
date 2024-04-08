@@ -16,6 +16,7 @@ export function MainNav() {
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
                         <a className="transition-colors hover:text-foreground/80 text-foreground/60" href="/home">Home</a>
                         <a className="transition-colors hover:text-foreground/80 text-foreground/60" href="/card">Card</a>
+                        <a className="transition-colors hover:text-foreground/80 text-foreground/60" href="/card-horizontal">Card Horizontal</a>
                     </nav>
                 </div>
                 

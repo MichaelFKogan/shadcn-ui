@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 
 
-const CardComponentWrap = ({heading, data}) => {
+const CardComponentWrapHorizontal = ({heading, data}) => {
     return (
         <>
 
@@ -23,7 +23,7 @@ const CardComponentWrap = ({heading, data}) => {
                 </CardHeader>
                 <CardContent>
                     {data.map((item, index) => (
-                        <div className=" flex flex-col items-center space-x-4 rounded-md border p-2 mb-2">
+                        <div className="card w-[25%] flex items-center space-x-4 rounded-md border p-2">
                             <div className="flex-1 space-y-1">
                                 <div className="flex items-center">
                                     <img src={"https://www.google.com/s2/favicons?domain="+ item.favicon +"&sz=256"} style={{height:"25px", marginRight:"5px"}}/>
@@ -47,4 +47,4 @@ const CardComponentWrap = ({heading, data}) => {
     );
 };
 
-export default CardComponentWrap;
+export default CardComponentWrapHorizontal;
