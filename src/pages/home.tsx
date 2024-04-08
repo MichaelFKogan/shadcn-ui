@@ -1,9 +1,17 @@
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
+import { ThemeProvider } from "@/components/theme-provider"
+import '../app/globals.css'
 
 export default function Home() {
   return (
     <>
+    <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
+    >
     <MainNav/>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -112,6 +120,7 @@ export default function Home() {
         </a>
       </div>
     </main>
+    </ThemeProvider>
     </>
   );
 }
