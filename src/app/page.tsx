@@ -1,14 +1,84 @@
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 
+const travel = [
+  {
+    title: "Google Maps",
+    description: "Find local businesses, view maps and get driving directions in Google Maps.",
+    url: "https://www.google.com/maps",
+  },
+  {
+    title: "Google Flights",
+    description: "Use Google Flights to explore cheap flights to anywhere. Search destinations and track prices to find and book your next flight.",
+    url: "https://www.google.com/travel/flights",
+  },
+  {
+    title: "Nomad List",
+    description: "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker.",
+    url: "https://www.nomadlist.com",
+  },
+  {
+    title: "HoodMaps",
+    description: "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker.",
+    url: "https://www.hoodmaps.com",
+  },
+]
+const accomodation = [
+    {
+      title: "AirBNB",
+      description: "Vacation Rentals & More — Book Top Rated Rentals for Your Next Trip - Houses, Cabins, Condos, Unique Stays & More.",
+      url: "https://www.airbnb.com",
+    },
+    {
+      title: "Agoda",
+      description: "Agoda.com is an online travel agency catering primarily to consumers in the Asia-Pacific region, with headquarters in Singapore and operations in Bangkok, Thailand. Agoda facilitates reservations for lodging, flights, ground transportation, and activities. It is a subsidiary of Booking Holdings.",
+      url: "https://www.Agoda.com/travel/flights",
+    },
+    {
+      title: "Booking.com",
+      description: " Choose From a Wide Range of Properties Which Booking.com Offers. Search Now! Find What You Need At Booking.com, The Biggest Travel Site In The World. Flight + Hotel. Hotels.",
+      url: "https://www.booking.com",
+    },
+    {
+      title: "Hostelworld",
+      description: "Book hostels and connect with travellers.",
+      url: "https://www.hostelworld.com",
+    },
+  ]
+    const healthinsurance = [
+        {
+          title: "Safety Wing",
+          description: "A travel and medical incident insurance built specifically for digital nomads. It can be purchased while already abroad, covers home trip visits and operates...",
+          url: "https://safetywing.com/",
+        },
+        {
+          title: "World Nomads",
+          description: "International Travel Insurance — International travel insurance for devices, emergency dental & medical, baggage, & gears. 24/7 emergency assistance & medical cover, trip cancellation, and gear cover.",
+          url: "https://www.worldnomads.com",
+        },
+    ]
+    const visa = [
+        {
+          title: "Visa requirements for United States citizens",
+          description: "As of 2024, holders of a United States passport may travel to 189 countries and territories without a travel visa, or with a visa on arrival. The United States ...",
+          url: "https://en.wikipedia.org/wiki/Visa_requirements_for_United_States_citizens",
+        },
+        {
+          title: "VisaHQ",
+          description: "Passports and Travel Visas Online: Comprehensive Information on Passport Services, Visa Requirements and Applications. Real-time Status Updates, Live Help.",
+          url: "https://www.visahq.com/",
+        },
+    ]
+
 export default function Home() {
   return (
     <>
       <MainNav />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-
       <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16">
+        
+        
         <div className="lg:col-span-4 xl:col-span-3">
           <div className="space-y-6">
 
@@ -35,14 +105,19 @@ export default function Home() {
             <div className="hidden lg:block">
               <div className="text-foreground-lighter mb-2 text-sm">Categories</div>
               <div className="space-y-1">
-                <a className="text-foreground-light block text-base" href="#api">API</a>
-                <a className="text-foreground-light block text-base" href="#auth">Auth</a>
-                <button className="text-foreground-light block text-base">Caching / Offline-First</button>
-                <button className="text-foreground-light block text-base">Data Platform</button>
-                <button className="text-foreground-light block text-base">DevTools</button>
-                <button className="text-foreground-light block text-base">Foreign Data Wrapper</button>
-                <button className="text-foreground-light block text-base">Low-Code</button>
-                <button className="text-foreground-light block text-base">Messaging</button>
+                <a className="text-foreground-light block text-base" href="#featured">💯 Featured</a>
+                <a className="text-foreground-light block text-base" href="#travel">📍 Travel</a>
+                <a className="text-foreground-light block text-base" href="#accomodation">🛌 Accomodation</a>
+                <a className="text-foreground-light block text-base" href="#healthinsurance">😷 Health Insurance</a>
+                <a className="text-foreground-light block text-base" href="#visa">🛂 Visa</a>
+
+                <a className="text-foreground-light block text-base" href="#work">👔 Work</a>
+                <a className="text-foreground-light block text-base" href="#finance">💵 Finance</a>
+                <a className="text-foreground-light block text-base" href="#productivity">📊 Productivity</a>
+                <a className="text-foreground-light block text-base" href="#apps">📱 Apps</a>
+                <a className="text-foreground-light block text-base" href="#socialmedia">📸 Social Media</a>
+                <a className="text-foreground-light block text-base" href="#vlog">📹 Vlog</a>
+                <a className="text-foreground-light block text-base" href="#blog">✍️ Blog</a>
               </div>
             </div>
 
@@ -88,226 +163,172 @@ export default function Home() {
         </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
         <div className="lg:col-span-8 xl:col-span-9">
           <div className="grid space-y-10">
+            
             <div id="featured" className="space-y-8 ">
-              <h2 className="h2">Featured</h2>
+              <h2 className="h2">💯 Featured</h2>
               <div className="grid grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-                <a href="/partners/electricsql">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Google Maps</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Find local businesses, view maps and get driving directions in Google Maps.">Find local businesses, view maps and get driving directions in Google Maps.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/cloudflare-workers">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Google Flights" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Google Flights</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Using Supabase from your Cloudflare Workers just got even easier.">Using Supabase from your Cloudflare Workers just got even easier.</p>
+                {travel.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-                <a href="/partners/resend">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Resend" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Resend</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Email for developers to reach humans instead of spam folders. Build, test, and deliver transactional emails at scale.">Email for developers to reach humans instead of spam folders. Build, test, and deliver transactional emails at scale.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/snaplet">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Snaplet" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Snaplet</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Snaplet is a developer tool that copies a Postgres database, transforming personal information, so that you can safely code against actual data.">Snaplet is a developer tool that copies a Postgres database, transforming personal information, so that you can safely code against actual data.</p>
+                  </a>
+                ))}
+                {accomodation.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-                <a href="/partners/triggerdotdev">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Trigger.dev" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Trigger.dev</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="The background jobs framework.">The background jobs framework.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/vercel">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Vercel" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Vercel</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Easily add the power of Supabase to your Vercel projects with our Vercel integration.">Easily add the power of Supabase to your Vercel projects with our Vercel integration.</p>
+                  </a>
+                ))}
+                {healthinsurance.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-                <a href="/partners/windmill">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Windmill" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Windmill</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Open-source platform to turn minimal scripts into internal UIs and workflows.">Open-source platform to turn minimal scripts into internal UIs and workflows.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/supabase_wrapper_bigquery">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="BigQuery Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">BigQuery Wrapper</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="A foreign data wrapper for BigQuery developed using Supabase Wrappers.">A foreign data wrapper for BigQuery developed using Supabase Wrappers.</p>
+                  </a>
+                ))}
+                {visa.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-                <a href="/partners/supabase_wrapper_firebase">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Firebase Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Firebase Wrapper</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="A foreign data wrapper for Firebase developed using Supabase Wrappers.">A foreign data wrapper for Firebase developed using Supabase Wrappers.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/supabase_wrapper_stripe">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Stripe Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">Stripe Wrapper</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="A foreign data wrapper for Stripe developed using Supabase Wrappers.">A foreign data wrapper for Stripe developed using Supabase Wrappers.</p>
+                  </a>
+                ))}
+              </div>
+              <div style={{textAlign: "center", marginTop:"20px"}}>See All</div>
+            </div>
+
+            <div id="travel" className="space-y-8 ">
+              <h2 className="h2">🗺 Travel</h2>
+              <div className="grid grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
+                {travel.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                ))}
               </div>
             </div>
-            <div id="api" className="space-y-8">
-              <h2 className="h2">API</h2>
+
+            <div id="accomodation" className="space-y-8">
+              <h2 className="h2">🛌 Accomodation</h2>
               <div className="grid  grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-                <a href="/partners/sequin_io">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Sequin" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">Sequin</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Sequin syncs data between APIs and Postgres. ">Sequin syncs data between APIs and Postgres. </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/stacksync">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Stacksync" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">Stacksync</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Real-time &amp; Two-way Sync between CRMs and Databases.">Real-time &amp; Two-way Sync between CRMs and Databases.</p>
+                {accomodation.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-                <a href="/partners/getstream_io">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Stream" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">Stream</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Deploy activity feeds and chat at scale with Stream – an API driven platform powering over a billion end users.">Deploy activity feeds and chat at scale with Stream – an API driven platform powering over a billion end users.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/zapier">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Zapier" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">Zapier</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Zapier is a no-code workflow automation tool that seamlessly connects different applications and services">Zapier is a no-code workflow automation tool that seamlessly connects different applications and services</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/zuplo">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="Zuplo" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">Zuplo</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="API Management you actually want to use.">API Management you actually want to use.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="/partners/n8n">
-                  <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
-                    <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                        <img alt="n8n" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
-                      </div>
-                      <div>
-                        <h3 className="text-light group-hover:text-foreground mb-2 text-xl transition-colors">n8n</h3>
-                        <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title="Workflow automation for technical people.">Workflow automation for technical people.</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                  </a>
+                ))}
               </div>
             </div>
+
+            <div id="healthinsurance" className="space-y-8">
+              <h2 className="h2">😷 Health Insurance</h2>
+              <div className="grid  grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
+                {healthinsurance.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div id="visa" className="space-y-8">
+              <h2 className="h2">🛂 Visa</h2>
+              <div className="grid  grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
+                {visa.map((item, index) => (
+                  <a href={item.url} target="_blank">
+                    <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
+                      <div className="flex w-full space-x-6">
+                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        </div>
+                        <div>
+                          <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
+                          <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[80px]" title={item.description}>{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+
             <div id="auth" className="space-y-8">
               <h2 className="h2">Auth</h2>
               <div className="grid  grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">

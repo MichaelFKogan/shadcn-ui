@@ -74,3 +74,28 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .p-24{
+    padding:2rem 4rem 2rem 4rem;
+  }
+
+  h2{
+    font-size: 28px;
+  }
+
+  .px-6, .py-6{
+    padding: 1rem;
+  }
+
+  .min-h-\[80px\]{
+    min-height: 40px;
+  }
+
+  .line-clamp-4{
+    -webkit-line-clamp: 2;
+  }
+
+  .text-xl{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
