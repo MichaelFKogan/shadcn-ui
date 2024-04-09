@@ -75,15 +75,23 @@
     }
   }
 
-  .p-24{
+  /* .p-24{
     padding:2rem 4rem 2rem 4rem;
+  } */
+
+  h1{
+    font-size: 32px;
   }
 
   h2{
     font-size: 28px;
   }
 
-  .px-6, .py-6{
+  .text-foreground-lighter{
+    color: #707070;
+  }
+
+  /* .px-6, .py-6{
     padding: 1rem;
   }
 
@@ -98,4 +106,4 @@
   .text-xl{
     font-size: 1rem;
     line-height: 1.25rem;
-  }
+  } */

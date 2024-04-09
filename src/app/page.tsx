@@ -74,15 +74,19 @@ export default function Home() {
   return (
     <>
       <MainNav />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-between">
+      <div className="sm:py-18 container relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 space-y-16">
+        <div>
+          <h1 className="h1">Find your travel inspiration</h1>
+            <p className="text-foreground-lighter text-xl">A collection of digital nomad content.</p>
+        </div>
 
       <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16">
-        
         
         <div className="lg:col-span-4 xl:col-span-3">
           <div className="space-y-6">
 
-            <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">
+            {/* <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">
               <div className="col-span-12">
                 <div className="">
                   <div className="relative">
@@ -100,10 +104,10 @@ export default function Home() {
                 <p data-state="hide" className="text-red-900 transition-all data-show:mt-2 data-show:animate-slide-down-normal data-hide:animate-slide-up-normal text-sm leading-4">
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="hidden lg:block">
-              <div className="text-foreground-lighter mb-2 text-sm">Categories</div>
+              <h2 className="text-foreground-lighter mb-2 text-xl">Categories</h2>
               <div className="space-y-1">
                 <a className="text-foreground-light block text-base" href="#featured">💯 Featured</a>
                 <a className="text-foreground-light block text-base" href="#travel">📍 Travel</a>
@@ -121,7 +125,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="text-foreground-lighter mb-2 text-sm">Explore more</div>
               <div className="grid grid-cols-2 gap-8 lg:grid-cols-1">
 
@@ -158,7 +162,8 @@ export default function Home() {
                   </div>
                 </a>
               </div>
-            </div>
+            </div> */}
+
           </div>
         </div>
 
@@ -1291,6 +1296,7 @@ export default function Home() {
         </div>
       </div>
 
+      </div>
       </main>
     </>
   );
