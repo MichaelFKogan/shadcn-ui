@@ -89,7 +89,7 @@ export function MusicPlayer() {
       <Popover>
       <PopoverTrigger>
 
-        <Button variant="outline" size="icon" style={{marginTop: "7px"}}>
+        <Button variant="outline" size="icon">
           <div className="music-bars">
             <span />
             <span />

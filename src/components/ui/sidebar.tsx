@@ -5,7 +5,7 @@ export function Sidebar() {
     return (
 
 <div className="lg:col-span-4 xl:col-span-3">
-              <div className="space-y-6">
+              <div className="sticky-sidebar space-y-6">
 
                 {/* <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">
                   <div className="col-span-12">
@@ -36,13 +36,19 @@ export function Sidebar() {
                     <a className="text-foreground-light block text-base" href="#healthinsurance">😷 Health Insurance</a>
                     <a className="text-foreground-light block text-base" href="#visa">🛂 Visa</a>
 
-                    <a className="text-foreground-light block text-base" href="#work">👔 Work</a>
-                    <a className="text-foreground-light block text-base" href="#finance">💵 Finance</a>
-                    <a className="text-foreground-light block text-base" href="#productivity">📊 Productivity</a>
-                    <a className="text-foreground-light block text-base" href="#apps">📱 Apps</a>
                     <a className="text-foreground-light block text-base" href="#socialmedia">📸 Social Media</a>
+                    <a className="text-foreground-light block text-base" href="#apps">📱 Apps</a>
                     <a className="text-foreground-light block text-base" href="#vlog">📹 Vlog</a>
                     <a className="text-foreground-light block text-base" href="#blog">✍️ Blog</a>
+
+                    <a className="text-foreground-light block text-base" href="#work">👔 Work</a>
+                    <a className="text-foreground-light block text-base" href="#work">🔤 English Teaching</a>
+
+                    <a className="text-foreground-light block text-base" href="#finance">💵 Finance</a>
+                    <a className="text-foreground-light block text-base" href="#productivity">📊 Productivity</a>
+
+
+                    <a className="text-foreground-light block text-base" href="#blog">⌚️ Products</a>
                   </div>
                 </div>
 

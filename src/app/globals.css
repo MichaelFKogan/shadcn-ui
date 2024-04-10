@@ -86,3 +86,13 @@
   /* .text-foreground-lighter{
     color: #707070;
   } */
+
+  .sticky-sidebar{
+    position: sticky;
+    top: 80px;
+  }
+
+  .card:hover{
+    background: hsl(var(--border));
+    transform: scale(1.02)
+  }

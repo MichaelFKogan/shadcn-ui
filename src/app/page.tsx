@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Cards } from "@/components/ui/cards";
 import { Sidebar } from "@/components/ui/sidebar";
 import Script from 'next/script'; // Import next/script component
-import { travel, accomodation, healthinsurance, visa, apps } from '../data/data';
+import { travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/data';
 
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <MainNav />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="sm:py-18 container relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 space-y-16">
+        <div className="sm:py-18 container relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 space-y-16" style={{paddingTop: "3rem"}}>
           <div>
             <h1 className="h1">Find your travel inspiration</h1>
             <p className="text-foreground-lighter text-xl">A collection of digital nomad content.</p>
@@ -29,7 +29,10 @@ export default function Home() {
                 <Cards heading="🛌 Accomodation" data={accomodation} anchor="accomodation" />
                 <Cards heading="😷 Health Insurance" data={healthinsurance} anchor="healthinsurance" />
                 <Cards heading="🛂 Visa" data={visa} anchor="visa" />
+                {/* <Cards heading="📸 Social Media" data={socialmedia} anchor="socialmedia" /> */}
+                <Cards heading="Reddit" data={reddit} anchor="reddit" />
                 <Cards heading="📱 Apps" data={apps} anchor="apps" />
+                <Cards heading="👔 Work" data={work} anchor="work" />
 
                 <div style={{ textAlign: "center", marginTop: "20px" }}>
                   <Button variant="secondary">See All</Button>

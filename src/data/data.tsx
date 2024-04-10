@@ -92,3 +92,163 @@ export const travel = [
       image: "pintraveler.png",
     },
   ]
+
+  export const reddit = [
+    {
+      title: "r/digitalnomad",
+      description: "Digital Nomads are individuals that leverage technology in order to work remotely and live an independent and nomadic lifestyle.",
+      url: "https://www.reddit.com/r/digitalnomad/",
+      image: "reddit.png",
+    },
+    {
+      title: "r/travel",
+      description: "r/travel is a community about exploring the world. Your pictures, questions, stories, or any good content is welcome. Clickbait, spam, memes, ads/selling/buying, brochures, classifieds, surveys or self-promotion will be removed.",
+      url: "https://www.reddit.com/r/travel/",
+      image: "reddittravel.png",
+    },
+    {
+      title: "r/solotravel",
+      description: "A place for all of those interested in solo travel to share their experiences and stories!",
+      url: "https://www.reddit.com/r/solotravel/",
+      image: "redditsolotravel.png",
+    },
+    {
+      title: "r/onebag",
+      description: "r/onebag is an 'urban' travel community devoted to the idea of helping people lug around less crap; onebag travel. Fewer items, packed into a single bag for ease of transport to make traveling simpler with more focus on the experience than the logistics.",
+      url: "https://www.reddit.com/r/onebag/",
+      image: "redditonebag.png",
+    },
+    {
+      title: "r/vanlife",
+      description: "For people that live a carefree, mobile, and active lifestyle on the road. Share rig images, helpful websites, road stories, tips and tricks for camping locations.",
+      url: "https://www.reddit.com/r/vanlife/",
+      image: "reddit.png",
+    },
+  ]
+
+  export const socialmedia = [
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+  ]
+  export const work = [
+    {
+      title: "Remote OK",
+      description: "Looking for a remote job? Remote OK® is the #1 Remote Job Board and has 705048+ remote jobs as a Developer, Designer, Copywriter, Customer Support Rep, ...",
+      url: "https://remoteok.com/",
+      image: "remoteok.png",
+    },
+    {
+      title: "We Work Remotely",
+      description: "Find the most qualified people in the most unexpected places: Hire remote! We Work Remotely is the best place to find and list remote jobs that aren't ...",
+      url: "https://weworkremotely.com/",
+      image: "weworkremotely.png",
+    },
+    {
+      title: "LinkedIn Jobs",
+      description: "Millions of jobs and people hiring.",
+      url: "https://www.linkedin.com/jobs/",
+      image: "linkedin.png",
+    },
+    {
+      title: "Upwork",
+      description: "Upwork connects businesses with independent professionals and agencies around the globe. Where companies and freelancers work together in new ways that ...",
+      url: "https://www.upwork.com/",
+      image: "upwork.png",
+    },
+  ]
+  export const template = [
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+    {
+      title: "",
+      description: "",
+      url: "",
+      image: "",
+    },
+  ]
