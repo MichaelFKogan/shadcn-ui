@@ -6,21 +6,25 @@ const travel = [
     title: "Google Maps",
     description: "Find local businesses, view maps and get driving directions in Google Maps.",
     url: "https://www.google.com/maps",
+    image: "googlemaps.png",
   },
   {
     title: "Google Flights",
     description: "Use Google Flights to explore cheap flights to anywhere. Search destinations and track prices to find and book your next flight.",
     url: "https://www.google.com/travel/flights",
+    image: "googleflights.png",
   },
   {
     title: "Nomad List",
     description: "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker.",
     url: "https://www.nomadlist.com",
+    image: "nomadlist.png",
   },
   {
     title: "HoodMaps",
     description: "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker.",
     url: "https://www.hoodmaps.com",
+    image: "hoodmaps.png"
   },
 ]
 const accomodation = [
@@ -28,21 +32,25 @@ const accomodation = [
       title: "AirBNB",
       description: "Vacation Rentals & More — Book Top Rated Rentals for Your Next Trip - Houses, Cabins, Condos, Unique Stays & More.",
       url: "https://www.airbnb.com",
+      image: "airbnb.png",
     },
     {
       title: "Agoda",
       description: "Agoda.com is an online travel agency catering primarily to consumers in the Asia-Pacific region, with headquarters in Singapore and operations in Bangkok, Thailand. Agoda facilitates reservations for lodging, flights, ground transportation, and activities. It is a subsidiary of Booking Holdings.",
       url: "https://www.Agoda.com/travel/flights",
+      image: "agoda.png",
     },
     {
       title: "Booking.com",
       description: " Choose From a Wide Range of Properties Which Booking.com Offers. Search Now! Find What You Need At Booking.com, The Biggest Travel Site In The World. Flight + Hotel. Hotels.",
       url: "https://www.booking.com",
+      image: "booking.png"
     },
     {
       title: "Hostelworld",
       description: "Book hostels and connect with travellers.",
       url: "https://www.hostelworld.com",
+      image: "hostelworld.png",
     },
   ]
     const healthinsurance = [
@@ -50,11 +58,13 @@ const accomodation = [
           title: "Safety Wing",
           description: "A travel and medical incident insurance built specifically for digital nomads. It can be purchased while already abroad, covers home trip visits and operates...",
           url: "https://safetywing.com/",
+          image: "safetywing.png",
         },
         {
           title: "World Nomads",
           description: "International Travel Insurance — International travel insurance for devices, emergency dental & medical, baggage, & gears. 24/7 emergency assistance & medical cover, trip cancellation, and gear cover.",
           url: "https://www.worldnomads.com",
+          image: "worldnomads.png",
         },
     ]
     const visa = [
@@ -189,8 +199,8 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + item.image} />
                         </div>
                         <div>
                           <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
@@ -204,8 +214,8 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + item.image} />
                         </div>
                         <div>
                           <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
@@ -219,8 +229,8 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + item.image} />
                         </div>
                         <div>
                           <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
@@ -234,8 +244,8 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
-                          <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                          <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + item.image} />
                         </div>
                         <div>
                           <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
@@ -256,7 +266,7 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                           <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
                         </div>
                         <div>
@@ -277,7 +287,7 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                           <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
                         </div>
                         <div>
@@ -298,7 +308,7 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                           <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
                         </div>
                         <div>
@@ -319,7 +329,7 @@ export default function Home() {
                   <a href={item.url} target="_blank">
                     <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                       <div className="flex w-full space-x-6">
-                        <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                        <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                           <img alt="Google Maps" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"https://www.google.com/s2/favicons?domain=" + item.url} />
                         </div>
                         <div>
@@ -340,7 +350,7 @@ export default function Home() {
                 <a href="/partners/arengu">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Arengu" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -353,7 +363,7 @@ export default function Home() {
                 <a href="/partners/auth0">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Auth0" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -366,7 +376,7 @@ export default function Home() {
                 <a href="/partners/authsignal">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Authsignal" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -379,7 +389,7 @@ export default function Home() {
                 <a href="/partners/clerk">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Clerk" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -392,7 +402,7 @@ export default function Home() {
                 <a href="/partners/corbado">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Corbado" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -405,7 +415,7 @@ export default function Home() {
                 <a href="/partners/keyri">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Keyri" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -418,7 +428,7 @@ export default function Home() {
                 <a href="/partners/nextauth">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="NextAuth" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -431,7 +441,7 @@ export default function Home() {
                 <a href="/partners/ory">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Ory" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -444,7 +454,7 @@ export default function Home() {
                 <a href="/partners/passageidentity">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Passage by 1Password" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -457,7 +467,7 @@ export default function Home() {
                 <a href="/partners/picket">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Picket" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -470,7 +480,7 @@ export default function Home() {
                 <a href="/partners/stytch">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Stytch" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -483,7 +493,7 @@ export default function Home() {
                 <a href="/partners/supertokens">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="SuperTokens" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -501,7 +511,7 @@ export default function Home() {
                 <a href="/partners/electricsql">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="ElectricSQL" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -514,7 +524,7 @@ export default function Home() {
                 <a href="/partners/polyscale">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="PolyScale" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -527,7 +537,7 @@ export default function Home() {
                 <a href="/partners/powersync">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="PowerSync" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -540,7 +550,7 @@ export default function Home() {
                 <a href="/partners/readyset">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="ReadySet" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -553,7 +563,7 @@ export default function Home() {
                 <a href="/partners/replicache">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Replicache" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -571,7 +581,7 @@ export default function Home() {
                 <a href="/partners/artie">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Artie" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -584,7 +594,7 @@ export default function Home() {
                 <a href="/partners/basedash">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Basedash" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -597,7 +607,7 @@ export default function Home() {
                 <a href="/partners/buster">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Buster" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -610,7 +620,7 @@ export default function Home() {
                 <a href="/partners/directus">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Directus" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -623,7 +633,7 @@ export default function Home() {
                 <a href="/partners/draxlr">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Draxlr" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -636,7 +646,7 @@ export default function Home() {
                 <a href="/partners/explo">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Explo" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -649,7 +659,7 @@ export default function Home() {
                 <a href="/partners/insightbase">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="InsightBase" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -662,7 +672,7 @@ export default function Home() {
                 <a href="/partners/risingwave">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="RisingWave" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -675,7 +685,7 @@ export default function Home() {
                 <a href="/partners/trevor_io">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Trevor.io" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -693,7 +703,7 @@ export default function Home() {
                 <a href="/partners/cloudflare-workers">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="CloudFlare Workers" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -706,7 +716,7 @@ export default function Home() {
                 <a href="/partners/codesandbox">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="CodeSandbox" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -719,7 +729,7 @@ export default function Home() {
                 <a href="/partners/deepnote">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Deepnote" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -732,7 +742,7 @@ export default function Home() {
                 <a href="/partners/dhiwise">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="DhiWise" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -745,7 +755,7 @@ export default function Home() {
                 <a href="/partners/doppler">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Doppler" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -758,7 +768,7 @@ export default function Home() {
                 <a href="/partners/estuary">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Estuary" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -771,7 +781,7 @@ export default function Home() {
                 <a href="/partners/infisical">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Infisical" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -784,7 +794,7 @@ export default function Home() {
                 <a href="/partners/litellm">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="LiteLLM" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -797,7 +807,7 @@ export default function Home() {
                 <a href="/partners/nuxt">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Nuxt" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -810,7 +820,7 @@ export default function Home() {
                 <a href="/partners/prisma">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Prisma" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -823,7 +833,7 @@ export default function Home() {
                 <a href="/partners/react-admin">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="React-admin" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -836,7 +846,7 @@ export default function Home() {
                 <a href="/partners/replibyte">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Replibyte" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -849,7 +859,7 @@ export default function Home() {
                 <a href="/partners/resend">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Resend" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -862,7 +872,7 @@ export default function Home() {
                 <a href="/partners/snaplet">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Snaplet" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -875,7 +885,7 @@ export default function Home() {
                 <a href="/partners/stormkit">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Stormkit" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -888,7 +898,7 @@ export default function Home() {
                 <a href="/partners/streamlit">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Streamlit" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -901,7 +911,7 @@ export default function Home() {
                 <a href="/partners/tamagui-takeout">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Tamagui Takeout" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -914,7 +924,7 @@ export default function Home() {
                 <a href="/partners/triggerdotdev">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Trigger.dev" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -927,7 +937,7 @@ export default function Home() {
                 <a href="/partners/vercel">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Vercel" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -940,7 +950,7 @@ export default function Home() {
                 <a href="/partners/windmill">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Windmill" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -953,7 +963,7 @@ export default function Home() {
                 <a href="/partners/zapp_run">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Zapp!" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -966,7 +976,7 @@ export default function Home() {
                 <a href="/partners/pgmustard">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="pgMustard" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -979,7 +989,7 @@ export default function Home() {
                 <a href="/partners/refine_dev">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="refine" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -997,7 +1007,7 @@ export default function Home() {
                 <a href="/partners/supabase_wrapper_bigquery">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="BigQuery Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1010,7 +1020,7 @@ export default function Home() {
                 <a href="/partners/supabase_wrapper_firebase">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Firebase Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1023,7 +1033,7 @@ export default function Home() {
                 <a href="/partners/supabase_wrapper_stripe">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Stripe Wrapper" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1041,7 +1051,7 @@ export default function Home() {
                 <a href="/partners/appsmith">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Appsmith" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1054,7 +1064,7 @@ export default function Home() {
                 <a href="/partners/clutch">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Clutch" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1067,7 +1077,7 @@ export default function Home() {
                 <a href="/partners/dashibase">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Dashibase" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1080,7 +1090,7 @@ export default function Home() {
                 <a href="/partners/dezbor">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Dezbor" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1093,7 +1103,7 @@ export default function Home() {
                 <a href="/partners/draftbit">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Draftbit" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1106,7 +1116,7 @@ export default function Home() {
                 <a href="/partners/drapcode">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="DrapCode" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1119,7 +1129,7 @@ export default function Home() {
                 <a href="/partners/dronahq">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="DronaHQ" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1132,7 +1142,7 @@ export default function Home() {
                 <a href="/partners/flutterflow">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="FlutterFlow" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1145,7 +1155,7 @@ export default function Home() {
                 <a href="/partners/forestadmin">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Forest Admin" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1158,7 +1168,7 @@ export default function Home() {
                 <a href="/partners/fezto">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Frontend Zero to One" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1171,7 +1181,7 @@ export default function Home() {
                 <a href="/partners/illa">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="ILLA" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1184,7 +1194,7 @@ export default function Home() {
                 <a href="/partners/internalio">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Internal" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1197,7 +1207,7 @@ export default function Home() {
                 <a href="/partners/jetadmin">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Jet Admin" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1210,7 +1220,7 @@ export default function Home() {
                 <a href="/partners/plasmic">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Plasmic" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1223,7 +1233,7 @@ export default function Home() {
                 <a href="/partners/retool">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Retool" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1236,7 +1246,7 @@ export default function Home() {
                 <a href="/partners/voltapp">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="Voltapp" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1249,7 +1259,7 @@ export default function Home() {
                 <a href="/partners/weweb">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="WeWeb" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1262,7 +1272,7 @@ export default function Home() {
                 <a href="/partners/yepcode">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="YepCode" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>
@@ -1280,7 +1290,7 @@ export default function Home() {
                 <a href="/partners/onesignal">
                   <div className=" bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-6 py-6 shadow transition-all hover:shadow-lg">
                     <div className="flex w-full space-x-6">
-                      <div className="relative h-[40px] min-w-[40px] w-[40px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
+                      <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-full overflow-hidden scale-100 transition-all group-hover:scale-110">
                         <img alt="OneSignal" loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src="https://www.google.com/s2/favicons?domain=google.com" />
                       </div>
                       <div>

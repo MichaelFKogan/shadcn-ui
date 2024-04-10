@@ -74,3 +74,15 @@
       @apply bg-background text-foreground;
     }
   }
+
+  h1{
+    font-size: 32px;
+  }
+
+  h2{
+    font-size: 28px;
+  }
+
+  /* .text-foreground-lighter{
+    color: #707070;
+  } */
