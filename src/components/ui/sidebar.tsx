@@ -1,11 +1,17 @@
-
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+  } from "@/components/ui/accordion"
+  
 
 export function Sidebar() {
 
     return (
 
 <div className="lg:col-span-4 xl:col-span-3">
-              <div className="sticky-sidebar space-y-6">
+              <div className="fixed-sidebar space-y-6">
 
                 {/* <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">
                   <div className="col-span-12">
@@ -29,7 +35,7 @@ export function Sidebar() {
 
                 <div className="hidden lg:block">
                   <h2 className="text-foreground-lighter mb-2 text-xl">Categories</h2>
-                  <div className="space-y-1">
+                  <div className="categories space-y-1">
                     {/* <a className="text-foreground-light block text-base" href="#featured">💯 Featured</a> */}
                     <a className="text-foreground-light block text-base" href="#travel">🗺 Travel</a>
                     <a className="text-foreground-light block text-base" href="#accomodation">🛌 Accomodation</a>
@@ -49,6 +55,60 @@ export function Sidebar() {
 
 
                     <a className="text-foreground-light block text-base" href="#blog">⌚️ Products</a>
+                  </div>
+                </div>
+
+                <div className="hidden lg:block">
+                  <h2 className="text-foreground-lighter mb-2 text-xl">Countries</h2>
+                  <div className="countries accordion space-y-1">
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>⛩ Asia</AccordionTrigger>
+                            <AccordionContent>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/thailand">🇹🇭 Thailand</a>
+                                <a className="city text-foreground-light block text-sm" href="/bangkok">🛺 Bangkok</a>
+                                <a className="city text-foreground-light block text-sm" href="/chiangmai">🐘 Chiang Mai</a>
+                                <a className="city text-foreground-light block text-sm" href="/khophangan">🌊 Kho Phangan</a>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/japan">🇯🇵 Japan</a>
+                                <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
+                                <a className="city text-foreground-light block text-sm" href="/osaka">🏯 Osaka</a>
+                                <a className="city text-foreground-light block text-sm" href="/kyoto">🎋 Kyoto</a>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/indonesia">🇮🇩 Indonesia</a>
+                                <a className="city text-foreground-light block text-sm" href="/bali">🏝 Bali</a>
+                                <a className="city text-foreground-light block text-sm" href="/canggu">🏄‍♀️ Canggu</a>
+                                <a className="city text-foreground-light block text-sm" href="/ubud">🐒 Ubud</a>
+                                <hr className="mt-2 mb-2"/>
+ 
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger>💃🏻 Latin America</AccordionTrigger>
+                            <AccordionContent>
+                            Yes. It adheres to the WAI-ARIA design pattern.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger>🇪🇺 Europe</AccordionTrigger>
+                            <AccordionContent>
+                            Yes. It adheres to the WAI-ARIA design pattern.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger>🕌 Middle East</AccordionTrigger>
+                            <AccordionContent>
+                            Yes. It adheres to the WAI-ARIA design pattern.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-5">
+                            <AccordionTrigger>🌊 Oceania</AccordionTrigger>
+                            <AccordionContent>
+                            Yes. It adheres to the WAI-ARIA design pattern.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
                   </div>
                 </div>
 

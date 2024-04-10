@@ -87,12 +87,34 @@
     color: #707070;
   } */
 
-  .sticky-sidebar{
-    position: sticky;
-    top: 80px;
+  .fixed-sidebar{
+    position: fixed;
+    width:262px;
+    min-width: 262px;
+    height: 85vh;
+    overflow-y: scroll;
   }
 
   .card:hover{
-    background: hsl(var(--border));
-    transform: scale(1.02)
+    background: hsl(var(--muted));
+    /* transform: scale(1.02) */
+  }
+
+  .categories a{
+    margin: 0px !important;
+  }
+
+  .countries a, .categories a{
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: .5rem;
+  }
+
+  .accordion a:hover, .categories a:hover{
+    background: hsl(var(--muted));
+  }
+
+  .city{
+    /* --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity)); */
   }
