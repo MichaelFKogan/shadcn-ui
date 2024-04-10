@@ -2,6 +2,7 @@
 import * as React from "react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import './styles/music-player.css'
 import {
   Popover,
   PopoverContent,
@@ -84,8 +85,42 @@ export function PlayerToggle() {
 
   return (
     <>
+      {isPlaying ? (
       <Popover>
-        <PopoverTrigger>
+      <PopoverTrigger>
+
+        <Button variant="outline" size="icon" style={{marginTop: "7px"}}>
+          <div className="music-bars">
+            <span />
+            <span />
+            <span />
+          </div>
+        </Button>
+
+      </PopoverTrigger>
+        <PopoverContent>
+          <div className="flex items-center justify-between popover">
+            <h3>{currentSongTitle}</h3>
+            <div className="flex items-center space-x-2">
+              <button className="text-sm" onClick={() => switchSong(-1)}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                  <polygon points="14 18 14 6 5 12 14 18"></polygon>
+                  <line x1="4" y1="6" x2="4" y2="18"></line>
+                </svg>
+              </button>
+              <button className="text-sm" onClick={() => switchSong(1)}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                  <polygon points="10 18 10 6 19 12 10 18"></polygon>
+                  <line x1="5" y1="6" x2="5" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+      ) : null}
+
+
           <Button variant="outline" size="icon" onClick={togglePlayPause}>
             {isPlaying ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
@@ -98,17 +133,6 @@ export function PlayerToggle() {
               </svg>
             )}
           </Button>
-        </PopoverTrigger>
-        <PopoverContent>
-          <div className="flex items-center justify-between">
-            <h3>{currentSongTitle}</h3>
-            <div className="flex items-center space-x-2">
-              <button onClick={() => switchSong(-1)}>Previous</button>
-              <button onClick={() => switchSong(1)}>Next</button>
-            </div>
-          </div>
-        </PopoverContent>
-      </Popover>
     </>
   );
 }
