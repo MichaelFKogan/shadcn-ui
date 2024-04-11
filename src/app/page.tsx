@@ -12,13 +12,13 @@ export default function Home() {
     <>
       <MainNav />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="sm:py-18 container relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 space-y-16" style={{paddingTop: "3rem"}}>
+        <div className="sm:py-18 relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-10 space-y-16" style={{paddingTop: "3rem"}}>
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16">
 
             <Sidebar />
 
-            <div className="lg:col-span-8 xl:col-span-9">
+            <div className="lg:col-span-10 xl:col-span-10">
 
               <div className="main-title">
                 <h1 className="h1">Find your travel inspiration</h1>

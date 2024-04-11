@@ -6,7 +6,7 @@ export function Cards({heading, data, anchor}) {
 
         <div id={anchor} className="space-y-8 ">
             <h2 className="h2">{heading}</h2>
-                <div className="grid grid-cols-1 gap-5 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
                     {data.map((item, index) => (
                         <a href={item.url} target="_blank">

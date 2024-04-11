@@ -10,7 +10,7 @@ export function Sidebar() {
 
     return (
 
-<div className="lg:col-span-4 xl:col-span-3">
+<div className="lg:col-span-2 xl:col-span-2">
               <div className="fixed-sidebar space-y-6">
 
                 {/* <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">

@@ -96,7 +96,7 @@
     margin-bottom: 3rem;
   }
 
-  .card:hover, {
+  .card:hover {
     background: hsl(var(--muted));
     /* transform: scale(1.02) */
   }
