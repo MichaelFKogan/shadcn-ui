@@ -1,13 +1,9 @@
 
 
-export function Cards({heading, data, anchor}) {
+export function CardExtension({data}) {
 
     return (
-
-        <div id={anchor} className="card-row space-y-8">
-            <h2 className="h2 section-title">{heading}</h2>
-                <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
+        <>
                     {data.map((item, index) => (
                         <a href={item.url} target="_blank">
                         <div className="card bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-4 py-4 shadow transition-all hover:shadow-lg">
@@ -23,11 +19,9 @@ export function Cards({heading, data, anchor}) {
                         </div>
                         </a>
                     ))}
-
-                </div>
-        </div>
+        </>
 
     )
 }
 
-export default Cards;
+export default CardExtension;

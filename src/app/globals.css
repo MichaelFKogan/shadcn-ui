@@ -85,15 +85,42 @@
 
   .fixed-sidebar{
     position: fixed;
-    width:262px;
-    min-width: 262px;
+    width:200px;
+    max-width: 200px;
     height: 85vh;
     overflow-y: scroll;
+  }
+
+  .border-b{
+    border-bottom:0px;
+    border-bottom-width: 0px !important
   }
 
   .main-title{
     margin-top:-5px;
     margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .section-title{
+    display: none;
+  }
+
+  .card-row{
+    margin-top: 1.25rem !important;
+  }
+
+  .space-y-8 > :not([hidden]) ~ :not([hidden]){
+    margin-top: 0px !important; 
+  }
+
+  .card{
+    max-height: 144px;
+  }
+
+  .card__text-wrapper{
+    max-height: 108px;
+    overflow: hidden;
   }
 
   .card:hover {
@@ -125,10 +152,6 @@
     margin-top: 0px !important;
   }
 
-  .categories-accordion .border-b{
-    border-bottom-width: 0px !important
-  }
-
   .accordion a:hover, .categories a:hover, .accordion button:hover{
     background: hsl(var(--muted));
   }
@@ -146,4 +169,8 @@
     max-width: 15px;
     height: max-content;
     margin-right: .25rem;
+  }
+
+  .line-clamp-4{
+    -webkit-line-clamp: 3;
   }

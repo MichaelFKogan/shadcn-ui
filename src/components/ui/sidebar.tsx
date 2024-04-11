@@ -63,7 +63,7 @@ export function Sidebar() {
                                 <a className="country text-foreground-light block text-base font-medium" href="/vietnam">🇻🇳 Vietnam</a>
                                 <a className="city text-foreground-light block text-sm" href="/hochiminhcity">🛵 Ho Chi Minh City</a>
                                 <a className="city text-foreground-light block text-sm" href="/hanoi">🍲 Hanoi</a>
-
+                                <hr className="mt-2 mb-2"/>
  
                             </AccordionContent>
                         </AccordionItem>
