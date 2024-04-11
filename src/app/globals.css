@@ -115,7 +115,8 @@
   }
 
   .card{
-    max-height: 144px;
+    /* max-height: 144px; */
+    max-height: 160px;
   }
 
   .card__text-wrapper{
@@ -173,4 +174,12 @@
 
   .line-clamp-4{
     -webkit-line-clamp: 3;
+  }
+
+  .badge{
+    justify-content: center;
+    margin-top: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }

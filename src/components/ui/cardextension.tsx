@@ -1,4 +1,4 @@
-
+import { Badge } from "@/components/ui/badge"
 
 export function CardExtension({data}) {
 
@@ -16,6 +16,7 @@ export function CardExtension({data}) {
                                 <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[50px] h-[58px]" title={item.description}>{item.description}</p>
                             </div>
                             </div>
+                            <Badge variant="secondary" className="badge">{item.category}</Badge>
                         </div>
                         </a>
                     ))}
