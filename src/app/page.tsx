@@ -3,6 +3,8 @@ import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
 import { Cards } from "@/components/ui/cards";
 import { Sidebar } from "@/components/ui/sidebar";
+// import { Fireflies } from "@/components/fireflies";
+import '../components/styles/fireflies.css'
 import Script from 'next/script'; // Import next/script component
 import { travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/data';
 
@@ -10,6 +12,8 @@ import { travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit,
 export default function Home() {
   return (
     <>
+      {/* <Fireflies /> */}
+      {/* <div className="gradient"></div> */}
       <MainNav />
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className="sm:py-18 container relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-20 space-y-16" style={{paddingTop: "3rem"}}>
