@@ -20,7 +20,7 @@ export default function Home() {
 
             <div className="lg:col-span-8 xl:col-span-9">
 
-              <div className="main-title mb-4">
+              <div className="main-title">
                 <h1 className="h1">Find your travel inspiration</h1>
                 <p className="text-foreground-lighter text-xl">A collection of digital nomad content.</p>
               </div>

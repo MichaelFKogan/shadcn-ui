@@ -83,10 +83,6 @@
     font-size: 28px;
   }
 
-  /* .text-foreground-lighter{
-    color: #707070;
-  } */
-
   .fixed-sidebar{
     position: fixed;
     width:262px;
@@ -95,7 +91,12 @@
     overflow-y: scroll;
   }
 
-  .card:hover{
+  .main-title{
+    margin-top:-5px;
+    margin-bottom: 3rem;
+  }
+
+  .card:hover, {
     background: hsl(var(--muted));
     /* transform: scale(1.02) */
   }
@@ -104,17 +105,45 @@
     margin: 0px !important;
   }
 
-  .countries a, .categories a{
-    padding-top: .25rem;
-    padding-bottom: .25rem;
-    padding-left: .5rem;
+  .countries a, .categories a, .accordion a, .accordion button{
+    padding: .25rem .5rem;
   }
 
-  .accordion a:hover, .categories a:hover{
+  .accordion .city, .categories-accordion a{
+    padding-left: 1rem !important;
+  }
+
+  .countries-accordion .accordion-hr{
+    display: none;
+  }
+
+  .countries-accordion [data-state="open"].border-b{
+    padding-bottom: .5rem;
+  }
+
+  .categories-accordion{
+    margin-top: 0px !important;
+  }
+
+  .categories-accordion .border-b{
+    border-bottom-width: 0px !important
+  }
+
+  .accordion a:hover, .categories a:hover, .accordion button:hover{
     background: hsl(var(--muted));
+  }
+
+  .categories-accordion [data-state="closed"] hr{
+    display: none;
   }
 
   .city{
     /* --tw-text-opacity: 1;
     color: rgba(55, 65, 81, var(--tw-text-opacity)); */
+  }
+
+  .accordion-logo{
+    max-width: 15px;
+    height: max-content;
+    margin-right: .25rem;
   }

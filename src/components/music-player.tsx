@@ -16,10 +16,10 @@ export function MusicPlayer() {
   const audioRef = useRef(new Audio());
 
   const songTitles = [
-    "Floating in Bliss",
-    "Touch",
-    "Scary Island",
-    "Turtle Time",
+    "1. Floating in Bliss",
+    "2. Touch",
+    "3. Scary Island",
+    "4. Turtle Time",
   ];
 
   useEffect(() => {

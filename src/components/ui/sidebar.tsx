@@ -34,33 +34,8 @@ export function Sidebar() {
                 </div> */}
 
                 <div className="hidden lg:block">
-                  <h2 className="text-foreground-lighter mb-2 text-xl">Categories</h2>
-                  <div className="categories space-y-1">
-                    {/* <a className="text-foreground-light block text-base" href="#featured">💯 Featured</a> */}
-                    <a className="text-foreground-light block text-base" href="#travel">🗺 Travel</a>
-                    <a className="text-foreground-light block text-base" href="#accomodation">🛌 Accomodation</a>
-                    <a className="text-foreground-light block text-base" href="#healthinsurance">😷 Health Insurance</a>
-                    <a className="text-foreground-light block text-base" href="#visa">🛂 Visa</a>
-
-                    <a className="text-foreground-light block text-base" href="#socialmedia">📸 Social Media</a>
-                    <a className="text-foreground-light block text-base" href="#apps">📱 Apps</a>
-                    <a className="text-foreground-light block text-base" href="#vlog">📹 Vlog</a>
-                    <a className="text-foreground-light block text-base" href="#blog">✍️ Blog</a>
-
-                    <a className="text-foreground-light block text-base" href="#work">👔 Work</a>
-                    <a className="text-foreground-light block text-base" href="#work">🔤 English Teaching</a>
-
-                    <a className="text-foreground-light block text-base" href="#finance">💵 Finance</a>
-                    <a className="text-foreground-light block text-base" href="#productivity">📊 Productivity</a>
-
-
-                    <a className="text-foreground-light block text-base" href="#blog">⌚️ Products</a>
-                  </div>
-                </div>
-
-                <div className="hidden lg:block">
                   <h2 className="text-foreground-lighter mb-2 text-xl">Countries</h2>
-                  <div className="countries accordion space-y-1">
+                  <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
@@ -74,13 +49,21 @@ export function Sidebar() {
                                 <a className="country text-foreground-light block text-base font-medium" href="/japan">🇯🇵 Japan</a>
                                 <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
                                 <a className="city text-foreground-light block text-sm" href="/osaka">🏯 Osaka</a>
-                                <a className="city text-foreground-light block text-sm" href="/kyoto">🎋 Kyoto</a>
+                                <a className="city text-foreground-light block text-sm" href="/kyoto">👘 Kyoto</a>
                                 <hr className="mt-2 mb-2"/>
                                 <a className="country text-foreground-light block text-base font-medium" href="/indonesia">🇮🇩 Indonesia</a>
                                 <a className="city text-foreground-light block text-sm" href="/bali">🏝 Bali</a>
                                 <a className="city text-foreground-light block text-sm" href="/canggu">🏄‍♀️ Canggu</a>
                                 <a className="city text-foreground-light block text-sm" href="/ubud">🐒 Ubud</a>
                                 <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/korea">🇰🇷 Korea</a>
+                                <a className="city text-foreground-light block text-sm" href="/bali">🍱 Seoul</a>
+                                <a className="city text-foreground-light block text-sm" href="/canggu">🚝 Busan</a>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/vietnam">🇻🇳 Vietnam</a>
+                                <a className="city text-foreground-light block text-sm" href="/hochiminhcity">🛵 Ho Chi Minh City</a>
+                                <a className="city text-foreground-light block text-sm" href="/hanoi">🍲 Hanoi</a>
+
  
                             </AccordionContent>
                         </AccordionItem>
@@ -109,6 +92,45 @@ export function Sidebar() {
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
+                  </div>
+                </div>
+
+
+                <div className="hidden lg:block">
+                  <h2 className="text-foreground-lighter mb-2 text-xl">Categories</h2>
+                  <div className="categories space-y-1">
+                    {/* <a className="text-foreground-light block text-base" href="#featured">💯 Featured</a> */}
+                    <a className="text-foreground-light block text-base" href="#travel">🗺 Travel</a>
+                    <a className="text-foreground-light block text-base" href="#accomodation">🛌 Accomodation</a>
+                    <a className="text-foreground-light block text-base" href="#healthinsurance">😷 Health Insurance</a>
+                    <a className="text-foreground-light block text-base" href="#visa">🛂 Visa</a>
+
+                    {/* <a className="text-foreground-light block text-base" href="#socialmedia">📸 Social Media</a> */}
+
+                    <Accordion className="categories-accordion accordion" type="single" collapsible>
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>📸 Social Media</AccordionTrigger>
+                            <AccordionContent>
+                    <a className="text-foreground-light block text-base" href="#instagram"><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
+                    <a className="text-foreground-light block text-base" href="#tiktok"><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
+                    <a className="text-foreground-light block text-base" href="#youtube"><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
+                    <a className="text-foreground-light block text-base" href="#reddit"><div className="flex items-center"><img src="./images/reddit.png" className="accordion-logo"/>Reddit</div></a>
+                            </AccordionContent>
+                            </AccordionItem>
+                    </Accordion>
+
+                    <a className="text-foreground-light block text-base" href="#apps">📱 Apps</a>
+                    <a className="text-foreground-light block text-base" href="#vlog">📹 Vlog</a>
+                    <a className="text-foreground-light block text-base" href="#blog">✍️ Blog</a>
+
+                    <a className="text-foreground-light block text-base" href="#work">👔 Work</a>
+                    <a className="text-foreground-light block text-base" href="#work">🔤 English Teaching</a>
+
+                    <a className="text-foreground-light block text-base" href="#finance">💵 Finance</a>
+                    <a className="text-foreground-light block text-base" href="#productivity">📊 Productivity</a>
+
+
+                    <a className="text-foreground-light block text-base" href="#blog">⌚️ Products</a>
                   </div>
                 </div>
 
