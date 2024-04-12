@@ -1,4 +1,8 @@
-export const travel = [
+// src/data/data.tsx
+export const data = [
+  {
+    heading: "Featured",
+    links: [
     {
       title: "Google Maps",
       description: "Find local businesses, view maps and get driving directions in Google Maps.",
@@ -27,9 +31,12 @@ export const travel = [
       image: "hoodmaps.png",
       category: "🗺 Maps",
     },
-  ]
-  export const accomodation = [
-    {
+  ],
+},
+{
+  heading: "🛌 Accomodation",
+  links: [
+      {
       title: "AirBNB",
       description: "Vacation Rentals & More — Book Top Rated Rentals for Your Next Trip - Houses, Cabins, Condos, Unique Stays & More.",
       url: "https://www.airbnb.com",
@@ -39,7 +46,7 @@ export const travel = [
     {
       title: "Agoda",
       description: "Agoda.com is an online travel agency catering primarily to consumers in the Asia-Pacific region, with headquarters in Singapore and operations in Bangkok, Thailand. Agoda facilitates reservations for lodging, flights, ground transportation, and activities. It is a subsidiary of Booking Holdings.",
-      url: "https://www.Agoda.com/travel/flights",
+      url: "https://www.agoda.com",
       image: "agoda.png",
       category: "🛌 Accomodation",
     },
@@ -57,146 +64,69 @@ export const travel = [
       image: "hostelworld.png",
       category: "🛏 Hostels",
     },
-  ]
-  export const healthinsurance = [
-    {
-      title: "Safety Wing",
-      description: "A travel and medical incident insurance built specifically for digital nomads. It can be purchased while already abroad, covers home trip visits and operates...",
-      url: "https://safetywing.com/",
-      image: "safetywing.png",
-      category: "😷 Health Insurance",
-    },
-    {
-      title: "World Nomads",
-      description: "International Travel Insurance — International travel insurance for devices, emergency dental & medical, baggage, & gears. 24/7 emergency assistance & medical cover, trip cancellation, and gear cover.",
-      url: "https://www.worldnomads.com",
-      image: "worldnomads.png",
-      category: "😷 Health Insurance",
-    },
-  ]
-  export const visa = [
-    {
-      title: "Visa requirements for United States citizens",
-      description: "As of 2024, holders of a United States passport may travel to 189 countries and territories without a travel visa, or with a visa on arrival. The United States ...",
-      url: "https://en.wikipedia.org/wiki/Visa_requirements_for_United_States_citizens",
-      image: "visarequirementsforunitedstatescitizens.png",
-      category: "🛂 Visa",
-    },
-    {
-      title: "VisaHQ",
-      description: "Passports and Travel Visas Online: Comprehensive Information on Passport Services, Visa Requirements and Applications. Real-time Status Updates, Live Help.",
-      url: "https://www.visahq.com/",
-      image: "visahq.png",
-      category: "🛂 Visa",
-    },
-  ]
-  export const apps = [
-    {
-      title: "Google Translate",
-      description: "Google Translate is a multilingual neural machine translation service developed by Google to translate text, documents and websites from one language into another.",
-      url: "https://translate.google.com/",
-      image: "googletranslate.png",
-      category: "📱 Apps",
-    },
-    {
-      title: "Pin Traveler: Travel Tracker",
-      description: "Track your travels, create your bucket list, save your favorite locations, and much more.",
-      url: "https://pintraveler.net/",
-      image: "pintraveler.png",
-      category: "📱 Apps",
-    },
-  ]
-
-  export const reddit = [
-    {
-      title: "r/digitalnomad",
-      description: "Digital Nomads are individuals that leverage technology in order to work remotely and live an independent and nomadic lifestyle.",
-      url: "https://www.reddit.com/r/digitalnomad/",
-      image: "reddit.png",
-      category: "Reddit",
-    },
-    {
-      title: "r/travel",
-      description: "r/travel is a community about exploring the world. Your pictures, questions, stories, or any good content is welcome. Clickbait, spam, memes, ads/selling/buying, brochures, classifieds, surveys or self-promotion will be removed.",
-      url: "https://www.reddit.com/r/travel/",
-      image: "reddittravel.png",
-      category: "Reddit",
-    },
-    {
-      title: "r/solotravel",
-      description: "A place for all of those interested in solo travel to share their experiences and stories!",
-      url: "https://www.reddit.com/r/solotravel/",
-      image: "redditsolotravel.png",
-      category: "Reddit",
-    },
-    {
-      title: "r/onebag",
-      description: "r/onebag is an 'urban' travel community devoted to the idea of helping people lug around less crap; onebag travel. Fewer items, packed into a single bag for ease of transport to make traveling simpler with more focus on the experience than the logistics.",
-      url: "https://www.reddit.com/r/onebag/",
-      image: "redditonebag.png",
-      category: "Reddit",
-    },
-    {
-      title: "r/vanlife",
-      description: "For people that live a carefree, mobile, and active lifestyle on the road. Share rig images, helpful websites, road stories, tips and tricks for camping locations.",
-      url: "https://www.reddit.com/r/vanlife/",
-      image: "reddit.png",
-      category: "Reddit",
-    },
-  ]
-
-  export const socialmedia = [
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-  ]
-  export const work = [
-    {
+  ],
+},
+// {
+//   heading: "😷 Health Insurance",
+//   links: [
+//       {
+//       title: "Safety Wing",
+//       description: "A travel and medical incident insurance built specifically for digital nomads. It can be purchased while already abroad, covers home trip visits and operates...",
+//       url: "https://safetywing.com/",
+//       image: "safetywing.png",
+//       category: "😷 Health Insurance",
+//     },
+//     {
+//       title: "World Nomads",
+//       description: "International Travel Insurance — International travel insurance for devices, emergency dental & medical, baggage, & gears. 24/7 emergency assistance & medical cover, trip cancellation, and gear cover.",
+//       url: "https://www.worldnomads.com",
+//       image: "worldnomads.png",
+//       category: "😷 Health Insurance",
+//     },
+//   ],
+// },
+// {
+//   heading: "🛂 Visa",
+//   links: [
+//       {
+//       title: "Visa requirements for United States citizens",
+//       description: "As of 2024, holders of a United States passport may travel to 189 countries and territories without a travel visa, or with a visa on arrival. The United States ...",
+//       url: "https://en.wikipedia.org/wiki/Visa_requirements_for_United_States_citizens",
+//       image: "visarequirementsforunitedstatescitizens.png",
+//       category: "🛂 Visa",
+//     },
+//     {
+//       title: "VisaHQ",
+//       description: "Passports and Travel Visas Online: Comprehensive Information on Passport Services, Visa Requirements and Applications. Real-time Status Updates, Live Help.",
+//       url: "https://www.visahq.com/",
+//       image: "visahq.png",
+//       category: "🛂 Visa",
+//     },
+//   ],
+// },
+// {
+//   heading: "📱 Apps",
+//   links: [
+//       {
+//       title: "Google Translate",
+//       description: "Google Translate is a multilingual neural machine translation service developed by Google to translate text, documents and websites from one language into another.",
+//       url: "https://translate.google.com/",
+//       image: "googletranslate.png",
+//       category: "📱 Apps",
+//     },
+//     {
+//       title: "Pin Traveler: Travel Tracker",
+//       description: "Track your travels, create your bucket list, save your favorite locations, and much more.",
+//       url: "https://pintraveler.net/",
+//       image: "pintraveler.png",
+//       category: "📱 Apps",
+//     },
+//   ],
+// },
+{
+  heading: "👔 Work",
+  links: [
+      {
       title: "Remote OK",
       description: "Looking for a remote job? Remote OK® is the #1 Remote Job Board and has 705048+ remote jobs as a Developer, Designer, Copywriter, Customer Support Rep, ...",
       url: "https://remoteok.com/",
@@ -224,54 +154,46 @@ export const travel = [
       image: "upwork.png",
       category: "👔 Work",
     },
-  ]
-  export const template = [
+  ],
+},
+{
+heading: "Reddit",
+links: [
     {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-    {
-      title: "",
-      description: "",
-      url: "",
-      image: "",
-    },
-  ]
+    title: "r/digitalnomad",
+    description: "Digital Nomads are individuals that leverage technology in order to work remotely and live an independent and nomadic lifestyle.",
+    url: "https://www.reddit.com/r/digitalnomad/",
+    image: "reddit.png",
+    category: "Reddit",
+  },
+  {
+    title: "r/travel",
+    description: "r/travel is a community about exploring the world. Your pictures, questions, stories, or any good content is welcome. Clickbait, spam, memes, ads/selling/buying, brochures, classifieds, surveys or self-promotion will be removed.",
+    url: "https://www.reddit.com/r/travel/",
+    image: "reddittravel.png",
+    category: "Reddit",
+  },
+  {
+    title: "r/solotravel",
+    description: "A place for all of those interested in solo travel to share their experiences and stories!",
+    url: "https://www.reddit.com/r/solotravel/",
+    image: "redditsolotravel.png",
+    category: "Reddit",
+  },
+  {
+    title: "r/onebag",
+    description: "r/onebag is an 'urban' travel community devoted to the idea of helping people lug around less crap; onebag travel. Fewer items, packed into a single bag for ease of transport to make traveling simpler with more focus on the experience than the logistics.",
+    url: "https://www.reddit.com/r/onebag/",
+    image: "redditonebag.png",
+    category: "Reddit",
+  },
+  {
+    title: "r/vanlife",
+    description: "For people that live a carefree, mobile, and active lifestyle on the road. Share rig images, helpful websites, road stories, tips and tricks for camping locations.",
+    url: "https://www.reddit.com/r/vanlife/",
+    image: "reddit.png",
+    category: "Reddit",
+  },
+],
+},
+]

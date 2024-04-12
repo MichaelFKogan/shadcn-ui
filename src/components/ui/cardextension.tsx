@@ -13,10 +13,10 @@ export function CardExtension({data}) {
                             </div>
                             <div className="card__text-wrapper">
                                 <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{item.title}</h3>
-                                <p className="text-foreground-lighter text-sm line-clamp-4 min-h-[50px] h-[58px]" title={item.description}>{item.description}</p>
+                                <p className="text-foreground-lighter text-xs line-clamp-4 min-h-[50px] h-[58px]" title={item.description}>{item.description}</p>
                             </div>
                             </div>
-                            <Badge variant="secondary" className="badge">{item.category}</Badge>
+                            {/* <Badge variant="secondary" className="badge">{item.category}</Badge> */}
                         </div>
                         </a>
                     ))}

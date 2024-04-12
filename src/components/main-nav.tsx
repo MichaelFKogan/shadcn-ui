@@ -1,3 +1,4 @@
+// src/components/main-nav.tsx
 import { DarkMode } from "@/components/darkmode"
 import { MusicPlayer } from "@/components/music-player"
 

@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
@@ -5,13 +6,15 @@ import { Cards } from "@/components/ui/cards";
 import { CardExtension } from "@/components/ui/cardextension";
 import { Sidebar } from "@/components/ui/sidebar";
 import Script from 'next/script'; // Import next/script component
-import { travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/data';
+import { allData, travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/dataExtension';
+import {data} from '../data/data'
+import {thailand} from '../data/thailand/thailand'
 
 
 export default function Home() {
   return (
     <>
-      <MainNav />
+      {/* <MainNav /> */}
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className="sm:py-18 relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-10 space-y-16" style={{paddingTop: "3rem"}}>
 
@@ -28,26 +31,20 @@ export default function Home() {
 
               <div className="grid space-y-10">
 
+              {/* {data.map((item, index) => (
+                <Cards key={index} data={item} anchor={`data-${index}`} />
+              ))}  
+
+              {thailand.map((item, index) => (
+                <Cards key={index} data={item} anchor={`thailand-${index}`} />
+              ))} */}
+
               <div id="featured" className="card-row space-y-8">
-                {/* <h2 className="h2 section-title">💯 Featured</h2> */}
+                <h2 className="h2 section-title">💯 Featured</h2>
                   <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <CardExtension data={travel} />
-                    <CardExtension data={accomodation} />
-                    <CardExtension data={healthinsurance} />
-                    <CardExtension data={visa} />
-                    <CardExtension data={reddit} />
-                    <CardExtension data={apps} />
-                    <CardExtension data={work} />
+                    <CardExtension data={allData} />
                   </div>
               </div>
-
-                {/* <Cards heading="🗺 Travel" data={travel} anchor="travel" />
-                <Cards heading="🛌 Accomodation" data={accomodation} anchor="accomodation" />
-                <Cards heading="😷 Health Insurance" data={healthinsurance} anchor="healthinsurance" />
-                <Cards heading="🛂 Visa" data={visa} anchor="visa" />
-                <Cards heading="Reddit" data={reddit} anchor="reddit" />
-                <Cards heading="📱 Apps" data={apps} anchor="apps" />
-                <Cards heading="👔 Work" data={work} anchor="work" /> */}
 
                 <div style={{ textAlign: "center", marginTop: "20px" }}>
                   <Button variant="secondary">See All</Button>
