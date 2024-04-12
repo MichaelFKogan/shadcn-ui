@@ -16,6 +16,43 @@ export const thailand = [
                 image: "redditthailand.png",
                 category: "🇹🇭 Thailand",
             },
+            {
+                title: "r/ThaiJobs/",
+                description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
+                url: "https://www.reddit.com/r/ThaiJobs/",
+                image: "reddit.png",
+                category: "🇹🇭 Thailand",
+            },
+        ],
+    },
+    {
+        heading: "📱 Apps",
+        links: [
+            {
+                title: "Grab",
+                description: "Grab is Southeast Asia's leading superapp. It provides everyday services like Deliveries, Mobility, Financial Services, and More.",
+                url: "https://www.grab.com/th/",
+                image: "grab.png",
+                category: "🛺 Bangkok",
+                badge: "🚖 Taxi",
+                tag2: "🥡🚖 Food Delivery"
+            },
+            {
+                title: "Line",
+                description: "Messenger APP. New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!",
+                url: "https://line.me/en/",
+                image: "line.png",
+                category: "🛺 Bangkok",
+                badge: "💬 Chat",
+            },
+            {
+                title: "Food Panda",
+                description: "From food delivery to your daily convenience companion. A subsidiary of Delivery Hero, foodpanda launched in Singapore in 2014 as a food delivery platform.",
+                url: "https://www.foodpanda.com/about-foodpanda/",
+                image: "foodpanda.png",
+                category: "🛺 Bangkok",
+                badge: "🥡🚖 Food",
+            },
         ],
     },
     {
@@ -28,12 +65,29 @@ export const thailand = [
                 image: "redditbangkok.png",
                 category: "🛺 Bangkok",
             },
+        ],
+    },
+    {
+        heading: "🐘 Chiang Mai",
+        links: [
             {
-                title: "r/ThaiJobs/",
-                description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
-                url: "https://www.reddit.com/r/ThaiJobs/",
-                image: "reddit.png",
-                category: "🇹🇭 Thailand",
+                title: "",
+                description: "",
+                url: "",
+                image: "",
+                category: "",
+            },
+        ],
+    },
+    {
+        heading: "🏖 Kho Phangan",
+        links: [
+            {
+                title: "",
+                description: "",
+                url: "",
+                image: "",
+                category: "",
             },
         ],
     },

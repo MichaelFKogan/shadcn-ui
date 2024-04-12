@@ -1,12 +1,16 @@
+// src/components/ui/sidebar.tsx
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+
+  import { thailand } from '../../data/thailand/thailand';
+
   
 
-export function Sidebar() {
+export function Sidebar({setData}) {
 
     return (
 
@@ -41,7 +45,7 @@ export function Sidebar() {
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mt-2 mb-2"/>
-                                <a className="country text-foreground-light block text-base font-medium" href="/thailand">🇹🇭 Thailand</a>
+                                <a className="country text-foreground-light block text-base font-medium" onClick={() => setData(thailand)}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" href="/thailand/bangkok">🛺 Bangkok</a>
                                 <a className="city text-foreground-light block text-sm" href="/chiangmai">🐘 Chiang Mai</a>
                                 <a className="city text-foreground-light block text-sm" href="/khophangan">🌊 Kho Phangan</a>

@@ -91,6 +91,10 @@
     overflow-y: scroll;
   }
 
+  a{
+    cursor: pointer;
+  }
+
   .border-b{
     border-bottom:0px;
     border-bottom-width: 0px !important
@@ -179,13 +183,13 @@
 
   .badge{
     justify-content: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(255,255,255,0);
+    top: 10px;
+    right: 8px;
+    /* background: rgba(255,255,255,0); */
     font-weight: 500;
   }
