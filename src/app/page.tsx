@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Cards } from "@/components/ui/cards";
 import { CardExtension } from "@/components/ui/cardextension";
 import { Sidebar } from "@/components/ui/sidebar";
+import { SidebarNew } from "@/components/ui/sidebarnew";
 import Script from 'next/script'; // Import next/script component
 import { allData, travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/dataExtension';
 import {homepage} from '../data/data'
@@ -18,15 +19,16 @@ export default function Home() {
 
   return (
     <>
-      <MainNav setData={setData} />
+
+      <Sidebar setData={setData} />
+      {/* <SidebarNew setData={setData}/> */}
+
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="sm:py-18 relative mx-auto px-6 py-16 md:py-24 lg:px-16 lg:py-24 xl:px-10 space-y-16" style={{paddingTop: "3rem"}}>
+        <div className="lg:pl-72 sm:py-18 relative mx-auto py-16 md:py-24 lg:py-24 space-y-16" style={{paddingTop: "0px"}}>
+        <MainNav setData={setData} />
 
-          <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16">
-
-            <Sidebar setData={setData} />
-
-            <div className="lg:col-span-10 xl:col-span-10">
+          <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{marginTop:"1rem"}}>
+            <div className="lg:col-span-12 xl:col-span-12 px-5">
 
               <div className="main-title">
                 <h1 className="h1">Find your travel inspiration</h1>
