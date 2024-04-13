@@ -1,8 +1,11 @@
 .
 ├── app
+│   └── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components
+├── styles
+│   ├── music-player.css
 │   ├── ui
 │   │   ├── alert-dialog.tsx
 │   │   ├── button.tsx
@@ -11,13 +14,13 @@
 │   ├── main-nav.tsx
 │   ├── page-header.tsx
 │   └── ...
+├── data
+│   └── data.tsx
+├── lib
+│   └── utils.ts
 ├── pages
 │   └── _apps.tsx
 │   └── home.tsx
-├── lib
-│   └── utils.ts
-├── styles
-│   └── globals.css
 ├── next.config.js
 ├── package.json
 ├── postcss.config.js

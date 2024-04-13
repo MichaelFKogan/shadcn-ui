@@ -110,6 +110,13 @@
     /* display: none; */
   }
 
+  .section-title__img{
+    width: 30px;
+    margin-right: 10px;
+    display: inline;
+    vertical-align: sub;
+  }
+
   .card-row{
     margin-top: 1.25rem !important;
   }

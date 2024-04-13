@@ -7,6 +7,10 @@ import {
   } from "@/components/ui/accordion"
 
   import { thailand } from '../../data/thailand/thailand';
+  
+  import { bangkok } from '../../data/thailand/bangkok';
+
+  import { instagram } from '../../data/socialmedia/instagram';
 
   
 
@@ -46,9 +50,9 @@ export function Sidebar({setData}) {
                             <AccordionContent>
                                 <hr className="mt-2 mb-2"/>
                                 <a className="country text-foreground-light block text-base font-medium" onClick={() => setData(thailand)}>🇹🇭 Thailand</a>
-                                <a className="city text-foreground-light block text-sm" href="/thailand/bangkok">🛺 Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" href="/chiangmai">🐘 Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" href="/khophangan">🌊 Kho Phangan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => setData(bangkok)}>🛺 Bangkok</a>
+                                <a className="city text-foreground-light block text-sm">🐘 Chiang Mai</a>
+                                <a className="city text-foreground-light block text-sm">🌊 Kho Phangan</a>
                                 <hr className="mt-2 mb-2"/>
                                 <a className="country text-foreground-light block text-base font-medium" href="/japan">🇯🇵 Japan</a>
                                 <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
@@ -68,7 +72,17 @@ export function Sidebar({setData}) {
                                 <a className="city text-foreground-light block text-sm" href="/hochiminhcity">🛵 Ho Chi Minh City</a>
                                 <a className="city text-foreground-light block text-sm" href="/hanoi">🍲 Hanoi</a>
                                 <hr className="mt-2 mb-2"/>
- 
+                                <a className="country text-foreground-light block text-base font-medium" href="/china">🇨🇳 China</a>
+                                <a className="city text-foreground-light block text-sm" href="/beijing">🥡 Beijing</a>
+                                <a className="city text-foreground-light block text-sm" href="/shanghai">🧧 Shanghai</a>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/hong kong">🇭🇰 Hong Kong</a>
+                                <hr className="mt-2 mb-2"/>
+                                <a className="country text-foreground-light block text-base font-medium" href="/taiwan">🇹🇼 Taiwan</a>
+                                <a className="city text-foreground-light block text-sm" href="/taipei">Taipei</a>
+                                <hr className="mt-2 mb-2"/>
+                                
+
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
@@ -115,7 +129,7 @@ export function Sidebar({setData}) {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>📸 Social Media</AccordionTrigger>
                             <AccordionContent>
-                    <a className="text-foreground-light block text-base" href="#instagram"><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
+                    <a className="text-foreground-light block text-base" onClick={() => setData(instagram)}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
                     <a className="text-foreground-light block text-base" href="#tiktok"><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
                     <a className="text-foreground-light block text-base" href="#youtube"><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
                     <a className="text-foreground-light block text-base" href="#reddit"><div className="flex items-center"><img src="./images/reddit.png" className="accordion-logo"/>Reddit</div></a>
