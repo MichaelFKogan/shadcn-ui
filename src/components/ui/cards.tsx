@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 export function Cards({ data, anchor }) {
     return (
         <div id={anchor} className="card-row space-y-8">
-            <h2 className="h2 section-title mb-1">
+            <h2 id={data.heading.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="h2 section-title mb-1">
                 {data.headingImage && (<img src={"/images/" + data.headingImage} className="section-title__img" />)}
                 {data.heading}
             </h2>

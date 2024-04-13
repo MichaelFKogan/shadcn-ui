@@ -75,10 +75,11 @@ export default function Home() {
               const targetElement = document.getElementById(targetId);
 
               if (targetElement) {
-                  targetElement.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                  });
+                const offsetTop = targetElement.offsetTop - 10; // Adjust the offset by 100px
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+              });
               }
           });
       });
