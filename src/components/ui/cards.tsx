@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge"
+import '../styles/cards.css'
 
 export function Cards({ data, anchor }) {
     return (
@@ -17,7 +18,7 @@ export function Cards({ data, anchor }) {
                                     <img alt={linkItem.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + linkItem.image} />
                                 </div>
                                 <div className="card__text-wrapper">
-                                    <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl transition-colors">{linkItem.title}</h3>
+                                    <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl font-medium transition-colors">{linkItem.title}</h3>
                                     <p className="text-foreground-lighter text-xs line-clamp-4 min-h-[50px] h-[58px]" title={linkItem.description}>{linkItem.description}</p>
                                 </div>
                             </div>

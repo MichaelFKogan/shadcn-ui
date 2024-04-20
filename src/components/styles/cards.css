@@ -1,0 +1,33 @@
+.card-row{
+    margin-top: 1.25rem !important;
+  }
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+    margin-top: 0px !important; 
+}
+
+.section-title__img{
+    width: 30px;
+    margin-right: 10px;
+    display: inline;
+    vertical-align: sub;
+}
+
+.card{
+    /* max-height: 144px; */
+    max-height: 160px;
+    position: relative;
+    /* background: hsl(var(--muted)); */
+}
+
+.card__text-wrapper{
+    max-height: 83px;
+    overflow: hidden;
+}
+
+.card:hover {
+    background: hsl(var(--muted));
+    /* transform: scale(1.02) */
+}
+  
+

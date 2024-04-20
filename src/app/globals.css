@@ -64,6 +64,19 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
+
+    /* UPDATED COLOR SCHEME */
+
+
+    :root{
+
+    }
+
+    .dark{
+      --text-light-gray: hsla(240,5%,65%,.8);
+    }
+
+
   }
 
   @layer base {
@@ -81,6 +94,11 @@
 
   h2{
     font-size: 28px;
+  }
+
+  .sidebar-wrapper{
+    z-index: 2 !important;
+    /* background-color: hsl(var(--muted)); */
   }
 
   .fixed-sidebar{
@@ -110,39 +128,8 @@
     /* display: none; */
   }
 
-  .section-title__img{
-    width: 30px;
-    margin-right: 10px;
-    display: inline;
-    vertical-align: sub;
-  }
-
-  .card-row{
-    margin-top: 1.25rem !important;
-  }
-
-  .space-y-8 > :not([hidden]) ~ :not([hidden]){
-    margin-top: 0px !important; 
-  }
-
-  .card{
-    /* max-height: 144px; */
-    max-height: 160px;
-    position: relative;
-  }
-
-  .card__text-wrapper{
-    max-height: 82px;
-    overflow: hidden;
-  }
-
-  .card:hover {
-    background: hsl(var(--muted));
-    /* transform: scale(1.02) */
-  }
-
   .countries-title, .categories-title{
-    padding: 0rem 2rem;
+    padding: 0rem 1.75rem;
   }
 
   .countries a, .categories a, .accordion a, .accordion button{

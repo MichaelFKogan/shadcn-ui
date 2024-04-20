@@ -5,10 +5,14 @@ import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
 import { Cards } from "@/components/ui/cards";
+import { List } from "@/components/ui/list";
+
 import { CardExtension } from "@/components/ui/cardextension";
 import { Sidebar } from "@/components/ui/sidebar";
 import { SidebarNew } from "@/components/ui/sidebarnew";
 import Script from 'next/script'; // Import next/script component
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 import { allData, travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/dataExtension';
 import {homepage} from '../data/data'
 import {thailand} from '../data/thailand/thailand'
@@ -37,9 +41,33 @@ export default function Home() {
 
               <div className="grid space-y-10">
 
-              {data.map((item, index) => (
-                <Cards key={index} data={item} anchor={`data-${index}`} />
-              ))}  
+                <Tabs defaultValue="list" className="">
+                  <TabsList>
+                    <TabsTrigger value="cards">Cards</TabsTrigger>
+                    <TabsTrigger value="list">List</TabsTrigger>
+                  </TabsList>
+
+                  <TabsContent value="cards">
+                    <div id="card-view">
+                      {data.map((item, index) => (
+                        <Cards key={index} data={item} anchor={`data-${index}`} />
+                      ))}  
+                  </div>
+                  </TabsContent>
+
+                  <TabsContent value="list">
+                    <div id="list-view">
+                      <div className="list-row space-y-8">
+                        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> 
+                          {data.map((item, index) => (
+                            <List key={index} data={item} anchor={`data-${index}`} />
+                          ))}  
+                        </div>
+                      </div>
+                   </div>
+                  </TabsContent>
+                </Tabs>
+
 
               {/* {thailand.map((item, index) => (
                 <Cards key={index} data={item} anchor={`thailand-${index}`} />

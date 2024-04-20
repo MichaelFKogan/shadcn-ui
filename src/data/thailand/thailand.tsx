@@ -91,4 +91,30 @@ export const thailand = [
             },
         ],
     },
+    {
+        heading: "Reddit",
+        links: [
+            {
+                title: "r/Thailand",
+                description: "The Thailand subreddit is a place where you can share links and content relating to Thailand.",
+                url: "https://www.reddit.com/r/Thailand/",
+                image: "redditthailand.png",
+                category: "🇹🇭 Thailand",
+            },
+            {
+                title: "r/ThailandTourism",
+                description: "Advice for Tourists coming to The Land Of Smiles. This is a subreddit where people can ask for advice about visiting Thailand, border crossings, hotels, what to see, what to do.",
+                url: "https://www.reddit.com/r/ThailandTourism/",
+                image: "redditthailand.png",
+                category: "🇹🇭 Thailand",
+            },
+            {
+                title: "r/ThaiJobs/",
+                description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
+                url: "https://www.reddit.com/r/ThaiJobs/",
+                image: "reddit.png",
+                category: "🇹🇭 Thailand",
+            },
+        ],
+    },
 ];
