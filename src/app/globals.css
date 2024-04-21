@@ -129,7 +129,9 @@
   }
 
   .countries-title, .categories-title{
-    padding: 0rem 1.75rem;
+    /* padding: 0rem 1.75rem; */
+    margin-left: 1.75rem;
+    margin-right: 1.75rem
   }
 
   .countries a, .categories a, .accordion a, .accordion button{

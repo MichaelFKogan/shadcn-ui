@@ -1,31 +1,5 @@
 export const thailand = [
     {
-        heading: "🇹🇭 Thailand",
-        links: [
-            {
-                title: "r/Thailand",
-                description: "The Thailand subreddit is a place where you can share links and content relating to Thailand.",
-                url: "https://www.reddit.com/r/Thailand/",
-                image: "redditthailand.png",
-                category: "🇹🇭 Thailand",
-            },
-            {
-                title: "r/ThailandTourism",
-                description: "Advice for Tourists coming to The Land Of Smiles. This is a subreddit where people can ask for advice about visiting Thailand, border crossings, hotels, what to see, what to do.",
-                url: "https://www.reddit.com/r/ThailandTourism/",
-                image: "redditthailand.png",
-                category: "🇹🇭 Thailand",
-            },
-            {
-                title: "r/ThaiJobs/",
-                description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
-                url: "https://www.reddit.com/r/ThaiJobs/",
-                image: "reddit.png",
-                category: "🇹🇭 Thailand",
-            },
-        ],
-    },
-    {
         heading: "📱 Apps",
         links: [
             {
@@ -88,6 +62,32 @@ export const thailand = [
                 url: "",
                 image: "",
                 category: "",
+            },
+        ],
+    },
+    {
+        heading: "Facebook",
+        links: [
+            {
+                title: "Thai Visa Advice",
+                description: "The Thailand subreddit is a place where you can share links and content relating to Thailand.",
+                url: "https://www.facebook.com/groups/1395920320731833",
+                image: "facebook.png",
+                category: "🛂 Visa",
+            },
+            {
+                title: "r/ThailandTourism",
+                description: "Advice for Tourists coming to The Land Of Smiles. This is a subreddit where people can ask for advice about visiting Thailand, border crossings, hotels, what to see, what to do.",
+                url: "https://www.reddit.com/r/ThailandTourism/",
+                image: "redditthailand.png",
+                category: "🇹🇭 Thailand",
+            },
+            {
+                title: "Digital Nomad Coffee Club - Chiang Mai",
+                description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
+                url: "https://www.facebook.com/groups/nomadcoffee/",
+                image: "facebook.png",
+                category: "🇹🇭 Thailand",
             },
         ],
     },
