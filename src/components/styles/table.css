@@ -1,0 +1,27 @@
+.table-container table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-container th, .table-container td{
+    border: 1px solid hsl(var(--input));
+    position: relative;
+}
+
+.table-container td{
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-resize{
+    cursor: col-resize;
+    background-color: hsl(var(--input));
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: ;
+}

@@ -1,4 +1,4 @@
-// src/components/Table.js or similar
+// src/components/ui/table.tsx
 
 import { useMemo } from 'react';
 import { Badge } from "@/components/ui/badge";
@@ -12,46 +12,86 @@ type Link = {
     url: string;
     image: string;
     category: string;
+    tags: string;
+    city: string;
+    country: string;
+    continent: string;
 };
-
-// Example data
-// const userData: User[] = [
-//     { firstName: "Tanner", lastName: "Linsley", age: 33, visits: 100, progress: 50, status: "Married" },
-//     { firstName: "Kevin", lastName: "Vandy", age: 27, visits: 200, progress: 100, status: "Single" },
-// ];
 
 // Column helper to create columns
 const columnHelper = createColumnHelper<Link>();
 
 const columns = [
-    columnHelper.accessor('title', { header: 'Title' }),
-    columnHelper.accessor('description', { header: 'Description' }),
-    columnHelper.accessor('url', { header: 'URL', cell: info => <a href={info.getValue()}>{info.getValue()}</a> }),
-    // columnHelper.accessor('image', { header: 'Image', cell: info => <img src={info.getValue()} alt={info.row.original.title} style={{ width: '50px' }} /> }),
-    columnHelper.accessor('category', { header: 'Category' }),
+    columnHelper.accessor(row => row.title, {  // Accessor can also use row directly to fetch multiple values
+        header: 'Title',
+        cell: info => (
+            <a href={info.row.original.url} target="_blank" className="list__link" style={{ alignItems: "center", display: "flex" }}>
+                <div className="relative h-[22px] min-w-[22px] w-[22px] rounded-md overflow-hidden scale-100 transition-all">
+                    <img src={`/images/${info.row.original.image}`} alt={info.row.original.title} loading="lazy" decoding="async" className="bg-surface-100" sizes="100vw" style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}/>
+                </div>
+                <div className="link__text-wrapper">
+                    <h3 className="text-foreground-light group-hover:text-foreground mb-0 text-sm font-medium transition-colors">{info.row.original.title}</h3>
+                </div>
+            </a>
+        ),
+    }),
+    columnHelper.accessor('description', {
+        header: 'Description',
+        cell: info => (<div className="description text-xs">{info.row.original.description}</div>),
+    }),
+    columnHelper.accessor('category', {
+        header: 'Category',
+        cell: info => (<div className="category text-sm">{info.row.original.category}</div>),
+    }),
+    columnHelper.accessor('tags', {
+        header: 'Tags',
+        cell: info => (<div className="category text-sm">{info.row.original.tags}</div>),
+    }),
+    columnHelper.accessor('city', {
+        header: 'City',
+        cell: info => (<div className="category text-sm">{info.row.original.city}</div>),
+    }),
+    columnHelper.accessor('country', {
+        header: 'Country',
+        cell: info => (<div className="category text-sm">{info.row.original.country}</div>),
+    }),
+    columnHelper.accessor('continent', {
+        header: 'Continent',
+        cell: info => (<div className="category text-sm">{info.row.original.continent}</div>),
+    }),
 ];
 
 export function Table({ data, anchor }) {
     // Use useMemo to ensure data has a stable reference
-    const stableData = useMemo(() => data.links, [data.links]);
+    // const stableData = useMemo(() => data.links, [data.links]);
+
+    const allLinks = useMemo(() => {
+        return data.reduce((acc, section) => acc.concat(section.links), []);
+    }, [data]);
 
     // Create the table instance
     const table = useReactTable({
-        data: stableData,
+        data: allLinks,
         columns,
+        // defaultColumn: {size: 150, minSize: 50, maxSize: 600,},
+        enableColumnResizing: true,
+        columnResizeMode: 'onChange',
         getCoreRowModel: getCoreRowModel(),
     });
 
     // Render the table UI
     return (
-        <div className="table-container" id={anchor}>
+        <div className="table-container">
             <table>
                 <thead>
                     {table.getHeaderGroups().map(headerGroup => (
                         <tr key={headerGroup.id}>
                             {headerGroup.headers.map(header => (
-                                <th key={header.id}>
-                                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                                <th key={header.id} style={{ width: `${header.getSize()}px` }}>
+                                    {flexRender(header.column.columnDef.header, header.getContext())}
+                                    {/* <div class="table-resize"
+                                        onMouseDown={header.getResizeHandler()}
+                                    /> */}
                                 </th>
                             ))}
                         </tr>
@@ -61,7 +101,7 @@ export function Table({ data, anchor }) {
                     {table.getRowModel().rows.map(row => (
                         <tr key={row.id}>
                             {row.getVisibleCells().map(cell => (
-                                <td key={cell.id}>
+                                <td key={cell.id} style={{ width: `${cell.column.getSize()}px` }}>
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                 </td>
                             ))}
@@ -71,4 +111,5 @@ export function Table({ data, anchor }) {
             </table>
         </div>
     );
+    
 }

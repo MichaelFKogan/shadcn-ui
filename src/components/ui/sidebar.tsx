@@ -19,7 +19,7 @@ export function Sidebar({setData}) {
 
     return (
 
-            <div className="sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r">
+            <div className="sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r">
               <div className="fixed-sidebar space-y-6">
 
               <div className="flex h-14 items-center px-6 py-4 lg:h-auto">

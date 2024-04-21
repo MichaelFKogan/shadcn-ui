@@ -29,7 +29,7 @@ export default function Home() {
       {/* <SidebarNew setData={setData}/> */}
 
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="lg:pl-72 sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16" style={{paddingTop: "0px"}}>
+        <div className="lg:pl-64 sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16" style={{paddingTop: "0px"}}>
         <MainNav setData={setData} />
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{marginTop:"1rem"}}>
@@ -71,9 +71,7 @@ export default function Home() {
 
                   <TabsContent value="table">
                     <div id="table-view">
-                      {data.map((item, index) => (
-                        <Table key={index} data={item} anchor={`data-${index}`} />
-                      ))}  
+                        <Table data={data} anchor="table-1" />
                     </div>
                   </TabsContent>
                   
