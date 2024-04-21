@@ -6,6 +6,7 @@ import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
 import { Cards } from "@/components/ui/cards";
 import { List } from "@/components/ui/list";
+import { Table } from "@/components/ui/table";
 
 import { CardExtension } from "@/components/ui/cardextension";
 import { Sidebar } from "@/components/ui/sidebar";
@@ -28,7 +29,7 @@ export default function Home() {
       {/* <SidebarNew setData={setData}/> */}
 
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="lg:pl-72 sm:py-18 relative mx-auto py-16 md:py-24 lg:py-24 space-y-16" style={{paddingTop: "0px"}}>
+        <div className="lg:pl-72 sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16" style={{paddingTop: "0px"}}>
         <MainNav setData={setData} />
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{marginTop:"1rem"}}>
@@ -41,10 +42,11 @@ export default function Home() {
 
               <div className="grid space-y-10">
 
-                <Tabs defaultValue="list" className="">
+                <Tabs defaultValue="table" className="">
                   <TabsList>
                     <TabsTrigger value="cards">Cards</TabsTrigger>
                     <TabsTrigger value="list">List</TabsTrigger>
+                    <TabsTrigger value="table">Table</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="cards">
@@ -66,6 +68,15 @@ export default function Home() {
                       </div>
                    </div>
                   </TabsContent>
+
+                  <TabsContent value="table">
+                    <div id="table-view">
+                      {data.map((item, index) => (
+                        <Table key={index} data={item} anchor={`data-${index}`} />
+                      ))}  
+                    </div>
+                  </TabsContent>
+                  
                 </Tabs>
 
 
