@@ -21,7 +21,19 @@ th:first-child, td:first-child {
     left: 276px; /* Stick to the left */
     z-index: 1; /* Make sure it overlays other cells if needed */
     background-color: hsl(var(--background));
-    min-width:250px;
+    /* max-width:300px; */
+}
+
+.link__text-wrapper{
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.link__text-wrapper h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: auto;
 }
 
 .table-container .description{
@@ -31,7 +43,7 @@ th:first-child, td:first-child {
     text-overflow: ellipsis;
 }
 
-/* .table-resize{
+.table-resize{
     cursor: col-resize;
     background-color: hsl(var(--input));
     width: 10px;
@@ -39,13 +51,34 @@ th:first-child, td:first-child {
     position: absolute;
     right: 0px;
     top: 0px;
-    z-index: ;
-} */
+    z-index: 2;
+}
 
-.category, .tags, .city, .country, .continent, .description{
+@media (max-width:1023px){
+    th:first-child, td:first-child {
+        left: 1.25rem; /* Stick to the left */
+    }
+}
+
+th, .title, .category, .tags, .city, .country, .continent, .description{
     padding: 4px 12px;
+    overflow: hidden;
 }
 
 .category div{
     cursor: pointer;
+}
+
+.ttable-container .city, .table-container .country, .table-container .continent{
+    text-align: right;
+}
+
+.tags{
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.category div, .tags div, .city, .country, .continent{
+    text-wrap:nowrap;
 }

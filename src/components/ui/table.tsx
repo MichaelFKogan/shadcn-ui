@@ -26,7 +26,7 @@ const columns = [
         id: 'title',
         header: 'Title',
         cell: info => (
-            <a href={info.row.original.url} target="_blank" className="list__link" style={{ alignItems: "center", display: "flex" }}>
+            <a href={info.row.original.url} target="_blank" className="list__link" style={{ alignItems: "center", display: "flex", columnGap: "10px" }}>
                 <div className="relative h-[22px] min-w-[22px] w-[22px] rounded-md overflow-hidden scale-100 transition-all">
                     <img src={`/images/${info.row.original.image}`} alt={info.row.original.title} loading="lazy" decoding="async" className="bg-surface-100" sizes="100vw" style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}/>
                 </div>

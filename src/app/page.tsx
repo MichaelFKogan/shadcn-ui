@@ -28,29 +28,41 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
   const [data, setData] = useState(homepage);
-  // const [firebaseData, setFirebaseData] = useState(jsonData);
-  // const [links, setLinks] = useState(Object.values(jsonData.__collections__.Links).sort((a, b) => a.category.localeCompare(b.category)));
+  const [firebaseData, setFirebaseData] = useState([]);
+  const [filterKeyword, setFilterKeyword] = useState('');
 
   useEffect(() => {
-    const linksData = Object.values(jsonData.__collections__.Links).map((link) => ({
-      title: link.name,
-      description: link.description || '',
-      url: link.url,
-      image: 'default.png',  // Assuming a default image; replace or modify as needed
-      category: link.category,
-      tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
-      city: link.city,
-      country: link.country,
-      continent: link.continent
-    })).sort((a, b) => a.category.localeCompare(b.category));
-
-    setData(linksData);
-  }, []);
+    const linksData = Object.values(jsonData.__collections__.Links)
+      .filter(link => {
+        if (!filterKeyword) return true; // If no filter is applied, return all data
+  
+        const allText = Object.values(link).reduce((acc, value) => {
+          return typeof value === 'string' ? acc + ' ' + value : acc;
+        }, '');
+  
+        return allText.includes(filterKeyword);
+      })
+      .map((link) => ({
+        title: link.name,
+        description: link.description || '',
+        url: link.url,
+        image: 'default.png',
+        category: link.category,
+        tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+        city: link.city,
+        country: link.country,
+        continent: link.continent
+      }))
+      .sort((a, b) => a.category.localeCompare(b.category));
+  
+    setFirebaseData(linksData);
+  }, [filterKeyword]); // Dependency array includes filterKeyword to re-run when it changes
+  
 
   return (
     <>
 
-      <Sidebar setData={setData} />
+      <Sidebar setData={setData} onSelectKeyword={setFilterKeyword} />
       {/* <SidebarNew setData={setData}/> */}
 
       <main className="flex min-h-screen flex-col items-center justify-between">
@@ -108,7 +120,7 @@ export default function Home() {
                     ):( null )} */}
                     {data && data.length > 0 ? (
                       <div id="table-view">
-                          <TableJson data={data} anchor="table-1" />
+                          <TableJson data={firebaseData} anchor="table-1" />
                       </div>
                     ):( null )}
                   </TabsContent>

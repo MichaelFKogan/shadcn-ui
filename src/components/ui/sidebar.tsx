@@ -15,7 +15,7 @@ import { instagram } from '../../data/socialmedia/instagram';
 import jsonData from '../../data/data.json';
   
 
-export function Sidebar({setData}) {
+export function Sidebar({setData, onSelectKeyword}) {
 
     return (
 
@@ -62,8 +62,8 @@ export function Sidebar({setData}) {
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mt-2 mb-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => setData(thailand)}>🇹🇭 Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => setData(bangkok)}>🛺 Bangkok</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
                                 <a className="city text-foreground-light block text-sm">🐘 Chiang Mai</a>
                                 <a className="city text-foreground-light block text-sm">🌊 Kho Phangan</a>
                                 <hr className="mt-2 mb-2"/>
@@ -132,7 +132,7 @@ export function Sidebar({setData}) {
                   <div className="categories">
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
-                    <a className="text-foreground-light block text-sm" onClick={() => setData(homepage)}>💯 All</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
                     {/* <a className="text-foreground-light block text-sm">💯 Featured</a> */}
                     <a className="text-foreground-light block text-sm font-medium">🗺 Travel</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#accomodation">🛌 Accomodation</a>
