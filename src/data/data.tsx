@@ -62,7 +62,7 @@ export const homepage = [
         description: "Book hostels and connect with travellers.",
         url: "https://www.hostelworld.com",
         image: "hostelworld.png",
-        category: "🛏 Hostels",
+        category: "🛌 Accomodation",
       },
     ],
   },

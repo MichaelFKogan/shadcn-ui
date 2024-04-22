@@ -7,7 +7,7 @@ export const thailand = [
                 description: "Grab is Southeast Asia's leading superapp. It provides everyday services like Deliveries, Mobility, Financial Services, and More.",
                 url: "https://www.grab.com/th/",
                 image: "grab.png",
-                category: "🛺 Bangkok",
+                category: "📱 Apps",
                 badge: "🚖 Taxi",
                 tag2: "🥡🚖 Food Delivery"
             },
@@ -16,7 +16,7 @@ export const thailand = [
                 description: "Messenger APP. New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!",
                 url: "https://line.me/en/",
                 image: "line.png",
-                category: "🛺 Bangkok",
+                category: "📱 Apps",
                 badge: "💬 Chat",
             },
             {
@@ -24,7 +24,7 @@ export const thailand = [
                 description: "From food delivery to your daily convenience companion. A subsidiary of Delivery Hero, foodpanda launched in Singapore in 2014 as a food delivery platform.",
                 url: "https://www.foodpanda.com/about-foodpanda/",
                 image: "foodpanda.png",
-                category: "🛺 Bangkok",
+                category: "📱 Apps",
                 badge: "🥡🚖 Food",
             },
         ],
@@ -42,30 +42,6 @@ export const thailand = [
         ],
     },
     {
-        heading: "🐘 Chiang Mai",
-        links: [
-            {
-                title: "",
-                description: "",
-                url: "",
-                image: "",
-                category: "",
-            },
-        ],
-    },
-    {
-        heading: "🏖 Kho Phangan",
-        links: [
-            {
-                title: "",
-                description: "",
-                url: "",
-                image: "",
-                category: "",
-            },
-        ],
-    },
-    {
         heading: "Facebook",
         links: [
             {
@@ -76,18 +52,11 @@ export const thailand = [
                 category: "🛂 Visa",
             },
             {
-                title: "r/ThailandTourism",
-                description: "Advice for Tourists coming to The Land Of Smiles. This is a subreddit where people can ask for advice about visiting Thailand, border crossings, hotels, what to see, what to do.",
-                url: "https://www.reddit.com/r/ThailandTourism/",
-                image: "redditthailand.png",
-                category: "🇹🇭 Thailand",
-            },
-            {
                 title: "Digital Nomad Coffee Club - Chiang Mai",
                 description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
                 url: "https://www.facebook.com/groups/nomadcoffee/",
                 image: "facebook.png",
-                category: "🇹🇭 Thailand",
+                category: "Facebook",
             },
         ],
     },
@@ -99,21 +68,21 @@ export const thailand = [
                 description: "The Thailand subreddit is a place where you can share links and content relating to Thailand.",
                 url: "https://www.reddit.com/r/Thailand/",
                 image: "redditthailand.png",
-                category: "🇹🇭 Thailand",
+                category: "Reddit",
             },
             {
                 title: "r/ThailandTourism",
                 description: "Advice for Tourists coming to The Land Of Smiles. This is a subreddit where people can ask for advice about visiting Thailand, border crossings, hotels, what to see, what to do.",
                 url: "https://www.reddit.com/r/ThailandTourism/",
                 image: "redditthailand.png",
-                category: "🇹🇭 Thailand",
+                category: "Reddit",
             },
             {
                 title: "r/ThaiJobs/",
                 description: "Expat Jobs in Thailand. Available jobs for expats in Thailand.",
                 url: "https://www.reddit.com/r/ThaiJobs/",
                 image: "reddit.png",
-                category: "🇹🇭 Thailand",
+                category: "Reddit",
             },
         ],
     },

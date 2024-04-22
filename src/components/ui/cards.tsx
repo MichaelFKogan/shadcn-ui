@@ -13,8 +13,8 @@ export function Cards({ data, anchor }) {
                     <a href={linkItem.url} target="_blank" key={linkIndex}>
                         <div className="card bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-4 py-4 shadow transition-all hover:shadow-lg">
                             {linkItem.badge ? <Badge variant="secondary" className="badge">{linkItem.badge}</Badge> : null}
-                            <div className="flex w-full space-x-6">
-                                <div className="relative h-[50px] min-w-[50px] w-[50px] rounded-md overflow-hidden scale-100 transition-all">
+                            <div className="flex w-full space-x-6" style={{alignItems: "center"}}>
+                                <div className="relative h-[65px] min-w-[65px] w-[65px] rounded-md overflow-hidden scale-100 transition-all">
                                     <img alt={linkItem.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={"/images/" + linkItem.image} />
                                 </div>
                                 <div className="card__text-wrapper">

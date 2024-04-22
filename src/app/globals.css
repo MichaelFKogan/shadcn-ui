@@ -98,7 +98,7 @@
 
   .sidebar-wrapper{
     z-index: 2 !important;
-    /* background-color: hsl(var(--muted)); */
+    background-color: hsl(var(--background));
   }
 
   .fixed-sidebar{

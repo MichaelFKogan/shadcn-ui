@@ -6,13 +6,13 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 
-  import {homepage} from '../../data/data'
-  import { thailand } from '../../data/thailand/thailand';
-  
-  import { bangkok } from '../../data/thailand/bangkok';
+import {homepage} from '../../data/data'
+import { thailand } from '../../data/thailand/thailand';
+import { bangkok } from '../../data/thailand/bangkok';
+import { instagram } from '../../data/socialmedia/instagram';
 
-  import { instagram } from '../../data/socialmedia/instagram';
-
+// Import the JSON data directly
+import jsonData from '../../data/data.json';
   
 
 export function Sidebar({setData}) {
@@ -55,7 +55,7 @@ export function Sidebar({setData}) {
                 </div> */}
 
                 <div className="hidden lg:block">
-                  <h2 className="countries-title text-foreground-lighter mb-2 text-sm">Countries</h2>
+                  <h2 className="countries-title text-foreground-lighter mb-2 text-sm border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
@@ -128,17 +128,18 @@ export function Sidebar({setData}) {
 
 
                 <div className="hidden lg:block">
-                  <h2 className="categories-title text-foreground-lighter mb-2 text-sm">Categories</h2>
+                  <h2 className="categories-title text-foreground-lighter mb-2 text-sm border-b-2">Categories</h2>
                   <div className="categories">
 
-                  <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm border-b-2">Essentials</h2>
-                    {/* <a className="text-foreground-light block text-sm" href="#featured">💯 Featured</a> */}
-                    <a className="text-foreground-light block text-sm font-medium" href="#travel">🗺 Travel</a>
+                  {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
+                    <a className="text-foreground-light block text-sm" onClick={() => setData(homepage)}>💯 All</a>
+                    {/* <a className="text-foreground-light block text-sm">💯 Featured</a> */}
+                    <a className="text-foreground-light block text-sm font-medium">🗺 Travel</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#accomodation">🛌 Accomodation</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#healthinsurance">😷 Health Insurance</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#visa">🛂 Visa</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm border-b-2">Social Media</h2>
+                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Social Media</h2> */}
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => setData(instagram)}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
                     <a className="text-foreground-light block text-sm font-medium" href="#tiktok"><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
                     <a className="text-foreground-light block text-sm font-medium" href="#youtube"><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
@@ -146,7 +147,7 @@ export function Sidebar({setData}) {
                     <a className="text-foreground-light block text-sm font-medium" href="#vlog">📹 Vlog</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#blog">✍️ Blog</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm border-b-2">Work</h2>
+                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Work</h2> */}
                     <a className="text-foreground-light block text-sm font-medium" href="#work">👔 Work</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#englishteaching">🔤 English Teaching</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#finance">💵 Finance</a>
@@ -154,6 +155,16 @@ export function Sidebar({setData}) {
 
                     <a className="text-foreground-light block text-sm font-medium" href="#apps">📱 Apps</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#blog">⌚️ Products</a>
+
+                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Lifestyle</h2> */}
+                    <a className="text-foreground-light block text-sm font-medium" href="#work">Van Life</a>
+                    <a className="text-foreground-light block text-sm font-medium" href="#englishteaching">Solo Travel</a>
+                    <a className="text-foreground-light block text-sm font-medium" href="#finance">Expat</a>
+                    <a className="text-foreground-light block text-sm font-medium" href="#productivity">Couple</a>
+
+                    <a className="text-foreground-light block text-sm font-medium" href="#apps">Expat</a>
+                    <a className="text-foreground-light block text-sm font-medium" href="#blog">Backpacker</a>
+
                   </div>
                 </div>
 

@@ -1,0 +1,743 @@
+{
+    "__collections__": {
+        "Links": {
+            "0KI74dSlSNh0HJOea1q5": {
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705210120,
+                        "_nanoseconds": 556000000
+                    }
+                },
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Grab",
+                "rank": "",
+                "votes": "",
+                "url": "https://www.grab.com/th/",
+                "tags": [
+                    "🚖 Taxi",
+                    "🥡🛵 Food Delivery"
+                ],
+                "country": "🇹🇭 Thailand",
+                "category": "📱 Apps",
+                "city": "🛺 Bangkok",
+                "continent": "⛩ Asia",
+                "__collections__": {}
+            },
+            "0nuxgMVvK2zoIeIqKuZH": {
+                "country": "",
+                "city": "",
+                "name": "Hoodmaps",
+                "rank": "",
+                "description": "Hoodmaps is a crowdsourced map to navigate citie based on hipsters, tourists, rich, normies, suits and uni areas.",
+                "url": "https://hoodmaps.com/",
+                "tags": "",
+                "category": "🗺 Maps",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "17ZOoOVgNuzeVH4Rr37K": {
+                "name": "Tropical Nomad Coworking Space",
+                "rank": "",
+                "description": "Tropical Nomad is a co-working community of professionals, creatives and artists located in the heart of Canggu, Bali.",
+                "tags": "",
+                "url": "https://www.tropicalnomad.org",
+                "votes": 100,
+                "city": "🏝 Bali",
+                "country": "🇮🇩 Indonesia",
+                "category": "👨‍💻👩‍💻 Coworking",
+                "continent": "⛩ Asia",
+                "__collections__": {}
+            },
+            "2CtRBSfW6M7iH5rDuEsL": {
+                "name": "Bangkok Expats",
+                "rank": "",
+                "description": "BANGKOK EXPATS is a group for people who live in, are visiting or just love Bangkok.",
+                "category": "Facebook Group",
+                "url": "https://www.facebook.com/groups/bkexpats.kc/",
+                "tags": [
+                    "🧍‍♂️Expat"
+                ],
+                "city": "🛺 Bangkok",
+                "country": "🇹🇭 Thailand",
+                "continent": "⛩ Asia",
+                "__collections__": {}
+            },
+            "2HDoiWJecHrSWyC2rv5y": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705693393,
+                        "_nanoseconds": 61000000
+                    }
+                },
+                "country": "🇭🇰 Hong Kong",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "@discoverhongkong",
+                "rank": "",
+                "description": "Hello, Hong Kong! Check this out for great deals and itineraries! 旅遊．就在香港！即睇最新玩樂情報同優惠資訊！#DiscoverHongKong",
+                "votes": "",
+                "category": "Instagram",
+                "url": "https://www.instagram.com/discoverhongkong/?hl=en",
+                "tags": [],
+                "__collections__": {}
+            },
+            "3Itjj65W3yuupDUBu4Vd": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705458683,
+                        "_nanoseconds": 622000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "🐘 Chiang Mai",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "rank": "",
+                "description": "Chiang Mai, Thailand. The hidden Jewel of Southeast Asia. The Rose of the North. Situated in the mountainous region of Northern Thailand, expat residents of Chiang Mai enjoy more temperate weather and a relaxed lifestyle not much different from back home. Come along and join the discussion about the beautiful sites to see, great food and other pleasantries on offer here in this lovely corner of the world!",
+                "votes": "",
+                "category": "Reddit",
+                "url": "https://www.reddit.com/r/chiangmai/",
+                "tags": [],
+                "name": "r/chiangmai",
+                "__collections__": {}
+            },
+            "3pnSjHm6izS6CMiPCzdF": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705938851,
+                        "_nanoseconds": 412000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Google Flights",
+                "rank": "",
+                "description": "Use Google Flights to explore cheap flights to anywhere. Search destinations and track prices to find and book your next flight.",
+                "votes": "",
+                "category": "✈️ Flights",
+                "url": "https://www.google.com/travel/flights",
+                "tags": [],
+                "__collections__": {}
+            },
+            "5zpb0S4TwrJ6ZWzSxhIU": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705277569,
+                        "_nanoseconds": 790000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "r/Thailand",
+                "rank": "",
+                "description": "The home of Thailand on Reddit.",
+                "votes": "",
+                "category": "Reddit",
+                "url": "https://www.reddit.com/r/Thailand/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "6uhlhcadpbO3c4Yf8s3Q": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705939024,
+                        "_nanoseconds": 89000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "World Nomads",
+                "rank": "",
+                "description": "Travel insurance for independent travellers from more than 130+ countries. Buy, extend & claim online. 24hr worldwide assistance.",
+                "votes": "",
+                "category": "😷 Health Insurance",
+                "url": "https://www.worldnomads.com/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "8wyR71fgiBJluXe64fCT": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705515767,
+                        "_nanoseconds": 153000000
+                    }
+                },
+                "country": "🇮🇩 Indonesia",
+                "city": "🏝 Bali",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Haiku Academy",
+                "rank": "",
+                "votes": "",
+                "url": "https://www.haikuacademy.com/",
+                "description": "10-week web programming course in Thailand or Bali. Learn to Code in Paradise.",
+                "tags": [
+                    "🖥 Coding"
+                ],
+                "category": "📘 Course",
+                "__collections__": {}
+            },
+            "BMQUhIju1RFQLCogbjDV": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705280659,
+                        "_nanoseconds": 835000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Google Translate",
+                "rank": "",
+                "description": "Google's service, offered free of charge, instantly translates words, phrases, and web pages between English and over 100 other languages.",
+                "votes": "",
+                "category": "📱 Apps",
+                "url": "https://translate.google.com/",
+                "tags": [
+                    "🗣 Language Learning"
+                ],
+                "__collections__": {}
+            },
+            "EbcigKwR1KEthSu7fTeN": {
+                "country": "",
+                "website": "https://nomadlist.com/",
+                "city": "",
+                "name": "Nomad List",
+                "description": "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker. Explore places based on cost of living, internet speed, weather and other metrics. For startups that work remotely and remote workers.",
+                "tags": "Travel",
+                "rank": 2,
+                "category": "📍 Places",
+                "url": "https://nomadlist.com/",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "FnDxt7ik11v3noFRMNVU": {
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705244886,
+                        "_nanoseconds": 744000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Remote OK",
+                "rank": "",
+                "description": "Looking for a remote job? Remote OK® is the #1 Remote Job Board and has 578,680+ remote jobs as a Developer, Designer, Copywriter, Customer Support Rep, Sales Professional, Project Manager and more! Find a career where you can work remotely from anywhere.",
+                "votes": "",
+                "url": "https://remoteok.com/",
+                "category": "👔 Jobs",
+                "tags": [
+                    "🔍 Job Search",
+                    "📋 Job Board",
+                    "💻 Remote Work"
+                ],
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "HBTP2WzV3maVISpPyW5h": {
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705208966,
+                        "_nanoseconds": 774000000
+                    }
+                },
+                "addedBy": null,
+                "name": "Line",
+                "rank": "",
+                "votes": "",
+                "url": "https://line.me/en/",
+                "tags": [
+                    "💬 Chat"
+                ],
+                "category": "📱 Apps",
+                "country": "🇹🇭 Thailand",
+                "city": "🛺 Bangkok",
+                "continent": "⛩ Asia",
+                "__collections__": {}
+            },
+            "IuPNsF4UyDvEFimbYJiC": {
+                "continent": "🌏 Worldwide",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705514135,
+                        "_nanoseconds": 994000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Worldpackers",
+                "rank": "",
+                "description": "Volunteer experiences in over 100 countries, Programs for Travelers, and Content made by a community of 5.1 million travelers and hosts.",
+                "votes": "",
+                "category": "💼 Work Exchange",
+                "url": "https://www.worldpackers.com/",
+                "tags": [
+                    "🤝 Volunteer"
+                ],
+                "__collections__": {}
+            },
+            "Lvb4OVKloTp3f0MiFzvh": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705276797,
+                        "_nanoseconds": 351000000
+                    }
+                },
+                "country": "🇮🇩 Indonesia",
+                "city": "🏝 Bali",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Outpost",
+                "rank": "",
+                "description": "Outpost is a network of coliving, coworking and social spaces where digital nomads and creatives go to meet, share ideas and travel together.",
+                "votes": "",
+                "category": "👨‍💻👩‍💻 Coworking",
+                "url": "https://destinationoutpost.co/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "N82CAHOwON0Fd66TQwoz": {
+                "continent": "🌏 Worldwide",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705853130,
+                        "_nanoseconds": 276000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Google Flights",
+                "rank": "",
+                "votes": "",
+                "category": "✈️ Flights",
+                "url": "https://www.google.com/travel/flights",
+                "tags": [],
+                "__collections__": {}
+            },
+            "Pu389DVG9N1KN1BPRduS": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705458603,
+                        "_nanoseconds": 441000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "🐘 Chiang Mai",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Co-working spaces in Chiang Mai",
+                "rank": "",
+                "description": "What are some good co-working spaces here? Preferably a place where I can meet and mingle with some digital nomads.",
+                "votes": "",
+                "category": "👨‍💻👩‍💻 Coworking",
+                "url": "https://www.reddit.com/r/chiangmai/comments/15kjz9p/coworking_spaces_in_chiang_mai/",
+                "tags": [
+                    "Reddit",
+                    "💬 Forum"
+                ],
+                "__collections__": {}
+            },
+            "QgCJ8gIOeYe89bgvahP0": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705279734,
+                        "_nanoseconds": 779000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "🛺 Bangkok",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "r/Bangkok",
+                "rank": "",
+                "description": "This sub-reddit is an english language friendly discussion forum focusing on life for living in Bangkok, as well as any other Bangkok related content. If you are looking for a large Thai only speaking community we recommend /r/thaithai Hope you enjoy the sub. Please read the rules, remember to talk to people nicely, and try to be there for each other.",
+                "votes": "",
+                "category": "Reddit",
+                "url": "https://www.reddit.com/r/Bangkok/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "UrG6Dj73larCelsZL6Vt": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705302949,
+                        "_nanoseconds": 708000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "@christabellatravels",
+                "rank": "",
+                "votes": "",
+                "category": "TikTok",
+                "url": "https://www.tiktok.com/@christabellatravels",
+                "tags": [],
+                "description": "Learn how to travel the 🌎while making $ doing work you ❤️! free training👇🏻.Watch the latest video from Christa👩🏼‍💻✈️ Digital Nomad (@christabellatravels).",
+                "__collections__": {}
+            },
+            "X8xUyk4xAugvuj4nHOJO": {
+                "country": "",
+                "city": "",
+                "name": "Google Maps",
+                "tags": "",
+                "rank": 1,
+                "category": "🗺 Maps",
+                "url": "https://www.google.com/maps",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "Ye2YCjpd3s5f5oIxu5EU": {
+                "name": "Digital Nomad Coffee Club - Chiang Mai",
+                "description": "Weekly Coffee Meetup for Digital Nomads in Chiang Mai. Featuring Guest Speakers, Live Q&A's and Networking. Meet other digital nomads, expats, entrepreneurs, travelers, even english teachers, everyone's invited.",
+                "city": "🐘 Chiang Mai",
+                "country": "🇹🇭 Thailand",
+                "rank": 6,
+                "url": "https://www.facebook.com/groups/nomadcoffee/",
+                "continent": "⛩ Asia",
+                "category": "Facebook Group",
+                "tags": [
+                    "👨‍💻 Digital Nomad"
+                ],
+                "__collections__": {}
+            },
+            "YfztPCsp61qGJTQnUVnh": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705915119,
+                        "_nanoseconds": 46000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Thai Visa Advice",
+                "rank": "",
+                "description": "Welcome to Thai Visa Advice.\nA group set up to help and advise members with questions about Visas or Extensions of Stay\nto stay inside Thailand. This help and advice can be given by all members with their own knowledge or experience.",
+                "votes": "",
+                "category": "🛂 Visa",
+                "url": "https://www.facebook.com/groups/1395920320731833",
+                "tags": [
+                    "Facebook Group"
+                ],
+                "__collections__": {}
+            },
+            "Ze9hIjJ1BDhMg9imUav0": {
+                "country": "",
+                "city": "",
+                "name": "AirBNB",
+                "description": "Find the perfect place to stay at an amazing price in 191 countries. Belong anywhere with Airbnb.",
+                "rank": 3,
+                "category": "🏠 Accomodation",
+                "url": "https://www.airbnb.com",
+                "continent": "🌎 Worldwide",
+                "tags": [
+                    "🛌 Apartment",
+                    "🏠 Home",
+                    "🏨 Hotels",
+                    "🛏 Hostels"
+                ],
+                "__collections__": {}
+            },
+            "aBSEpXLs0WgxqMlQADnZ": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705516064,
+                        "_nanoseconds": 757000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "layla | solo female travel",
+                "rank": "",
+                "votes": "",
+                "category": "TikTok",
+                "url": "https://www.tiktok.com/@laylaloutfi",
+                "tags": [
+                    "🧍Solo"
+                ],
+                "__collections__": {}
+            },
+            "hdQpqMNyDGBIcldvgbP4": {
+                "continent": "",
+                "country": "",
+                "city": "",
+                "name": "Things you may not know about Teaching English (ESL) Online...but need to know",
+                "description": "I've been a Teacher/Recruiter for Qkids, for over 1 year. And during this time I've learned a lot about the Online ESL Industry, and various Online ESL Companies. Hopefully this information will help you make an informative decision, as to which company may be a good fit for you. ",
+                "rank": 5,
+                "tags": [
+                    "📄 Articles"
+                ],
+                "url": "https://www.reddit.com/r/OnlineESLTeaching/comments/btp68l/things_you_may_not_know_about_teaching_english/",
+                "category": "👩‍🏫 English Teaching",
+                "__collections__": {}
+            },
+            "iZgYPHjVSLaems3X6Q4L": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705915047,
+                        "_nanoseconds": 711000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "@digital_bromad",
+                "rank": "",
+                "description": "Want travel buddies or remote work DM me on IG for community discord link.",
+                "votes": "",
+                "category": "TikTok",
+                "url": "https://www.tiktok.com/@digital_bromad",
+                "tags": [
+                    "👨‍💻 Digital Nomad"
+                ],
+                "__collections__": {}
+            },
+            "kvBqvaIo2HunrR96z5pN": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705938958,
+                        "_nanoseconds": 658000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Safety Wing",
+                "rank": "",
+                "description": "Health and insurance products for remote companies and remote workers worldwide, as a replacement for national welfare systems.",
+                "votes": "",
+                "category": "😷 Health Insurance",
+                "url": "https://safetywing.com/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "lGNN2lCxB3eK0D0RUAjm": {
+                "continent": "⛩️ Asia ",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705458477,
+                        "_nanoseconds": 706000000
+                    }
+                },
+                "country": "🇹🇭 Thailand",
+                "city": "🐘 Chiang Mai",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Punspace Tha Phae Gate",
+                "rank": "",
+                "description": "Two convenient locations at the heart of Chiang Mai, Thailand. Discover your perfect professional home with our communal workspaces.",
+                "votes": "",
+                "category": "👨‍💻👩‍💻 Coworking",
+                "url": "https://www.punspace.com/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "mgErDxUoFsyYPHXUkCL6": {
+                "continent": "🌏 Worldwide",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705280345,
+                        "_nanoseconds": 968000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Nomadic Matt",
+                "rank": "",
+                "votes": "",
+                "category": "📝 Blog",
+                "url": "https://www.nomadicmatt.com/",
+                "tags": [],
+                "description": "Get the budget travel tips you need to travel cheaper, better, and smarter today from the world's #1 budget travel writer!",
+                "__collections__": {}
+            },
+            "tWSt9vltDjcHv3aX8M51": {
+                "country": "",
+                "city": "",
+                "name": "Booking.com",
+                "rank": 4,
+                "category": "🏠 Accomodation",
+                "url": "https://www.booking.com",
+                "continent": "🌎 Worldwide",
+                "tags": [
+                    "🏨 Hotels",
+                    "🛏 Hostels"
+                ],
+                "__collections__": {}
+            },
+            "v7jpJtqXUM6t9eHsmt3s": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705277451,
+                        "_nanoseconds": 522000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "r/digitalnomad",
+                "rank": "",
+                "description": "r/digitalnomad: Digital Nomads are individuals that leverage technology in order to work remotely and live an independent and nomadic lifestyle.",
+                "votes": "",
+                "category": "Reddit",
+                "url": "https://www.reddit.com/r/digitalnomad/",
+                "tags": [
+                    "👨‍💻 Digital Nomad"
+                ],
+                "__collections__": {}
+            },
+            "yC673v5NFwGXFn6RtMbX": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705475282,
+                        "_nanoseconds": 845000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Digital Nomad Quest",
+                "rank": "",
+                "votes": "",
+                "category": "📝 Blog",
+                "url": "https://digitalnomadquest.com/",
+                "description": "Helping you become financially free. I'll teach you how to build passive income, become financially free, and design your best life!",
+                "tags": [
+                    "💵 Finance",
+                    "🏝 Escape 9-5"
+                ],
+                "__collections__": {}
+            },
+            "z8K7DTgbd8cXVzuPgo8Y": {
+                "name": "Chris The Freelancer",
+                "description": "The travel and lifestyle channel of location-independent web developer, Chris the Freelancer. ",
+                "category": "YouTube",
+                "rank": 6,
+                "city": "🏝 Bali",
+                "country": "🇮🇩 Indonesia",
+                "url": "https://www.youtube.com/channel/UCbxtV_oVIXBtLRmyPfcLKVg",
+                "continent": "⛩ Asia",
+                "tags": [
+                    "👨‍💻 Digital Nomad",
+                    "📹 Vlog",
+                    "🖥 Coding",
+                    "💰 Side Hustle"
+                ],
+                "__collections__": {}
+            }
+        }
+    }
+}

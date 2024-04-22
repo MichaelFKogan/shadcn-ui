@@ -1,6 +1,6 @@
 // src/app/page.tsx
 'use client'
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { allData, travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/dataExtension';
 import {homepage} from '../data/data'
 import {thailand} from '../data/thailand/thailand'
+
+// Import the JSON data directly
+import jsonData from '../data/data.json';
 
 
 export default function Home() {
@@ -90,7 +93,7 @@ export default function Home() {
               </div> */}
 
                 <div style={{ textAlign: "center", marginTop: "20px" }}>
-                  <Button variant="secondary">See All</Button>
+                  {/* <Button variant="secondary">See All</Button> */}
                 </div>
 
               </div>
