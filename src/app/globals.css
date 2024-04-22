@@ -128,53 +128,6 @@
     /* display: none; */
   }
 
-  .countries-title, .categories-title{
-    /* padding: 0rem 1.75rem; */
-    margin-left: 1.75rem;
-    margin-right: 1.75rem
-  }
-
-  .countries a, .categories a, .accordion a, .accordion button{
-    padding: .25rem 1rem;
-    margin: 0rem .75rem;
-    border-radius: .375rem;
-  }
-
-  .accordion .city, .categories-accordion a{
-    padding-left: 1rem !important;
-  }
-
-  .countries-accordion .accordion-hr{
-    display: none;
-  }
-
-  .countries-accordion [data-state="open"].border-b{
-    padding-bottom: .5rem;
-  }
-
-  .categories-accordion{
-    margin-top: 0px !important;
-  }
-
-  .accordion a:hover, .categories a:hover, .accordion button:hover{
-    background: hsl(var(--muted));
-  }
-
-  .categories-accordion [data-state="closed"] hr{
-    display: none;
-  }
-
-  .city{
-    /* --tw-text-opacity: 1;
-    color: rgba(55, 65, 81, var(--tw-text-opacity)); */
-  }
-
-  .accordion-logo{
-    max-width: 15px;
-    height: max-content;
-    margin-right: .25rem;
-  }
-
   .line-clamp-4{
     -webkit-line-clamp: 3;
   }

@@ -5,6 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+  import '../styles/sidebar.css'
 
 import {homepage} from '../../data/data'
 import { thailand } from '../../data/thailand/thailand';
@@ -54,6 +55,8 @@ export function Sidebar({setData, onSelectKeyword}) {
                   </div>
                 </div> */}
 
+                <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
+
                 <div className="hidden lg:block">
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
@@ -64,8 +67,8 @@ export function Sidebar({setData, onSelectKeyword}) {
                                 <hr className="mt-2 mb-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
-                                <a className="city text-foreground-light block text-sm">🐘 Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm">🌊 Kho Phangan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Chiang Mai')}>🐘 Chiang Mai</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kho Phangan')}>🌊 Kho Phangan</a>
                                 <hr className="mt-2 mb-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/japan">🇯🇵 Japan</a>
                                 <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
@@ -132,7 +135,6 @@ export function Sidebar({setData, onSelectKeyword}) {
                   <div className="categories">
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
-                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
                     {/* <a className="text-foreground-light block text-sm">💯 Featured</a> */}
                     <a className="text-foreground-light block text-sm font-medium">🗺 Travel</a>
                     <a className="text-foreground-light block text-sm font-medium" href="#accomodation">🛌 Accomodation</a>

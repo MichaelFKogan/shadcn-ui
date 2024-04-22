@@ -30,6 +30,7 @@ export default function Home() {
   const [data, setData] = useState(homepage);
   const [firebaseData, setFirebaseData] = useState([]);
   const [filterKeyword, setFilterKeyword] = useState('');
+  const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 
   useEffect(() => {
     const linksData = Object.values(jsonData.__collections__.Links)
@@ -58,11 +59,21 @@ export default function Home() {
     setFirebaseData(linksData);
   }, [filterKeyword]); // Dependency array includes filterKeyword to re-run when it changes
   
+    // Function to handle keyword selection
+    const handleKeywordSelection = (keyword) => {
+      console.log(keyword)
+      if (keyword === lastKeyword) {
+        setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
+      } else {
+        setFilterKeyword(keyword);
+      }
+      setLastKeyword(keyword); // Update the last keyword
+    };
 
   return (
     <>
 
-      <Sidebar setData={setData} onSelectKeyword={setFilterKeyword} />
+      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} />
       {/* <SidebarNew setData={setData}/> */}
 
       <main className="flex min-h-screen flex-col items-center justify-between">
@@ -85,6 +96,7 @@ export default function Home() {
                     <TabsTrigger value="list">List</TabsTrigger>
                     <TabsTrigger value="table">Table</TabsTrigger>
                   </TabsList>
+                  <Button className="ml-2" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button>
 
                   <TabsContent value="cards">
                     <div id="card-view">
@@ -120,7 +132,7 @@ export default function Home() {
                     ):( null )} */}
                     {data && data.length > 0 ? (
                       <div id="table-view">
-                          <TableJson data={firebaseData} anchor="table-1" />
+                          <TableJson data={firebaseData} anchor="table-1" onSelectKeyword={handleKeywordSelection} />
                       </div>
                     ):( null )}
                   </TabsContent>

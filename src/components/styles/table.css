@@ -46,7 +46,7 @@ th:first-child, td:first-child {
 .table-resize{
     cursor: col-resize;
     background-color: hsl(var(--input));
-    width: 10px;
+    width: 5px;
     height: 100%;
     position: absolute;
     right: 0px;
@@ -65,11 +65,15 @@ th, .title, .category, .tags, .city, .country, .continent, .description{
     overflow: hidden;
 }
 
-.category div{
+.category div, .tags div{
     cursor: pointer;
 }
 
-.ttable-container .city, .table-container .country, .table-container .continent{
+.city a:hover, .country a:hover, .continent a:hover{
+    color: aqua;
+}
+
+.table-container .city, .table-container .country, .table-container .continent{
     text-align: right;
 }
 
