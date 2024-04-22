@@ -1,4 +1,4 @@
-// src/components/ui/table.tsx
+// src/components/ui/tablejson.tsx
 
 import { useState, useMemo } from 'react';
 import { Badge } from "@/components/ui/badge";
@@ -26,55 +26,56 @@ const columns = [
         id: 'title',
         header: 'Title',
         cell: info => (
-            <a href={info.row.original.url} target="_blank" className="list__link" style={{ alignItems: "center", display: "flex" }}>
+            <>
                 <div className="relative h-[22px] min-w-[22px] w-[22px] rounded-md overflow-hidden scale-100 transition-all">
-                    <img src={`/images/${info.row.original.image}`} alt={info.row.original.title} loading="lazy" decoding="async" className="bg-surface-100" sizes="100vw" style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}/>
+                    
                 </div>
                 <div className="link__text-wrapper">
-                    <h3 className="text-foreground-light group-hover:text-foreground mb-0 text-sm font-medium transition-colors">{info.row.original.title}</h3>
+                    <h3 className="text-foreground-light group-hover:text-foreground mb-0 text-sm font-medium transition-colors">{info.row.original ? info.row.original.title : 'Default Title'}</h3>
                 </div>
-            </a>
+            </>
         ),
     }),
     columnHelper.accessor('category', {
         header: 'Category',
-        cell: info => (<div className="category text-sm"><Badge variant="secondary">{info.row.original.category}</Badge></div>),
+        cell: info => (<div className="category text-sm"><Badge variant="secondary">{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
     }),
-    columnHelper.accessor('tags', {
-        header: 'Tags',
-        cell: info => (<div className="tags text-sm">{info.row.original.tags}</div>),
-    }),
-    columnHelper.accessor('city', {
-        header: 'City',
-        cell: info => (<div className="city text-sm">{info.row.original.city}</div>),
-        size: 100,
-    }),
-    columnHelper.accessor('country', {
-        id: 'country',
-        header: 'Country',
-        cell: info => (<div className="country text-sm">{info.row.original.country}</div>),
-        size: 100,
-    }),
-    columnHelper.accessor('continent', {
-        header: 'Continent',
-        cell: info => (<div className="continent text-sm">{info.row.original.continent}</div>),
-        size: 100,
-    }),
-        columnHelper.accessor('description', {
-        id: 'description',
-        header: 'Description',
-        cell: info => (<div className="description text-xs">{info.row.original.description}</div>),
-        size: 300,
-    }),
+    // columnHelper.accessor('tags', {
+    //     header: 'Tags',
+    //     cell: info => (<div className="tags text-sm">{info.row.original.tags}</div>),
+    // }),
+    // columnHelper.accessor('city', {
+    //     header: 'City',
+    //     cell: info => (<div className="city text-sm">{info.row.original.city}</div>),
+    //     size: 100,
+    // }),
+    // columnHelper.accessor('country', {
+    //     id: 'country',
+    //     header: 'Country',
+    //     cell: info => (<div className="country text-sm">{info.row.original.country}</div>),
+    //     size: 100,
+    // }),
+    // columnHelper.accessor('continent', {
+    //     header: 'Continent',
+    //     cell: info => (<div className="continent text-sm">{info.row.original.continent}</div>),
+    //     size: 100,
+    // }),
+    //     columnHelper.accessor('description', {
+    //     id: 'description',
+    //     header: 'Description',
+    //     cell: info => (<div className="description text-xs">{info.row.original.description}</div>),
+    //     size: 300,
+    // }),
 ];
 
-export function Table({ data, anchor }) {
+export function TableJson({ data, anchor }) {
     // Use useMemo to ensure data has a stable reference
     // const stableData = useMemo(() => data.links, [data.links]);
 
-    const allLinks = useMemo(() => {
-        return data.reduce((acc, section) => acc.concat(section.links), []);
-    }, [data]);
+    // const allLinks = useMemo(() => {
+    //     return data.reduce((acc, section) => acc.concat(section.links), []);
+    // }, [data]);
+    const allLinks = useMemo(() => data, [data]);
 
     // Create the table instance
     const table = useReactTable({

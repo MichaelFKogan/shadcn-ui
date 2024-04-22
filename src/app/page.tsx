@@ -1,12 +1,16 @@
 // src/app/page.tsx
 'use client'
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
+
 import { Cards } from "@/components/ui/cards";
 import { List } from "@/components/ui/list";
 import { Table } from "@/components/ui/table";
+import { CardsJson } from "@/components/ui/cardsjson";
+import { ListJson } from "@/components/ui/listjson";
+import { TableJson } from "@/components/ui/tablejson";
 
 import { CardExtension } from "@/components/ui/cardextension";
 import { Sidebar } from "@/components/ui/sidebar";
@@ -24,6 +28,24 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
   const [data, setData] = useState(homepage);
+  // const [firebaseData, setFirebaseData] = useState(jsonData);
+  // const [links, setLinks] = useState(Object.values(jsonData.__collections__.Links).sort((a, b) => a.category.localeCompare(b.category)));
+
+  useEffect(() => {
+    const linksData = Object.values(jsonData.__collections__.Links).map((link) => ({
+      title: link.name,
+      description: link.description || '',
+      url: link.url,
+      image: 'default.png',  // Assuming a default image; replace or modify as needed
+      category: link.category,
+      tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+      city: link.city,
+      country: link.country,
+      continent: link.continent
+    })).sort((a, b) => a.category.localeCompare(b.category));
+
+    setData(linksData);
+  }, []);
 
   return (
     <>
@@ -54,9 +76,12 @@ export default function Home() {
 
                   <TabsContent value="cards">
                     <div id="card-view">
-                      {data.map((item, index) => (
+                      {/* {data.map((item, index) => (
                         <Cards key={index} data={item} anchor={`data-${index}`} />
-                      ))}  
+                      ))}   */}
+                      {/* {data.map((item, index) => (
+                        <CardsJson key={index} data={item} anchor={`data-${index}`} />
+                      ))}   */}
                   </div>
                   </TabsContent>
 
@@ -64,18 +89,28 @@ export default function Home() {
                     <div id="list-view">
                       <div className="list-row space-y-8">
                         <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> 
-                          {data.map((item, index) => (
+                          {/* {data.map((item, index) => (
                             <List key={index} data={item} anchor={`data-${index}`} />
-                          ))}  
+                          ))}   */}
+                          {/* {data.map((item, index) => (
+                            <ListJson key={index} data={item} anchor={`data-${index}`} />
+                          ))}   */}
                         </div>
                       </div>
                    </div>
                   </TabsContent>
 
                   <TabsContent value="table">
-                    <div id="table-view">
-                        <Table data={data} anchor="table-1" />
-                    </div>
+                    {/* {data && data.length > 0 ? (
+                      <div id="table-view">
+                          <Table data={data} anchor="table-1" />
+                      </div>
+                    ):( null )} */}
+                    {data && data.length > 0 ? (
+                      <div id="table-view">
+                          <TableJson data={data} anchor="table-1" />
+                      </div>
+                    ):( null )}
                   </TabsContent>
                   
                 </Tabs>
