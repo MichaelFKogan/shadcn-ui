@@ -30,7 +30,8 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
   const [data, setData] = useState(homepage);
-  const [firebaseData, setFirebaseData] = useState([]);
+  const [cardsData, setCardsData] = useState([]);
+  const [tableData, setTableData] = useState([]);
   const [filterKeyword, setFilterKeyword] = useState('');
   const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 
@@ -65,7 +66,7 @@ export default function Home() {
       }))
       .sort((a, b) => a.category.localeCompare(b.category));
 
-    setFirebaseData(linksData);
+    setTableData(linksData);
   }, [filterKeyword]); // Dependency array includes filterKeyword to re-run when it changes
 
 
@@ -94,8 +95,8 @@ export default function Home() {
     });
 
     // Sort categories alphabetically and update the state
-    setFirebaseData(Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB)));
-}, [jsonData]); // Ensure dependency on jsonData to recompute on data change
+    setCardsData(Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB)));
+}, [filterKeyword]); // Ensure dependency on jsonData to recompute on data change
 
 
 
@@ -186,8 +187,8 @@ export default function Home() {
                       {/* {data.map((item, index) => (
                         <Cards key={index} data={item} anchor={`data-${index}`} />
                       ))} */}
-                        {firebaseData && firebaseData.length > 0 ? (
-                            <CardsJson data={firebaseData} />
+                        {cardsData && cardsData.length > 0 ? (
+                            <CardsJson data={cardsData} />
                         ) : (null)}
                     </div>
                   </TabsContent>
@@ -196,12 +197,12 @@ export default function Home() {
                     <div id="list-view">
                       <div className="list-row space-y-8">
                         <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                          {data.map((item, index) => (
-                            <List key={index} data={item} anchor={`data-${index}`} />
-                          ))}
                           {/* {data.map((item, index) => (
-                            <ListJson key={index} data={item} anchor={`data-${index}`} />
-                          ))}   */}
+                            <List key={index} data={item} anchor={`data-${index}`} />
+                          ))} */}
+                          {cardsData && cardsData.length > 0 ? (
+                            <ListJson data={cardsData}  />
+                          ) : (null)}
                         </div>
                       </div>
                     </div>
@@ -213,9 +214,9 @@ export default function Home() {
                           <Table data={data} anchor="table-1" />
                       </div>
                     ):( null )} */}
-                    {firebaseData && firebaseData.length > 0 ? (
+                    {tableData && tableData.length > 0 ? (
                       <div id="table-view">
-                        <TableJson data={firebaseData} anchor="table-1" onSelectKeyword={handleKeywordSelection} />
+                        <TableJson data={tableData} anchor="table-1" onSelectKeyword={handleKeywordSelection} />
                       </div>
                     ) : (null)}
                   </TabsContent>
