@@ -5,17 +5,18 @@ import '../styles/cards.css'
 
 export function CardsJson({ data }) {
     return (
-
-        <div className="card-row">
+        <>
+        {/* <div className="card-row"> */}
+        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-2">
 
             {data.map(([category, links]) => (
                 <>
-                    <h2 key={category} id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="cards-heading h2 section-title mb-1 mt-4">
+                    {/* <h2 key={category} id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="cards-heading h2 section-title mb-1 mt-4">
                         {category.headingImage && (<img src={"/images/" + category.headingImage} className="section-title__img" />)}
                         {category}
-                    </h2>
+                    </h2> */}
 
-                    <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-2">
+                    {/* <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-2"> */}
 
                         {links.map((item, index) => {
 
@@ -76,10 +77,11 @@ export function CardsJson({ data }) {
                             );
                         })}
 
-                    </div>
+                    {/* </div> */}
                 </>
             ))}
-
+        {/* </div> */}
         </div>
+        </>
     );
 }
