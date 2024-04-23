@@ -2,8 +2,13 @@
     margin-top: 1.25rem !important;
   }
 
+/* Undoing the website settings */
 .space-y-8 > :not([hidden]) ~ :not([hidden]){
     margin-top: 0px !important; 
+}
+
+.cards-heading{
+    margin-top: 1rem !important;
 }
 
 .section-title__img{
