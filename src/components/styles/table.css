@@ -56,6 +56,14 @@ th:first-child, td:first-child {
     padding: 2px 0px;
 }
 
+.th-category .table-resize, .th-city .table-resize, .th-country .table-resize, .th-continent .table-resize{
+    display: none;
+}
+
+.th-title, .th-category, .th-tags, .th-city, .th-country, .th-continent{
+    cursor: pointer;
+}
+
 .table-container th{
     overflow: visible;
 }

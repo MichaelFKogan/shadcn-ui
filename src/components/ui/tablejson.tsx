@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { badgeVariants } from "@/components/ui/badge"
 import Link from 'next/link';
-import { useReactTable, ColumnDef, createColumnHelper, getCoreRowModel, flexRender } from '@tanstack/react-table';
+import { useReactTable, ColumnDef, createColumnHelper, getCoreRowModel, flexRender, getSortedRowModel } from '@tanstack/react-table';
 import '../styles/table.css';
 
 // Define the data type
@@ -22,6 +22,18 @@ type Link = {
 
 // Column helper to create columns
 const columnHelper = createColumnHelper<Link>();
+
+const alphanumericSort = (rowA, rowB, columnId) => {
+    const regex = /^[^a-zA-Z0-9]+/; // Regex to find non-alphanumeric characters at the start
+  
+    // Remove leading non-alphanumeric characters for comparison
+    const valA = rowA.getValue(columnId).replace(regex, '');
+    const valB = rowB.getValue(columnId).replace(regex, '');
+  
+    // Perform case-insensitive comparison
+    return valA.toLowerCase().localeCompare(valB.toLowerCase());
+  };
+  
 
 function getColumns(onSelectKeyword) {
     return [
@@ -48,11 +60,15 @@ function getColumns(onSelectKeyword) {
                     </div>
                 </a>
         )},
+        enableSorting: true,
+        sortingFn: alphanumericSort,
     }),
     columnHelper.accessor('category', {
         header: 'Category',
         cell: info => (<div className="category text-sm"><Badge variant="secondary" onClick={() => onSelectKeyword(info.row.original.category)}>{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
         size: 80,
+        enableSorting: true,
+        sortingFn: alphanumericSort,
     }),
     columnHelper.accessor('tags', {
         header: 'Tags',
@@ -76,21 +92,32 @@ function getColumns(onSelectKeyword) {
                 </div>
             );
         },
+        enableSorting: true,
+        sortingFn: alphanumericSort,
     }),    
     columnHelper.accessor('city', {
         header: 'City',
         cell: info => (<div className="city text-sm"><a onClick={() => onSelectKeyword(info.row.original.city)}>{info.row.original.city}</a></div>),
+        enableResizing: false,
+        enableSorting: true,
+        sortingFn: alphanumericSort,
         size: 60,
     }),
     columnHelper.accessor('country', {
         id: 'country',
         header: 'Country',
         cell: info => (<div className="country text-sm"><a onClick={() => onSelectKeyword(info.row.original.country)}>{info.row.original.country}</a></div>),
+        enableResizing: false,
+        enableSorting: true,
+        sortingFn: alphanumericSort,
         size: 60,
     }),
     columnHelper.accessor('continent', {
         header: 'Continent',
         cell: info => (<div className="continent text-sm"><a onClick={() => onSelectKeyword(info.row.original.continent)}>{info.row.original.continent}</a></div>),
+        enableResizing: false,
+        enableSorting: true,
+        sortingFn: alphanumericSort,
         size: 60,
     }),
     //     columnHelper.accessor('description', {
@@ -107,6 +134,8 @@ function getColumns(onSelectKeyword) {
 export function TableJson({ data, anchor, onSelectKeyword }) {
     const columns = useMemo(() => getColumns(onSelectKeyword), [onSelectKeyword]);
     const allLinks = useMemo(() => data, [data]);
+    const [sorting, setSorting] = useState<SortingState>([]);
+
 
     const table = useReactTable({
         data: allLinks,
@@ -118,9 +147,14 @@ export function TableJson({ data, anchor, onSelectKeyword }) {
               right: [],
             },
         },
+        state: {
+            sorting,
+        },
+        onSortingChange: setSorting,
         enableColumnResizing: true,
         columnResizeMode: 'onChange',
         getCoreRowModel: getCoreRowModel(),
+        getSortedRowModel: getSortedRowModel(),
     });
 
     return (
@@ -131,8 +165,30 @@ export function TableJson({ data, anchor, onSelectKeyword }) {
                     {table.getHeaderGroups().map(headerGroup => (
                         <tr key={headerGroup.id}>
                             {headerGroup.headers.map(header => (
-                                <th key={header.id} style={{ width: `${header.getSize()}px` }}>
-                                    {flexRender(header.column.columnDef.header, header.getContext())}
+                                <th 
+                                    key={header.id} 
+                                    onClick={header.column.getToggleSortingHandler()} 
+                                    className={`th-${header.id}`} style={{ width: `${header.getSize()}px` }}>
+                                    
+                                    <div className='flex justify-center'>
+                                        <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
+                                        <div className="sorting-svg">
+                                            {header.column.getIsSorted() ? (header.column.getIsSorted() === 'desc' ? (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M12 6l-4 4h8l-4-4z"/>
+                                                </svg>
+                                            ) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M12 18l4-4H8l4 4z"/>
+                                                </svg>
+                                            )) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M12 6l-4 4h8l-4-4zM12 18l4-4H8l4 4z"/>
+                                                </svg>
+                                            )}
+                                        </div>
+                                    </div>
+                                    
                                     <div className="table-resize"
                                         onMouseDown={header.getResizeHandler()}
                                     >
