@@ -30,7 +30,7 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
   const [data, setData] = useState(homepage);
-  const [cardsData, setCardsData] = useState([]);
+  const [listData, setListData] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [filterKeyword, setFilterKeyword] = useState('');
   const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
@@ -95,7 +95,7 @@ export default function Home() {
     });
 
     // Sort categories alphabetically and update the state
-    setCardsData(Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB)));
+    setListData(Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB)));
 }, [filterKeyword]); // Ensure dependency on jsonData to recompute on data change
 
 
@@ -172,7 +172,7 @@ export default function Home() {
               </div>
 
               <div className="grid space-y-10">
-                <Tabs defaultValue="cards" className="tab-menu mt-2">
+                <Tabs defaultValue="cards" className="tab-menu mt-4">
 
                   <Breadcrumbs filterKeyword={filterKeyword} setData={setData} handleKeywordSelection={handleKeywordSelection} />
 
@@ -187,8 +187,8 @@ export default function Home() {
                       {/* {data.map((item, index) => (
                         <Cards key={index} data={item} anchor={`data-${index}`} />
                       ))} */}
-                        {cardsData && cardsData.length > 0 ? (
-                            <CardsJson data={cardsData} />
+                        {listData && listData.length > 0 ? (
+                            <CardsJson data={tableData} />
                         ) : (null)}
                     </div>
                   </TabsContent>
@@ -200,8 +200,8 @@ export default function Home() {
                           {/* {data.map((item, index) => (
                             <List key={index} data={item} anchor={`data-${index}`} />
                           ))} */}
-                          {cardsData && cardsData.length > 0 ? (
-                            <ListJson data={cardsData}  />
+                          {listData && listData.length > 0 ? (
+                            <ListJson data={listData}  />
                           ) : (null)}
                         </div>
                       </div>

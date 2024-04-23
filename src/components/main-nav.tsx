@@ -18,7 +18,8 @@ export function MainNav({setData}) {
                     </a>
                 
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <a className="transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => setData(homepage)}>Home</a>
+                        {/* <a className="transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => setData(homepage)}>Home</a> */}
+                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a>
                     </nav>
                 </div>
                 
@@ -41,7 +42,6 @@ export function MainNav({setData}) {
                     </div> */}
                 
                 <nav className="flex items-center" style={{columnGap:"10px"}}>
-                <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a>
                 <MusicPlayer />
 
                     {/* <a target="_blank" rel="noreferrer" href="https://github.com/shadcn-ui/ui">

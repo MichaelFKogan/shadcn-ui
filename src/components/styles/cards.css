@@ -16,7 +16,7 @@
 
 .card{
     /* max-height: 144px; */
-    max-height: 160px;
+    max-height: auto;
     position: relative;
     /* background: hsl(var(--muted)); */
 }
@@ -31,4 +31,24 @@
     /* transform: scale(1.02) */
 }
   
+.badge{
+    justify-content: center;
+    /* margin-top: 10px; */
+    width: fit-content;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* position: absolute;
+    top: 10px;
+    right: 8px; */
+    /* background: rgba(255,255,255,0); */
+    font-weight: 500;
+  }
 
+  .badge-category{
+
+  }
+
+  .badge-city, .badge-country, .badge-continent{
+    background: none;
+    border: none;
+  }
