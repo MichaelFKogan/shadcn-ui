@@ -33,7 +33,6 @@ th:first-child, td:first-child {
 .link__text-wrapper h3{
     overflow: hidden;
     text-overflow: ellipsis;
-    overflow: auto;
 }
 
 .table-container .description{

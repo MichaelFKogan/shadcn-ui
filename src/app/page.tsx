@@ -4,15 +4,9 @@ import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { MainNav } from "@/components/main-nav"
 import { Button } from "@/components/ui/button";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 
+import { Sidebar } from "@/components/ui/sidebar";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 import { Cards } from "@/components/ui/cards";
 import { List } from "@/components/ui/list";
@@ -22,7 +16,6 @@ import { ListJson } from "@/components/ui/listjson";
 import { TableJson } from "@/components/ui/tablejson";
 
 import { CardExtension } from "@/components/ui/cardextension";
-import { Sidebar } from "@/components/ui/sidebar";
 import { SidebarNew } from "@/components/ui/sidebarnew";
 import Script from 'next/script'; // Import next/script component
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -95,13 +88,13 @@ export default function Home() {
 
     useEffect(() => {
       const container = document.getElementById('snow-container');
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 8; i++) {
         let flake = document.createElement('div');
         flake.className = 'snowflake';
         let randomSize = Math.random() * 3 + 3;
         let randomOpacity = Math.random() * 0.1 + 0.4;
-        let randomDuration = Math.random() * 10 + 2;
-        let randomDelay = Math.random() * 3 - 3;
+        let randomDuration = Math.random() * 11 + 2;
+        let randomDelay = Math.random() * 10 - 3;
         let randomHorizontal = (Math.random() * 2 - 1) * 100;
         let randomLeft = Math.random() * 100;
   
@@ -141,44 +134,14 @@ export default function Home() {
 
               <div className="grid space-y-10">
               <Tabs defaultValue="table" className="tab-menu mt-2">
-              <Breadcrumb>
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink onClick={() => handleKeywordSelection('')}>Home</BreadcrumbLink>
-                  </BreadcrumbItem>
 
-                  {filterKeyword !== '' ?
-                    <>
-                      <BreadcrumbSeparator />
-
-                      <BreadcrumbItem>
-                        <BreadcrumbLink onClick={() => handleKeywordSelection(filterKeyword)}>{filterKeyword}</BreadcrumbLink>
-                      </BreadcrumbItem>
-                    </>
-                  : null }
-
-                  {/* <BreadcrumbSeparator /> */}
-
-                  {/* <BreadcrumbItem>
-                    <BreadcrumbLink onClick={() => handleKeywordSelection('Thailand')}>Thailand</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>Bangkok</BreadcrumbPage>
-                  </BreadcrumbItem> */}
-
-                </BreadcrumbList>
-              </Breadcrumb>
-
-
+                <Breadcrumbs filterKeyword={filterKeyword} setData={setData} handleKeywordSelection={handleKeywordSelection} />
 
                   <TabsList className="mb-2">
                     <TabsTrigger value="cards">Cards</TabsTrigger>
                     <TabsTrigger value="list">List</TabsTrigger>
                     <TabsTrigger value="table">Table</TabsTrigger>
                   </TabsList>
-                  {/* <Button className="mr-4" variant="outline" onClick={() => handleKeywordSelection('')} style={{float: "right"}}>Clear</Button> */}
 
                   <TabsContent value="cards">
                     <div id="card-view">
@@ -220,22 +183,6 @@ export default function Home() {
                   </TabsContent>
                   
                 </Tabs>
-
-
-              {/* {thailand.map((item, index) => (
-                <Cards key={index} data={item} anchor={`thailand-${index}`} />
-              ))} */}
-
-              {/* <div id="featured" className="card-row space-y-8">
-                <h2 className="h2 section-title">💯 Featured</h2>
-                  <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <CardExtension data={allData} />
-                  </div>
-              </div> */}
-
-                <div style={{ textAlign: "center", marginTop: "20px" }}>
-                  {/* <Button variant="secondary">See All</Button> */}
-                </div>
 
               </div>
             </div>

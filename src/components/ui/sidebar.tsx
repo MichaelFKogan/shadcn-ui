@@ -134,37 +134,35 @@ export function Sidebar({setData, onSelectKeyword}) {
                   <div className="categories">
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
-                    {/* <a className="text-foreground-light block text-sm">💯 Featured</a> */}
-                    <a className="text-foreground-light block text-sm font-medium">🗺 Travel</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#accomodation">🛌 Accomodation</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#healthinsurance">😷 Health Insurance</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#visa">🛂 Visa</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("")}>💯 All</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Travel")}>🗺 Travel</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Accomodation")}>🛌 Accomodation</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Health Insurance")}>😷 Health Insurance</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Visa")}>🛂 Visa</a>
 
                     {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Social Media</h2> */}
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => setData(instagram)}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#tiktok"><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#youtube"><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#reddit"><div className="flex items-center"><img src="./images/reddit.png" className="accordion-logo"/>Reddit</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#vlog">📹 Vlog</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#blog">✍️ Blog</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("TikTok")}><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("YouTube")}><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Reddit")}><div className="flex items-center"><img src="./images/reddit.png" className="accordion-logo"/>Reddit</div></a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Vlog")}>📹 Vlog</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>✍️ Blog</a>
 
                     {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Work</h2> */}
-                    <a className="text-foreground-light block text-sm font-medium" href="#work">👔 Work</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#englishteaching">🔤 English Teaching</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#finance">💵 Finance</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#productivity">📊 Productivity</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Work")}>👔 Work</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("English Teaching")}>🔤 English Teaching</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Finance")}>💵 Finance</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Productivity")}>📊 Productivity</a>
 
-                    <a className="text-foreground-light block text-sm font-medium" href="#apps">📱 Apps</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#blog">⌚️ Products</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Apps")}>📱 Apps</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>⌚️ Products</a>
 
                     {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Lifestyle</h2> */}
-                    <a className="text-foreground-light block text-sm font-medium" href="#work">Van Life</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#englishteaching">Solo Travel</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#finance">Expat</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#productivity">Couple</a>
-
-                    <a className="text-foreground-light block text-sm font-medium" href="#apps">Expat</a>
-                    <a className="text-foreground-light block text-sm font-medium" href="#blog">Backpacker</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Van Life")}>Van Life</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Solo")}>Solo Travel</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Expat")}>Expat</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Couple")}>Couple</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Backpacker")}>Backpacker</a>
 
                   </div>
                 </div>

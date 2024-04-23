@@ -45,10 +45,42 @@ function getColumns(onSelectKeyword) {
         cell: info => {
             // Check if title exists and provide a default value if it does not
             const title = info.row.original.title || 'Default Title';
-
             // Prepare the image path by transforming the title
             const formattedTitle = title.toLowerCase().replace(/\s+/g, '');
-            const imagePath = `/images/${formattedTitle}.png`;
+
+            // Declare imagePath outside of the if/else block
+            let imagePath;
+            if (
+                formattedTitle === "thaivisaadvice" 
+                || formattedTitle === "bangkokexpats" 
+                || formattedTitle === "digitalnomadcoffeeclub-chiangmai" 
+            ) {imagePath = `/images/facebook.png`;} 
+            
+            else if(
+                formattedTitle === "@discoverhongkong"
+            ) {imagePath = `/images/instagram.png`;} 
+            
+            else if(
+                formattedTitle === "@discoverhongkong"
+                || formattedTitle === "r/chiangmai" 
+                || formattedTitle === "r/thailand" 
+                || formattedTitle === "r/bangkok" 
+                || formattedTitle === "r/digitalnomad" 
+            ) {imagePath = `/images/reddit.png`;}
+
+            else if(
+                formattedTitle === "christhefreelancer"
+            ) {imagePath = `/images/youtube.png`;}
+
+            else if(
+                formattedTitle === "@christabellatravels"
+                || formattedTitle === "layla|solofemaletravel" 
+                || formattedTitle === "@digital_bromad" 
+            ) {imagePath = `/images/tiktok.png`;}
+
+            else {imagePath = `/images/${formattedTitle}.png`;}
+
+            // const imagePath = `/images/${formattedTitle}.png`;
             return (
                 
                 <a href={info.row.original ? info.row.original.url : '#'} target="_blank" className="title list__link" style={{ alignItems: "center", display: "flex", columnGap: "10px" }}>
