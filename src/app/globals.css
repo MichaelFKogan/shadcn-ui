@@ -88,6 +88,34 @@
     }
   }
 
+  .hero-banner{
+    background-image: url(/images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 275px;
+    top: 0px;
+
+    height: 181px;
+    width: 100%;
+    z-index: -1;
+    background-position-y: 70%;
+    margin-top: 0px !important;
+  }
+
+  .hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Black color with 30% opacity */
+    pointer-events: none; /* Allows clicks to pass through to elements below */
+  }
+
   h1{
     font-size: 32px;
   }
@@ -130,6 +158,14 @@
 
   .line-clamp-4{
     -webkit-line-clamp: 3;
+  }
+
+  .tab-menu{
+    margin-top: .5rem !important;
+  }
+
+  .tab-menu div.inline-flex{
+    float: right;
   }
 
   .badge{

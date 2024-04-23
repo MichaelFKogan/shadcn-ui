@@ -71,7 +71,7 @@ function getColumns(onSelectKeyword) {
             return (
                 <div className="tags text-sm">
                     {tags.length > 0 ? tags.map((tag, index) => (
-                        <Badge key={index} variant="outline"  onClick={() => onSelectKeyword(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
+                        <Badge variant="outline"  onClick={() => onSelectKeyword(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
                     )) : null} 
                 </div>
             );

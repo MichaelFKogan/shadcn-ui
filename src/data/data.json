@@ -351,29 +351,6 @@
                 "tags": [],
                 "__collections__": {}
             },
-            "N82CAHOwON0Fd66TQwoz": {
-                "continent": "🌏 Worldwide",
-                "date": {
-                    "__datatype__": "timestamp",
-                    "value": {
-                        "_seconds": 1705853130,
-                        "_nanoseconds": 276000000
-                    }
-                },
-                "country": "",
-                "city": "",
-                "addedBy": {
-                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
-                    "email": "mfkogan@gmail.com"
-                },
-                "name": "Google Flights",
-                "rank": "",
-                "votes": "",
-                "category": "✈️ Flights",
-                "url": "https://www.google.com/travel/flights",
-                "tags": [],
-                "__collections__": {}
-            },
             "Pu389DVG9N1KN1BPRduS": {
                 "continent": "⛩️ Asia ",
                 "date": {

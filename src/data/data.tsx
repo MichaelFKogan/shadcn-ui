@@ -54,7 +54,7 @@ export const homepage = [
         title: "Booking.com",
         description: " Choose From a Wide Range of Properties Which Booking.com Offers. Search Now! Find What You Need At Booking.com, The Biggest Travel Site In The World. Flight + Hotel. Hotels.",
         url: "https://www.booking.com",
-        image: "booking.png",
+        image: "booking.com.png",
         category: "🛌 Accomodation",
       },
       {
