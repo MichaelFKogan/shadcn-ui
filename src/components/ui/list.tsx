@@ -4,7 +4,7 @@ import '../styles/list.css'
 export function List({ data, anchor }) {
     return (
         <>
-            <div className="card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl border px-4 py-4 shadow transition-all hover:shadow-lg">
+            <div className="card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-md border px-4 py-4 shadow transition-all hover:shadow-lg">
                 <h2 id={data.heading.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="h2 section-title mb-1 border-b-2">
                     {data.headingImage && (<img src={"/images/" + data.headingImage} className="section-title__img" />)}
                     {data.heading}

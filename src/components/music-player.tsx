@@ -106,7 +106,7 @@ export function MusicPlayer() {
       <Popover>
       <PopoverTrigger>
 
-        <Button variant="outline" size="icon" onClick={Play}>
+        <Button variant="ghost" size="icon" onClick={Play}>
         {isPlaying ? (
               <div className="music-bars">
                 <span />

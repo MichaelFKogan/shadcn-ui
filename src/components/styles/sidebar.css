@@ -1,7 +1,7 @@
 .countries-title, .categories-title{
     /* padding: 0rem 1.75rem; */
-    margin-left: 1.75rem;
-    margin-right: 1.75rem
+    margin-left: 1.5rem;
+    margin-right: 1.5rem
   }
 
   .all, .countries a, .categories a, .accordion a, .accordion button{
@@ -11,7 +11,7 @@
   }
 
   .accordion .city, .categories-accordion a{
-    padding-left: 1rem !important;
+    /* padding-left: 1rem !important; */
   }
 
   .countries-accordion .accordion-hr{

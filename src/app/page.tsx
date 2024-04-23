@@ -146,7 +146,7 @@ export default function Home() {
                     <TabsTrigger value="list">List</TabsTrigger>
                     <TabsTrigger value="table">Table</TabsTrigger>
                   </TabsList>
-                  {/* <Button className="ml-2" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button> */}
+                  <Button className="mr-4" variant="outline" onClick={() => handleKeywordSelection('')} style={{float: "right"}}>Clear</Button>
 
                   <TabsContent value="cards">
                     <div id="card-view">

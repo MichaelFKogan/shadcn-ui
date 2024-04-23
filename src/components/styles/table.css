@@ -46,12 +46,18 @@ th:first-child, td:first-child {
 .table-resize{
     cursor: col-resize;
     background-color: hsl(var(--input));
-    width: 5px;
     height: 100%;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: -5px;
+    top: 10px;
     z-index: 2;
+    height: auto;
+    border-radius: 2px;
+    padding: 2px 0px;
+}
+
+.table-container th{
+    overflow: visible;
 }
 
 @media (max-width:1023px){

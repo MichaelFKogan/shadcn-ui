@@ -23,7 +23,7 @@ export function Sidebar({setData, onSelectKeyword}) {
             <div className="sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r">
               <div className="fixed-sidebar space-y-6">
 
-              <div className="flex h-14 items-center px-6 py-4 lg:h-auto">
+              <div className="flex h-14 items-center px-6 py-4 lg:h-auto" style={{display: "none"}}>
                 <a className="group flex w-full items-center gap-x-2.5" onClick={() => onSelectKeyword('')}>
                     <div className="h-7 w-7 rounded-full border">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
@@ -56,46 +56,46 @@ export function Sidebar({setData, onSelectKeyword}) {
                 </div> */}
 
                 <div className="hidden lg:block">
-                <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
+                {/* <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a> */}
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Chiang Mai')}>🐘 Chiang Mai</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kho Phangan')}>🌊 Kho Phangan</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/japan">🇯🇵 Japan</a>
                                 <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
                                 <a className="city text-foreground-light block text-sm" href="/osaka">🏯 Osaka</a>
                                 <a className="city text-foreground-light block text-sm" href="/kyoto">👘 Kyoto</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/indonesia">🇮🇩 Indonesia</a>
                                 <a className="city text-foreground-light block text-sm" href="/bali">🏝 Bali</a>
                                 <a className="city text-foreground-light block text-sm" href="/canggu">🏄‍♀️ Canggu</a>
                                 <a className="city text-foreground-light block text-sm" href="/ubud">🐒 Ubud</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/korea">🇰🇷 Korea</a>
                                 <a className="city text-foreground-light block text-sm" href="/bali">🍱 Seoul</a>
                                 <a className="city text-foreground-light block text-sm" href="/canggu">🚝 Busan</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/vietnam">🇻🇳 Vietnam</a>
                                 <a className="city text-foreground-light block text-sm" href="/hochiminhcity">🛵 Ho Chi Minh City</a>
                                 <a className="city text-foreground-light block text-sm" href="/hanoi">🍲 Hanoi</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/china">🇨🇳 China</a>
                                 <a className="city text-foreground-light block text-sm" href="/beijing">🥡 Beijing</a>
                                 <a className="city text-foreground-light block text-sm" href="/shanghai">🧧 Shanghai</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/hong kong">🇭🇰 Hong Kong</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/taiwan">🇹🇼 Taiwan</a>
                                 <a className="city text-foreground-light block text-sm" href="/taipei">Taipei</a>
-                                <hr className="mt-2 mb-2"/>
+                                <hr className="mx-7 my-2"/>
                                 
 
                             </AccordionContent>

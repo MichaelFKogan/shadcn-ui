@@ -8,8 +8,9 @@ export function MainNav({setData}) {
 
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center">
+
                 <div className="mr-4 hidden md:flex">
-                    {/* <a className="mr-6 flex items-center space-x-2" onClick={() => setData(homepage)}>
+                    <a className="mr-6 flex items-center space-x-2" onClick={() => setData(homepage)}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
                         <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
                         </svg>
@@ -18,7 +19,7 @@ export function MainNav({setData}) {
                 
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
                         <a className="transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => setData(homepage)}>Home</a>
-                    </nav> */}
+                    </nav>
                 </div>
                 
                 <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:R16u6la:" data-state="closed">
