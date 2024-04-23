@@ -55,9 +55,8 @@ export function Sidebar({setData, onSelectKeyword}) {
                   </div>
                 </div> */}
 
-                <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
-
                 <div className="hidden lg:block">
+                <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a>
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
