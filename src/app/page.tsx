@@ -93,6 +93,29 @@ export default function Home() {
       console.log(cleanedKeyword)
     };
 
+    useEffect(() => {
+      const container = document.getElementById('snow-container');
+      for (let i = 0; i < 10; i++) {
+        let flake = document.createElement('div');
+        flake.className = 'snowflake';
+        let randomSize = Math.random() * 3 + 3;
+        let randomOpacity = Math.random() * 0.1 + 0.4;
+        let randomDuration = Math.random() * 10 + 2;
+        let randomDelay = Math.random() * 3 - 3;
+        let randomHorizontal = (Math.random() * 2 - 1) * 100;
+        let randomLeft = Math.random() * 100;
+  
+        flake.style.width = `${randomSize}px`;
+        flake.style.height = `${randomSize}px`;
+        flake.style.opacity = randomOpacity;
+        flake.style.animationDuration = `${randomDuration}s`;
+        flake.style.animationDelay = `${randomDelay}s`;
+        flake.style.left = `${randomLeft}%`;
+  
+        container.appendChild(flake);
+      }
+    }, []);  // Empty dependency array means this runs once on component mount
+
   return (
     <>
 
@@ -107,6 +130,9 @@ export default function Home() {
             <div className="lg:col-span-12 xl:col-span-12 px-5">
 
             <div className="hero-banner">
+
+              <div className="snow-container" id="snow-container"></div>
+
               <div className="main-title">
                 <h1 className="h1">Find your travel inspiration</h1>
                 <p className="text-foreground-lighter text-xl">A collection of digital nomad content.</p>
@@ -120,11 +146,17 @@ export default function Home() {
                   <BreadcrumbItem>
                     <BreadcrumbLink onClick={() => handleKeywordSelection('')}>Home</BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator />
 
-                  <BreadcrumbItem>
-                    <BreadcrumbLink onClick={() => handleKeywordSelection(filterKeyword)}>{filterKeyword}</BreadcrumbLink>
-                  </BreadcrumbItem>
+                  {filterKeyword !== '' ?
+                    <>
+                      <BreadcrumbSeparator />
+
+                      <BreadcrumbItem>
+                        <BreadcrumbLink onClick={() => handleKeywordSelection(filterKeyword)}>{filterKeyword}</BreadcrumbLink>
+                      </BreadcrumbItem>
+                    </>
+                  : null }
+
                   {/* <BreadcrumbSeparator /> */}
 
                   {/* <BreadcrumbItem>
@@ -146,7 +178,7 @@ export default function Home() {
                     <TabsTrigger value="list">List</TabsTrigger>
                     <TabsTrigger value="table">Table</TabsTrigger>
                   </TabsList>
-                  <Button className="mr-4" variant="outline" onClick={() => handleKeywordSelection('')} style={{float: "right"}}>Clear</Button>
+                  {/* <Button className="mr-4" variant="outline" onClick={() => handleKeywordSelection('')} style={{float: "right"}}>Clear</Button> */}
 
                   <TabsContent value="cards">
                     <div id="card-view">
