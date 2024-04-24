@@ -26,6 +26,8 @@
     margin-top: 0px !important;
   }
 
+
+
   .all:hover, .accordion a:hover, .categories a:hover, .accordion button:hover{
     background: hsl(var(--muted));
   }

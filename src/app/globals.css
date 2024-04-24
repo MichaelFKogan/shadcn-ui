@@ -208,3 +208,9 @@
     width: 0.875rem;
     height: 0.875rem;
   }
+
+  .badges-switch{
+    position: absolute;
+    top: -40px;
+    right: 200px;
+  }

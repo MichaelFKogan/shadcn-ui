@@ -23,8 +23,8 @@ export function SidebarNew({setData}) {
             <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
                 <a className="group flex w-full items-center gap-x-2.5" onClick={() => setData(homepage)}>
                     <div className="h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
+                            <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
                         </svg>
                     </div>
                         <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">NomadLinks</h3>
@@ -33,7 +33,7 @@ export function SidebarNew({setData}) {
 
             <button type="button" className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden">
                 <div className="font-medium text-gray-100 group-hover:text-gray-400">Menu</div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="block w-6 text-gray-400"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="block w-6 text-gray-400"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
                 </svg>
             </button><div className="overflow-y-auto lg:static lg:block hidden">
             
