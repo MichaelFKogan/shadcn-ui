@@ -1,3 +1,29 @@
+.sidebar-wrapper{
+  z-index: 2 !important;
+  background-color: hsl(var(--background));
+}
+
+.fixed-sidebar{
+  /* position: fixed;
+  width:200px;
+  max-width: 200px;
+  height: 85vh; */
+  overflow-y: auto;
+  position: relative;
+}
+
+.lucide-circle-chevron-left{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: hsl(var(--foreground) / 0.6);
+  cursor: pointer;
+}
+
+.lucide-circle-chevron-left:hover{
+  color: hsl(var(--foreground) / 0.8);
+}
+
 .countries-title, .categories-title{
     /* padding: 0rem 1.75rem; */
     margin-left: 1.5rem;

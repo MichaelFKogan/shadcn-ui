@@ -163,19 +163,6 @@
     font-size: 28px;
   }
 
-  .sidebar-wrapper{
-    z-index: 2 !important;
-    background-color: hsl(var(--background));
-  }
-
-  .fixed-sidebar{
-    /* position: fixed;
-    width:200px;
-    max-width: 200px;
-    height: 85vh; */
-    overflow-y: auto;
-  }
-
   .clear-btn{
     margin-top: 2px;
   }

@@ -11,16 +11,18 @@ import {homepage} from '../../data/data'
 import { thailand } from '../../data/thailand/thailand';
 import { bangkok } from '../../data/thailand/bangkok';
 import { instagram } from '../../data/socialmedia/instagram';
+import { CircleChevronLeft, CircleChevronRight } from "lucide-react"
 
 // Import the JSON data directly
 import jsonData from '../../data/data.json';
   
 
-export function Sidebar({setData, onSelectKeyword}) {
+export function Sidebar({setData, onSelectKeyword, handleSidebarToggle, sidebarOpen}) {
 
     return (
-
-            <div className="sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r">
+      <>
+            <CircleChevronRight onClick={handleSidebarToggle} />
+            <div className={`sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r ${sidebarOpen ? "block" : "hidden"}`}>
               <div className="fixed-sidebar">
 
               <div className="flex h-14 items-center px-6 py-4 lg:h-auto" style={{display: "none"}}>
@@ -54,6 +56,8 @@ export function Sidebar({setData, onSelectKeyword}) {
                     </p>
                   </div>
                 </div> */}
+
+                <CircleChevronLeft onClick={handleSidebarToggle} />
 
                 <div className="hidden lg:block mt-8">
                 {/* <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a> */}
@@ -212,7 +216,7 @@ export function Sidebar({setData, onSelectKeyword}) {
 
               </div>
             </div>
-
+    </>
     )
 }
 
