@@ -32,8 +32,12 @@
 }
 
 .card:hover {
-    background: hsl(var(--muted));
+    /* background: hsl(var(--muted)); */
     /* transform: scale(1.02) */
+}
+
+.card-link:hover{
+  background: hsl(var(--muted));
 }
   
 .badge{
@@ -47,6 +51,7 @@
     right: 8px; */
     /* background: rgba(255,255,255,0); */
     font-weight: 500;
+    cursor:pointer;
   }
 
   .badge-wrapper{
@@ -61,4 +66,12 @@
   .badge-city, .badge-country, .badge-continent{
     background: none;
     border: none;
+  }
+
+  .badge-category:hover{
+    background-color: hsl(var(--input));
+  }
+
+  .badge-city:hover, .badge-country:hover, .badge-continent:hover{
+    background-color: hsl(var(--input));
   }

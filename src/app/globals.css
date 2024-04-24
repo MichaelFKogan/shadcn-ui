@@ -203,3 +203,8 @@
     top: 57px;
     z-index: 2;
   }
+
+  .lucide-chevron-down{
+    width: 0.875rem;
+    height: 0.875rem;
+  }

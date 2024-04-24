@@ -188,7 +188,7 @@ export default function Home() {
                         <Cards key={index} data={item} anchor={`data-${index}`} />
                       ))} */}
                         {listData && listData.length > 0 ? (
-                            <CardsJson data={tableData} />
+                            <CardsJson data={tableData} onSelectKeyword={handleKeywordSelection} />
                         ) : (null)}
                     </div>
                   </TabsContent>
