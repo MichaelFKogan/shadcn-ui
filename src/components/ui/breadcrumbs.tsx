@@ -18,13 +18,13 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Slash } from "lucide-react"
 
 
-export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword }) {
+export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, clearKeywords }) {
 
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink onClick={() => handleKeywordSelection('')}>Home</BreadcrumbLink>
+          <BreadcrumbLink onClick={() => clearKeywords()}>Home</BreadcrumbLink>
         </BreadcrumbItem>
 
 
@@ -34,7 +34,7 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
             <BreadcrumbItem>
               <BreadcrumbLink onClick={() => handleKeywordSelection(breadcrumbKeyword)}>{breadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
-            <Button className="text-xs clear-btn" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button>
+            <Button className="text-xs clear-btn" variant="ghost" onClick={() => clearKeywords()}>Clear</Button>
           </>
           : null
         }
@@ -45,7 +45,7 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
             <BreadcrumbItem>
               <BreadcrumbLink onClick={() => handleKeywordSelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
-            <Button className="text-xs clear-btn" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button>
+            <Button className="text-xs clear-btn" variant="ghost" onClick={() => clearKeywords()}>Clear</Button>
           </>
           : null
         }
