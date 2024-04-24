@@ -21,7 +21,7 @@ export function Sidebar({setData, onSelectKeyword}) {
     return (
 
             <div className="sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r">
-              <div className="fixed-sidebar space-y-6">
+              <div className="fixed-sidebar">
 
               <div className="flex h-14 items-center px-6 py-4 lg:h-auto" style={{display: "none"}}>
                 <a className="group flex w-full items-center gap-x-2.5" onClick={() => onSelectKeyword('')}>
@@ -55,9 +55,9 @@ export function Sidebar({setData, onSelectKeyword}) {
                   </div>
                 </div> */}
 
-                <div className="hidden lg:block">
+                <div className="hidden lg:block mt-8">
                 {/* <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a> */}
-                  <h2 className="countries-title text-foreground-lighter mb-2 text-sm border-b-2">Countries</h2>
+                  <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-semibold border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
@@ -131,20 +131,20 @@ export function Sidebar({setData, onSelectKeyword}) {
                 </div>
 
 
-                <div className="hidden lg:block">
-                  <h2 className="categories-title text-foreground-lighter mb-2 text-sm border-b-2">Categories</h2>
+                <div className="hidden lg:block mb-32">
+                  <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2">📍 Essentials</h2>
                   <div className="categories">
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
-                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("")}>💯 All</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("")}>📍 Essentials</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("")}>💯 All</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Flights")}>✈️ Flights</a>
 
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Travel")}>🗺 Travel</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Accomodation")}>🛌 Accomodation</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Health Insurance")}>😷 Health Insurance</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Visa")}>🛂 Visa</a>
 
-                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Social Media</h2> */}
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">📸 Social Media</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("TikTok")}><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Facebook")}><div className="flex items-center"><img src="./images/facebook.png" className="accordion-logo"/>Facebook</div></a>
@@ -153,21 +153,20 @@ export function Sidebar({setData, onSelectKeyword}) {
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Vlog")}>📹 Vlog</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>✍️ Blog</a>
 
-                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Work</h2> */}
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">💼 Work</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Work")}>👔 Work</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("English Teaching")}>🔤 English Teaching</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Finance")}>💵 Finance</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Productivity")}>📊 Productivity</a>
 
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">😎 Lifestyle</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Apps")}>📱 Apps</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>⌚️ Products</a>
-
-                    {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Lifestyle</h2> */}
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Van Life")}>Van Life</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Solo")}>Solo Travel</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Expat")}>Expat</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Couple")}>Couple</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Backpacker")}>Backpacker</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Solo")}>🧍‍♀️ Solo Travel</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Expat")}>🧍‍♂️ Expat</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Couple")}>👫 Couple</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Backpacker")}>🎒 Backpacker</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Van Life")}>🚐 Van Life</a>
 
                   </div>
                 </div>

@@ -214,22 +214,51 @@ export default function Home() {
       .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
-      console.log(cleanedKeyword);
-      console.log(lastKeyword);
-
-    if (cleanedKeyword === lastKeyword) {
-      // setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
-      // setLastKeyword(''); // Update the last keyword
-    }
-    else if(cleanedKeyword !== lastKeyword){
-      setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    }
-    
-    else {
       setFilterKeyword(cleanedKeyword);
-      setLastKeyword(cleanedKeyword); // Update the last keyword
       setBreadcrumbKeyword(cleanedKeyword);
-    }
+
+      // // STEP 1: If both keywords are empty
+      // if (lastKeyword === '' && cleanedKeyword !== ''){
+      //   setFilterKeyword(cleanedKeyword);
+      //   setLastKeyword(cleanedKeyword);
+      //   setBreadcrumbKeyword(cleanedKeyword);
+      // }
+
+      // // STEP 2: lastKeyword is set and new keyword comes in
+      // else if(cleanedKeyword === lastKeyword){}
+
+      // else if(lastKeyword.includes(cleanedKeyword)){
+      //   setFilterKeyword(cleanedKeyword);
+      //   setBreadcrumbKeyword(cleanedKeyword);
+      //   setLastKeyword(cleanedKeyword);
+      //   setSecondBreadcrumbKeyword('');
+      // }
+
+      // else if(cleanedKeyword !== lastKeyword){
+      //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
+      //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
+      //   setLastKeyword(`${lastKeyword} ${cleanedKeyword}`);
+      // }
+
+      // else{}
+
+    // if (cleanedKeyword === lastKeyword) {
+
+    // }
+    // else if(cleanedKeyword !== lastKeyword){
+    //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
+    //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
+    // }else{
+    //   setFilterKeyword(cleanedKeyword);
+    //   setLastKeyword(cleanedKeyword);
+    //   setBreadcrumbKeyword(cleanedKeyword);
+    // }
+    
+    // else {
+    //   setFilterKeyword(cleanedKeyword);
+    //   setLastKeyword(cleanedKeyword); // Update the last keyword
+    //   setBreadcrumbKeyword(cleanedKeyword);
+    // }
 
 
   };

@@ -34,7 +34,6 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
             <BreadcrumbItem>
               <BreadcrumbLink onClick={() => handleKeywordSelection(breadcrumbKeyword)}>{breadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
-            <Button className="text-xs clear-btn" variant="ghost" onClick={() => clearKeywords()}>Clear</Button>
           </>
           : null
         }
@@ -45,9 +44,13 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
             <BreadcrumbItem>
               <BreadcrumbLink onClick={() => handleKeywordSelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
-            <Button className="text-xs clear-btn" variant="ghost" onClick={() => clearKeywords()}>Clear</Button>
           </>
           : null
+        }
+
+        {filterKeyword !== '' ? 
+          <Button className="text-xs clear-btn" variant="ghost" onClick={() => clearKeywords()}>Clear</Button>
+        : null
         }
 
         {/* {filterKeyword !== '' && filterKeyword !== ' ' &&
