@@ -197,10 +197,6 @@
     -webkit-line-clamp: 3;
   }
 
-  .tab-menu{
-    margin-top: .25rem !important;
-  }
-
   .tab-menu-options{
     float: right;
     position: sticky;

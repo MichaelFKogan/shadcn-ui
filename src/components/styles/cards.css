@@ -22,8 +22,13 @@
 }
 
 .card__text-wrapper{
-    max-height: 83px;
+    max-height: 82px;
+    /* max-height: 116px; */
     overflow: hidden;
+}
+
+.card__text-wrapper p{
+    max-height: 50px;
 }
 
 .card:hover {
@@ -42,6 +47,11 @@
     right: 8px; */
     /* background: rgba(255,255,255,0); */
     font-weight: 500;
+  }
+
+  .badge-wrapper{
+    column-gap: .25rem;
+    flex-wrap: wrap;
   }
 
   .badge-category{
