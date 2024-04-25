@@ -16,7 +16,7 @@ import { instagram } from '../../data/socialmedia/instagram';
 import jsonData from '../../data/data.json';
   
 
-export function Sidebar({setData, onSelectKeyword, sidebarOpen}) {
+export function Sidebar({setData, onSelectKeyword, firstKeywordSelection, sidebarOpen, setContinentBreadcrumbKeyword}) {
 
     return (
       <>
@@ -64,17 +64,17 @@ export function Sidebar({setData, onSelectKeyword, sidebarOpen}) {
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Asia')}>💯 All Asia</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => {onSelectKeyword('Asia')}}>💯 All Asia</a>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Chiang Mai')}>🐘 Chiang Mai</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kho Phangan')}>🌊 Kho Phangan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/japan">🇯🇵 Japan</a>
-                                <a className="city text-foreground-light block text-sm" href="/tokyo">🗼 Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" href="/osaka">🏯 Osaka</a>
-                                <a className="city text-foreground-light block text-sm" href="/kyoto">👘 Kyoto</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Japan')}>🇯🇵 Japan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Tokyo')}>🗼 Tokyo</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Osaka')}>🏯 Osaka</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kyoto')}>👘 Kyoto</a>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" href="/indonesia">🇮🇩 Indonesia</a>
                                 <a className="city text-foreground-light block text-sm" href="/bali">🏝 Bali</a>
@@ -137,12 +137,11 @@ export function Sidebar({setData, onSelectKeyword, sidebarOpen}) {
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("")}>💯 All</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Flights")}>✈️ Flights</a>
-
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Travel")}>🗺 Travel</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Accomodation")}>🛌 Accomodation</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Health Insurance")}>😷 Health Insurance</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Visa")}>🛂 Visa</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Flights")}>✈️ Flights</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Maps")}>🗺 Maps</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Accomodation")}>🛌 Accomodation</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Health Insurance")}>😷 Health Insurance</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Visa")}>🛂 Visa</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">📸 Social Media</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>

@@ -22,7 +22,7 @@ export function MainNav({setData, handleSidebarToggle, sidebarOpen}) {
                         <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
                         </svg> */}
                         {/* <TreePalm strokeWidth={1} /> */}
-                        <span className="hidden font-bold sm:inline-block">NomadLinks</span>
+                        <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
                 
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">

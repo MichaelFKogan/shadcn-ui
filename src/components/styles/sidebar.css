@@ -4,16 +4,13 @@
 }
 
 .fixed-sidebar{
-  /* position: fixed;
-  width:200px;
-  max-width: 200px;
-  height: 85vh; */
   overflow-y: auto;
   position: relative;
+  scrollbar-color: hsl(var(--border) / .6) hsl(var(--border) / 0);
+  scrollbar-width: thin;
 }
 
 .countries-title, .categories-title{
-    /* padding: 0rem 1.75rem; */
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     color: hsl(var(--foreground) / 0.7);

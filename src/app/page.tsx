@@ -36,9 +36,11 @@ export default function Home() {
   const [listData, setListData] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [uniqueCategories, setUniqueCategories] = useState(new Set());
+
   const [filterKeyword, setFilterKeyword] = useState('');
   const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 
+  const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
   const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
   const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 
@@ -46,29 +48,21 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [hideBanner, setHideBanner] = useState(false);
 
+
+
   const handleSwitchChange = (newState) => {
     setIsSwitchOn(newState);
-    // You can also perform other actions here based on the new state
-    if (newState) {
-      // console.log("Switch is ON");
-      // Perform actions when switch is ON
-    } else {
-      // console.log("Switch is OFF");
-      // Perform actions when switch is OFF
-    }
   };
-
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen); // Toggles the sidebarOpen state
   };
-
   const handleBannerToggle = () => {
     setHideBanner(!hideBanner);
   };
 
 
 
-  
+
 
 
   // MAPPING THE DATA OBJECT
@@ -164,7 +158,7 @@ export default function Home() {
     });
     setUniqueCategories(newCategories);
   }, [tableData]); // This effect runs whenever tableData changes
-  
+
 
 
 
@@ -209,14 +203,42 @@ export default function Home() {
       .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
-      setSecondBreadcrumbKeyword();
+    setSecondBreadcrumbKeyword();
   }
 
 
 
 
   // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
+  const firstKeywordSelection = (keyword) => {
+    // Extend the regex to include regional indicator symbols for flag emojis
+    // Remove emojis and replace multiple spaces with a single space, trim leading spaces
+    const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
+      .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
+      .replace(/^\s+/g, ''); // Trim leading spaces only
+
+      setFilterKeyword(cleanedKeyword);
+      setLastKeyword('');
+      setBreadcrumbKeyword(cleanedKeyword);
+      setSecondBreadcrumbKeyword('')
+  }
+
+  const dynamicTabsSelection = (keyword) => {
+    const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/^\s+/g, '');
+  
+
+  
+  }
+
+
+
+  // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
   const handleKeywordSelection = (keyword) => {
+    console.log("*--------------------------------------*")
+    console.log("KEYWORD");
+    console.log(keyword);
 
     // Extend the regex to include regional indicator symbols for flag emojis
     // Remove emojis and replace multiple spaces with a single space, trim leading spaces
@@ -225,32 +247,63 @@ export default function Home() {
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
       setFilterKeyword(cleanedKeyword);
-      setBreadcrumbKeyword(cleanedKeyword);
 
-      // // STEP 1: If both keywords are empty
-      // if (lastKeyword === '' && cleanedKeyword !== ''){
+      if(lastKeyword === ''){
+        setLastKeyword(cleanedKeyword);
+      }
+
+      if(breadcrumbKeyword === ''){
+        setBreadcrumbKeyword(cleanedKeyword);
+      }
+
+      if(breadcrumbKeyword !== ''){
+        setSecondBreadcrumbKeyword(cleanedKeyword);
+      }
+
+      // if(breadcrumbKeyword !== '' && secondBreadcrumbKeyword !== '' ){
       //   setFilterKeyword(cleanedKeyword);
       //   setLastKeyword(cleanedKeyword);
-      //   setBreadcrumbKeyword(cleanedKeyword);
       // }
 
-      // // STEP 2: lastKeyword is set and new keyword comes in
-      // else if(cleanedKeyword === lastKeyword){}
+      console.log("FILTER KEYWORD");
+      console.log(cleanedKeyword);
 
-      // else if(lastKeyword.includes(cleanedKeyword)){
-      //   setFilterKeyword(cleanedKeyword);
-      //   setBreadcrumbKeyword(cleanedKeyword);
-      //   setLastKeyword(cleanedKeyword);
-      //   setSecondBreadcrumbKeyword('');
-      // }
+      console.log("LAST KEYWORD");
+      console.log(lastKeyword);
 
-      // else if(cleanedKeyword !== lastKeyword){
-      //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
-      //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
-      //   setLastKeyword(`${lastKeyword} ${cleanedKeyword}`);
-      // }
+      console.log("BREADCRUMB KEYWORD");
+      console.log(breadcrumbKeyword);
 
-      // else{}
+      console.log("SECOND BREADCRUMB KEYWORD");
+      console.log(secondBreadcrumbKeyword);
+
+
+
+
+    // // STEP 1: If both keywords are empty
+    // if (lastKeyword === '' && cleanedKeyword !== ''){
+    //   setFilterKeyword(cleanedKeyword);
+    //   setLastKeyword(cleanedKeyword);
+    //   setBreadcrumbKeyword(cleanedKeyword);
+    // }
+
+    // // STEP 2: lastKeyword is set and new keyword comes in
+    // else c
+
+    // else if(lastKeyword.includes(cleanedKeyword)){
+    //   setFilterKeyword(cleanedKeyword);
+    //   setBreadcrumbKeyword(cleanedKeyword);
+    //   setLastKeyword(cleanedKeyword);
+    //   setSecondBreadcrumbKeyword('');
+    // }
+
+    // else if(cleanedKeyword !== lastKeyword){
+    //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
+    //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
+    //   setLastKeyword(`${lastKeyword} ${cleanedKeyword}`);
+    // }
+
+    // else{}
 
     // if (cleanedKeyword === lastKeyword) {
 
@@ -263,7 +316,7 @@ export default function Home() {
     //   setLastKeyword(cleanedKeyword);
     //   setBreadcrumbKeyword(cleanedKeyword);
     // }
-    
+
     // else {
     //   setFilterKeyword(cleanedKeyword);
     //   setLastKeyword(cleanedKeyword); // Update the last keyword
@@ -275,15 +328,14 @@ export default function Home() {
 
 
   const clearKeywords = () => {
-      setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
-      setLastKeyword(''); // Update the last keyword
-
-      setBreadcrumbKeyword('');
-      setSecondBreadcrumbKeyword('');
+    setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
+    setLastKeyword(''); // Update the last keyword
+    setBreadcrumbKeyword('');
+    setSecondBreadcrumbKeyword('');
   }
 
 
-// SORTS THE CATEGORIES LIST IN ALPHABETICAL ORDER, ACCOUNTING FOR EMOJIS
+  // SORTS THE CATEGORIES LIST IN ALPHABETICAL ORDER, ACCOUNTING FOR EMOJIS
   const cleanCategoryForSorting = (category) => {
     // Normalize Unicode characters to a standard form
     category = category.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Strip accents/diacritics
@@ -321,16 +373,17 @@ export default function Home() {
   return (
     <>
 
-      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} sidebarOpen={sidebarOpen}/>
+      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} firstKeywordSelection={firstKeywordSelection} sidebarOpen={sidebarOpen} setContinentBreadcrumbKeyword={setContinentBreadcrumbKeyword} />
 
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className={`sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
-          <MainNav setData={setData} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen}  />
+          <MainNav setData={setData} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen} />
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-5 relative">
-                
+
               <div className="hide-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>{hideBanner ? "Show Banner" : "Hide Banner"}</div>
+              {/* <div className="change-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>New Banner</div> */}
               <div className={`hero-banner ${hideBanner ? "hidden" : "block"}`}>
                 <div className="snow-container" id="snow-container"></div>
                 <div className="main-title">
@@ -342,7 +395,7 @@ export default function Home() {
               <div className="grid space-y-10">
                 <Tabs defaultValue="cards" className="tab-menu mt-10">
 
-                  <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} setData={setData} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
+                  <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} setData={setData} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} continentBreadcrumbKeyword={continentBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
 
                   <TabsList className="mb-2">
                     <TabsTrigger value="cards">Cards</TabsTrigger>
@@ -355,26 +408,27 @@ export default function Home() {
                     <div id="card-view">
                       <div className="badges-switch flex items-center space-x-2">
                         <Switch id="card-badges" checked={isSwitchOn} onCheckedChange={handleSwitchChange} />
-                        <Label htmlFor="card-badges hover:opacity-20">Show Card Badges</Label>
+                        <Label htmlFor="card-badges" className="hover:opacity-20">Show Card Badges</Label>
                       </div>
+
+
+
+
 
                       {tableData && tableData.length > 0 ? (
                         <>
-
                           {filterKeyword !== '' ? (
-                          <>
-                          <div className="card-categories-list">
-                            {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                              <Badge key={index} variant="secondary" className="badge badge-category mb-2 text-xs ml-2" onClick={() => handleKeywordSelection(category)}>
-                                {category}
-                              </Badge>
-                            ))}
-                          </div>
-                          </>
+                            <>
+                              <div className="card-categories-list">
+                                {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
+                                  <Badge key={index} variant="secondary" className="badge badge-category mb-2 text-xs ml-2" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) } }>
+                                    {category}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </>
                           ) : null
                           }
-
-
                           <CardsJson data={tableData} onSelectKeyword={handleKeywordSelection} isSwitchOn={isSwitchOn} />
                         </>
                       ) : (null)}
