@@ -23,7 +23,7 @@
     padding: .25rem .50rem;
     margin: 0rem 1rem;
     border-radius: .375rem;
-    color: hsl(var(--foreground) / 0.7);
+    color: hsl(var(--foreground) / 0.8);
   }
 
   .accordion .city, .categories-accordion a{

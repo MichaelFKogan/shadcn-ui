@@ -26,13 +26,19 @@
 }
 
 .card__text-wrapper{
-    max-height: 82px;
+    max-height: 67px;
     /* max-height: 116px; */
     overflow: hidden;
 }
 
+.card__text-wrapper h3{
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
 .card__text-wrapper p{
-    max-height: 50px;
+    max-height: 34px;
+    color: hsl(var(--foreground) / 0.6);
 }
 
 .card:hover {

@@ -67,12 +67,12 @@ export function CardsJson({ data, onSelectKeyword, isSwitchOn }) {
                                             <a href={item.url} target="_blank" key={index} className="card-link rounded-xl p-4">
                                                 {/* <SquareArrowOutUpRight /> */}
                                                 <div className="image-text-wrapper flex w-full items-center">
-                                                    <div className="relative h-[65px] min-w-[65px] w-[65px] rounded-md overflow-hidden scale-100 transition-all">
+                                                    <div className="relative h-[62px] min-w-[62px] w-[62px] rounded-md overflow-hidden scale-100 transition-all">
                                                         <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} />
                                                     </div>
                                                     <div className="card__text-wrapper ml-4">
                                                         <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-xl font-medium transition-colors">{item.title}</h3>
-                                                        <p className="text-foreground-lighter text-xs line-clamp-4 min-h-[50px] h-[58px]" title={item.description}>{item.description}</p>
+                                                        <p className="text-foreground-lighter text-xs line-clamp-2 min-h-[34px] h-[34px]" title={item.description}>{item.description}</p>
                                                     </div>
                                                 </div>
                                                 </a>
