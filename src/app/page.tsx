@@ -44,6 +44,7 @@ export default function Home() {
 
   const [isSwitchOn, setIsSwitchOn] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [hideBanner, setHideBanner] = useState(false);
 
   const handleSwitchChange = (newState) => {
     setIsSwitchOn(newState);
@@ -59,6 +60,10 @@ export default function Home() {
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen); // Toggles the sidebarOpen state
+  };
+
+  const handleBannerToggle = () => {
+    setHideBanner(!hideBanner);
   };
 
 
@@ -323,9 +328,10 @@ export default function Home() {
           <MainNav setData={setData} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen}  />
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
-            <div className="lg:col-span-12 xl:col-span-12 px-5">
-
-              <div className="hero-banner">
+            <div className="lg:col-span-12 xl:col-span-12 px-5 relative">
+                
+              <div className="hide-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>{hideBanner ? "Show Banner" : "Hide Banner"}</div>
+              <div className={`hero-banner ${hideBanner ? "hidden" : "block"}`}>
                 <div className="snow-container" id="snow-container"></div>
                 <div className="main-title">
                   <h1 className="h1">Find your travel inspiration</h1>
@@ -334,7 +340,7 @@ export default function Home() {
               </div>
 
               <div className="grid space-y-10">
-                <Tabs defaultValue="cards" className="tab-menu mt-4">
+                <Tabs defaultValue="cards" className="tab-menu mt-10">
 
                   <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} setData={setData} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
 
@@ -349,7 +355,7 @@ export default function Home() {
                     <div id="card-view">
                       <div className="badges-switch flex items-center space-x-2">
                         <Switch id="card-badges" checked={isSwitchOn} onCheckedChange={handleSwitchChange} />
-                        <Label htmlFor="card-badges">Show Card Badges</Label>
+                        <Label htmlFor="card-badges hover:opacity-20">Show Card Badges</Label>
                       </div>
 
                       {tableData && tableData.length > 0 ? (
