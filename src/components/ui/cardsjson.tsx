@@ -78,7 +78,7 @@ export function CardsJson({ data, onSelectKeyword, isSwitchOn }) {
                                                 </div>
                                                 </a>
 
-                                                <div className={`bottom-card pb-2 ${isSwitchOn ? "block" : "hidden"}`}>
+                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"}`}>
                                                     {/* <hr/> */}
                                                     <div className="flex justify-end badge-wrapper">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.category)}>{item.category}</Badge> : null}

@@ -67,7 +67,7 @@
   .badge-wrapper{
     column-gap: .25rem;
     flex-wrap: wrap;
-    margin-top: -21px;
+    /* margin-top: -21px; */
   }
 
   .badge-category{
@@ -77,7 +77,7 @@
   .badge-city, .badge-country, .badge-continent{
     /* background: none; */
     background: hsl(var(--background));
-    /* border: none; */
+    border: none;
   }
 
   .badge-category:hover{
