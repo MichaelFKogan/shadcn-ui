@@ -130,7 +130,6 @@ function getColumns(onSelectKeyword) {
     columnHelper.accessor('city', {
         header: 'City',
         cell: info => (<div className="city text-sm"><a onClick={() => onSelectKeyword(info.row.original.city)}>{info.row.original.city}</a></div>),
-        enableResizing: false,
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
@@ -139,7 +138,6 @@ function getColumns(onSelectKeyword) {
         id: 'country',
         header: 'Country',
         cell: info => (<div className="country text-sm"><a onClick={() => onSelectKeyword(info.row.original.country)}>{info.row.original.country}</a></div>),
-        enableResizing: false,
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
@@ -147,7 +145,6 @@ function getColumns(onSelectKeyword) {
     columnHelper.accessor('continent', {
         header: 'Continent',
         cell: info => (<div className="continent text-sm"><a onClick={() => onSelectKeyword(info.row.original.continent)}>{info.row.original.continent}</a></div>),
-        enableResizing: false,
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
