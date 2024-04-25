@@ -1,0 +1,24 @@
+header .container{
+    width: 100% !important;
+    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+}
+
+.lucide-chevrons-left{
+    color: hsl(var(--foreground) / 0.6);
+    cursor: pointer;
+}
+
+.lucide-menu{
+    cursor: pointer;
+}
+
+.lucide-chevrons-left{
+    position: absolute;
+    left: -42px;
+    top: 15px;
+}
+  
+.lucide-chevrons-left:hover, .lucide-menu:hover{
+color: hsl(var(--foreground) / 0.8);
+}

@@ -1,19 +1,27 @@
 // src/components/main-nav.tsx
 import { DarkMode } from "@/components/darkmode"
 import { MusicPlayer } from "@/components/music-player"
+import './styles/main-nav.css'
+import { ChevronsLeft, Menu, TreePalm } from "lucide-react"
+
 import {homepage} from '../data/data'
 
-export function MainNav({setData}) {
+export function MainNav({setData, handleSidebarToggle, sidebarOpen}) {
     return (
 
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center">
+            
+            <ChevronsLeft onClick={handleSidebarToggle} />
 
                 <div className="mr-4 hidden md:flex">
+                <Menu strokeWidth={2} className={`mr-6 ${sidebarOpen ? "hidden" : "block"}`} onClick={handleSidebarToggle} />
                     <a className="mr-6 flex items-center space-x-2" onClick={() => setData(homepage)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
+
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-6 w-6"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
                         <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
-                        </svg>
+                        </svg> */}
+                        {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadLinks</span>
                     </a>
                 

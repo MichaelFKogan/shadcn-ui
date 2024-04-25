@@ -316,11 +316,11 @@ export default function Home() {
   return (
     <>
 
-      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen} />
+      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} sidebarOpen={sidebarOpen}/>
 
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className={`sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
-          <MainNav setData={setData} />
+          <MainNav setData={setData} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen}  />
 
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-5">

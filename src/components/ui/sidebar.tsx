@@ -11,17 +11,15 @@ import {homepage} from '../../data/data'
 import { thailand } from '../../data/thailand/thailand';
 import { bangkok } from '../../data/thailand/bangkok';
 import { instagram } from '../../data/socialmedia/instagram';
-import { CircleChevronLeft, CircleChevronRight } from "lucide-react"
 
 // Import the JSON data directly
 import jsonData from '../../data/data.json';
   
 
-export function Sidebar({setData, onSelectKeyword, handleSidebarToggle, sidebarOpen}) {
+export function Sidebar({setData, onSelectKeyword, sidebarOpen}) {
 
     return (
       <>
-            <CircleChevronRight onClick={handleSidebarToggle} />
             <div className={`sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r ${sidebarOpen ? "block" : "hidden"}`}>
               <div className="fixed-sidebar">
 
@@ -57,8 +55,6 @@ export function Sidebar({setData, onSelectKeyword, handleSidebarToggle, sidebarO
                   </div>
                 </div> */}
 
-                <CircleChevronLeft onClick={handleSidebarToggle} />
-
                 <div className="hidden lg:block mt-8">
                 {/* <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a> */}
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-semibold border-b-2">Countries</h2>
@@ -68,7 +64,7 @@ export function Sidebar({setData, onSelectKeyword, handleSidebarToggle, sidebarO
                             <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Asia')}>💯 All</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Asia')}>💯 All Asia</a>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
@@ -163,9 +159,9 @@ export function Sidebar({setData, onSelectKeyword, handleSidebarToggle, sidebarO
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Finance")}>💵 Finance</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Productivity")}>📊 Productivity</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">😎 Lifestyle</h2>
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">🏄‍♀️ Lifestyle</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Apps")}>📱 Apps</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>⌚️ Products</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Products")}>⌚️ Products</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Solo")}>🧍‍♀️ Solo Travel</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Expat")}>🧍‍♂️ Expat</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Couple")}>👫 Couple</a>
