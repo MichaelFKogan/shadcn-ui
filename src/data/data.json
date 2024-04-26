@@ -15,6 +15,7 @@
                 },
                 "name": "Grab",
                 "rank": "",
+                "description": "Grab is Southeast Asia's leading superapp. It provides everyday services like Deliveries, Mobility, Financial Services, and More.",
                 "votes": "",
                 "url": "https://www.grab.com/th/",
                 "tags": [
@@ -290,6 +291,7 @@
                 "addedBy": null,
                 "name": "Line",
                 "rank": "",
+                "description": "Messenger APP. New communication app which allows you to make FREE voice calls and send FREE messages whenever and wherever you are, 24 hours a day!",
                 "votes": "",
                 "url": "https://line.me/en/",
                 "tags": [
@@ -297,7 +299,7 @@
                 ],
                 "category": "📱 Apps",
                 "country": "🇹🇭 Thailand",
-                "city": "🛺 Bangkok",
+                "city": "",
                 "continent": "⛩ Asia",
                 "__collections__": {}
             },

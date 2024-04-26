@@ -170,12 +170,12 @@ export function TableJson({ data, anchor, onSelectKeyword }) {
         data: allLinks,
         columns,
         // defaultColumn: {size: 50, minSize: 50, maxSize: 600,},
-        initialState: {
-            columnPinning: {
-              left: ['title'],
-              right: [],
-            },
-        },
+        // initialState: {
+        //     columnPinning: {
+        //       left: ['title'],
+        //       right: [],
+        //     },
+        // },
         state: {
             sorting,
         },

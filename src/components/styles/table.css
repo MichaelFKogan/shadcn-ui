@@ -8,8 +8,8 @@
 
 .table-container th, .table-container td{
     border: 1px solid hsl(var(--input));
-    /* position: relative; */
-    position: sticky;
+    position: relative;
+    /* position: sticky; */
 }
 
 /* th, td {

@@ -76,27 +76,27 @@ export function Sidebar({setData, onSelectKeyword, firstKeywordSelection, sideba
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Osaka')}>🏯 Osaka</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kyoto')}>👘 Kyoto</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/indonesia">🇮🇩 Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" href="/bali">🏝 Bali</a>
-                                <a className="city text-foreground-light block text-sm" href="/canggu">🏄‍♀️ Canggu</a>
-                                <a className="city text-foreground-light block text-sm" href="/ubud">🐒 Ubud</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Indonesia')}>🇮🇩 Indonesia</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bali')}>🏝 Bali</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Canggu')}>🏄‍♀️ Canggu</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ubud')}>🐒 Ubud</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/korea">🇰🇷 Korea</a>
-                                <a className="city text-foreground-light block text-sm" href="/bali">🍱 Seoul</a>
-                                <a className="city text-foreground-light block text-sm" href="/canggu">🚝 Busan</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Korea')}>🇰🇷 Korea</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Seoul')}>🍱 Seoul</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Busan')}>🚝 Busan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/vietnam">🇻🇳 Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" href="/hochiminhcity">🛵 Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" href="/hanoi">🍲 Hanoi</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Vietnam')}>🇻🇳 Vietnam</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ho Chi Minh City')}>🛵 Ho Chi Minh City</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Hanoi')}>🍲 Hanoi</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/china">🇨🇳 China</a>
-                                <a className="city text-foreground-light block text-sm" href="/beijing">🥡 Beijing</a>
-                                <a className="city text-foreground-light block text-sm" href="/shanghai">🧧 Shanghai</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('China')}>🇨🇳 China</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Beijing')}>🥡 Beijing</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Shanghai')}>🧧 Shanghai</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/hong kong">🇭🇰 Hong Kong</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Hong Kong')}>🇭🇰 Hong Kong</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" href="/taiwan">🇹🇼 Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" href="/taipei">Taipei</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Taiwan')}>🇹🇼 Taiwan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Taipei')}>Taipei</a>
                                 <hr className="mx-7 my-2"/>
                                 
 

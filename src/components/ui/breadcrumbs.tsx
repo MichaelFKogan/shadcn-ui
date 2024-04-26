@@ -51,7 +51,7 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink onClick={() => handleKeywordSelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
+              <BreadcrumbLink className="second-breadcrumb" onClick={() => handleKeywordSelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
           </>
           : null
