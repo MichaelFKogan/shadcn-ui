@@ -384,7 +384,9 @@ export default function Home() {
 
               <div className="hide-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>{hideBanner ? "Show Banner" : "Hide Banner"}</div>
               {/* <div className="change-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>New Banner</div> */}
+              
               <div className={`hero-banner ${hideBanner ? "hidden" : "block"}`}>
+
                 <div className="snow-container" id="snow-container"></div>
                 <div className="main-title">
                   <h1 className="h1">Find your travel inspiration</h1>
@@ -393,7 +395,7 @@ export default function Home() {
               </div>
 
               <div className="grid space-y-10">
-                <Tabs defaultValue="cards" className="tab-menu mt-10">
+                <Tabs defaultValue="cards" className="tab-menu mt-4">
 
                   <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} setData={setData} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} continentBreadcrumbKeyword={continentBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
 

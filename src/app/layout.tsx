@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "NomadLinks - A collection of digital noomad content.",
+  title: "NomadHub",
   description: "A collection of digital nomad content.",
 };
 
