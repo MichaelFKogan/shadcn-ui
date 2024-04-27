@@ -1,11 +1,11 @@
-// src/components/ui/tablejson.tsx
+// src/components/Table.tsx
 
 import { useState, useMemo } from 'react';
 import { Badge } from "@/components/ui/badge";
 import { badgeVariants } from "@/components/ui/badge"
 import Link from 'next/link';
 import { useReactTable, ColumnDef, createColumnHelper, getCoreRowModel, flexRender, getSortedRowModel } from '@tanstack/react-table';
-import '../styles/table.css';
+import './styles/table.css';
 
 // Define the data type
 type Link = {
@@ -160,7 +160,7 @@ function getColumns(onSelectKeyword) {
 ];
 }
 
-export function TableJson({ data, anchor, onSelectKeyword }) {
+export function Table({ data, anchor, onSelectKeyword }) {
     const columns = useMemo(() => getColumns(onSelectKeyword), [onSelectKeyword]);
     const allLinks = useMemo(() => data, [data]);
     const [sorting, setSorting] = useState<SortingState>([]);

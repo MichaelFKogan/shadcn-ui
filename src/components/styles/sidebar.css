@@ -10,6 +10,15 @@
   scrollbar-width: thin;
 }
 
+.lucide-chevrons-left{
+  color: hsl(var(--foreground) / 0.6);
+  cursor: pointer;
+}
+
+.lucide-chevrons-left:hover{
+  color: hsl(var(--foreground) / 0.8);
+  }
+
 .countries-title, .categories-title{
     margin-left: 1.5rem;
     margin-right: 1.5rem;

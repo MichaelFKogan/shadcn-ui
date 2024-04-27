@@ -1,39 +1,22 @@
 // src/app/page.tsx
 'use client'
-import { useState, useMemo, useEffect } from "react";
-import Image from "next/image";
-import { MainNav } from "@/components/main-nav"
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
+import { useState, useEffect } from "react";
 
-import { Sidebar } from "@/components/ui/sidebar";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { HeroBanner } from "@/components/ui/herobanner";
+import { MainNav } from "@/components/MainNav"
+import { Sidebar } from "@/components/Sidebar";
+import { HeroBanner } from "@/components/HeroBanner";
+import { TabsComponent } from "@/components/TabsComponent"
 
-import { Cards } from "@/components/ui/cards";
-import { List } from "@/components/ui/list";
-import { Table } from "@/components/ui/table";
-import { CardsJson } from "@/components/ui/cardsjson";
-import { ListJson } from "@/components/ui/listjson";
-import { TableJson } from "@/components/ui/tablejson";
-
-import { CardExtension } from "@/components/ui/cardextension";
-import { SidebarNew } from "@/components/ui/sidebarnew";
 import Script from 'next/script'; // Import next/script component
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { allData, travel, accomodation, healthinsurance, visa, apps, socialmedia, reddit, work } from '../data/dataExtension';
 import { homepage } from '../data/data'
-import { thailand } from '../data/thailand/thailand'
 
 // Import the JSON data directly
 import jsonData from '../data/data.json';
 
 
 export default function Home() {
-  const [data, setData] = useState(homepage);
+
   const [listData, setListData] = useState([]);
   const [tableData, setTableData] = useState([]);
   const [uniqueCategories, setUniqueCategories] = useState(new Set());
@@ -218,21 +201,21 @@ export default function Home() {
       .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
-      setFilterKeyword(cleanedKeyword);
-      setLastKeyword('');
+    setFilterKeyword(cleanedKeyword);
+    setLastKeyword('');
 
-      setContinentBreadcrumbKeyword('');
-      setBreadcrumbKeyword('');
-      setSecondBreadcrumbKeyword('');
+    setContinentBreadcrumbKeyword('');
+    setBreadcrumbKeyword('');
+    setSecondBreadcrumbKeyword('');
   }
 
   const dynamicTabsSelection = (keyword) => {
     const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
-    .replace(/\s{2,}/g, ' ')
-    .replace(/^\s+/g, '');
-  
+      .replace(/\s{2,}/g, ' ')
+      .replace(/^\s+/g, '');
 
-  
+
+
   }
 
 
@@ -245,24 +228,24 @@ export default function Home() {
       .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
-      setFilterKeyword(cleanedKeyword);
+    setFilterKeyword(cleanedKeyword);
 
-      if(lastKeyword === ''){
-        setLastKeyword(cleanedKeyword);
-      }
+    if (lastKeyword === '') {
+      setLastKeyword(cleanedKeyword);
+    }
 
-      if(breadcrumbKeyword === ''){
-        setBreadcrumbKeyword(cleanedKeyword);
-      }
+    if (breadcrumbKeyword === '') {
+      setBreadcrumbKeyword(cleanedKeyword);
+    }
 
-      if(breadcrumbKeyword !== ''){
-        setSecondBreadcrumbKeyword(cleanedKeyword);
-      }
+    if (breadcrumbKeyword !== '') {
+      setSecondBreadcrumbKeyword(cleanedKeyword);
+    }
 
-      // if(breadcrumbKeyword !== '' && secondBreadcrumbKeyword !== '' ){
-      //   setFilterKeyword(cleanedKeyword);
-      //   setLastKeyword(cleanedKeyword);
-      // }
+    // if(breadcrumbKeyword !== '' && secondBreadcrumbKeyword !== '' ){
+    //   setFilterKeyword(cleanedKeyword);
+    //   setLastKeyword(cleanedKeyword);
+    // }
 
   };
 
@@ -313,84 +296,28 @@ export default function Home() {
   return (
     <>
 
-      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} handleFirstKeyword={handleFirstKeyword} sidebarOpen={sidebarOpen} setContinentBreadcrumbKeyword={setContinentBreadcrumbKeyword} />
-
+      <Sidebar onSelectKeyword={handleKeywordSelection} handleFirstKeyword={handleFirstKeyword} sidebarOpen={sidebarOpen} handleSidebarToggle={handleSidebarToggle} setContinentBreadcrumbKeyword={setContinentBreadcrumbKeyword} />
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className={`sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
-          <MainNav setData={setData} handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen} />
-
+          <MainNav handleSidebarToggle={handleSidebarToggle} sidebarOpen={sidebarOpen} onSelectKeyword={handleKeywordSelection} />
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-5 relative">
-
-              <HeroBanner hideBanner={hideBanner} handleBannerToggle={handleBannerToggle}/>
-
-              <div className="grid space-y-10">
-                <Tabs defaultValue="cards" className="tab-menu mt-4">
-
-                  <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} setData={setData} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} continentBreadcrumbKeyword={continentBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
-
-                  <TabsList className="mb-2">
-                    <TabsTrigger value="cards">Cards</TabsTrigger>
-                    <TabsTrigger value="list">List</TabsTrigger>
-                    <TabsTrigger value="table">Table</TabsTrigger>
-                  </TabsList>
-
-                  <TabsContent value="cards">
-
-                    <div id="card-view">
-                      <div className="badges-switch flex items-center space-x-2">
-                        <Switch id="card-badges" checked={isSwitchOn} onCheckedChange={handleSwitchChange} />
-                        <Label htmlFor="card-badges" className="hover:opacity-20">Show Card Badges</Label>
-                      </div>
-
-
-
-
-
-                      {tableData && tableData.length > 0 ? (
-                        <>
-                          {filterKeyword !== '' ? (
-                            <>
-                              <div className="card-categories-list">
-                                {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                  <Badge key={index} variant="secondary" className="badge badge-category mb-2 text-xs ml-2" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) } }>
-                                    {category}
-                                  </Badge>
-                                ))}
-                              </div>
-                            </>
-                          ) : null
-                          }
-                          <CardsJson data={tableData} onSelectKeyword={handleKeywordSelection} isSwitchOn={isSwitchOn} />
-                        </>
-                      ) : (null)}
-
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent value="list">
-                    <div id="list-view">
-                      <div className="list-row space-y-8">
-                        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                          {listData && listData.length > 0 ? (
-                            <ListJson data={listData} />
-                          ) : (null)}
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent value="table">
-                    {tableData && tableData.length > 0 ? (
-                      <div id="table-view">
-                        <TableJson data={tableData} anchor="table-1" onSelectKeyword={handleKeywordSelection} />
-                      </div>
-                    ) : (null)}
-                  </TabsContent>
-
-                </Tabs>
-
-              </div>
+              <HeroBanner hideBanner={hideBanner} handleBannerToggle={handleBannerToggle} />
+              <TabsComponent 
+                filterKeyword={filterKeyword} 
+                lastKeyword={lastKeyword} 
+                breadcrumbKeyword={breadcrumbKeyword} 
+                secondBreadcrumbKeyword={secondBreadcrumbKeyword} 
+                continentBreadcrumbKeyword={continentBreadcrumbKeyword} 
+                setBreadcrumbKeyword={setBreadcrumbKeyword} 
+                setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} 
+                clearKeywords={clearKeywords} 
+                handleKeywordSelection={handleKeywordSelection}
+                isSwitchOn={isSwitchOn}
+                handleSwitchChange={handleSwitchChange}
+                tableData={tableData}
+                listData={listData}
+                 />
             </div>
           </div>
 

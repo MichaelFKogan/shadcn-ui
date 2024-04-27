@@ -1,9 +1,9 @@
-// src/components/ui/listjson.tsx
+// src/components/List.tsx
 
 import { Badge } from "@/components/ui/badge"
-import '../styles/list.css'
+import './styles/list.css'
 
-export function ListJson({ data, anchor }) {
+export function List({ data, anchor }) {
     return (
         <>
             {data.map(([category, links]) => (

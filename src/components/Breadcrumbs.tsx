@@ -1,4 +1,4 @@
-// src/components/ui/breadcrumbs.tsx
+// src/components/Breadcrumbs.tsx
 
 import {
   Breadcrumb,
@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Slash } from "lucide-react"
 
 
-export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords }) {
+export function Breadcrumbs({ handleKeywordSelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords }) {
 
   return (
     <Breadcrumb>

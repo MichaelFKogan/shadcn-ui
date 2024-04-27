@@ -1,22 +1,15 @@
-// src/components/ui/sidebar.tsx
+// src/components/sidebar.tsx
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
-  import '../styles/sidebar.css'
-
-import {homepage} from '../../data/data'
-import { thailand } from '../../data/thailand/thailand';
-import { bangkok } from '../../data/thailand/bangkok';
-import { instagram } from '../../data/socialmedia/instagram';
-
-// Import the JSON data directly
-import jsonData from '../../data/data.json';
+  import { ChevronsLeft } from "lucide-react"
+  import './styles/sidebar.css'
   
 
-export function Sidebar({setData, onSelectKeyword, handleFirstKeyword, sidebarOpen, setContinentBreadcrumbKeyword}) {
+export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handleSidebarToggle}) {
 
     return (
       <>
@@ -30,33 +23,14 @@ export function Sidebar({setData, onSelectKeyword, handleFirstKeyword, sidebarOp
                             <line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line>
                         </svg>
                     </div>
-                        {/* <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">NomadLinks</h3> */}
                         <span className="hidden font-bold sm:inline-block">NomadLinks</span>
                 </a>
               </div>
 
-                {/* <div className="text-sm leading-4 grid gap-2 md:grid md:grid-cols-12">
-                  <div className="col-span-12">
-                    <div className="">
-                      <div className="relative">
-                        <input data-size="small" id="" name="" placeholder="Search..." type="text" className="peer/input block box-border w-full rounded-md shadow-sm transition-all text-foreground focus-visible:shadow-md outline-none focus:ring-current focus:ring-2 focus-visible:border-foreground-muted focus-visible:ring-background-control placeholder-foreground-muted group bg-foreground/[.026] border border-control text-sm leading-4 px-3 py-2 pl-10" value="" />
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-foreground-light [&amp;_svg]:stroke-[1.5] [&amp;_svg]:h-[18px] [&amp;_svg]:w-[18px]">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="sbui-icon">
-                            <circle cx="11" cy="11" r="8">
-                            </circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65">
-                            </line>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <p data-state="hide" className="text-red-900 transition-all data-show:mt-2 data-show:animate-slide-down-normal data-hide:animate-slide-up-normal text-sm leading-4">
-                    </p>
+                <div className="hidden lg:block mt-4">
+                  <div className="w-full mr-2 text-right">
+                    <ChevronsLeft onClick={handleSidebarToggle} className="ml-auto mr-4" />
                   </div>
-                </div> */}
-
-                <div className="hidden lg:block mt-8">
-                {/* <a className="all text-foreground-light block text-sm" onClick={() => onSelectKeyword('')}>💯 All</a> */}
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-semibold border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
@@ -134,9 +108,6 @@ export function Sidebar({setData, onSelectKeyword, handleFirstKeyword, sidebarOp
                 <div className="hidden lg:block mb-32">
                   <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2">📍 Essentials</h2>
                   <div className="categories">
-
-                  {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("")}>💯 All</a>
                     
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Flights")}>✈️ Flights</a>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Maps")}>🗺 Maps</a>

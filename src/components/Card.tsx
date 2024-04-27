@@ -1,11 +1,11 @@
-// src/components/ui/cardsjson.tsx
+// src/components/Card.tsx
 
 import { Badge } from "@/components/ui/badge"
-import '../styles/cards.css'
+import './styles/cards.css'
 import { SquareArrowOutUpRight } from "lucide-react"
 
 
-export function CardsJson({ data, onSelectKeyword, isSwitchOn }) {
+export function Card({ data, onSelectKeyword, isSwitchOn }) {
 
     return (
         <>
