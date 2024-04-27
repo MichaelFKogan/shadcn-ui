@@ -4,15 +4,15 @@
 │   ├── layout.tsx
 │   └── page.tsx
 ├── components
-├── styles
-│   ├── music-player.css
+│   ├── styles
+│   |   └── music-player.css
 │   ├── ui
 │   │   ├── alert-dialog.tsx
 │   │   ├── button.tsx
 │   │   ├── dropdown-menu.tsx
 │   │   └── ...
-│   ├── main-nav.tsx
-│   ├── page-header.tsx
+│   ├── MainNav.tsx
+│   ├── Card.tsx
 │   └── ...
 ├── data
 │   └── data.tsx
@@ -21,6 +21,8 @@
 ├── pages
 │   └── _apps.tsx
 │   └── home.tsx
+├── utils
+│   └── KeywordUtils.tsx
 ├── next.config.js
 ├── package.json
 ├── postcss.config.js

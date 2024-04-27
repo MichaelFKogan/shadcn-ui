@@ -21,7 +21,9 @@ export function TabsComponent({
     isSwitchOn,
     handleSwitchChange,
     tableData,
-    listData
+    listData,
+    uniqueCategories,
+    cleanCategoryForSorting
 }) {
 
     return (
