@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 
 import { Sidebar } from "@/components/ui/sidebar";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { HeroBanner } from "@/components/ui/herobanner";
 
 import { Cards } from "@/components/ui/cards";
 import { List } from "@/components/ui/list";
@@ -165,7 +166,7 @@ export default function Home() {
 
 
 
-  // SORTING BY CATEGORY FOR CARDS
+  // SORTING BY CATEGORY FOR LIST
   useEffect(() => {
     const categoryMap = {};
 
@@ -210,7 +211,7 @@ export default function Home() {
 
 
   // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
-  const firstKeywordSelection = (keyword) => {
+  const handleFirstKeyword = (keyword) => {
     // Extend the regex to include regional indicator symbols for flag emojis
     // Remove emojis and replace multiple spaces with a single space, trim leading spaces
     const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
@@ -219,8 +220,10 @@ export default function Home() {
 
       setFilterKeyword(cleanedKeyword);
       setLastKeyword('');
-      setBreadcrumbKeyword(cleanedKeyword);
-      setSecondBreadcrumbKeyword('')
+
+      setContinentBreadcrumbKeyword('');
+      setBreadcrumbKeyword('');
+      setSecondBreadcrumbKeyword('');
   }
 
   const dynamicTabsSelection = (keyword) => {
@@ -236,10 +239,6 @@ export default function Home() {
 
   // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
   const handleKeywordSelection = (keyword) => {
-    console.log("*--------------------------------------*")
-    console.log("KEYWORD");
-    console.log(keyword);
-
     // Extend the regex to include regional indicator symbols for flag emojis
     // Remove emojis and replace multiple spaces with a single space, trim leading spaces
     const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
@@ -264,65 +263,6 @@ export default function Home() {
       //   setFilterKeyword(cleanedKeyword);
       //   setLastKeyword(cleanedKeyword);
       // }
-
-      console.log("FILTER KEYWORD");
-      console.log(cleanedKeyword);
-
-      console.log("LAST KEYWORD");
-      console.log(lastKeyword);
-
-      console.log("BREADCRUMB KEYWORD");
-      console.log(breadcrumbKeyword);
-
-      console.log("SECOND BREADCRUMB KEYWORD");
-      console.log(secondBreadcrumbKeyword);
-
-
-
-
-    // // STEP 1: If both keywords are empty
-    // if (lastKeyword === '' && cleanedKeyword !== ''){
-    //   setFilterKeyword(cleanedKeyword);
-    //   setLastKeyword(cleanedKeyword);
-    //   setBreadcrumbKeyword(cleanedKeyword);
-    // }
-
-    // // STEP 2: lastKeyword is set and new keyword comes in
-    // else c
-
-    // else if(lastKeyword.includes(cleanedKeyword)){
-    //   setFilterKeyword(cleanedKeyword);
-    //   setBreadcrumbKeyword(cleanedKeyword);
-    //   setLastKeyword(cleanedKeyword);
-    //   setSecondBreadcrumbKeyword('');
-    // }
-
-    // else if(cleanedKeyword !== lastKeyword){
-    //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    //   setLastKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    // }
-
-    // else{}
-
-    // if (cleanedKeyword === lastKeyword) {
-
-    // }
-    // else if(cleanedKeyword !== lastKeyword){
-    //   setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    //   setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
-    // }else{
-    //   setFilterKeyword(cleanedKeyword);
-    //   setLastKeyword(cleanedKeyword);
-    //   setBreadcrumbKeyword(cleanedKeyword);
-    // }
-
-    // else {
-    //   setFilterKeyword(cleanedKeyword);
-    //   setLastKeyword(cleanedKeyword); // Update the last keyword
-    //   setBreadcrumbKeyword(cleanedKeyword);
-    // }
-
 
   };
 
@@ -349,7 +289,7 @@ export default function Home() {
   // SNOWFLAKE EFFECT
   useEffect(() => {
     const container = document.getElementById('snow-container');
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
       let flake = document.createElement('div');
       flake.className = 'snowflake';
       let randomSize = Math.random() * 2 + 3;
@@ -373,7 +313,7 @@ export default function Home() {
   return (
     <>
 
-      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} firstKeywordSelection={firstKeywordSelection} sidebarOpen={sidebarOpen} setContinentBreadcrumbKeyword={setContinentBreadcrumbKeyword} />
+      <Sidebar setData={setData} onSelectKeyword={handleKeywordSelection} handleFirstKeyword={handleFirstKeyword} sidebarOpen={sidebarOpen} setContinentBreadcrumbKeyword={setContinentBreadcrumbKeyword} />
 
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className={`sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
@@ -382,17 +322,7 @@ export default function Home() {
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-5 relative">
 
-              <div className="hide-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>{hideBanner ? "Show Banner" : "Hide Banner"}</div>
-              {/* <div className="change-banner text-xs text-muted-foreground font-normal hover:opacity-70" onClick={handleBannerToggle}>New Banner</div> */}
-              
-              <div className={`hero-banner ${hideBanner ? "hidden" : "block"}`}>
-
-                <div className="snow-container" id="snow-container"></div>
-                <div className="main-title">
-                  <h1 className="h1">Find your travel inspiration</h1>
-                  <p className="text-foreground-lighter text-xl">A collection of digital nomad content.</p>
-                </div>
-              </div>
+              <HeroBanner hideBanner={hideBanner} handleBannerToggle={handleBannerToggle}/>
 
               <div className="grid space-y-10">
                 <Tabs defaultValue="cards" className="tab-menu mt-4">

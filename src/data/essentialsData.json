@@ -1,0 +1,171 @@
+{
+    "__collections__": {
+        "Links": {
+            "0nuxgMVvK2zoIeIqKuZH": {
+                "country": "",
+                "city": "",
+                "name": "Hoodmaps",
+                "rank": "",
+                "description": "Hoodmaps is a crowdsourced map to navigate citie based on hipsters, tourists, rich, normies, suits and uni areas.",
+                "url": "https://hoodmaps.com/",
+                "tags": "",
+                "category": "🗺 Maps",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "3pnSjHm6izS6CMiPCzdF": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705938851,
+                        "_nanoseconds": 412000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Google Flights",
+                "rank": "",
+                "description": "Use Google Flights to explore cheap flights to anywhere. Search destinations and track prices to find and book your next flight.",
+                "votes": "",
+                "category": "✈️ Flights",
+                "url": "https://www.google.com/travel/flights",
+                "tags": [],
+                "__collections__": {}
+            },
+            "6uhlhcadpbO3c4Yf8s3Q": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705939024,
+                        "_nanoseconds": 89000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "World Nomads",
+                "rank": "",
+                "description": "Travel insurance for independent travellers from more than 130+ countries. Buy, extend & claim online. 24hr worldwide assistance.",
+                "votes": "",
+                "category": "😷 Health Insurance",
+                "url": "https://www.worldnomads.com/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "BMQUhIju1RFQLCogbjDV": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705280659,
+                        "_nanoseconds": 835000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Google Translate",
+                "rank": "",
+                "description": "Google's service, offered free of charge, instantly translates words, phrases, and web pages between English and over 100 other languages.",
+                "votes": "",
+                "category": "📱 Apps",
+                "url": "https://translate.google.com/",
+                "tags": [
+                    "🗣 Language Learning"
+                ],
+                "__collections__": {}
+            },
+            "EbcigKwR1KEthSu7fTeN": {
+                "country": "",
+                "website": "https://nomadlist.com/",
+                "city": "",
+                "name": "Nomad List",
+                "description": "Learn how to become a digital nomad and find the best places to live and work remotely as a location independent remote worker. Explore places based on cost of living, internet speed, weather and other metrics. For startups that work remotely and remote workers.",
+                "tags": "Travel",
+                "rank": 2,
+                "category": "📍 Places",
+                "url": "https://nomadlist.com/",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "X8xUyk4xAugvuj4nHOJO": {
+                "country": "",
+                "city": "",
+                "name": "Google Maps",
+                "tags": "",
+                "rank": 1,
+                "category": "🗺 Maps",
+                "url": "https://www.google.com/maps",
+                "continent": "🌎 Worldwide",
+                "__collections__": {}
+            },
+            "Ze9hIjJ1BDhMg9imUav0": {
+                "country": "",
+                "city": "",
+                "name": "AirBNB",
+                "description": "Find the perfect place to stay at an amazing price in 191 countries. Belong anywhere with Airbnb.",
+                "rank": 3,
+                "category": "🏠 Accomodation",
+                "url": "https://www.airbnb.com",
+                "continent": "🌎 Worldwide",
+                "tags": [
+                    "🛌 Apartment",
+                    "🏠 Home",
+                    "🏨 Hotels",
+                    "🛏 Hostels"
+                ],
+                "__collections__": {}
+            },
+            "kvBqvaIo2HunrR96z5pN": {
+                "continent": "",
+                "date": {
+                    "__datatype__": "timestamp",
+                    "value": {
+                        "_seconds": 1705938958,
+                        "_nanoseconds": 658000000
+                    }
+                },
+                "country": "",
+                "city": "",
+                "addedBy": {
+                    "uid": "E9wCjhcyByXpvACkdKfC5QPkQex1",
+                    "email": "mfkogan@gmail.com"
+                },
+                "name": "Safety Wing",
+                "rank": "",
+                "description": "Health and insurance products for remote companies and remote workers worldwide, as a replacement for national welfare systems.",
+                "votes": "",
+                "category": "😷 Health Insurance",
+                "url": "https://safetywing.com/",
+                "tags": [],
+                "__collections__": {}
+            },
+            "tWSt9vltDjcHv3aX8M51": {
+                "country": "",
+                "city": "",
+                "name": "Booking.com",
+                "rank": 4,
+                "category": "🏠 Accomodation",
+                "url": "https://www.booking.com",
+                "continent": "🌎 Worldwide",
+                "tags": [
+                    "🏨 Hotels",
+                    "🛏 Hostels"
+                ],
+                "__collections__": {}
+            },
+        }
+    }
+}

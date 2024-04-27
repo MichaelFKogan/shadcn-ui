@@ -22,7 +22,7 @@ export function Breadcrumbs({ setData, handleKeywordSelection, filterKeyword, la
 
   return (
     <Breadcrumb>
-      <BreadcrumbList>
+      <BreadcrumbList style={{marginBottom: "1px"}}>
         <BreadcrumbItem>
           <BreadcrumbLink onClick={() => clearKeywords()}>Home</BreadcrumbLink>
         </BreadcrumbItem>

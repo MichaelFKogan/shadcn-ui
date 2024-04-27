@@ -16,7 +16,7 @@ import { instagram } from '../../data/socialmedia/instagram';
 import jsonData from '../../data/data.json';
   
 
-export function Sidebar({setData, onSelectKeyword, firstKeywordSelection, sidebarOpen, setContinentBreadcrumbKeyword}) {
+export function Sidebar({setData, onSelectKeyword, handleFirstKeyword, sidebarOpen, setContinentBreadcrumbKeyword}) {
 
     return (
       <>
@@ -61,10 +61,10 @@ export function Sidebar({setData, onSelectKeyword, firstKeywordSelection, sideba
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                            <AccordionTrigger>⛩ Asia</AccordionTrigger>
+                        <AccordionTrigger>⛩ Asia</AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
-                                <a className="city text-foreground-light block text-sm" onClick={() => {onSelectKeyword('Asia')}}>💯 All Asia</a>
+                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Asia')}>All</a>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
@@ -137,11 +137,12 @@ export function Sidebar({setData, onSelectKeyword, firstKeywordSelection, sideba
 
                   {/* <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm">Essentials</h2> */}
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("")}>💯 All</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Flights")}>✈️ Flights</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Maps")}>🗺 Maps</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Accomodation")}>🛌 Accomodation</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Health Insurance")}>😷 Health Insurance</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => firstKeywordSelection("Visa")}>🛂 Visa</a>
+                    
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Flights")}>✈️ Flights</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Maps")}>🗺 Maps</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Accomodation")}>🛌 Accomodation</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Health Insurance")}>😷 Health Insurance</a>
+                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Visa")}>🛂 Visa</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">📸 Social Media</h2>
                     <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
