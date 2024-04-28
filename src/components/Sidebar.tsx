@@ -14,7 +14,7 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
 
     return (
       <>
-            <div className={`sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-64 lg:border-b-0 lg:border-r ${sidebarOpen ? "block" : "hidden"}`}>
+            <div className={`sidebar-wrapper fixed top-0 z-10 flex w-full flex-col border-b lg:bottom-0 lg:z-auto lg:w-56 lg:border-b-0 lg:border-r ${sidebarOpen ? "block" : "hidden"}`}>
               <div className="fixed-sidebar">
 
               <div className="flex h-14 items-center px-6 py-4 lg:h-auto" style={{display: "none"}}>

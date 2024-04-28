@@ -44,7 +44,7 @@
 
 .card__text-wrapper p{
     max-height: 34px;
-    color: hsl(var(--muted-foreground));
+    color: hsl(var(--muted-foreground))
 }
 
 .card:hover {
@@ -76,9 +76,17 @@
     /* margin-top: -21px; */
   }
 
+
+  .card .badge-category{
+    font-size: 10px;
+  }
+
+
   .badge-city, .badge-country, .badge-continent{
-    /* background: none; */
+    font-size: 10px;
+    font-weight: 300;
     background: hsl(var(--background));
+    color: hsl(var(--muted-foreground)))
     border: none;
   }
 

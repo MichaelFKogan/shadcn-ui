@@ -10,7 +10,7 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
     return (
         <>
         {/* <div className="card-row"> */}
-        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 mb-2">
+        <div className="grid grid-cols-1 gap-3 2xl:gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 mb-2">
 
             {data.map((item, index) => {
                 
