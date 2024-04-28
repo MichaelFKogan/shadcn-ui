@@ -40,7 +40,7 @@
 
 .card__text-wrapper p{
     max-height: 34px;
-    color: hsl(var(--foreground) / 0.6);
+    color: hsl(var(--muted-foreground));
 }
 
 .card:hover {
