@@ -24,7 +24,7 @@
                 ],
                 "country": "🇹🇭 Thailand",
                 "category": "📱 Apps",
-                "city": "🛺 Bangkok",
+                "city": "",
                 "continent": "⛩ Asia",
                 "__collections__": {}
             },
@@ -645,6 +645,7 @@
                     "🏨 Hotels",
                     "🛏 Hostels"
                 ],
+                "description": "Booking.com is one of the largest online travel agencies. It is headquartered in Amsterdam, and is a subsidiary of Booking Holdings. In 2022, the company's mobile app was the most downloaded mobile app in the travel agency category.",
                 "__collections__": {}
             },
             "v7jpJtqXUM6t9eHsmt3s": {

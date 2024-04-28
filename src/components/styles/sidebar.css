@@ -33,6 +33,10 @@
     height: max-content;
   }
 
+.country-click:hover{
+  text-decoration: underline;
+}
+
 .countries-title, .categories-title{
     margin-left: 1.5rem;
     margin-right: 1.5rem;

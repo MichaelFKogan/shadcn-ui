@@ -21,7 +21,7 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(false);
+const [isSwitchOn, setIsSwitchOn] = useState(true);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
 
@@ -235,7 +235,7 @@ const handleFirstKeyword = (keyword) => {
           <MainNav 
             handleSidebarToggle={handleSidebarToggle} 
             sidebarOpen={sidebarOpen} 
-            onSelectKeyword={handleKeywordSelection} 
+            handleKeywordSelection={handleKeywordSelection} 
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>

@@ -30,7 +30,7 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
 
                 <div className="hidden lg:block mt-4">
                   <div className="w-full mr-2 text-right">
-                    <Button variant="ghost" size="icon" className="ml-auto mr-4" onClick={handleSidebarToggle}>
+                    <Button variant="ghost" size="icon" className="ml-auto mr-3" onClick={handleSidebarToggle}>
                       <ChevronsLeft />
                     </Button>
                   </div>
@@ -38,10 +38,8 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> Asia</div></AccordionTrigger>
+                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => onSelectKeyword('Asia')}>Asia</span></div></AccordionTrigger>
                             <AccordionContent>
-                                <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Asia')}>All</a>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>

@@ -62,10 +62,10 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
 
                             return (
                                 <>
-                                        <div className="card group flex h-full w-full flex-col rounded-xl transition-all" key={index}>
+                                        <div className="card group flex h-full w-full flex-col rounded-lg p-4 transition-all border shadow" key={index}>
                                             <div className="flex flex-col">
 
-                                            <a href={item.url} target="_blank" key={index} className="card-link rounded-xl p-4 border shadow">
+                                            <a href={item.url} target="_blank" key={index} className="card-link">
                                                 {/* <SquareArrowOutUpRight /> */}
                                                 <div className="image-text-wrapper flex w-full items-center">
                                                     <div className="relative h-[62px] min-w-[62px] w-[62px] rounded-md overflow-hidden scale-100 transition-all">
@@ -78,9 +78,9 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
                                                 </div>
                                                 </a>
 
-                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"}`}>
-                                                    {/* <hr/> */}
-                                                    <div className="flex justify-end badge-wrapper">
+                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} pt-2`}>
+                                                    <hr/>
+                                                    <div className="flex justify-end badge-wrapper mt-2">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.category)}>{item.category}</Badge> : null}
 
                                                         {item.city ? <Badge variant="outline" className="badge badge-city mt-2 text-xs" onClick={() => onSelectKeyword(item.city)}>{item.city}</Badge> :
