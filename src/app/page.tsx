@@ -21,7 +21,7 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(false);
+const [isSwitchOn, setIsSwitchOn] = useState(true);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
 

@@ -8,6 +8,8 @@ import { List } from "@/components/List";
 import { Table } from "@/components/Table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import './styles/tabscomponent.css';
+
 export function TabsComponent({
     filterKeyword, 
     lastKeyword, 
@@ -55,7 +57,7 @@ export function TabsComponent({
                                         <>
                                             <div className="card-categories-list">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mb-2 text-xs ml-2" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
+                                                    <Badge key={index} variant="outline" className="badge badge-category mb-2 text-sm rounded-sm ml-2" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}
