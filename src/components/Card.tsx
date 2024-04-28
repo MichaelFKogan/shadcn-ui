@@ -67,7 +67,7 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
 
                                             <a href={item.url} target="_blank" key={index} className="card-link rounded-xl">
                                                 {/* <SquareArrowOutUpRight /> */}
-                                                <div className="image-text-wrapper flex w-full items-center p-4">
+                                                <div className="image-text-wrapper flex w-full items-center px-3 pt-3">
                                                     <div className="relative h-[62px] min-w-[62px] w-[62px] rounded-md overflow-hidden scale-100 transition-all">
                                                         <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} />
                                                     </div>
@@ -78,8 +78,8 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
                                                 </div>
                                                 </a>
 
-                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-4 pb-2`}>
-                                                    <hr/>
+                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-3 pb-2`}>
+                                                    {/* <hr/> */}
                                                     <div className="flex justify-end badge-wrapper">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.category)}>{item.category}</Badge> : null}
 

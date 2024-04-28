@@ -53,9 +53,9 @@ export function TabsComponent({
                                 <>
                                     {filterKeyword !== '' ? (
                                         <>
-                                            <div className="card-categories-list">
+                                            <div className="card-categories-list mt-4 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mb-2 text-xs ml-2" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}

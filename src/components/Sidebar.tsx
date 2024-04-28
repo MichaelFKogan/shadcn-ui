@@ -126,7 +126,7 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">💼</span> Work</h2>
-                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Work")}><span className="sidebar-emoji">👔</span> Work</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Jobs")}><span className="sidebar-emoji">👔</span> Work</a>
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("English Teaching")}><span className="sidebar-emoji">🔤</span> English Teaching</a>
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Finance")}><span className="sidebar-emoji">💵</span> Finance</a>
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Productivity")}><span className="sidebar-emoji">📊</span> Productivity</a>
