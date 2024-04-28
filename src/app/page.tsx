@@ -13,7 +13,7 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
 
-const [filterKeyword, setFilterKeyword] = useState('Essentials');
+const [filterKeyword, setFilterKeyword] = useState('');
 const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
 const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
