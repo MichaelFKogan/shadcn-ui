@@ -32,6 +32,8 @@
 }
 
 .card__text-wrapper h3{
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.25rem;
 }
@@ -99,4 +101,20 @@
 
 .card-link:hover .lucide-square-arrow-out-up-right {
   opacity: 1;
+}
+
+/* SWITCH - FOR CARD BADGES */
+.badges-switch{
+  position: absolute;
+  top: -40px;
+  right: 200px;
+  cursor:pointer;
+}
+
+.badges-switch label{
+  cursor:pointer;
+}
+
+.badges-switch label:hover{
+  opacity: 0.7;
 }

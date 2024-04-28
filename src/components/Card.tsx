@@ -62,7 +62,7 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
 
                             return (
                                 <>
-                                        <div className="card bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-xl transition-all" key={index}>
+                                        <div className="card group flex h-full w-full flex-col rounded-xl transition-all" key={index}>
                                             <div className="flex flex-col">
 
                                             <a href={item.url} target="_blank" key={index} className="card-link rounded-xl p-4 border shadow">

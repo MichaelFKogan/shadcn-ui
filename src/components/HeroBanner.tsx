@@ -1,3 +1,5 @@
+import './styles/herobanner.css'
+
 export function HeroBanner({hideBanner, handleBannerToggle}) {
     return (
         <>

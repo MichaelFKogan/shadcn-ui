@@ -5,6 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+  import { Button } from "@/components/ui/button";
   import { ChevronsLeft } from "lucide-react"
   import './styles/sidebar.css'
   
@@ -29,47 +30,49 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
 
                 <div className="hidden lg:block mt-4">
                   <div className="w-full mr-2 text-right">
-                    <ChevronsLeft onClick={handleSidebarToggle} className="ml-auto mr-4" />
+                    <Button variant="ghost" size="icon" className="ml-auto mr-4" onClick={handleSidebarToggle}>
+                      <ChevronsLeft />
+                    </Button>
                   </div>
                   <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-semibold border-b-2">Countries</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                        <AccordionTrigger>⛩ Asia</AccordionTrigger>
+                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> Asia</div></AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Asia')}>All</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Asia')}>All</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Thailand')}>🇹🇭 Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}>🛺 Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Chiang Mai')}>🐘 Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kho Phangan')}>🌊 Kho Phangan</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Japan')}>🇯🇵 Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Tokyo')}>🗼 Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Osaka')}>🏯 Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kyoto')}>👘 Kyoto</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Indonesia')}>🇮🇩 Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bali')}>🏝 Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Canggu')}>🏄‍♀️ Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ubud')}>🐒 Ubud</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Korea')}>🇰🇷 Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Seoul')}>🍱 Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Busan')}>🚝 Busan</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Vietnam')}>🇻🇳 Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ho Chi Minh City')}>🛵 Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Hanoi')}>🍲 Hanoi</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('China')}>🇨🇳 China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Beijing')}>🥡 Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Shanghai')}>🧧 Shanghai</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Hong Kong')}>🇭🇰 Hong Kong</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword('Taiwan')}>🇹🇼 Taiwan</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => onSelectKeyword('Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
                                 <a className="city text-foreground-light block text-sm" onClick={() => onSelectKeyword('Taipei')}>Taipei</a>
                                 <hr className="mx-7 my-2"/>
                                 
@@ -77,25 +80,25 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger>💃🏻 Latin America</AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">💃🏻</span> Latin America</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
-                            <AccordionTrigger>🇪🇺 Europe</AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🇪🇺</span> Europe</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
-                            <AccordionTrigger>🕌 Middle East</AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🕌</span> Middle East</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-5">
-                            <AccordionTrigger>🌊 Oceania</AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🌊</span> Oceania</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
@@ -106,38 +109,38 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
 
 
                 <div className="hidden lg:block mb-32">
-                  <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2">📍 Essentials</h2>
+                  <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2"><span className="sidebar-emoji">📍</span> Essentials</h2>
                   <div className="categories">
                     
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Flights")}>✈️ Flights</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Maps")}>🗺 Maps</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Accomodation")}>🛌 Accomodation</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Health Insurance")}>😷 Health Insurance</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => handleFirstKeyword("Visa")}>🛂 Visa</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Flights")}><span className="sidebar-emoji">✈️</span> Flights</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Maps")}><span className="sidebar-emoji">🗺</span> Maps</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Accomodation")}><span className="sidebar-emoji">🛌</span> Accomodation</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Health Insurance")}><span className="sidebar-emoji">😷</span> Health Insurance</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Visa")}><span className="sidebar-emoji">🛂</span> Visa</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">📸 Social Media</h2>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><img src="./images/instagram.png" className="accordion-logo"/>Instagram</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("TikTok")}><div className="flex items-center"><img src="./images/tiktok.png" className="accordion-logo"/>TikTok</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Facebook")}><div className="flex items-center"><img src="./images/facebook.png" className="accordion-logo"/>Facebook</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("YouTube")}><div className="flex items-center"><img src="./images/youtube.png" className="accordion-logo"/>YouTube</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Reddit")}><div className="flex items-center"><img src="./images/reddit.png" className="accordion-logo"/>Reddit</div></a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Vlog")}>📹 Vlog</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Blog")}>✍️ Blog</a>
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">📸</span> Social Media</h2>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/tiktok.png" className="accordion-logo"/></span>TikTok</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">💼 Work</h2>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Work")}>👔 Work</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("English Teaching")}>🔤 English Teaching</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Finance")}>💵 Finance</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Productivity")}>📊 Productivity</a>
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">💼</span> Work</h2>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Work")}><span className="sidebar-emoji">👔</span> Work</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("English Teaching")}><span className="sidebar-emoji">🔤</span> English Teaching</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Finance")}><span className="sidebar-emoji">💵</span> Finance</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Productivity")}><span className="sidebar-emoji">📊</span> Productivity</a>
 
-                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2">🏄‍♀️ Lifestyle</h2>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Apps")}>📱 Apps</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Products")}>⌚️ Products</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Solo")}>🧍‍♀️ Solo Travel</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Expat")}>🧍‍♂️ Expat</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Couple")}>👫 Couple</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Backpacker")}>🎒 Backpacker</a>
-                    <a className="text-foreground-light block text-sm font-medium" onClick={() => onSelectKeyword("Van Life")}>🚐 Van Life</a>
+                    <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">🏄‍♀️</span> Lifestyle</h2>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Apps")}><span className="sidebar-emoji">📱</span> Apps</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Products")}><span className="sidebar-emoji">⌚️</span> Products</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Solo")}><span className="sidebar-emoji">🧍‍♀️</span> Solo Travel</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Expat")}><span className="sidebar-emoji">🧍‍♂️</span> Expat</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Couple")}><span className="sidebar-emoji">👫</span> Couple</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Backpacker")}><span className="sidebar-emoji">🎒</span> Backpacker</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Van Life")}><span className="sidebar-emoji">🚐</span> Van Life</a>
 
                   </div>
                 </div>

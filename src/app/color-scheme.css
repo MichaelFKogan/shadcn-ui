@@ -7,7 +7,9 @@
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
 
-      --sidebar: 0, 0%, 97.6%;
+      --sidebar: #f8fafc;
+      --sidebar-heading: #475569;
+      --sidebar-text: #6b7280;
 
       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
@@ -68,82 +70,13 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
-  } 
+  }
 
-   @layer base {
+  @layer base {
     * {
       @apply border-border;
     }
     body {
       @apply bg-background text-foreground;
     }
-  }
-
-  .snow-container {
-    /* display: none; */
-    position: relative;
-    width: 100%;
-    height: 260px;
-    overflow: hidden;
-  }
-  
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    background-color: white; 
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    animation: fall linear 10s infinite;
-  }
-  
-  @keyframes fall {
-    0% { transform: translateY(-10px) translateX(0px); }
-    100% { transform: translateY(200px) translateX(100px); }
-  }
-
-
-  h1{
-    font-size: 32px;
-  }
-
-  h2{
-    font-size: 28px;
-  }
-
-  .clear-btn{
-    margin-top: 1px;
-  }
-
-  a{
-    cursor: pointer;
-  }
-
-  .border-b{
-    border-bottom:0px;
-    border-bottom-width: 0px !important
-  }
-
-  .section-title{
-    /* display: none; */
-  }
-
-  .line-clamp-4{
-    -webkit-line-clamp: 3;
-  }
-
-  .tab-menu-options{
-    float: right;
-    position: sticky;
-    top: 57px;
-    z-index: 2;
-  }
-
-  .lucide-chevron-down{
-    width: 0.875rem;
-    height: 0.875rem;
-  }
-
-  .second-breadcrumb{
-    color: hsl(var(--foreground) / .9)
   }

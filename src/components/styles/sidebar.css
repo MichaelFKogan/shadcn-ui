@@ -8,6 +8,7 @@
   position: relative;
   scrollbar-color: hsl(var(--border) / .6) hsl(var(--border) / 0);
   scrollbar-width: thin;
+  /* background-color: var(--sidebar); */
 }
 
 .lucide-chevrons-left{
@@ -19,17 +20,36 @@
   color: hsl(var(--foreground) / 0.8);
   }
 
+  .sidebar-emoji{
+    margin-right: 10px;
+    font-size: 18px;
+    /* border: 1px solid hsl(var(--border));
+    border-radius: 6px; */
+    /* padding: 4px; */
+  }
+
+  .accordion-logo{
+    max-width: 18px;
+    height: max-content;
+  }
+
 .countries-title, .categories-title{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    color: hsl(var(--foreground) / 0.7);
+    color: var(--sidebar-heading);
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
   }
 
   .all, .countries a, .categories a, .accordion a, .accordion button{
     padding: .25rem .50rem;
     margin: 0rem 1rem;
     border-radius: .375rem;
-    color: hsl(var(--foreground) / 0.8);
+    color: var(--sidebar-text);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
   }
 
   .accordion .city, .categories-accordion a{
@@ -61,10 +81,4 @@
   .city{
     /* --tw-text-opacity: 1;
     color: rgba(55, 65, 81, var(--tw-text-opacity)); */
-  }
-
-  .accordion-logo{
-    max-width: 15px;
-    height: max-content;
-    margin-right: .25rem;
   }
