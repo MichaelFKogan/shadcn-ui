@@ -13,7 +13,7 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
 
-const [filterKeyword, setFilterKeyword] = useState('');
+const [filterKeyword, setFilterKeyword] = useState('Essentials');
 const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
 const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
@@ -21,7 +21,7 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(true);
+const [isSwitchOn, setIsSwitchOn] = useState(false);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
 

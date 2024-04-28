@@ -107,7 +107,7 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
 
 
                 <div className="hidden lg:block mb-32">
-                  <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2"><span className="sidebar-emoji">📍</span> Essentials</h2>
+                  <h2 className="categories-title text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2" onClick={() => onSelectKeyword('Essentials')}><span className="sidebar-emoji">📍</span> Essentials</h2>
                   <div className="categories">
                     
                     <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Flights")}><span className="sidebar-emoji">✈️</span> Flights</a>

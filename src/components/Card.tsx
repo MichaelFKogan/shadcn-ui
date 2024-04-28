@@ -10,7 +10,7 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
     return (
         <>
         {/* <div className="card-row"> */}
-        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-2">
+        <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 mb-2">
 
             {data.map((item, index) => {
                 
@@ -62,12 +62,12 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
 
                             return (
                                 <>
-                                        <div className="card group flex h-full w-full flex-col rounded-lg p-4 transition-all border shadow" key={index}>
+                                        <div className="card group flex h-full w-full flex-col rounded-xl transition-all border shadow" key={index}>
                                             <div className="flex flex-col">
 
-                                            <a href={item.url} target="_blank" key={index} className="card-link">
+                                            <a href={item.url} target="_blank" key={index} className="card-link rounded-xl">
                                                 {/* <SquareArrowOutUpRight /> */}
-                                                <div className="image-text-wrapper flex w-full items-center">
+                                                <div className="image-text-wrapper flex w-full items-center p-4">
                                                     <div className="relative h-[62px] min-w-[62px] w-[62px] rounded-md overflow-hidden scale-100 transition-all">
                                                         <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} />
                                                     </div>
@@ -78,10 +78,12 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
                                                 </div>
                                                 </a>
 
-                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} pt-2`}>
+                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-4 pb-2`}>
                                                     <hr/>
-                                                    <div className="flex justify-end badge-wrapper mt-2">
+                                                    <div className="flex justify-end badge-wrapper">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.category)}>{item.category}</Badge> : null}
+
+                                                        {/* {item.tags ? <Badge variant="outline" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.tags)}>{item.tags}</Badge> : null} */}
 
                                                         {item.city ? <Badge variant="outline" className="badge badge-city mt-2 text-xs" onClick={() => onSelectKeyword(item.city)}>{item.city}</Badge> :
                                                         item.country ? <Badge variant="outline" className="badge badge-country mt-2 text-xs" onClick={() => onSelectKeyword(item.country)}>{item.country}</Badge> : 

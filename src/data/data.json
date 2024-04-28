@@ -37,6 +37,7 @@
                 "url": "https://hoodmaps.com/",
                 "tags": "",
                 "category": "🗺 Maps",
+                "group": "Essentials",
                 "continent": "🌎 Worldwide",
                 "__collections__": {}
             },
@@ -136,6 +137,7 @@
                 "votes": "",
                 "category": "✈️ Flights",
                 "url": "https://www.google.com/travel/flights",
+                "group": "Essentials",
                 "tags": [],
                 "__collections__": {}
             },
@@ -184,6 +186,7 @@
                 "votes": "",
                 "category": "😷 Health Insurance",
                 "url": "https://www.worldnomads.com/",
+                "group": "Essentials",
                 "tags": [],
                 "__collections__": {}
             },
@@ -436,6 +439,7 @@
                 "rank": 1,
                 "category": "🗺 Maps",
                 "url": "https://www.google.com/maps",
+                "group": "Essentials",
                 "continent": "🌎 Worldwide",
                 "__collections__": {}
             },
@@ -488,6 +492,7 @@
                 "category": "🏠 Accomodation",
                 "url": "https://www.airbnb.com",
                 "continent": "🌎 Worldwide",
+                "group": "Essentials",
                 "tags": [
                     "🛌 Apartment",
                     "🏠 Home",
@@ -582,6 +587,7 @@
                 "votes": "",
                 "category": "😷 Health Insurance",
                 "url": "https://safetywing.com/",
+                "group": "Essentials",
                 "tags": [],
                 "__collections__": {}
             },
@@ -640,6 +646,7 @@
                 "rank": 4,
                 "category": "🏠 Accomodation",
                 "url": "https://www.booking.com",
+                "group": "Essentials",
                 "continent": "🌎 Worldwide",
                 "tags": [
                     "🏨 Hotels",
