@@ -76,22 +76,34 @@
     /* margin-top: -21px; */
   }
 
-
   .card .badge-category{
     font-size: 10px;
+    /* border: 1px solid hsl(var(--background)); */
   }
 
+  .card .badge-category:hover{
+    background-color: hsl(var(--input));
+  }
 
   .badge-city, .badge-country, .badge-continent{
     font-size: 10px;
-    font-weight: 300;
+    font-weight: 400;
     background: hsl(var(--background));
-    color: hsl(var(--muted-foreground)))
+    color: hsl(var(--secondary-foreground));
     border: none;
   }
 
-  .badge-category:hover{
-    background-color: hsl(var(--input));
+  /* .card:hover .badge-category{
+    background: hsl(var(--background));
+  } */
+
+  .card:hover .badge-city, .card:hover .badge-country, .card:hover .badge-continent{
+    
+  }
+
+
+  .card-categories-list .badge-category:hover{
+    background-color: hsl(var(--secondary) / .5);
   }
 
   .badge-city:hover, .badge-country:hover, .badge-continent:hover{
