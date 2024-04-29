@@ -11,3 +11,14 @@ header .container{
 .lucide-menu:hover{
 color: hsl(var(--foreground) / 0.8);
 }
+
+.hamburger-menu{
+    opacity: 1;
+    transition: opacity .2s ease-in-out, width .2s ease-in-out, margin-right .2s ease-in-out;
+}
+
+.hamburger-menu.collapsed{
+    opacity: 0;
+    width: 0px;
+    margin-right: 0px;
+  }

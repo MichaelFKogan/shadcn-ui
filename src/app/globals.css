@@ -129,6 +129,10 @@
     /* display: none; */
   }
 
+  .right-side-content{
+  transition: padding-left 0.1s ease-in-out; /* Add smooth transition for padding-left */
+  }
+
   .line-clamp-4{
     -webkit-line-clamp: 3;
   }

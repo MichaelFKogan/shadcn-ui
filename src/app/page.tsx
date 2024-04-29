@@ -236,7 +236,7 @@ const handleFirstKeyword = (keyword) => {
       />
 
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className={`sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-56 2xl:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
+        <div className={`right-side-content sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-56 2xl:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
           
           <MainNav 
             handleSidebarToggle={handleSidebarToggle} 
@@ -245,7 +245,7 @@ const handleFirstKeyword = (keyword) => {
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
-            <div className="lg:col-span-12 xl:col-span-12 px-3 2xl:px-4 relative">
+            <div className="lg:col-span-12 xl:col-span-12 px-3 2xl:px-5 relative">
               <HeroBanner 
                 hideBanner={hideBanner} 
                 handleBannerToggle={handleBannerToggle}

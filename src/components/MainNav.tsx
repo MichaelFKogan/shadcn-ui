@@ -1,6 +1,7 @@
 // src/components/MainNav.tsx
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
+import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
 
@@ -11,7 +12,11 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center">
                 <div className="mr-4 hidden md:flex">
-                    <Menu strokeWidth={2} className={`mr-6 ${sidebarOpen ? "hidden" : "block"}`} onClick={handleSidebarToggle} />
+
+                    <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"}`} onClick={handleSidebarToggle} >
+                        <Menu strokeWidth={2}/>
+                    </Button>
+
                     <a className="mr-6 flex items-center space-x-2" onClick={() => handleKeywordSelection('')}>
                         {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
