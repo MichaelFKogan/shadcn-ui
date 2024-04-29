@@ -79,10 +79,12 @@
   .card .badge-category{
     font-size: 10px;
     /* border: 1px solid hsl(var(--background)); */
-  }
+    /* background-color: hsl(var(--muted-foreground) / .5); */
+      background-color: hsl(var(--secondary) / .5);
+    }
 
   .card .badge-category:hover{
-    background-color: hsl(var(--input));
+    background-color: hsl(var(--muted-foreground) / .3)
   }
 
   .badge-city, .badge-country, .badge-continent{
@@ -101,9 +103,12 @@
     
   }
 
+  .card-categories-list .badge-category{
+    background-color: hsl(var(--secondary) / .7);
+  }
 
   .card-categories-list .badge-category:hover{
-    background-color: hsl(var(--secondary) / .5);
+    background-color: hsl(var(--secondary) / 1);
   }
 
   .badge-city:hover, .badge-country:hover, .badge-continent:hover{
