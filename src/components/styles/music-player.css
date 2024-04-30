@@ -48,3 +48,19 @@
       animation-delay: -3.7s; /* Start mid-way of return of animation */
     }
   }
+
+
+  /* SPOTIFY PLAYER */
+  .spotify-player{
+    position: absolute;
+    top: 10px;
+    right: 124px;
+    width: 500px;
+    padding: 1rem;
+    background-color: hsl(var(--background));
+    border-radius: 12px;
+  }
+
+  .spotify-player iframe{
+    border-radius: 12px;
+  }
