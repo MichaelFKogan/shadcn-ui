@@ -29,7 +29,7 @@ export function MusicPlayer() {
             </svg>
         </Button>
 
-        <div className={`spotify-player border-2 ${isPlaying ? "opacity-100" : "opacity-0"}`}>
+        <div className={`spotify-player border-2 ${isPlaying ? "show" : "hide"}`}>
             <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E8P3HYYmdhmfL?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 

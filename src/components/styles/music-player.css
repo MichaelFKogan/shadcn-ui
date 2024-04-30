@@ -64,3 +64,11 @@
   .spotify-player iframe{
     border-radius: 12px;
   }
+
+  .spotify-player.show{
+    display: block;
+  }
+
+  .spotify-player.hide{
+    display: none;
+  }
