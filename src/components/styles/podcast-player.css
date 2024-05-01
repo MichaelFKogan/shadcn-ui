@@ -1,0 +1,26 @@
+/* PODCAST PLAYER */
+  .podcast-player{
+    position: absolute;
+    top: 10px;
+    right: 124px;
+    width: 500px;
+    padding: 1rem;
+    background-color: hsl(var(--background));
+    border-radius: 18px;
+  }
+
+  .podcast-player iframe{
+    border-radius: 12px;
+  }
+
+  .podcast-player.show{
+    display: block;
+  }
+
+  .podcast-player.hide{
+    display: none;
+  }
+
+  .podcast-player div.relative.w-full.max-w-xs{
+    margin-top: 50px;
+  }

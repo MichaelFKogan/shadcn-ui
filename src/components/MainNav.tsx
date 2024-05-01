@@ -1,6 +1,7 @@
 // src/components/MainNav.tsx
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
+import { PodcastPlayer } from "@/components/PodcastPlayer"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
@@ -8,6 +9,13 @@ import { Menu, TreePalm } from "lucide-react"
 import { homepage } from '../data/data'
 
 export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelection }) {
+
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const Play = () => { 
+        setIsPlaying(!isPlaying);
+    }
+
     return (
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center">
@@ -36,7 +44,8 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
 
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <nav className="flex items-center" style={{ columnGap: "10px" }}>
-                        <MusicPlayer />
+                        <PodcastPlayer Play={Play} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+                        <MusicPlayer Play={Play} isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
                         <DarkMode />
                     </nav>
                 </div>

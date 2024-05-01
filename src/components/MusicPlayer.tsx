@@ -4,21 +4,8 @@ import * as React from "react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import './styles/music-player.css'
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 
 export function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-
-
-  const Play = () => { 
-      setIsPlaying(!isPlaying);
-  }
-
 
   return (
     <>
