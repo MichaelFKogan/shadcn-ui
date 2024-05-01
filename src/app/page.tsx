@@ -40,7 +40,7 @@ const handleKeywordSelection = (keyword) => {
   if(cleanedKeyword.includes('Asia')){
     cleanedKeyword = 'Asia'
   }else if(cleanedKeyword.includes('Flights')){
-      cleanedKeyword = 'FLights'
+      cleanedKeyword = 'Flights'
   }else if(cleanedKeyword.includes('Coworking')){
     cleanedKeyword = 'Coworking'
   }else if(cleanedKeyword.includes('English Teaching')){

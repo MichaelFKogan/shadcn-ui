@@ -52,7 +52,7 @@ export function PodcastPlayer({podcastOpen, handlePodcastOpen}) {
                 className="w-full"
                 style={{marginTop: "50px", marginBottom: "50px"}}
                 >
-                <CarouselContent className="-mt-1" style={{height: "430px"}}>
+                <CarouselContent className="-mt-1" style={{maxHeight: "752px"}}>
 
                     <CarouselItem className="pt-1 md:basis-1/2">
                         <div className="p-1">
