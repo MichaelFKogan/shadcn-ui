@@ -1,5 +1,5 @@
 // src/components/MainNav.tsx
-// import { useState, useEffect, useRef } from "react";
+import { useState} from "react";
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
 import { PodcastPlayer } from "@/components/PodcastPlayer"
@@ -11,11 +11,22 @@ import { homepage } from '../data/data'
 
 export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelection }) {
 
-    // const [isPlaying, setIsPlaying] = useState(false);
+    const [podcastOpen, setPodcastOpen] = useState(false);
+    const [musicOpen, setMusicOpen] = useState(false);
 
-    // const Play = () => { 
-    //     setIsPlaying(!isPlaying);
-    // }
+    const handlePodcastOpen = () => { 
+        if(musicOpen){
+            setMusicOpen(false);
+        }
+        setPodcastOpen(!podcastOpen);
+    }
+
+    const handleMusicOpen = () => { 
+        if(podcastOpen){
+            setPodcastOpen(false);
+        }
+        setMusicOpen(!musicOpen);
+    }
 
     return (
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -45,8 +56,8 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
 
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <nav className="flex items-center" style={{ columnGap: "10px" }}>
-                        <PodcastPlayer />
-                        <MusicPlayer />
+                        <PodcastPlayer podcastOpen={podcastOpen} handlePodcastOpen={handlePodcastOpen}/>
+                        <MusicPlayer musicOpen={musicOpen} handleMusicOpen={handleMusicOpen} />
                         <DarkMode />
                     </nav>
                 </div>

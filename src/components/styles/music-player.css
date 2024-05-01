@@ -52,8 +52,8 @@
   /* SPOTIFY PLAYER */
   .spotify-player{
     position: absolute;
-    top: 10px;
-    right: 124px;
+    top: 58px;
+    right: 82px;
     width: 500px;
     padding: 1rem;
     background-color: hsl(var(--background));
