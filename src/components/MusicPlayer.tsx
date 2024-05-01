@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import './styles/music-player.css'
 
 export function MusicPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+
+
+  const Play = () => { 
+      setIsPlaying(!isPlaying);
+  }
+
 
   return (
     <>

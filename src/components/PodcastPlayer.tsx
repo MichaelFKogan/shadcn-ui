@@ -22,6 +22,14 @@ import {
   
 
 export function PodcastPlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+
+
+  const Play = () => { 
+      setIsPlaying(!isPlaying);
+  }
+
 
   return (
     <>
@@ -47,12 +55,13 @@ export function PodcastPlayer() {
 
             <Carousel
                 opts={{
-                    align: "start",
+                    align: "start", loop: true,
                 }}
                 orientation="vertical"
-                className="w-full max-w-xs"
+                className="w-full"
+                style={{marginTop: "50px", marginBottom: "50px"}}
                 >
-                <CarouselContent className="-mt-1 h-[200px]">
+                <CarouselContent className="-mt-1" style={{height: "430px"}}>
 
                     <CarouselItem className="pt-1 md:basis-1/2">
                         <div className="p-1">

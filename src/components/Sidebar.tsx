@@ -139,6 +139,7 @@ export function Sidebar({onSelectKeyword, handleFirstKeyword, sidebarOpen, handl
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Couple")}><span className="sidebar-emoji">👫</span> Couple</a>
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Backpacker")}><span className="sidebar-emoji">🎒</span> Backpacker</a>
                     <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Van Life")}><span className="sidebar-emoji">🚐</span> Van Life</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => onSelectKeyword("Podcast")}><span className="sidebar-emoji">🎙</span> Podcast</a>
 
                   </div>
                 </div>
