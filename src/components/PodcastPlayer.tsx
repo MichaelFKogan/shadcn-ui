@@ -26,7 +26,7 @@ export function PodcastPlayer({podcastOpen, handlePodcastOpen}) {
     <>
 
         <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-podcast"><path d="M16.85 18.58a9 9 0 1 0-9.7 0"/><path d="M8 14a5 5 0 1 1 8 0"/><circle cx="12" cy="11" r="1"/><path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-podcast"><path d="M16.85 18.58a9 9 0 1 0-9.7 0"/><path d="M8 14a5 5 0 1 1 8 0"/><circle cx="12" cy="11" r="1"/><path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z"/></svg>
         </Button>
 
         <div className={`podcast-player border-2 ${podcastOpen ? "show" : "hide"}`}>
@@ -58,7 +58,7 @@ export function PodcastPlayer({podcastOpen, handlePodcastOpen}) {
                         <div className="p-1">
                         <Card>
                             <CardContent className="flex items-center justify-center p-6">
-                                <iframe src="https://open.spotify.com/embed/show/0MVpQzxKUP03L9HhXMdmuL?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <iframe src="https://open.spotify.com/embed/show/0MVpQzxKUP03L9HhXMdmuL?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                             </CardContent>
                         </Card>
                         </div>
@@ -68,7 +68,7 @@ export function PodcastPlayer({podcastOpen, handlePodcastOpen}) {
                         <div className="p-1">
                         <Card>
                             <CardContent className="flex items-center justify-center p-6">
-                                <iframe src="https://open.spotify.com/embed/show/6cq2iaGUmfcNRVIGAGXtEb?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <iframe src="https://open.spotify.com/embed/show/6cq2iaGUmfcNRVIGAGXtEb?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                             </CardContent>
                         </Card>
                         </div>
@@ -78,7 +78,7 @@ export function PodcastPlayer({podcastOpen, handlePodcastOpen}) {
                         <div className="p-1">
                         <Card>
                             <CardContent className="flex items-center justify-center p-6">
-                            <iframe src="https://open.spotify.com/embed/episode/2Dp9RRP0Xxq8A2C61kQyYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe src="https://open.spotify.com/embed/episode/2Dp9RRP0Xxq8A2C61kQyYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                             </CardContent>
                         </Card>
                         </div>
