@@ -1,31 +1,20 @@
-import { Badge } from "@/components/ui/badge";
-import './styles/list.css';
+// src/components/List.tsx
 
-export function List({ data, cleanCategoryForSorting }) {
-    // Group the data by category
-    const groupedData = data.reduce((acc, item) => {
-        if (!acc[item.category]) {
-            acc[item.category] = [];
-        }
-        acc[item.category].push(item);
-        return acc;
-    }, {});
+import { Badge } from "@/components/ui/badge"
+import './styles/list.css'
 
-    // Sort the categories alphabetically, accounting for emojis and symbols
-    const sortedCategories = Object.keys(groupedData).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b)));
-
+export function List({ data, anchor }) {
     return (
         <>
-            {sortedCategories.map((category, index) => (
-
-                <div className="list-container card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border px-4 py-4 shadow transition-all hover:shadow-lg">
-                        <h2 id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="category-heading h2 section-title mb-1 border-b-2">
+            {data.map(([category, links]) => (
+                <div className="card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border px-4 py-4 shadow transition-all hover:shadow-lg">
+                    <>
+                        <h2 id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="h2 section-title mb-1 border-b-2">
                             {category.headingImage && (<img src={"/images/" + category.headingImage} className="section-title__img" />)}
                             {category}
                         </h2>
-                    <div className="card-list">
 
-                        {groupedData[category].map((item, idx) => {
+                        {links.map((item, index) => {
 
                             // Check if title exists and provide a default value if it does not
                             const title = item.title || 'Default Title';
@@ -83,12 +72,9 @@ export function List({ data, cleanCategoryForSorting }) {
 
                                 </>
                             );
-                            
                         })}
-
-                    </div>
+                    </>
                 </div>
-
             ))}
         </>
     );

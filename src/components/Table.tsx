@@ -203,15 +203,15 @@ export function Table({ data, anchor, onSelectKeyword }) {
                                         <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
                                         <div className="sorting-svg">
                                             {header.column.getIsSorted() ? (header.column.getIsSorted() === 'desc' ? (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                                                     <path d="M12 6l-4 4h8l-4-4z"/>
                                                 </svg>
                                             ) : (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                                                     <path d="M12 18l4-4H8l4 4z"/>
                                                 </svg>
                                             )) : (
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                                                     <path d="M12 6l-4 4h8l-4-4zM12 18l4-4H8l4 4z"/>
                                                 </svg>
                                             )}

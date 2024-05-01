@@ -1,3 +1,4 @@
+// src/components/TabsComponent.tsx
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
@@ -72,10 +73,27 @@ export function TabsComponent({
 
                     <TabsContent value="list">
                         <div id="list-view">
+
+                        {tableData && tableData.length > 0 ? (
+                                <>
+                                    {filterKeyword !== '' ? (
+                                        <>
+                                            <div className="card-categories-list mt-4 mb-2">
+                                                {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
+                                                        {category}
+                                                    </Badge>
+                                                ))}
+                                            </div>
+                                        </>
+                                    ) : null }
+                                </>
+                            ) : (null)}
+
                             <div className="list-row space-y-8">
                                 <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                                    {listData && listData.length > 0 ? (
-                                        <List data={listData} />
+                                    {tableData && tableData.length > 0 ? (
+                                        <List data={tableData} cleanCategoryForSorting={cleanCategoryForSorting} />
                                     ) : (null)}
                                 </div>
                             </div>

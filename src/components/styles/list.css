@@ -14,9 +14,10 @@
 }
 
 .card-list .section-title{
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.card-list{
-    /* row-gap: 5px; */
+.card-list .link__text-wrapper h3{
+    font-weight: 600;
 }
