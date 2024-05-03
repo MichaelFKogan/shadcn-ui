@@ -149,8 +149,13 @@
     height: 0.875rem;
   }
 
+  .breadcrumb.selected{
+    color: hsl(var(--foreground));
+    font-weight: 500;
+  }
+
   .second-breadcrumb{
-    color: hsl(var(--foreground) / .9)
+    /* color: hsl(var(--foreground) / .9) */
   }
 
   .badges-switch button{

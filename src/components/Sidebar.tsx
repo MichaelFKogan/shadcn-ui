@@ -10,7 +10,7 @@ import {
   import './styles/sidebar.css'
   
 
-export function Sidebar({handleKeywordSelection, handleFirstKeyword, sidebarOpen, handleSidebarToggle}) {
+export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebarOpen, handleSidebarToggle}) {
 
     return (
       <>
@@ -38,40 +38,40 @@ export function Sidebar({handleKeywordSelection, handleFirstKeyword, sidebarOpen
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleKeywordSelection('Asia')}>Asia</span></div></AccordionTrigger>
+                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div></AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛺 Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐘 Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🌊 Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇯🇵 Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🗼 Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏯 Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('👘 Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇮🇩 Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏝 Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏄‍♀️ Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐒 Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇰🇷 Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍱 Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🚝 Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇻🇳 Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛵 Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍲 Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇨🇳 China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🥡 Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🧧 Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇭🇰 Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
                                 <hr className="mx-7 my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleKeywordSelection('Taipei')}>Taipei</a>
+                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇼 Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
+                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('Taipei')}>Taipei</a>
                                 <hr className="mx-7 my-2"/>
                                 
 
@@ -107,14 +107,14 @@ export function Sidebar({handleKeywordSelection, handleFirstKeyword, sidebarOpen
 
 
                 <div className="hidden lg:block mb-32">
-                  <h2 className="categories-title essentials text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2" onClick={() => handleKeywordSelection('Essentials')}><span className="sidebar-emoji">📍</span> Essentials</h2>
+                  <h2 className="categories-title essentials text-foreground-lighter mt-4 mb-2 text-sm font-semibold border-b-2" onClick={() => handleKeywordSelection('📍 Essentials')}><span className="sidebar-emoji">📍</span> Essentials</h2>
                   <div className="categories">
                     
-                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Flights")}><span className="sidebar-emoji">✈️</span> Flights</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Maps")}><span className="sidebar-emoji">🗺</span> Maps</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Accomodation")}><span className="sidebar-emoji">🛌</span> Accomodation</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Health Insurance")}><span className="sidebar-emoji">😷</span> Health Insurance</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleFirstKeyword("Visa")}><span className="sidebar-emoji">🛂</span> Visa</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("✈️ Flights")}><span className="sidebar-emoji">✈️</span> Flights</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🗺 Maps")}><span className="sidebar-emoji">🗺</span> Maps</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🛌 Accomodation")}><span className="sidebar-emoji">🛌</span> Accomodation</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("😷 Health Insurance")}><span className="sidebar-emoji">😷</span> Health Insurance</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🛂 Visa")}><span className="sidebar-emoji">🛂</span> Visa</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">📸</span> Social Media</h2>
                     <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
@@ -122,24 +122,24 @@ export function Sidebar({handleKeywordSelection, handleFirstKeyword, sidebarOpen
                     <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
                     <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
                     <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("📹 Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("✍️ Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">💼</span> Work</h2>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Jobs")}><span className="sidebar-emoji">👔</span> Work</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("English Teaching")}><span className="sidebar-emoji">🔤</span> English Teaching</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Finance")}><span className="sidebar-emoji">💵</span> Finance</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Productivity")}><span className="sidebar-emoji">📊</span> Productivity</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("👔 Jobs")}><span className="sidebar-emoji">👔</span> Work</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🔤 English Teaching")}><span className="sidebar-emoji">🔤</span> English Teaching</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("💵 Finance")}><span className="sidebar-emoji">💵</span> Finance</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("📊 Productivity")}><span className="sidebar-emoji">📊</span> Productivity</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-4 text-sm font-semibold border-b-2"><span className="sidebar-emoji">🏄‍♀️</span> Lifestyle</h2>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Apps")}><span className="sidebar-emoji">📱</span> Apps</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Products")}><span className="sidebar-emoji">⌚️</span> Products</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Solo")}><span className="sidebar-emoji">🧍‍♀️</span> Solo Travel</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Expat")}><span className="sidebar-emoji">🧍‍♂️</span> Expat</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Couple")}><span className="sidebar-emoji">👫</span> Couple</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Backpacker")}><span className="sidebar-emoji">🎒</span> Backpacker</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Van Life")}><span className="sidebar-emoji">🚐</span> Van Life</a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("Podcast")}><span className="sidebar-emoji">🎙</span> Podcast</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("📱 Apps")}><span className="sidebar-emoji">📱</span> Apps</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("⌚️ Products")}><span className="sidebar-emoji">⌚️</span> Products</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🧍‍♀️ Solo")}><span className="sidebar-emoji">🧍‍♀️</span> Solo Travel</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🧍‍♂️ Expat")}><span className="sidebar-emoji">🧍‍♂️</span> Expat</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("👫 Couple")}><span className="sidebar-emoji">👫</span> Couple</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🎒 Backpacker")}><span className="sidebar-emoji">🎒</span> Backpacker</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🚐 Van Life")}><span className="sidebar-emoji">🚐</span> Van Life</a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleKeywordSelection("🎙 Podcast")}><span className="sidebar-emoji">🎙</span> Podcast</a>
 
                   </div>
                 </div>

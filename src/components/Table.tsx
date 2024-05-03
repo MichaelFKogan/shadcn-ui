@@ -98,7 +98,7 @@ const alphanumericSort = (rowA, rowB, columnId) => {
     }),
     columnHelper.accessor('category', {
         header: 'Category',
-        cell: info => (<div className="category text-sm"><Badge variant="secondary" onClick={() => handleKeywordSelection(info.row.original.category)}>{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
+        cell: info => (<div className="category text-sm"><Badge variant="secondary" onClick={() => handleCategorySelection(info.row.original.category)}>{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
         size: 80,
         enableSorting: true,
         sortingFn: alphanumericSort,

@@ -1,5 +1,6 @@
 // src/components/Breadcrumbs.tsx
 
+import { useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,35 +19,33 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Slash } from "lucide-react"
 
 
-export function Breadcrumbs({ handleKeywordSelection, handleCategorySelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords }) {
+export function Breadcrumbs({ handleKeywordSelection, handleFirstBreadcrumb, handleCategorySelection, filterKeyword, lastKeyword, combinedKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords, clearAll, selectedBreadcrumb, setSelectedBreadcrumb }) {
 
   return (
     <Breadcrumb>
       <BreadcrumbList style={{marginBottom: "1px"}}>
         <BreadcrumbItem>
-          <BreadcrumbLink onClick={() => clearKeywords()}>Home</BreadcrumbLink>
+          <BreadcrumbLink
+            className={`breadcrumb home-breadcrumb ${selectedBreadcrumb === 'home' ? 'selected' : ''}`}
+            onClick={() => {clearAll();}}
+          >
+            Home
+          </BreadcrumbLink>
         </BreadcrumbItem>
-
-        {/* <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink onClick={() => {handleKeywordSelection(filterKeyword);}}>{filterKeyword}</BreadcrumbLink>
-            </BreadcrumbItem> */}
-
-        {/* {continentBreadcrumbKeyword ?
-          <>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink onClick={() => {handleKeywordSelection(breadcrumbKeyword); setSecondBreadcrumbKeyword('')}}>{breadcrumbKeyword}</BreadcrumbLink>
-            </BreadcrumbItem>
-          </>
-          : null
-        } */}
 
         {breadcrumbKeyword ?
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink onClick={() => {handleKeywordSelection(breadcrumbKeyword); setSecondBreadcrumbKeyword('')}}>{breadcrumbKeyword}</BreadcrumbLink>
+              <BreadcrumbLink
+                className={`breadcrumb first-breadcrumb ${selectedBreadcrumb === 'first' ? 'selected' : ''}`}
+                onClick={() => {
+                  handleFirstBreadcrumb(breadcrumbKeyword);
+                  setSelectedBreadcrumb('first');
+                }}
+              >
+                {breadcrumbKeyword}
+              </BreadcrumbLink>
             </BreadcrumbItem>
           </>
           : null
@@ -56,7 +55,15 @@ export function Breadcrumbs({ handleKeywordSelection, handleCategorySelection, f
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink className="second-breadcrumb" onClick={() => handleCategorySelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
+              <BreadcrumbLink
+                className={`breadcrumb second-breadcrumb ${selectedBreadcrumb === 'second' ? 'selected' : ''}`}
+                onClick={() => {
+                  handleKeywordSelection(combinedKeyword);
+                  setSelectedBreadcrumb('second');
+                }}
+              >
+                {secondBreadcrumbKeyword}
+              </BreadcrumbLink>
             </BreadcrumbItem>
           </>
           : null
@@ -67,30 +74,7 @@ export function Breadcrumbs({ handleKeywordSelection, handleCategorySelection, f
         : null
         }
 
-        {/* {filterKeyword !== '' && filterKeyword !== ' ' &&
-
-          (filterKeyword.includes(lastKeyword) ? (
-            <>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink onClick={() => handleKeywordSelection(lastKeyword)}>{lastKeyword}</BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <Button className="text-xs clear-btn" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button>
-            </>
-          ) : (
-            <>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink onClick={() => handleKeywordSelection(filterKeyword)}>{filterKeyword}</BreadcrumbLink>
-              </BreadcrumbItem>
-
-              <Button className="text-xs clear-btn" variant="ghost" onClick={() => handleKeywordSelection('')}>Clear</Button>
-            </>
-          ))} */}
-
       </BreadcrumbList>
     </Breadcrumb>
-
-  )
+  );
 }

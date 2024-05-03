@@ -26,6 +26,7 @@ const [uniqueCategories, setUniqueCategories] = useState(new Set());
 const [isSwitchOn, setIsSwitchOn] = useState(true);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
+const [selectedBreadcrumb, setSelectedBreadcrumb] = useState('first');
 
 
 
@@ -50,23 +51,25 @@ const handleKeywordSelection = (keyword) => {
   }
 
 if(combinedKeyword !== ''){
-  setFilterKeyword(lastKeyword);
+  setFilterKeyword(combinedKeyword);
+  setSelectedBreadcrumb('second');
 }
-else if(cleanedKeyword === lastKeyword){
-  setFilterKeyword('');
-  setLastKeyword('');
-  setBreadcrumbKeyword('');
-}else{
+else{
   setFilterKeyword(cleanedKeyword);
   setLastKeyword(cleanedKeyword);
-  setBreadcrumbKeyword(cleanedKeyword);
+  setBreadcrumbKeyword(keyword);
+  setSelectedBreadcrumb('first');
 }
 
 console.log("-----------------------------------------------------");   
-console.log(`CLEANED KEYWORD: ${cleanedKeyword}`);        
-console.log(`LAST KEYWORD: ${lastKeyword}`);
-console.log(`COMBINED KEYWORDS: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+console.log(`LAST KEYWORD 1: ${lastKeyword}`);
+console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+console.log(`BREADCRUMB KEYWORD 1: ${breadcrumbKeyword}`);
+console.log(`COMBINED KEYWORDS 1: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
 };
+
 
 
 // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
@@ -90,14 +93,18 @@ const handleCountrySelection = (keyword) => {
   }
   setFilterKeyword(cleanedKeyword);
   setLastKeyword(cleanedKeyword);
-  setBreadcrumbKeyword(cleanedKeyword);
+  setBreadcrumbKeyword(keyword);
   setSecondBreadcrumbKeyword('');
   setCombinedKeyword('');
+  setSelectedBreadcrumb('first');
 
 console.log("-----------------------------------------------------");   
-console.log(`CLEANED KEYWORD: ${cleanedKeyword}`);        
-console.log(`LAST KEYWORD: ${lastKeyword}`);
-console.log(`COMBINED KEYWORDS: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`KEYWORD: ${keyword}`);    
+console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
+console.log(`LAST KEYWORD 2: ${lastKeyword}`);
+console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
+console.log(`COMBINED KEYWORDS 2: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
 };
 
 
@@ -121,19 +128,21 @@ const handleCategorySelection = (keyword) => {
   }
   
         console.log("-----------------------------------------------------");   
-        console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
-        console.log(`LAST KEYWORD 2: ${lastKeyword}`);
-        console.log(`COMBINED KEYWORDS: ${lastKeyword} ${cleanedKeyword}`);
+        console.log(`CLEANED KEYWORD 3: ${cleanedKeyword}`);        
+        console.log(`LAST KEYWORD 3: ${lastKeyword}`);
+        console.log(`BREADCRUMB KEYWORD 3: ${breadcrumbKeyword}`);
+        console.log(`COMBINED KEYWORDS 3: ${lastKeyword} ${cleanedKeyword}`);
+        console.log(`COMBINED KEYWORDS 3.1: ${combinedKeyword}`);
 
-        if(cleanedKeyword === combinedKeyword){
-          setFilterKeyword(lastKeyword);
-          setSecondBreadcrumbKeyword('');
-          // setCombinedKeyword('');
-        }else{
+        // if(cleanedKeyword === combinedKeyword){
+        //   setFilterKeyword(lastKeyword);
+        //   setSecondBreadcrumbKeyword('');
+        // }else{
           setFilterKeyword(`${lastKeyword} ${cleanedKeyword}`);
-          setSecondBreadcrumbKeyword(`${lastKeyword} ${cleanedKeyword}`);
+          setSecondBreadcrumbKeyword(keyword);
           setCombinedKeyword(`${lastKeyword} ${cleanedKeyword}`);
-        }
+          setSelectedBreadcrumb('second');
+        // }
     }
 
 
@@ -143,9 +152,13 @@ const handleCategorySelection = (keyword) => {
           setSecondBreadcrumbKeyword('');
           setFilterKeyword(lastKeyword);
           setCombinedKeyword('');
+          setSelectedBreadcrumb('first')
         }else if(breadcrumbKeyword){
+          setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
+          setLastKeyword(''); // Update the last keyword
           setBreadcrumbKeyword('');
-          setFilterKeyword('');
+          setSecondBreadcrumbKeyword('');
+          setCombinedKeyword('');
         }else{
           setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
           setLastKeyword(''); // Update the last keyword
@@ -155,6 +168,17 @@ const handleCategorySelection = (keyword) => {
         }
     }
 
+    const clearAll = () => {
+        setFilterKeyword(''); // Set to a default or different keyword if the same is clicked
+        setLastKeyword(''); // Update the last keyword
+        setBreadcrumbKeyword('');
+        setSecondBreadcrumbKeyword('');
+        setCombinedKeyword('');
+  }
+
+  const handleFirstBreadcrumb = () => {
+    setFilterKeyword(breadcrumbKeyword);
+  }
 
   useEffect(() => {
     const linksData = Object.values(jsonData.__collections__.Links)
@@ -321,6 +345,7 @@ const cleanCategoryForSorting = (category) => {
 
       <Sidebar
         handleKeywordSelection={handleKeywordSelection} 
+        handleCountrySelection={handleCountrySelection} 
         sidebarOpen={sidebarOpen} 
         handleSidebarToggle={handleSidebarToggle} 
       />
@@ -343,13 +368,16 @@ const cleanCategoryForSorting = (category) => {
               
               <TabsComponent 
                 filterKeyword={filterKeyword} 
-                lastKeyword={lastKeyword} 
+                lastKeyword={lastKeyword}
+                combinedKeyword={combinedKeyword}
                 breadcrumbKeyword={breadcrumbKeyword} 
                 secondBreadcrumbKeyword={secondBreadcrumbKeyword} 
                 setBreadcrumbKeyword={setBreadcrumbKeyword} 
                 setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} 
-                clearKeywords={clearKeywords} 
+                clearKeywords={clearKeywords}
+                clearAll={clearAll}
                 handleKeywordSelection={handleKeywordSelection}
+                handleFirstBreadcrumb={handleFirstBreadcrumb}
                 handleCountrySelection={handleCountrySelection}
                 handleCategorySelection={handleCategorySelection}
                 isSwitchOn={isSwitchOn}
@@ -358,6 +386,8 @@ const cleanCategoryForSorting = (category) => {
                 listData={listData}
                 uniqueCategories={uniqueCategories}
                 cleanCategoryForSorting={cleanCategoryForSorting}
+                selectedBreadcrumb={selectedBreadcrumb}
+                setSelectedBreadcrumb={setSelectedBreadcrumb}
                  />
             </div>
           </div>

@@ -11,14 +11,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export function TabsComponent({
     filterKeyword, 
-    lastKeyword, 
+    lastKeyword,
+    combinedKeyword,
     breadcrumbKeyword, 
     secondBreadcrumbKeyword, 
     continentBreadcrumbKeyword, 
     setBreadcrumbKeyword, 
     setSecondBreadcrumbKeyword, 
-    clearKeywords, 
+    clearKeywords,
+    clearAll,
     handleKeywordSelection,
+    handleFirstBreadcrumb,
     handleCountrySelection,
     handleCategorySelection,
     isSwitchOn,
@@ -26,7 +29,9 @@ export function TabsComponent({
     tableData,
     listData,
     uniqueCategories,
-    cleanCategoryForSorting
+    cleanCategoryForSorting,
+    selectedBreadcrumb,
+    setSelectedBreadcrumb
 }) {
 
     return (
@@ -35,7 +40,7 @@ export function TabsComponent({
             <div className="grid space-y-10">
                 <Tabs defaultValue="cards" className="tab-menu mt-4">
 
-                    <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} handleCountrySelecttion={handleCountrySelection} handleCategorySelection={handleCategorySelection}/>
+                    <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} combinedKeyword={combinedKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} clearAll={clearAll} handleKeywordSelection={handleKeywordSelection} handleFirstBreadcrumb={handleFirstBreadcrumb} handleCountrySelecttion={handleCountrySelection} handleCategorySelection={handleCategorySelection} selectedBreadcrumb={selectedBreadcrumb} setSelectedBreadcrumb={setSelectedBreadcrumb}/>
 
 
                     <TabsList className="mb-2">
@@ -82,7 +87,7 @@ export function TabsComponent({
                                         <>
                                             <div className="card-categories-list mt-4 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}
