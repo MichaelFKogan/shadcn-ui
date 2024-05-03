@@ -43,7 +43,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a>
+                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" href="/submit">Submit A Link</a>
                     </nav>
                 </div>
 
