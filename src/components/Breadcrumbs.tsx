@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Slash } from "lucide-react"
 
 
-export function Breadcrumbs({ handleKeywordSelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords }) {
+export function Breadcrumbs({ handleKeywordSelection, handleCategorySelection, filterKeyword, lastKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords }) {
 
   return (
     <Breadcrumb>
@@ -27,7 +27,12 @@ export function Breadcrumbs({ handleKeywordSelection, filterKeyword, lastKeyword
           <BreadcrumbLink onClick={() => clearKeywords()}>Home</BreadcrumbLink>
         </BreadcrumbItem>
 
-        {continentBreadcrumbKeyword ?
+        {/* <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink onClick={() => {handleKeywordSelection(filterKeyword);}}>{filterKeyword}</BreadcrumbLink>
+            </BreadcrumbItem> */}
+
+        {/* {continentBreadcrumbKeyword ?
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -35,7 +40,7 @@ export function Breadcrumbs({ handleKeywordSelection, filterKeyword, lastKeyword
             </BreadcrumbItem>
           </>
           : null
-        }
+        } */}
 
         {breadcrumbKeyword ?
           <>
@@ -51,7 +56,7 @@ export function Breadcrumbs({ handleKeywordSelection, filterKeyword, lastKeyword
           <>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink className="second-breadcrumb" onClick={() => handleKeywordSelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
+              <BreadcrumbLink className="second-breadcrumb" onClick={() => handleCategorySelection(secondBreadcrumbKeyword)}>{secondBreadcrumbKeyword}</BreadcrumbLink>
             </BreadcrumbItem>
           </>
           : null

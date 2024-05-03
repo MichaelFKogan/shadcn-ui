@@ -35,7 +35,8 @@ const alphanumericSort = (rowA, rowB, columnId) => {
   };
   
 
-function getColumns(onSelectKeyword) {
+  function getColumns(handleKeywordSelection, handleCategorySelection, handleCountrySelection, rowData) {    
+    
     return [
 
 
@@ -97,7 +98,7 @@ function getColumns(onSelectKeyword) {
     }),
     columnHelper.accessor('category', {
         header: 'Category',
-        cell: info => (<div className="category text-sm"><Badge variant="secondary" onClick={() => onSelectKeyword(info.row.original.category)}>{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
+        cell: info => (<div className="category text-sm"><Badge variant="secondary" onClick={() => handleKeywordSelection(info.row.original.category)}>{info.row.original ? info.row.original.category : 'Default category'}</Badge></div>),
         size: 80,
         enableSorting: true,
         sortingFn: alphanumericSort,
@@ -119,7 +120,7 @@ function getColumns(onSelectKeyword) {
             return (
                 <div className="tags text-sm">
                     {tags.length > 0 ? tags.map((tag, index) => (
-                        <Badge variant="outline"  onClick={() => onSelectKeyword(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
+                        <Badge variant="outline"  onClick={() => handleKeywordSelection(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
                     )) : null} 
                 </div>
             );
@@ -129,7 +130,7 @@ function getColumns(onSelectKeyword) {
     }),    
     columnHelper.accessor('city', {
         header: 'City',
-        cell: info => (<div className="city text-sm"><a onClick={() => onSelectKeyword(info.row.original.city)}>{info.row.original.city}</a></div>),
+        cell: info => (<div className="city text-sm"><a onClick={() => handleCountrySelection(info.row.original.city)}>{info.row.original.city}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
@@ -137,14 +138,14 @@ function getColumns(onSelectKeyword) {
     columnHelper.accessor('country', {
         id: 'country',
         header: 'Country',
-        cell: info => (<div className="country text-sm"><a onClick={() => onSelectKeyword(info.row.original.country)}>{info.row.original.country}</a></div>),
+        cell: info => (<div className="country text-sm"><a onClick={() => handleCountrySelection(info.row.original.country)}>{info.row.original.country}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
     }),
     columnHelper.accessor('continent', {
         header: 'Continent',
-        cell: info => (<div className="continent text-sm"><a onClick={() => onSelectKeyword(info.row.original.continent)}>{info.row.original.continent}</a></div>),
+        cell: info => (<div className="continent text-sm"><a onClick={() => handleCountrySelection(info.row.original.continent)}>{info.row.original.continent}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
@@ -160,8 +161,8 @@ function getColumns(onSelectKeyword) {
 ];
 }
 
-export function Table({ data, anchor, onSelectKeyword }) {
-    const columns = useMemo(() => getColumns(onSelectKeyword), [onSelectKeyword]);
+export function Table({ data, anchor, handleKeywordSelection, handleCategorySelection, handleCountrySelection }) {
+    const columns = useMemo(() => getColumns(handleKeywordSelection, handleCategorySelection, handleCountrySelection), [handleKeywordSelection, handleCategorySelection, handleCountrySelection]);
     const allLinks = useMemo(() => data, [data]);
     const [sorting, setSorting] = useState<SortingState>([]);
 

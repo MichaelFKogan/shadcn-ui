@@ -5,7 +5,7 @@ import './styles/cards.css'
 import { SquareArrowOutUpRight } from "lucide-react"
 
 
-export function Card({ data, onSelectKeyword, isSwitchOn }) {
+export function Card({ data, handleKeywordSelection, handleCountrySelection, handleCategorySelection, isSwitchOn }) {
 
     return (
         <>
@@ -81,13 +81,13 @@ export function Card({ data, onSelectKeyword, isSwitchOn }) {
                                                 <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-3 pb-2`}>
                                                     {/* <hr/> */}
                                                     <div className="flex justify-end badge-wrapper">
-                                                        {item.category ? <Badge variant="secondary" className="badge badge-category text-xs" onClick={() => onSelectKeyword(item.category)}>{item.category}</Badge> : null}
+                                                        {item.category ? <Badge variant="secondary" className="badge badge-category text-xs" onClick={() => handleCategorySelection(item.category)}>{item.category}</Badge> : null}
 
-                                                        {/* {item.tags ? <Badge variant="outline" className="badge badge-category mt-2 text-xs" onClick={() => onSelectKeyword(item.tags)}>{item.tags}</Badge> : null} */}
+                                                        {/* {item.tags ? <Badge variant="outline" className="badge badge-category mt-2 text-xs" onClick={() => handleKeywordSelection(item.tags)}>{item.tags}</Badge> : null} */}
 
-                                                        {item.city ? <Badge variant="outline" className="badge badge-city text-xs" onClick={() => onSelectKeyword(item.city)}>{item.city}</Badge> :
-                                                        item.country ? <Badge variant="outline" className="badge badge-country text-xs" onClick={() => onSelectKeyword(item.country)}>{item.country}</Badge> : 
-                                                        item.continent ? <Badge variant="outline" className="badge badge-continent text-xs" onClick={() => onSelectKeyword(item.continent)}>{item.continent}</Badge> : null}
+                                                        {item.city ? <Badge variant="outline" className="badge badge-city text-xs" onClick={() => handleCountrySelection(item.city)}>{item.city}</Badge> :
+                                                        item.country ? <Badge variant="outline" className="badge badge-country text-xs" onClick={() => handleCountrySelection(item.country)}>{item.country}</Badge> : 
+                                                        item.continent ? <Badge variant="outline" className="badge badge-continent text-xs" onClick={() => handleCountrySelection(item.continent)}>{item.continent}</Badge> : null}
                                                     </div>
                                                 </div>
                                                 

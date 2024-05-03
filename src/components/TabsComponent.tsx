@@ -18,7 +18,9 @@ export function TabsComponent({
     setBreadcrumbKeyword, 
     setSecondBreadcrumbKeyword, 
     clearKeywords, 
-    handleKeywordSelection, 
+    handleKeywordSelection,
+    handleCountrySelection,
+    handleCategorySelection,
     isSwitchOn,
     handleSwitchChange,
     tableData,
@@ -33,7 +35,7 @@ export function TabsComponent({
             <div className="grid space-y-10">
                 <Tabs defaultValue="cards" className="tab-menu mt-4">
 
-                    <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} continentBreadcrumbKeyword={continentBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} />
+                    <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} handleKeywordSelection={handleKeywordSelection} handleCountrySelecttion={handleCountrySelection} handleCategorySelection={handleCategorySelection}/>
 
 
                     <TabsList className="mb-2">
@@ -56,7 +58,7 @@ export function TabsComponent({
                                         <>
                                             <div className="card-categories-list mt-4 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleKeywordSelection(`${lastKeyword} ${category}`) }}>
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}
@@ -64,7 +66,7 @@ export function TabsComponent({
                                         </>
                                     ) : null
                                     }
-                                    <Card data={tableData} onSelectKeyword={handleKeywordSelection} isSwitchOn={isSwitchOn} />
+                                    <Card data={tableData} handleKeywordSelection={handleKeywordSelection} handleCountrySelection={handleCountrySelection} handleCategorySelection={handleCategorySelection} isSwitchOn={isSwitchOn} />
                                 </>
                             ) : (null)}
 
@@ -103,7 +105,7 @@ export function TabsComponent({
                     <TabsContent value="table">
                         {tableData && tableData.length > 0 ? (
                             <div id="table-view">
-                                <Table data={tableData} anchor="table-1" onSelectKeyword={handleKeywordSelection} />
+                                <Table data={tableData} anchor="table-1" handleKeywordSelection={handleKeywordSelection} handleCountrySelection={handleCountrySelection} handleCategorySelection={handleCategorySelection}/>
                             </div>
                         ) : (null)}
                     </TabsContent>
