@@ -94,12 +94,12 @@
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    animation: fall linear 10s infinite;
+    animation: fall linear 11s infinite;
   }
   
   @keyframes fall {
     0% { transform: translateY(-10px) translateX(0px); }
-    100% { transform: translateY(200px) translateX(100px); }
+    100% { transform: translateY(250px) translateX(100px); }
   }
 
 

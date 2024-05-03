@@ -49,6 +49,16 @@
     }
   }
 
+  .song-title{
+    font-size: 15px;
+  }
+
+  .song-title:hover{
+    text-decoration: underline;
+    opacity: .7;
+    /* border-bottom: 1px solid; */
+  }
+
   .artist-name{
     display: block;
     width: fit-content;

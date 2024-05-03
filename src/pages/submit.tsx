@@ -208,7 +208,7 @@ export default function Submit() {
     <>
     <ThemeProvider
         attribute="class"
-        defaultTheme="dark"
+        defaultTheme="light"
         enableSystem
         disableTransitionOnChange
     >
@@ -242,7 +242,7 @@ export default function Submit() {
             <CardContent>
                 <label for="inputUrl" class="form-label">Category 
                     <span className="text-muted-foreground text-xs"> [required]</span>
-                    <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small>
+                    {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
                 </label>
 
                 <CreatableSelect 
@@ -260,7 +260,7 @@ export default function Submit() {
 
 
             <hr className='mt-4 pb-4'/>
-            <CardContent><h3 className='text-muted-foreground'>(Optional)</h3></CardContent>
+            <CardContent><h3 className='text-muted-foreground text-md'>(Optional)</h3></CardContent>
             
             <CardContent>
 
@@ -275,7 +275,7 @@ export default function Submit() {
                     closeMenuOnSelect={false} components={animatedComponents}
                     defaultValue={[]} isMulti
                     onChange={(selectedOption) => handleTagsChange("tags", selectedOption)}
-                    isClearable={isClearable} placeholder="Add or create multiple tags" aria-describedby="tagsHelp" 
+                    isClearable={isClearable} placeholder="Add or create tags" aria-describedby="tagsHelp" 
                     styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
                     />
             </CardContent>

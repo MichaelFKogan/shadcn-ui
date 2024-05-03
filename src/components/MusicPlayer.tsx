@@ -17,17 +17,24 @@ export function MusicPlayer() {
   const audioRef = useRef(new Audio());
 
   const songTitles = [
-    "1. Floating in Bliss",
-    "2. Touch",
-    "3. Scary Island",
-    "4. Turtle Time",
+    "1. For Vlog",
+    "2. Lofi Chill Vlog",
+    "3. Opener",
+    "4. Japan Future Bass",
   ];
 
   const artistNames = [
-    "Artist 1",
-    "Artist 2",
-    "Artist 3",
-    "Artist 4",
+    "Oasis_Music",
+    "RND-Music",
+    "HitsLab",
+    "Flartical",
+  ];
+
+  const artistUrls = [
+    "https://audiojungle.net/item/for-vlog/51689950",
+    "https://audiojungle.net/item/lofi-chill-vlog/36102297",
+    "https://audiojungle.net/item/the-future-bass/45466299",
+    "hhttps://audiojungle.net/item/japan-future-bass/38747649",
   ];
 
   useEffect(() => {
@@ -130,7 +137,7 @@ export function MusicPlayer() {
       </PopoverTrigger>
         <PopoverContent>
           <div className="flex items-center justify-between popover">
-            <h3>{currentSongTitle}</h3>
+            <a href={artistUrls[currentSongIndex]} target="_blank"><h3 className="song-title">{currentSongTitle}</h3></a>
             <div className="flex items-center">
 
             <Button variant="ghost" size="icon" className="text-sm mr-2 text-muted-foreground" onClick={Pause}>
@@ -155,7 +162,7 @@ export function MusicPlayer() {
               </Button>
             </div>
           </div>
-          <a href="https://www.google.como" className="artist-name"><p className="text-xs text-muted-foreground">{artistNames[currentSongIndex]}</p></a>
+          <a href={artistUrls[currentSongIndex]} className="artist-name" target="_blank"><p className="text-xs text-muted-foreground">{artistNames[currentSongIndex]}</p></a>
         </PopoverContent>
       </Popover>
 
