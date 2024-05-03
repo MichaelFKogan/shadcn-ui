@@ -22,3 +22,11 @@ color: hsl(var(--foreground) / 0.8);
     width: 0px;
     margin-right: 0px;
   }
+  
+  .logo-text{
+    opacity: 1;
+  }
+
+  .logo-text:hover{
+    opacity: .7;
+  }

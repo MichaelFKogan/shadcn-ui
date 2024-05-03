@@ -149,6 +149,10 @@
     height: 0.875rem;
   }
 
+  .breadcrumb:hover{
+    opacity: .7;
+  }
+
   .breadcrumb.selected{
     color: hsl(var(--foreground));
     font-weight: 500;

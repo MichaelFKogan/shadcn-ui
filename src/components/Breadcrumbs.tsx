@@ -27,7 +27,9 @@ export function Breadcrumbs({ handleKeywordSelection, handleFirstBreadcrumb, han
         <BreadcrumbItem>
           <BreadcrumbLink
             className={`breadcrumb home-breadcrumb ${selectedBreadcrumb === 'home' ? 'selected' : ''}`}
-            onClick={() => {clearAll();}}
+            onClick={() => {
+              clearAll();
+            }}
           >
             Home
           </BreadcrumbLink>

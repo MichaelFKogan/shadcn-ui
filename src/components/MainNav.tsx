@@ -2,6 +2,7 @@
 import { useState} from "react";
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
+import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
 import { PodcastPlayer } from "@/components/PodcastPlayer"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
@@ -9,7 +10,7 @@ import { Menu, TreePalm } from "lucide-react"
 
 import { homepage } from '../data/data'
 
-export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelection }) {
+export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelection, clearAll }) {
 
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
@@ -37,7 +38,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
                         <Menu strokeWidth={2}/>
                     </Button>
 
-                    <a className="mr-6 flex items-center space-x-2" onClick={() => handleKeywordSelection('')}>
+                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => clearAll()}>
                         {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
@@ -62,6 +63,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
                         </Button> */}
 
                         {/* <PodcastPlayer podcastOpen={podcastOpen} handlePodcastOpen={handlePodcastOpen}/> */}
+                        {/* <MusicPlayerSpotify musicOpen={musicOpen} handleMusicOpen={handleMusicOpen} /> */}
                         <MusicPlayer musicOpen={musicOpen} handleMusicOpen={handleMusicOpen} />
                         <DarkMode />
                     </nav>

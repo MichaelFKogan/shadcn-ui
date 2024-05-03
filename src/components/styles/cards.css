@@ -20,6 +20,12 @@
 
 .card-categories-list .badge-category{
   color: hsl(var(--secondary-foreground) / .9);
+  background-color: hsl(var(--secondary) / .7);
+}
+
+.card-categories-list .badge-category:hover{
+  color: hsl(var(--secondary-foreground) / 1);
+  background-color: hsl(var(--secondary) / 1);
 }
 
 .card{
@@ -101,14 +107,6 @@
 
   .card:hover .badge-city, .card:hover .badge-country, .card:hover .badge-continent{
     
-  }
-
-  .card-categories-list .badge-category{
-    background-color: hsl(var(--secondary) / .7);
-  }
-
-  .card-categories-list .badge-category:hover{
-    background-color: hsl(var(--secondary) / 1);
   }
 
   .badge-city:hover, .badge-country:hover, .badge-continent:hover{

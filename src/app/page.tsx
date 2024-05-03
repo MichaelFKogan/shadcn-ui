@@ -99,7 +99,7 @@ const handleCountrySelection = (keyword) => {
   setSelectedBreadcrumb('first');
 
 console.log("-----------------------------------------------------");   
-console.log(`KEYWORD: ${keyword}`);    
+console.log(`KEYWORD 2: ${keyword}`);    
 console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
 console.log(`LAST KEYWORD 2: ${lastKeyword}`);
 console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
@@ -176,8 +176,33 @@ const handleCategorySelection = (keyword) => {
         setCombinedKeyword('');
   }
 
-  const handleFirstBreadcrumb = () => {
-    setFilterKeyword(breadcrumbKeyword);
+  const handleFirstBreadcrumb = (keyword) => {
+
+  // Extend the regex to include regional indicator symbols for flag emojis
+  // Remove emojis and replace multiple spaces with a single space, trim leading spaces
+  let cleanedKeyword = keyword
+  .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '') // Remove emojis
+  .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
+  .trim(); // Trim leading and trailing spaces
+
+  if(cleanedKeyword.includes('Asia')){
+    cleanedKeyword = 'Asia'
+  }else if(cleanedKeyword.includes('Flights')){
+      cleanedKeyword = 'Flights'
+  }else if(cleanedKeyword.includes('Coworking')){
+    cleanedKeyword = 'Coworking'
+  }else if(cleanedKeyword.includes('English Teaching')){
+    cleanedKeyword = 'English Teaching'
+  }
+
+    // console.log("-----------------------------------------------------");   
+    // console.log(`KEYWORD 4: ${keyword}`);    
+    // console.log(`CLEANED KEYWORD 4: ${cleanedKeyword}`);        
+    // console.log(`LAST KEYWORD 4: ${lastKeyword}`);
+    // console.log(`BREADCRUMB KEYWORD 4: ${breadcrumbKeyword}`);
+    // console.log(`COMBINED KEYWORDS 4: ${lastKeyword} ${cleanedKeyword}`);
+    // console.log(`COMBINED KEYWORDS 4.1: ${combinedKeyword}`);
+    setFilterKeyword(cleanedKeyword);
   }
 
   useEffect(() => {
@@ -356,7 +381,8 @@ const cleanCategoryForSorting = (category) => {
           <MainNav 
             handleSidebarToggle={handleSidebarToggle} 
             sidebarOpen={sidebarOpen} 
-            handleKeywordSelection={handleKeywordSelection} 
+            handleKeywordSelection={handleKeywordSelection}
+            clearAll={clearAll} 
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
