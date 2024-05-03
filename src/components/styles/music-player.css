@@ -53,21 +53,20 @@
   .spotify-player{
     position: absolute;
     top: 58px;
-    right: 82px;
+    right: 10px;
     width: 500px;
     padding: 1rem;
     background-color: hsl(var(--background));
     border-radius: 18px;
+    transition: transform .5s ease-in-out;
   }
 
   .spotify-player iframe{
     border-radius: 12px;
   }
 
-  .spotify-player.show{
-    display: block;
-  }
-
   .spotify-player.hide{
+    /* transform: translateX(700px); */
     display: none;
+    /* visibility: hidden; */
   }

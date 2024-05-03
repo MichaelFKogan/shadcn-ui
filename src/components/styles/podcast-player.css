@@ -2,23 +2,21 @@
   .podcast-player{
     position: absolute;
     top: 58px;
-    right: 134px;
+    right: 10px;
     width: 500px;
     padding: 1rem;
     background-color: hsl(var(--background));
     border-radius: 18px;
+    transition: transform .5s ease-in-out;
   }
 
   .podcast-player iframe{
     border-radius: 12px;
   }
 
-  .podcast-player.show{
-    display: block;
-  }
-
   .podcast-player.hide{
-    display: none;
+    /* display: none; */
+    transform: translateX(700px);
   }
 
   .podcast-player div.relative.w-full.max-w-xs{

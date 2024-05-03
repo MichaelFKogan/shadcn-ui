@@ -28,8 +28,7 @@ const [hideBanner, setHideBanner] = useState(false);
 
 // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
 const handleKeywordSelection = (keyword) => {
-  console.log("KEYWORD");
-  console.log(keyword);
+
   // Extend the regex to include regional indicator symbols for flag emojis
   // Remove emojis and replace multiple spaces with a single space, trim leading spaces
   let cleanedKeyword = keyword
@@ -49,23 +48,21 @@ const handleKeywordSelection = (keyword) => {
 
 console.log("CLEANED KEYWORD");
 console.log(cleanedKeyword);
-console.log("CLEANED KEYWORD TRIM()");
-console.log(cleanedKeyword.trim())
 
 setFilterKeyword(cleanedKeyword);
 
 
-  if (lastKeyword === '') {
-    setLastKeyword(cleanedKeyword);
-  }
+  // if (lastKeyword === '') {
+  //   setLastKeyword(cleanedKeyword);
+  // }
 
-  if (breadcrumbKeyword === '') {
-    setBreadcrumbKeyword(cleanedKeyword);
-  }
+  // if (breadcrumbKeyword === '') {
+  //   setBreadcrumbKeyword(cleanedKeyword);
+  // }
 
-  if (breadcrumbKeyword !== '') {
-    setSecondBreadcrumbKeyword(cleanedKeyword);
-  }
+  // if (breadcrumbKeyword !== '') {
+  //   setSecondBreadcrumbKeyword(cleanedKeyword);
+  // }
 
   // if(breadcrumbKeyword !== '' && secondBreadcrumbKeyword !== '' ){
   //   setFilterKeyword(cleanedKeyword);
