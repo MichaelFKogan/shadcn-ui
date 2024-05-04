@@ -1,10 +1,20 @@
 // src/components/Login.tsx
 import React, { useState, useEffect } from 'react';
-import { firebaseApp } from '../lib/firebase'; // Import the firebaseApp, not auth
-import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
-import { signOut } from 'firebase/auth';
 
+import Select from 'react-select'
+import CreatableSelect from 'react-select/creatable';
+import makeAnimated from 'react-select/animated';
+
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+
+import categoryGroupedOptions from '../data/categoryFormData.js';
+import groupedOptions from '../data/tagsFormData.js';
+import cityGroupedOptions from '../data/cityFormData.js'
+import countries from '../data/countryFormData.js';
+
 import {
     Dialog,
     DialogContent,
@@ -12,6 +22,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogFooter,
   } from "@/components/ui/dialog"
   import {
     Card,
@@ -21,8 +32,6 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-  import { Input } from "@/components/ui/input"
-  import { Label } from "@/components/ui/label"
   import {
     Tabs,
     TabsContent,
@@ -32,98 +41,310 @@ import {
 
 
 export function Form() {
-    // const firebase = useFirebaseApp();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [userLoggedIn, setUserLoggedIn] = useState(false); // State to manage user
-    const [registrationError, setRegistrationError] = useState(null);
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  
-    const auth = getAuth(firebaseApp);
 
-    useEffect(() => {
-        // Check if user is already logged in
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUserLoggedIn(true);
-            } else {
-                setUserLoggedIn(false);
-            }
-        });
+    const [selectedOptions, setSelectedOptions] = useState([]);
+    const [isClearable, setIsClearable] = useState(true);
+    const animatedComponents = makeAnimated();
 
-        return () => {
-            unsubscribe();
-        };
-    }, [auth]);
-  
-    const handleRegister = async () => {
-      try {
-        await createUserWithEmailAndPassword(auth, email, password);
-        // Registration successful
-        const user = auth.currentUser;
-        console.log('Registration successful!', user);
-        // onSuccess(); // Redirect to /add-link
-        setShowSuccessMessage(true);
-      } catch (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    const [linkData, setLinkData] = useState({
+        rank: '',
+        votes:'',
+        name:'',
+        url: '',
+        category: '',
+        tags: [],
+        city: '',
+        country: '',
+        continent: '',
+        date: new Date(), // Add a date field with the current date as default
+        // addedBy: user ? { uid: user.uid, email: user.email } : null, // Store relevant user information
+      });
+
+      const [formErrors, setFormErrors] = useState({
+        name:'',
+        url: '',
+        category: '',
+      });
+
+      const continents = [
+        {value: "Worldwide", label: "🌏 Worldwide"},
+        {value: "Asia", label: "⛩️ Asia "},
+        {value: "Latin America", label: "💃 Latin America "},
+        {value: "Europe", label: "🇪🇺 Europe"},
+        {value: "North America", label: "🗽 North America"},
+        {value: "Middle East", label: "🕌 Middle East"},
+        {value: "Oceania", label: "🏄 Oceania"},
+        {value: "Africa", label: "🦓 Africa"},
+      ]
+
+      const handleInputChange = (e) => {
+        // console.log(e);
+        console.log(linkData);
+        const { name, value } = e.target;
+        setLinkData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      };
     
-        if (errorCode === 'auth/email-already-in-use') {
-          console.error('Registration error: Email is already in use. Please log in.');
-          setRegistrationError('Email is already in use. Please log in using Gmail.');
-        } else {
-          console.error('Registration error:', errorMessage);
-          setRegistrationError('Registration failed. Please try again.');
+      const handleDropdownChange = (name, value) => {
+        setLinkData((prevData) => ({
+          ...prevData,
+          [name]: value ? value.label : '',  // Check if value exists before accessing its property
+        }));
+      };  
+
+      const handleTagsChange = (name, value) => {
+        // Set the maximum number of selections to 5
+        const maxSelections = 5;
+
+            // Check if the number of selected options is less than the maximum limit
+    if (value.length <= maxSelections) {
+      setSelectedOptions(value);
+
+        setLinkData((prevData) => ({
+          ...prevData,
+          [name]: value ? (Array.isArray(value) ? value.map(tag => tag.label) : value.label) : '',  
+        }));
+      };
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const errors = {};
+    
+        // Check if required fields are empty and set errors
+        if (!linkData.name) {
+          errors.name = 'Name is required';
         }
-      }
+        if (!linkData.url) {
+          errors.url = 'URL is required';
+        }
+        if (!linkData.category) {
+          errors.category = 'Category is required';
+        }
+    
+        // Check conditional validation based on city, country, and continent
+        if (linkData.city) {
+          // If city is chosen, validate country and continent
+          if (!linkData.country) {
+            errors.country = 'Country is required when a city is chosen';
+          }
+          if (!linkData.continent) {
+            errors.continent = 'Continent is required when a city is chosen';
+          }
+        }
+    
+        // Check conditional validation based on city, country, and continent
+        if (linkData.country) {
+          if (!linkData.continent) {
+            errors.continent = 'Continent is required when a country is chosen';
+          }
+        }
+      
+        // If there are errors, set them in the state and prevent submission
+        if (Object.keys(errors).length > 0) {
+          setFormErrors(errors);
+          // Scroll back to the top of the page
+          window.scrollTo(0, 0);
+          return;
+        }
+        try {
+          const linksCollection = collection(firestore, 'Links');
+           // Convert addedBy to a plain JavaScript object
+          const addedByObject = user ? { uid: user.uid, email: user.email } : null;
+          await addDoc(linksCollection, { ...linkData, addedBy: addedByObject, date: new Date() });
+          // Clear the form after successful submission
+          setLinkData({
+            rank: '',
+            votes:'',
+            name:'',
+            url: '',
+            category: '',
+            tags: [],
+            city: '',
+            country: '',
+            continent: '',
+            date: new Date(), // Add a date field with the current date as default
+            addedBy: addedByObject, // Store relevant user informationinformation
+          });
+          setIsFormSubmitted(true);  // Set form submission status to true
+          // Clear errors after successful submission
+          setFormErrors({});
+        } catch (error) {
+          console.error('Error adding document:', error);
+        }
+      };
+
+          const groupStyles = {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      color:"black",
+      fontSize:'14px',
+    };
+    const groupBadgeStyles: CSSProperties = {
+      backgroundColor: 'red',
+      borderRadius: '2em',
+      color: 'black',
+      display: 'inline-block',
+      fontSize: 12,
+      fontWeight: 'normal',
+      lineHeight: '1',
+      minWidth: 1,
+      padding: '0.16666666666667em 0.5em',
+      textAlign: 'center',
     };
     
+    const formatGroupLabel = (data: GroupedOption) => (
+      <div style={groupStyles}>
+        <span>{data.label}</span>
+        <span style={groupBadgeStyles}>{data.options.length}</span>
+      </div>
+    );
   
-  const handleGoogleRegister = async () => {
-    try {
-      // Create GoogleAuthProvider instance
-      const provider = new GoogleAuthProvider();
-      
-      // Sign in with Google
-      const result = await signInWithPopup(auth, provider);
-  
-      // The signed-in user info
-      const user = result.user;
-      console.log('Google sign-in successful!', user);
-    //   onSuccess(); // Redirect to /add-link
-      // Show success message
-      setShowSuccessMessage(true);
-    } catch (error) {
-      console.error('Google sign-in error:', error.message);
-      // Handle Google sign-in error
-    }
-  };
-  
-  const handleForgotPassword = async () => {
-    const email = prompt('Enter your email to reset password:');
-    
-    try {
-      await sendPasswordResetEmail(auth, email);
-      // Display a success message or redirect the user
-      console.log('Password reset email sent successfully');
-    } catch (error) {
-      console.error('Password reset error:', error.message);
-      // Handle password reset error
-    }
-  };
-
-const handleLogout = async () => {
-    try {
-        await signOut(auth);
-        setUserLoggedIn(false);
-    } catch (error) {
-        console.error('Logout error:', error.message);
-        // Handle logout error
-    }
-};
 
   return (
     <>
+
+        <Dialog>
+            <DialogTrigger asChild>
+            <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+                <form>
+                <DialogHeader>
+                <DialogTitle>Submit A Link</DialogTitle>
+                {/* <DialogDescription>
+                    Make changes to your profile here. Click save when you're done.
+                </DialogDescription> */}
+                </DialogHeader>
+
+                <div className="grid gap-4 py-4">
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="name" className="text-right">
+                        Name
+                        </Label>
+                        <Input
+                        id="name"
+                        defaultValue=""
+                        className="col-span-3"
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="username" className="text-right">
+                        URL
+                        </Label>
+                        <Input
+                        id="username"
+                        defaultValue=""
+                        className="col-span-3"
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        {/* <label for="inputUrl" class="form-label">Category  */}
+                        {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
+                        {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+                        {/* </label> */}
+                        <Label htmlFor="category" className="text-right">
+                        Category
+                        </Label>
+
+                        <CreatableSelect 
+                            options={categoryGroupedOptions}
+                            // formatGroupLabel={formatGroupLabel}
+                            type="text" className="form-control col-span-3" id="inputCategory" name="category" 
+                            value={linkData.category.value}
+                            onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
+                            isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
+                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                            />
+                        {/* <div className="text-danger">{formErrors.category}</div> */}
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="tags" className="text-right">
+                        Tags
+                        </Label>
+
+                        <CreatableSelect
+                            options={groupedOptions}
+                            // formatGroupLabel={formatGroupLabel}
+                            type="text" className="form-control col-span-3" id="inputTags" name="tags"
+                            value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
+                            closeMenuOnSelect={false} components={animatedComponents}
+                            defaultValue={[]} isMulti
+                            onChange={(selectedOption) => handleTagsChange("tags", selectedOption)}
+                            isClearable={isClearable} placeholder="Add or create tags" aria-describedby="tagsHelp" 
+                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                            />
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="city" className="text-right">
+                            City
+                        </Label>
+
+                        <CreatableSelect
+                            options={cityGroupedOptions}
+                            // options={cities} 
+                            type="text" className="form-control col-span-3" id="inputCity" name="city" 
+                            value={linkData.city.label}
+                            onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
+                            isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
+                            {/* <div className="text-danger">{formErrors.city}</div> */}
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="city" className="text-right">
+                            City
+                        </Label>
+
+                        <CreatableSelect
+                            options={cityGroupedOptions}
+                            // options={cities} 
+                            type="text" className="form-control col-span-3" id="inputCity" name="city" 
+                            value={linkData.city.label}
+                            onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
+                            isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
+                            {/* <div className="text-danger">{formErrors.city}</div> */}
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="country" className="text-right">
+                            Country
+                        </Label>
+
+                        <Select options={countries} type="text" className="form-control col-span-3" id="inputCountry" name="country" 
+                            value={linkData.country.label}
+                            onChange={(selectedOption) => handleDropdownChange("country", selectedOption)} 
+                            isClearable={isClearable} placeholder="Add country" aria-describedby="countryHelp" />
+                            {/* <div className="text-danger">{formErrors.country}</div> */}
+                    </div>
+
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="continent" className="text-right">
+                            Continent
+                        </Label>
+
+                        <Select options={continents} type="text" className="form-control col-span-3" id="inputContinent" name="continent" 
+                            value={linkData.continent.value}
+                            onChange={(selectedOption) => handleDropdownChange("continent", selectedOption)} 
+                            isClearable={isClearable} placeholder="Add continent" aria-describedby="continentHelp" />
+                            {/* <div className="text-danger">{formErrors.continent}</div> */}
+                    </div>
+
+                </div>
+                <DialogFooter>
+                <Button type="submit">Submit</Button>
+                </DialogFooter>
+                </form>
+            </DialogContent>
+        </Dialog>
 
         <Dialog>
             <DialogTrigger><a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a></DialogTrigger>
@@ -133,116 +354,125 @@ const handleLogout = async () => {
 
                     <DialogDescription>
 
-                    <Tabs defaultValue="account" className="w-full p-4 pb-0">
-                        <TabsList className="grid w-full grid-cols-2">
-                            <TabsTrigger value="account">Login</TabsTrigger>
-                            <TabsTrigger value="password">Register</TabsTrigger>
-                        </TabsList>
+  
+                    <form className="add-link-form" onSubmit={handleSubmit}>
 
-                        <TabsContent value="account">
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>Login</CardTitle>
-                                    <CardDescription>
-                                    Log In to your account here.
-                                    </CardDescription>
-                                </CardHeader>
+                        <Card className="mt-6 p-10">
+                        {/* <CardHeader>
+                            <CardTitle>Title</CardTitle>
+                            <CardDescription>Title</CardDescription>
+                        </CardHeader> */}
 
-                                <CardContent className="space-y-2 px-6">
-                                    <div className="space-y-1">
-                                        <Label htmlFor="exampleInputEmail1" className="form-label">Email address</Label>
-                                            <Input type="email" className="form-control" id="exampleInputEmail1" value={email} onChange={(e) => setEmail(e.target.value)} aria-describedby="emailHelp" />
-                                                {registrationError && (
-                                                    <div className="alert alert-danger" role="alert">
-                                                    {registrationError}
-                                                    </div>
-                                                )}
-                                    </div>
-                                    <div className="space-y-1">
-                                        <Label htmlFor="exampleInputPassword1" className="form-label">Password</Label>
-                                            <Input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <CardContent className="mt-6">
+                            <label for="inputName" class="form-label">Name 
+                                <span className="text-muted-foreground text-xs"> [required]</span>
+                            </label>
+                            <Input type="text" className="form-control" id="inputName" name="name" value={linkData.name} onChange={handleInputChange} aria-describedby="nameHelp" placeholder="Name" />
+                            <div className="text-red-400">{formErrors.name}</div>
+                        </CardContent>
 
-                                        <div className="w-full text-right">
-                                            <a href="#" onClick={handleForgotPassword} style={{fontSize:".75rem"}}>
-                                                Forgot Password?
-                                            </a>
-                                        </div>
-                                    </div>
-                                </CardContent>
+                        <CardContent>
+                            <label for="inputUrl" class="form-label">URL 
+                                <span className="text-muted-foreground text-xs"> [required]</span>
+                            </label>
+                            <Input type="text" className="form-control" id="inputUrl" name="url" value={linkData.url} onChange={handleInputChange} aria-describedby="urlHelp" placeholder="URL" />
+                                <div className="text-red-400">{formErrors.url}</div>
+                        </CardContent>
 
-                                <CardFooter className="flex-col items-stretch">
+                        <CardContent>
+                            <label for="inputUrl" class="form-label">Category 
+                                <span className="text-muted-foreground text-xs"> [required]</span>
+                                {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+                            </label>
 
-                                    <Button variant="secondary" className="btn btn-outline-primary" type="button" onClick={handleRegister}>
-                                        Login with Email
-                                    </Button>
-                                    {/* <div className="w-full my-2">or</div> */}
+                            <CreatableSelect 
+                                options={categoryGroupedOptions}
+                                // formatGroupLabel={formatGroupLabel}
+                                type="text" class="form-control" id="inputCategory" name="category" 
+                                value={linkData.category.value}
+                                onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
+                                isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
+                                styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                                />
+                            <div className="text-danger">{formErrors.category}</div>
 
-                                    <Button variant="outline" className="btn btn-outline-primary mt-5" type="button" onClick={handleGoogleRegister}>
-                                        <div className="flex items-center google-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Google&quot;,&quot;New Post&quot;,null,null]">
-                                            <svg aria-hidden="true" className="native svg-icon iconGoogle" width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18Z"></path><path fill="#34A853" d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17Z"></path><path fill="#FBBC05" d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07Z"></path><path fill="#EA4335" d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3Z"></path></svg> 
-                                                <span className="ml-1">Login using Google</span>
-                                        </div>
-                                    </Button>
-                                    {!showSuccessMessage ? ( null ) : (
-                                        <div className="mt-4 text-green-300">Successfully signed in!</div>
-                                    )}
+                        </CardContent>
 
-                                </CardFooter>
-                            </Card>
-                        </TabsContent>
 
-                        <TabsContent value="password">
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>Register</CardTitle>
-                                    <CardDescription>
-                                    Register for an account here.
-                                    </CardDescription>
-                                </CardHeader>
+                        <hr className='mt-4 pb-4'/>
+                        <CardContent><h3 className='text-muted-foreground text-md'>(Optional)</h3></CardContent>
 
-                                <CardContent className="space-y-2 px-6">
-                                    <div className="space-y-1">
-                                        <Label htmlFor="exampleInputEmail1" className="form-label">Email address</Label>
-                                            <Input type="email" className="form-control" id="exampleInputEmail1" value={email} onChange={(e) => setEmail(e.target.value)} aria-describedby="emailHelp" />
-                                                {registrationError && (
-                                                    <div className="alert alert-danger" role="alert">
-                                                    {registrationError}
-                                                    </div>
-                                                )}
-                                    </div>
-                                    <div className="space-y-1">
-                                        <Label htmlFor="exampleInputPassword1" className="form-label">Password</Label>
-                                            <Input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => setPassword(e.target.value)} />
-                                        
-                                        <div className="w-full text-right">
-                                            <a href="#" onClick={handleForgotPassword} style={{fontSize:".75rem"}}>
-                                                Forgot Password?
-                                            </a>
-                                        </div>
-                                    </div>
-                                </CardContent>
+                        <CardContent>
 
-                                <CardFooter className="flex-col items-stretch">
+                            <label for="inputUrl" class="form-label mb-1">Tags</label>
+                                <br/><small className='text-muted-foreground'>Create a tag here if you don't see it in the list</small>
 
-                                    <Button variant="secondary" className="btn btn-outline-primary" type="button" onClick={handleRegister}>
-                                        Register with Email
-                                    </Button>
+                            <CreatableSelect
+                                options={groupedOptions}
+                                // formatGroupLabel={formatGroupLabel}
+                                type="text" class="form-control" id="inputTags" name="tags"
+                                value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
+                                closeMenuOnSelect={false} components={animatedComponents}
+                                defaultValue={[]} isMulti
+                                onChange={(selectedOption) => handleTagsChange("tags", selectedOption)}
+                                isClearable={isClearable} placeholder="Add or create tags" aria-describedby="tagsHelp" 
+                                styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                                />
+                        </CardContent>
 
-                                    <Button variant="outline" className="btn btn-outline-primary mt-5" type="button" onClick={handleGoogleRegister}>
-                                        <div className="flex items-center google-login" data-ga="[&quot;sign up&quot;,&quot;Sign Up Started - Google&quot;,&quot;New Post&quot;,null,null]">
-                                            <svg aria-hidden="true" className="native svg-icon iconGoogle" width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18Z"></path><path fill="#34A853" d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17Z"></path><path fill="#FBBC05" d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07Z"></path><path fill="#EA4335" d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3Z"></path></svg> 
-                                                <span className="ml-1">Sign up using Google</span>
-                                        </div>
-                                    </Button>
-                                    {!showSuccessMessage ? ( null ) : (
-                                    <div className="mt-4 text-green-300">Registration successful!</div>
-                                )}
+                        <CardContent>
 
-                                </CardFooter>
-                            </Card>
-                        </TabsContent>
+                            <label for="inputUrl" class="form-label">City</label>
+                            <br/><small className='text-muted-foreground'>Create a city here if you don't see it in the list</small>
 
-                    </Tabs>
+                            <CreatableSelect
+                                options={cityGroupedOptions}
+                                // options={cities} 
+                                type="text" class="form-control" id="inputCity" name="city" 
+                                value={linkData.city.label}
+                                onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
+                                isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
+                                <div className="text-danger">{formErrors.city}</div>
+
+                        </CardContent>
+
+                        <CardContent>
+                            <label for="inputUrl" class="form-label">Country</label>
+                                <Select options={countries} type="text" class="form-control" id="inputCountry" name="country" 
+                                value={linkData.country.label}
+                                onChange={(selectedOption) => handleDropdownChange("country", selectedOption)} 
+                                isClearable={isClearable} placeholder="Add country" aria-describedby="countryHelp" />
+                                <div className="text-danger">{formErrors.country}</div>
+                        </CardContent>
+
+                        <CardContent>
+                            <label for="inputUrl" class="form-label">Continent</label>
+                                <Select options={continents} type="text" class="form-control" id="inputContinent" name="continent" 
+                                value={linkData.continent.value}
+                                onChange={(selectedOption) => handleDropdownChange("continent", selectedOption)} 
+                                isClearable={isClearable} placeholder="Add continent" aria-describedby="continentHelp" />
+                                <div className="text-danger">{formErrors.continent}</div>
+                        </CardContent>
+
+                        <CardContent>
+                            <h3>Description</h3>
+                            <Textarea/>
+                        </CardContent>
+
+                        <div className='w-full text-right'>
+                            <Button type="submit" variant="secondary" className="ml-auto">
+                                Submit
+                            </Button>
+                        </div>
+
+
+                        {/* <CardFooter>
+                            <p>Card Footer</p>
+                        </CardFooter> */}
+                        </Card>
+
+                    </form>
+                        
 
                     </DialogDescription>
                     </DialogHeader>

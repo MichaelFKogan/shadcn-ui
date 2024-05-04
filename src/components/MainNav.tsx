@@ -9,10 +9,11 @@ import { Submit } from "@/components/Submit"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
+import { signOut } from 'firebase/auth';
   
 
 export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
-
+    const [userLoggedIn, setUserLoggedIn] = useState(false); // State to manage user
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
 
@@ -29,6 +30,16 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
         }
         setMusicOpen(!musicOpen);
     }
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            setUserLoggedIn(false);
+        } catch (error) {
+            console.error('Logout error:', error.message);
+            // Handle logout error
+        }
+    };
 
     return (
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -58,6 +69,8 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
 
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <nav className="flex items-center" style={{ columnGap: "10px" }}>
+                    
+                    {userLoggedIn ? (<><p>User Is Logged In</p> <Button variant="ghost" className="text-muted-foreground" onClick={handleLogout}>Sign Out</Button></>) : ( <a className="text-muted-foreground text-sm" onClick={handleLogout}>Sign Out</a> )}
                        
                         {/* <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
