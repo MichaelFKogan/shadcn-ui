@@ -5,6 +5,7 @@ import { MainNav } from "@/components/MainNav"
 import { Sidebar } from "@/components/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
 import { TabsComponent } from "@/components/TabsComponent";
+import { Form } from "@/components/Form";
 // import {handleKeywordSelection, handleFirstKeyword, clearKeywords} from "@/utils/KeywordUtils";
 import Script from 'next/script'; // Import next/script component
 import { homepage } from '../data/data'
@@ -365,6 +366,16 @@ const cleanCategoryForSorting = (category) => {
     }
   }, []);  // Empty dependency array means this runs once on component mount
 
+    const [showForm, setShowForm] = useState(false);
+
+    const handleClick = (componentName) => {
+      if (componentName === 'form') {
+        setShowForm(true);
+      } else {
+        setShowForm(false);
+      }
+    };
+
   return (
     <>
 
@@ -382,15 +393,23 @@ const cleanCategoryForSorting = (category) => {
             handleSidebarToggle={handleSidebarToggle} 
             sidebarOpen={sidebarOpen} 
             handleKeywordSelection={handleKeywordSelection}
-            clearAll={clearAll} 
+            clearAll={clearAll}
+            handleClick={handleClick}
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-3 2xl:px-5 relative">
+
+            {!showForm &&
               <HeroBanner 
                 hideBanner={hideBanner} 
                 handleBannerToggle={handleBannerToggle}
                />
+            }
+
+
+              {showForm && <Form />}
+              {!showForm && 
               
               <TabsComponent 
                 filterKeyword={filterKeyword} 
@@ -415,6 +434,8 @@ const cleanCategoryForSorting = (category) => {
                 selectedBreadcrumb={selectedBreadcrumb}
                 setSelectedBreadcrumb={setSelectedBreadcrumb}
                  />
+                }
+
             </div>
           </div>
 

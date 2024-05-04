@@ -1,5 +1,7 @@
 // src/components/Login.tsx
 import React, { useState, useEffect } from 'react';
+import './styles/form.css'
+import '../app/globals.css';
 
 import Select from 'react-select'
 import CreatableSelect from 'react-select/creatable';
@@ -177,19 +179,29 @@ export function Form() {
         }
       };
 
-          const groupStyles = {
+      const textColor = getComputedStyle(document.documentElement).getPropertyValue('--foreground');
+      const badgeBackground = getComputedStyle(document.documentElement).getPropertyValue('--muted');
+
+      const mutedTextForeground = getComputedStyle(document.documentElement).getPropertyValue('--muted-foreground');
+
+      const backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background');
+      const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--input');
+
+    // Group Titles
+    const groupStyles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      color:"black",
-      fontSize:'14px',
+      color:`hsl(${mutedTextForeground})`,
+      fontSize:'12px',
     };
+    // Badges
     const groupBadgeStyles: CSSProperties = {
-      backgroundColor: 'red',
+      backgroundColor: `hsl(${badgeBackground})`,
       borderRadius: '2em',
-      color: 'black',
+      color: `hsl(${textColor})`,
       display: 'inline-block',
-      fontSize: 12,
+      fontSize: '11px',
       fontWeight: 'normal',
       lineHeight: '1',
       minWidth: 1,
@@ -256,12 +268,12 @@ export function Form() {
 
                         <CreatableSelect 
                             options={categoryGroupedOptions}
-                            // formatGroupLabel={formatGroupLabel}
+                            formatGroupLabel={formatGroupLabel}
                             type="text" className="form-control col-span-3" id="inputCategory" name="category" 
                             value={linkData.category.value}
                             onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
                             isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
-                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:`hsl(${mutedTextForeground})`, fontSize: '12px'}),}}
                             />
                         {/* <div className="text-danger">{formErrors.category}</div> */}
                     </div>
@@ -273,14 +285,14 @@ export function Form() {
 
                         <CreatableSelect
                             options={groupedOptions}
-                            // formatGroupLabel={formatGroupLabel}
+                            formatGroupLabel={formatGroupLabel}
                             type="text" className="form-control col-span-3" id="inputTags" name="tags"
                             value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
                             closeMenuOnSelect={false} components={animatedComponents}
                             defaultValue={[]} isMulti
                             onChange={(selectedOption) => handleTagsChange("tags", selectedOption)}
                             isClearable={isClearable} placeholder="Add or create tags" aria-describedby="tagsHelp" 
-                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:'#21259', fontSize: '14px'}),}}
+                            styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:`hsl(${mutedTextForeground})`, fontSize: '12px'}),}}
                             />
                     </div>
 
@@ -338,9 +350,16 @@ export function Form() {
                             {/* <div className="text-danger">{formErrors.continent}</div> */}
                     </div>
 
+                    <div className="grid grid-cols-4 items-center gap-4">
+                        <Label htmlFor="dsecription" className="text-right">
+                            Description
+                        </Label>
+                        <Textarea className="form-control col-span-3" />
+                    </div>
+
                 </div>
                 <DialogFooter>
-                <Button type="submit">Submit</Button>
+                <Button variant="outline" type="submit">Submit</Button>
                 </DialogFooter>
                 </form>
             </DialogContent>

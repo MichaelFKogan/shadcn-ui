@@ -41,8 +41,7 @@ const handleLogout = async () => {
   return (
     <>
 
-      <Form /> 
-      <Login />
+      {userLoggedIn ? ( <Form /> ) : ( <Login /> )}
 
     </>
   );

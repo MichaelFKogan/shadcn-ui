@@ -1,6 +1,6 @@
 // src/components/MainNav.tsx
 'use client'
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
 // import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
@@ -9,10 +9,13 @@ import { Submit } from "@/components/Submit"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
+
+import { firebaseApp } from '../lib/firebase'; // Import the firebaseApp, not auth
+import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
 import { signOut } from 'firebase/auth';
   
 
-export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
+export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleClick }) {
     const [userLoggedIn, setUserLoggedIn] = useState(false); // State to manage user
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
@@ -41,6 +44,23 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
         }
     };
 
+    const auth = getAuth(firebaseApp);
+
+    useEffect(() => {
+        // Check if user is already logged in
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUserLoggedIn(true);
+            } else {
+                setUserLoggedIn(false);
+            }
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, [auth]);
+
     return (
         <header className="sticky top-0 z-10 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-14 max-w-screen-2xl items-center">
@@ -50,13 +70,18 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
                         <Menu strokeWidth={2}/>
                     </Button>
 
-                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => clearAll()}>
+                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleClick('home'); }}>
                         {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
+
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <Submit />
+                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleClick('form')}>Submit A Link</a>
                     </nav>
+
+                    {/* <nav className="flex items-center gap-4 text-sm lg:gap-6">
+                        <Submit />
+                    </nav> */}
                 </div>
 
                 <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:R16u6la:" data-state="closed">
@@ -70,7 +95,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <nav className="flex items-center" style={{ columnGap: "10px" }}>
                     
-                    {userLoggedIn ? (<><p>User Is Logged In</p> <Button variant="ghost" className="text-muted-foreground" onClick={handleLogout}>Sign Out</Button></>) : ( <a className="text-muted-foreground text-sm" onClick={handleLogout}>Sign Out</a> )}
+                    {userLoggedIn ? ( <Button variant="ghost" className="text-muted-foreground text-xs" onClick={handleLogout}>Sign Out</Button> ) : ( null )}
                        
                         {/* <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
