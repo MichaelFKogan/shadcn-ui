@@ -5,7 +5,7 @@ import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
 // import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
 // import { PodcastPlayer } from "@/components/PodcastPlayer"
-import { Login } from "@/components/Login"
+import { Submit } from "@/components/Submit"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
@@ -44,7 +44,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <Login/>
+                        <Submit />
                     </nav>
                 </div>
 

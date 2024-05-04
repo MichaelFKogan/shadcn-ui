@@ -31,7 +31,7 @@ import {
   } from "@/components/ui/tabs"
 
 
-export function Login() {
+export function Form() {
     // const firebase = useFirebaseApp();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -253,4 +253,4 @@ const handleLogout = async () => {
   );
 }
 
-export default Login;
+export default Form;
