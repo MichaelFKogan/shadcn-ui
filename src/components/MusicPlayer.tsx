@@ -162,7 +162,7 @@ export function MusicPlayer() {
               </Button>
             </div>
           </div>
-          <a href={artistUrls[currentSongIndex]} className="artist-name" target="_blank"><p className="text-xs text-muted-foreground">{artistNames[currentSongIndex]}</p></a>
+          {/* <a href={artistUrls[currentSongIndex]} className="artist-name" target="_blank"><p className="text-xs text-muted-foreground">{artistNames[currentSongIndex]}</p></a> */}
         </PopoverContent>
       </Popover>
 

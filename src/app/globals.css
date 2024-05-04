@@ -141,7 +141,7 @@
     -webkit-line-clamp: 3;
   }
 
-  .tab-menu-options{
+  .tab-menu .tab-menu-options{
     float: right;
     position: sticky;
     top: 57px;

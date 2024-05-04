@@ -1,16 +1,17 @@
 // src/components/MainNav.tsx
+'use client'
 import { useState} from "react";
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
-import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
-import { PodcastPlayer } from "@/components/PodcastPlayer"
+// import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
+// import { PodcastPlayer } from "@/components/PodcastPlayer"
+import { Login } from "@/components/Login"
 import { Button } from "@/components/ui/button";
 import './styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
+  
 
-import { homepage } from '../data/data'
-
-export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelection, clearAll }) {
+export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll }) {
 
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
@@ -43,7 +44,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, handleKeywordSelecti
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" href="/submit" target="_blank">Submit A Link</a>
+                        <Login/>
                     </nav>
                 </div>
 
