@@ -18,6 +18,7 @@
 │   └── data.tsx
 ├── lib
 │   └── utils.ts
+│   └── firebase.js
 ├── pages
 │   └── _apps.tsx
 │   └── home.tsx
