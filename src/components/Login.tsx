@@ -31,7 +31,7 @@ import {
   } from "@/components/ui/tabs"
 
 
-export function Login() {
+export function Login({handleShowForm}) {
     // const firebase = useFirebaseApp();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -126,10 +126,19 @@ const handleLogout = async () => {
     <>
 
         <Dialog>
-            <DialogTrigger><a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a></DialogTrigger>
+            <DialogTrigger>
+                <nav className="flex items-center gap-4 text-sm lg:gap-6">
+                    <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleShowForm('form')}>Submit A Link</a>
+                </nav>
+            </DialogTrigger>
+
+            {userLoggedIn ? (
+                null
+            ) : (
+            <>
                 <DialogContent>
                     <DialogHeader>
-                    <DialogTitle className="ml-4">You must be logged in to submit a link</DialogTitle>
+                    <DialogTitle className="ml-4">You must be signed in to submit a link</DialogTitle>
 
                     <DialogDescription>
 
@@ -247,6 +256,8 @@ const handleLogout = async () => {
                     </DialogDescription>
                     </DialogHeader>
                 </DialogContent>
+            </>
+            )} 
         </Dialog>
 
     </>

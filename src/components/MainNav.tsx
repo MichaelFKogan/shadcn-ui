@@ -3,6 +3,7 @@
 import { useState, useEffect} from "react";
 import { DarkMode } from "@/components/DarkMode"
 import { MusicPlayer } from "@/components/MusicPlayer"
+import { Login } from "@/components/Login"
 // import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
 // import { PodcastPlayer } from "@/components/PodcastPlayer"
 import { Submit } from "@/components/Submit"
@@ -15,7 +16,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthPro
 import { signOut } from 'firebase/auth';
   
 
-export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleClick }) {
+export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShowForm }) {
     const [userLoggedIn, setUserLoggedIn] = useState(false); // State to manage user
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
@@ -70,14 +71,15 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleClic
                         <Menu strokeWidth={2}/>
                     </Button>
 
-                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleClick('home'); }}>
+                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); }}>
                         {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
                     </a>
 
-                    <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleClick('form')}>Submit A Link</a>
-                    </nav>
+                    {/* <nav className="flex items-center gap-4 text-sm lg:gap-6">
+                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleShoworm('form')}><Login /></a>
+                    </nav> */}
+                    <Login handleShowForm={handleShowForm} />
 
                     {/* <nav className="flex items-center gap-4 text-sm lg:gap-6">
                         <Submit />
@@ -95,7 +97,8 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleClic
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <nav className="flex items-center" style={{ columnGap: "10px" }}>
                     
-                    {userLoggedIn ? ( <Button variant="ghost" className="text-muted-foreground text-xs" onClick={handleLogout}>Sign Out</Button> ) : ( null )}
+                    {userLoggedIn ? ( <Button variant="ghost" className="text-muted-foreground text-xs" onClick={handleLogout}>Sign Out</Button> ) 
+                    : ( null )}
                        
                         {/* <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>

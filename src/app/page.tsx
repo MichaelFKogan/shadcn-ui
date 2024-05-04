@@ -368,7 +368,7 @@ const cleanCategoryForSorting = (category) => {
 
     const [showForm, setShowForm] = useState(false);
 
-    const handleClick = (componentName) => {
+    const handleShowForm = (componentName) => {
       if (componentName === 'form') {
         setShowForm(true);
       } else {
@@ -394,7 +394,7 @@ const cleanCategoryForSorting = (category) => {
             sidebarOpen={sidebarOpen} 
             handleKeywordSelection={handleKeywordSelection}
             clearAll={clearAll}
-            handleClick={handleClick}
+            handleShowForm={handleShowForm}
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>

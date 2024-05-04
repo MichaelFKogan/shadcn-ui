@@ -220,6 +220,136 @@ export function Form() {
   return (
     <>
 
+
+      <div className="grid gap-4 py-4">
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+            Name
+            </Label>
+            <Input
+            id="name"
+            defaultValue=""
+            className="col-span-3"
+            />
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+            URL
+            </Label>
+            <Input
+            id="username"
+            defaultValue=""
+            className="col-span-3"
+            />
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            {/* <label for="inputUrl" class="form-label">Category  */}
+            {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
+            {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+            {/* </label> */}
+            <Label htmlFor="category" className="text-right">
+            Category
+            </Label>
+
+            <CreatableSelect 
+                options={categoryGroupedOptions}
+                formatGroupLabel={formatGroupLabel}
+                type="text" className="form-control col-span-3" id="inputCategory" name="category" 
+                value={linkData.category.value}
+                onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
+                isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
+                styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:`hsl(${mutedTextForeground})`, fontSize: '12px'}),}}
+                />
+            {/* <div className="text-danger">{formErrors.category}</div> */}
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="tags" className="text-right">
+            Tags
+            </Label>
+
+            <CreatableSelect
+                options={groupedOptions}
+                formatGroupLabel={formatGroupLabel}
+                type="text" className="form-control col-span-3" id="inputTags" name="tags"
+                value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
+                closeMenuOnSelect={false} components={animatedComponents}
+                defaultValue={[]} isMulti
+                onChange={(selectedOption) => handleTagsChange("tags", selectedOption)}
+                isClearable={isClearable} placeholder="Add or create tags" aria-describedby="tagsHelp" 
+                styles={{control: (provided) => ({...provided, }), option: (provided) => ({...provided, color:`hsl(${mutedTextForeground})`, fontSize: '12px'}),}}
+                />
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="city" className="text-right">
+                City
+            </Label>
+
+            <CreatableSelect
+                options={cityGroupedOptions}
+                // options={cities} 
+                type="text" className="form-control col-span-3" id="inputCity" name="city" 
+                value={linkData.city.label}
+                onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
+                isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
+                {/* <div className="text-danger">{formErrors.city}</div> */}
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="city" className="text-right">
+                City
+            </Label>
+
+            <CreatableSelect
+                options={cityGroupedOptions}
+                // options={cities} 
+                type="text" className="form-control col-span-3" id="inputCity" name="city" 
+                value={linkData.city.label}
+                onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
+                isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
+                {/* <div className="text-danger">{formErrors.city}</div> */}
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="country" className="text-right">
+                Country
+            </Label>
+
+            <Select options={countries} type="text" className="form-control col-span-3" id="inputCountry" name="country" 
+                value={linkData.country.label}
+                onChange={(selectedOption) => handleDropdownChange("country", selectedOption)} 
+                isClearable={isClearable} placeholder="Add country" aria-describedby="countryHelp" />
+                {/* <div className="text-danger">{formErrors.country}</div> */}
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="continent" className="text-right">
+                Continent
+            </Label>
+
+            <Select options={continents} type="text" className="form-control col-span-3" id="inputContinent" name="continent" 
+                value={linkData.continent.value}
+                onChange={(selectedOption) => handleDropdownChange("continent", selectedOption)} 
+                isClearable={isClearable} placeholder="Add continent" aria-describedby="continentHelp" />
+                {/* <div className="text-danger">{formErrors.continent}</div> */}
+        </div>
+
+        <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="dsecription" className="text-right">
+                Description
+            </Label>
+            <Textarea className="form-control col-span-3" />
+        </div>
+
+      </div>
+
+
+
+
         <Dialog>
             <DialogTrigger asChild>
             <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60">Submit A Link</a>
