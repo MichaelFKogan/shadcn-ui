@@ -84,12 +84,18 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShow
                         <Submit />
                     </nav> */}
 
-                    <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                    <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('💯 Featured')}>💯 Featured</a>
+                    <nav className="flex items-center text-sm main-menu">
+                        {/* <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('💯 Featured')}>💯 Featured</a>
                         <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📍 Essentials')}>📍 Essentials</a>
                         <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📸 Social Media')}>📸 Social Media</a>
                         <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('👔 Work')}>👔 Work</a>
-                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('🏄‍♀️ Lifestyle')}>🏄‍♀️ Lifestyle</a>
+                        <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('🏄‍♀️ Lifestyle')}>🏄‍♀️ Lifestyle</a> */}
+
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('💯 Featured')}><span className="emoji">💯</span> Featured</Button>
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📍 Essentials')}><span className="emoji">📍</span> Essentials</Button>
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📸 Social Media')}><span className="emoji">📸</span> Social Media</Button>
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('👔 Work')}><span className="emoji">👔</span> Work</Button>
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('🏄‍♀️ Lifestyle')}><span className="emoji">🏄‍♀️</span> Lifestyle</Button>
                     </nav>
 
                 </div>

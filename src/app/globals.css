@@ -6,35 +6,91 @@
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
+      color: #FFFFFF;
+      color: #020817;
 
-      --sidebar: 0, 0%, 97.6%;
+      /* --sidebar-background: 0, 0%, 97.6%;
+      color: #F9F9F9;
+      --sidebar-foreground: #09090B;
+
+      --nav-menu: #09090B; */
 
       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
+      color: #FFFFFF;
+      color: #020817;
 
       --popover: 0 0% 100%;
       --popover-foreground: 222.2 84% 4.9%;
+      color: #FFFFFF;
+      color: #020817;
 
       --primary: 222.2 47.4% 11.2%;
       --primary-foreground: 210 40% 98%;
+      color: #0F172A;
+      color: #FAF8FC;
 
       --secondary: 210 40% 96.1%;
       --secondary-foreground: 222.2 47.4% 11.2%;
+      color: #F1F5F9;
+      color: #0F172A;
 
       --muted: 210 40% 96.1%;
       --muted-foreground: 215.4 16.3% 65.1%;
+      color: #F1F5F9;
+      color: #97A3B5;
 
       --accent: 210 40% 96.1%;
       --accent-foreground: 222.2 47.4% 11.2%;
+      color: #F1F5F9;
+      color: #0F172A;
 
       --destructive: 0 84.2% 60.2%;
       --destructive-foreground: 210 40% 98%;
+      color: #EF4444;
+      color: #FAF8FC;
 
       --border: 214.3 31.8% 91.4%;
       --input: 214.3 31.8% 91.4%;
       --ring: 222.2 84% 4.9%;
+      color: #E2E8F0;
+      color: #E2E8F0;
+      color: #020817;
 
       --radius: 0.5rem;
+
+      /* MUTED FOREGROUND COLORS */
+
+      /* --muted-foreground: #97A3B5; */
+      --muted-foreground-10: #8792a2;
+      --muted-foreground-20: #788290;
+      --muted-foreground-30: #69727e;
+      --muted-foreground-40: #5a616c;
+      --muted-foreground-50: #4b515a;
+      --muted-foreground-60: #3c4148;
+      --muted-foreground-70: #2d3036;
+      --muted-foreground-90: #1e2024;
+      --muted-foreground-90: #0f1012;
+
+
+      --gray-10: #fcfcfc;
+      --gray-20: #f9f9f9;
+      --gray-30: #f0f0f0;
+      --gray-40: #e8e8e8;
+      --gray-50: #e0e0e0;
+      --gray-60: #d9d9d9;
+      --gray-70: #cecece;
+      --gray-80: #bbb;
+      --gray-90: #8d8d8d;
+      --gray-100: #838383;
+      --gray-110: #646464;
+      --gray-120: #202020;
+
+      --violet-20: #fbfaff;
+      --violet-40: #ede9fe;
+      --violet-90: #6e56cf;
+      --violet-110: #5746af;
+      
     }
 
     .dark {

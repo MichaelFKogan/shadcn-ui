@@ -4,6 +4,15 @@ header .container{
     padding-right: 1.25rem;
 }
 
+.main-menu button{
+  color: var(--sidebar-menu);
+}
+
+.main-menu .emoji{
+  /* opacity: .8; */
+  margin-right: 7px;
+}
+
 .lucide-menu{
     cursor: pointer;
 }
