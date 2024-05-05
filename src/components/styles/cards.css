@@ -32,7 +32,8 @@
     /* max-height: 144px; */
     max-height: auto;
     position: relative;
-    /* background: hsl(var(--muted)); */
+    background: var(--gray-10);
+    badckground: var(--card-background);
 }
 
 .card__text-wrapper{
@@ -84,9 +85,10 @@
 
   .card .badge-category{
     font-size: 12px;
-    /* border: 1px solid hsl(var(--background)); */
-    /* background-color: hsl(var(--muted-foreground) / .5); */
-      background-color: hsl(var(--secondary) / .5);
+    font-weight: 500 !important;
+    background-color: var(--badge-category-background);
+    color: var(--badge-category-text);
+    border: 1px solid var(--badge-category-border);
     }
 
   .card .badge-category:hover{
@@ -95,10 +97,12 @@
 
   .badge-city, .badge-country, .badge-continent{
     font-size: 12px;
-    font-weight: 400;
-    background: hsl(var(--background));
-    color: hsl(var(--secondary-foreground));
-    border: none;
+    font-weight: 500 !important;
+
+    background: var(--badge-location-background);
+    color: var(--badge-location-text);
+
+    border: 1px solid var(--badge-location-border);
   }
 
   /* .card:hover .badge-category{

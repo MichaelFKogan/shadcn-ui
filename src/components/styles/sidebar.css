@@ -1,6 +1,7 @@
 .sidebar-wrapper{
   z-index: 2 !important;
-  background-color: hsl(var(--background));
+  /* background-color: hsl(var(--background)); */
+  background-color: var(--gray-10);
   transition: transform .2s ease-in-out; /* Add smooth transition for transform */
 }
 
@@ -56,7 +57,7 @@
     padding: .25rem .50rem;
     margin: 0rem 1rem;
     border-radius: .375rem;
-    color: hsl(var(--sidebar-foreground));
+    color: var(--sidebar-foreground);
     font-weight: 400;
     display: flex;
     align-items: center;

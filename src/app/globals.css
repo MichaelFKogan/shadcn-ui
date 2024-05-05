@@ -9,16 +9,26 @@
       color: #FFFFFF;
       color: #020817;
 
-      /* --sidebar-background: 0, 0%, 97.6%;
+      --sidebar-background: 0, 0%, 97.6%;
       color: #F9F9F9;
       --sidebar-foreground: #09090B;
 
-      --nav-menu: #09090B; */
+      --nav-menu: #09090B;
 
       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
       color: #FFFFFF;
       color: #020817;
+
+      --card-background: #F9FAFb;
+
+      --badge-category-background: #E1EFFE;
+      --badge-category-text: #1E429f;
+      --badge-category-border: rgba(118, 169, 250, .1);
+
+      --badge-location-background: #F3F4F6;
+      --badge-location-text: #1F2937;
+      --badge-location-border: rgba(107, 114, 128, .1);
 
       --popover: 0 0% 100%;
       --popover-foreground: 222.2 84% 4.9%;
@@ -90,39 +100,71 @@
       --violet-40: #ede9fe;
       --violet-90: #6e56cf;
       --violet-110: #5746af;
+
+      --blue-10: #fbfdff;
+      --blue-20: #f5faff;
+      --blue-30: #edf6ff;
+      --blue-40: #e1f0ff;
+      --blue-50: #cee7fe;
+      --blue-60: #b7d9f8;
+      --blue-80: #5eb0ef;
+      --blue-90: #0091ff;
+      --blue-100: #0081f1;
+      --blue-110: #006adc;
       
     }
 
     .dark {
       --background: 222.2 84% 4.9%;
       --foreground: 210 40% 98%;
+      color: #020817;
+      color: #F8FAFC;
 
       --sidebar: 222.2 84% 4.9%;
+      color: #020817;
+      --sidebar-foreground: #F8FAFC;
 
       --card: 222.2 84% 4.9%;
       --card-foreground: 210 40% 98%;
+      color: #020817;
+      color: #F8FAFC;
 
       --popover: 222.2 84% 4.9%;
       --popover-foreground: 210 40% 98%;
+      color: #020817;
+      color: #F8FAFC;
 
       --primary: 210 40% 98%;
       --primary-foreground: 222.2 47.4% 11.2%;
+      color: #F8FAFC;
+      color: #0F172A;
 
       --secondary: 217.2 32.6% 17.5%;
       --secondary-foreground: 210 40% 98%;
+      color: #1E293B;
+      color: #F8FAFC;
 
       --muted: 217.2 32.6% 17.5%;
       --muted-foreground: 215 20.2% 65.1%;
+      color: #1E293B;
+      color: #94A3B8;
 
       --accent: 217.2 32.6% 17.5%;
       --accent-foreground: 210 40% 98%;
+      color: #1E293B;
+      color: #F8FAFC;
 
       --destructive: 0 62.8% 30.6%;
       --destructive-foreground: 210 40% 98%;
+      color: #7F1D1D;
+      color: #F8FAFC;
 
       --border: 217.2 32.6% 17.5%;
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
+      color: #1E293B;
+      color: #1E293B;
+      color: #CBD5E1;
     }
   } 
 
