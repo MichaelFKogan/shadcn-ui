@@ -128,7 +128,7 @@ const handleLogout = async () => {
         <Dialog>
             <DialogTrigger>
                 <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                    <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleShowForm('form')}>Submit A Link</a>
+                    <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleShowForm('form')}>Submit A Link</a>
                 </nav>
             </DialogTrigger>
 

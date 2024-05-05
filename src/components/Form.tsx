@@ -300,21 +300,6 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="city" className="text-right">
-                City
-            </Label>
-
-            <CreatableSelect
-                options={cityGroupedOptions}
-                // options={cities} 
-                type="text" className="form-control col-span-3" id="inputCity" name="city" 
-                value={linkData.city.label}
-                onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
-                isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
-                {/* <div className="text-danger">{formErrors.city}</div> */}
-        </div>
-
-        <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="country" className="text-right">
                 Country
             </Label>

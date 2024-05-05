@@ -54,17 +54,24 @@ export function MusicPlayer() {
       playCurrentSong();
     }
 
+    // Update current song index when song ends
+    const onAudioEnded = () => {
+      setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songTitles.length);
+    };
+
     // Add event listeners
     audioRef.current.addEventListener('play', () => console.log('Audio playing'));
     audioRef.current.addEventListener('pause', () => console.log('Audio paused'));
+    audioRef.current.addEventListener('ended', onAudioEnded);
 
     // Cleanup function to remove event listeners
     return () => {
       audioRef.current.pause();
       audioRef.current.removeEventListener('play', () => console.log('Audio playing'));
       audioRef.current.removeEventListener('pause', () => console.log('Audio paused'));
+      audioRef.current.removeEventListener('ended', onAudioEnded);
     };
-  }, []); // This effect runs once on mount and cleanup on unmount
+    }, [currentSongIndex, isPlaying]); // Run effect when currentSongIndex or isPlaying changes
 
   useEffect(() => {
     if (isPlaying) {

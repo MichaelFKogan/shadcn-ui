@@ -127,6 +127,12 @@ const alphanumericSort = (rowA, rowB, columnId) => {
         },
         enableSorting: true,
         sortingFn: alphanumericSort,
+    }),
+    columnHelper.accessor('description', {
+        id: 'description',
+        header: 'Description',
+        cell: info => (<div className="description text-xs" style={{fontSize: "10px"}}>{info.row.original.description}</div>),
+        size: 150,
     }),    
     columnHelper.accessor('city', {
         header: 'City',
@@ -150,12 +156,6 @@ const alphanumericSort = (rowA, rowB, columnId) => {
         sortingFn: alphanumericSort,
         size: 60,
     }),
-    //     columnHelper.accessor('description', {
-    //     id: 'description',
-    //     header: 'Description',
-    //     cell: info => (<div className="description text-xs">{info.row.original.description}</div>),
-    //     size: 300,
-    // }),
 
 
 ];

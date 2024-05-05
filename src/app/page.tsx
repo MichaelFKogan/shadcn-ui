@@ -395,6 +395,7 @@ const cleanCategoryForSorting = (category) => {
             handleKeywordSelection={handleKeywordSelection}
             clearAll={clearAll}
             handleShowForm={handleShowForm}
+            handleCountrySelection={handleCountrySelection}
           />
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
