@@ -38,7 +38,7 @@
                 "tags": "",
                 "category": "🗺 Maps",
                 "group": "Essentials",
-                "continent": "🌎 Worldwide",
+                "continent": "",
                 "__collections__": {}
             },
             "17ZOoOVgNuzeVH4Rr37K": {
@@ -90,6 +90,7 @@
                 "category": "Instagram",
                 "url": "https://www.instagram.com/discoverhongkong/?hl=en",
                 "tags": [],
+                "group": "social media",
                 "__collections__": {}
             },
             "3Itjj65W3yuupDUBu4Vd": {
@@ -440,7 +441,7 @@
                 "category": "🗺 Maps",
                 "url": "https://www.google.com/maps",
                 "group": "Essentials",
-                "continent": "🌎 Worldwide",
+                "continent": "",
                 "__collections__": {}
             },
             "Ye2YCjpd3s5f5oIxu5EU": {
@@ -491,7 +492,7 @@
                 "rank": 3,
                 "category": "🏠 Accomodation",
                 "url": "https://www.airbnb.com",
-                "continent": "🌎 Worldwide",
+                "continent": "",
                 "group": "Essentials",
                 "tags": [
                     "🛌 Apartment",
@@ -647,7 +648,7 @@
                 "category": "🏠 Accomodation",
                 "url": "https://www.booking.com",
                 "group": "Essentials",
-                "continent": "🌎 Worldwide",
+                "continent": "",
                 "tags": [
                     "🏨 Hotels",
                     "🛏 Hostels"
