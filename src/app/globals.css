@@ -17,6 +17,7 @@
 
       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
+      --card-hover: #F1F5F9;
       color: #FFFFFF;
       color: #020817;
 
@@ -52,6 +53,8 @@
       --muted-foreground: 215.4 16.3% 65.1%;
       color: #F1F5F9;
       color: #97A3B5;
+
+      --card-description: #69727e;
 
       --accent: 210 40% 96.1%;
       --accent-foreground: 222.2 47.4% 11.2%;
@@ -129,6 +132,8 @@
 
       --card: 222.2 84% 4.9%;
       --card-foreground: 210 40% 98%;
+
+      --card-hover: #0d1219;
       color: #020817;
       color: #F8FAFC;
 
@@ -163,6 +168,8 @@
       --muted-foreground: 215 20.2% 65.1%;
       color: #1E293B;
       color: #94A3B8;
+
+      --card-description: #768293;
 
       --accent: 217.2 32.6% 17.5%;
       --accent-foreground: 210 40% 98%;
