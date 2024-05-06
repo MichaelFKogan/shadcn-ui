@@ -6,23 +6,33 @@
     overflow-x: auto;
 }
 
+.table-container th{
+    background: hsl(var(--muted));
+}
+
 .table-container th, .table-container td{
     border: 1px solid hsl(var(--input));
     position: relative;
     /* position: sticky; */
 }
 
-/* th, td {
-    position: sticky !important;
-} */
-
-th:first-child, td:first-child {
-    /* position: sticky !important;
-    left: 276px;
-    z-index: 1;
-    background-color: hsl(var(--background)); */
-    /* max-width:300px; */
+.table-container .category div{
+    background: var(--blue-110);
+    color: white;
 }
+
+.table-container .tags div{
+    background: hsl(var(--secondary));
+    color: white;
+}
+
+/* .th-title{
+    border-top-left-radius: .5rem;
+}
+
+.th-continent{
+    border-top-right-radius: .5rem;
+} */
 
 .link__text-wrapper{
     overflow: hidden;
@@ -83,7 +93,7 @@ th, .title, .category, .tags, .city, .country, .continent, .description{
 }
 
 .city a:hover, .country a:hover, .continent a:hover{
-    color: aqua;
+    color: var(--blue-110);
 }
 
 .table-container .city, .table-container .country, .table-container .continent{

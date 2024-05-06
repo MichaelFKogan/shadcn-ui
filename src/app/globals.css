@@ -30,6 +30,9 @@
       --badge-location-text: #1F2937;
       --badge-location-border: rgba(107, 114, 128, .1);
 
+      --badge-tag-background: rgb(222 247 236);
+      --badge-tag-text: rgb(3 84 63);
+
       --popover: 0 0% 100%;
       --popover-foreground: 222.2 84% 4.9%;
       color: #FFFFFF;
@@ -128,6 +131,18 @@
       --card-foreground: 210 40% 98%;
       color: #020817;
       color: #F8FAFC;
+
+      --badge-category-background: rgba(28, 44, 94, 1);
+      --badge-category-text: rgba(164, 202, 254, 1);
+      --badge-category-border: rgba(118, 169, 250, 0);
+
+      --badge-location-background: rgb(55 65 81);
+      --badge-location-text: rgb(156 163 175);
+      --badge-location-border: rgba(107, 114, 128, 0);
+
+      --badge-tag-background: rgb(1 71 55);
+      --badge-tag-text: rgb(132 225 188);
+      --badge-tag-border: rgb(49 196 141);
 
       --popover: 222.2 84% 4.9%;
       --popover-foreground: 210 40% 98%;

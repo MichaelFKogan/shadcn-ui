@@ -32,8 +32,8 @@
     /* max-height: 144px; */
     max-height: auto;
     position: relative;
-    background: var(--gray-10);
-    badckground: var(--card-background);
+    /* background: var(--gray-10); */
+    /* background: var(--card-background); */
 }
 
 .card__text-wrapper{
@@ -86,28 +86,44 @@
   .card .badge-category{
     font-size: 12px;
     font-weight: 500 !important;
-    background-color: var(--badge-category-background);
-    color: var(--badge-category-text);
-    border: 1px solid var(--badge-category-border);
-    }
+    /* background-color: var(--blue-110);
+    color: white;
+    border: 1px solid var(--badge-category-border); */
+
+    /* background-color: var(--blue-110);
+    color: white; */
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+    /* border: 1px solid var(--badge-category-border); */
+  }
 
   .card .badge-category:hover{
     background-color: hsl(var(--muted-foreground) / .3)
   }
 
-  .badge-city, .badge-country, .badge-continent{
+  .card .tags{
+    position: absolute;
+    top: -24px;
+    right: 0px;
+  }
+
+  .card .badge-tag{
+    /* background: hsl(var(--foreground));
+    color: hsl(var(--background)); */
+    background-color: var(--blue-110);
+    color: white;
+    border: 0px solid white;
+  }
+
+  .card .badge-city, .card .badge-country, .card .badge-continent{
     font-size: 12px;
     font-weight: 500 !important;
 
-    background: var(--badge-location-background);
-    color: var(--badge-location-text);
+    background: hsl(var(--secondary));
+    color: hsl(var(--foreground));
 
     border: 1px solid var(--badge-location-border);
   }
-
-  /* .card:hover .badge-category{
-    background: hsl(var(--background));
-  } */
 
   .card:hover .badge-city, .card:hover .badge-country, .card:hover .badge-continent{
     

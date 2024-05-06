@@ -16,6 +16,9 @@
 .card-list .section-title{
     font-size: 18px;
     font-weight: 700;
+    background: hsl(var(--muted));
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 .card-list .link__text-wrapper h3{

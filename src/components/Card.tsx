@@ -65,6 +65,22 @@ export function Card({ data, handleKeywordSelection, handleCountrySelection, han
                                         <div className="card group flex h-full w-full flex-col rounded-xl transition-all border shadow" key={index}>
                                             <div className="flex flex-col">
 
+                                            {item.tags ? (
+                                                <div className="tags text-xs mt-2">
+                                                    {item.tags.split(',').map((tag, tagIndex) => {
+                                                        const trimmedTag = tag.trim().toLowerCase();
+                                                        if (trimmedTag.includes('food delivery') || trimmedTag.includes('taxi') || trimmedTag.includes('chat')) {
+                                                            return (
+                                                                <Badge key={tagIndex} variant="outline" className="badge badge-tag ml-1" onClick={() => handleKeywordSelection(tag.trim())}>
+                                                                    {tag.trim()}
+                                                                </Badge>
+                                                            );
+                                                        }
+                                                        return null;
+                                                    })}
+                                                </div>
+                                            ) : null}
+
                                             <a href={item.url} target="_blank" key={index} className="card-link rounded-xl">
                                                 {/* <SquareArrowOutUpRight /> */}
                                                 <div className="image-text-wrapper flex w-full items-center p-3">
@@ -82,8 +98,6 @@ export function Card({ data, handleKeywordSelection, handleCountrySelection, han
                                                     {/* <hr/> */}
                                                     <div className="flex justify-end badge-wrapper">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category text-xs" onClick={() => handleCategorySelection(item.category)}>{item.category}</Badge> : null}
-
-                                                        {/* {item.tags ? <Badge variant="outline" className="badge badge-category mt-2 text-xs" onClick={() => handleKeywordSelection(item.tags)}>{item.tags}</Badge> : null} */}
 
                                                         {item.city ? <Badge variant="outline" className="badge badge-city text-xs" onClick={() => handleCountrySelection(item.city)}>{item.city}</Badge> :
                                                         item.country ? <Badge variant="outline" className="badge badge-country text-xs" onClick={() => handleCountrySelection(item.country)}>{item.country}</Badge> : 

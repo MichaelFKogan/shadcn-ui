@@ -18,12 +18,12 @@ export function List({ data, cleanCategoryForSorting }) {
         <>
             {sortedCategories.map((category, index) => (
 
-                <div className="list-container card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border px-4 py-4 shadow transition-all hover:shadow-lg">
-                        <h2 id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="category-heading h2 section-title mb-1 border-b-2">
+                <div className="list-container card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border shadow transition-all hover:shadow-lg">
+                        <h2 id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="category-heading h2 section-title mb-1 border-b-2 px-4 py-2">
                             {category.headingImage && (<img src={"/images/" + category.headingImage} className="section-title__img" />)}
                             {category}
                         </h2>
-                    <div className="card-list">
+                    <div className="card-list px-4 pb-4">
 
                         {groupedData[category].map((item, idx) => {
 
