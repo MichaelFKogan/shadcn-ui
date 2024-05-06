@@ -16,7 +16,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthPro
 import { signOut } from 'firebase/auth';
   
 
-export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShowForm, handleCountrySelection }) {
+export function MainNav({ handleSidebarToggle, sidebarOpen, setSidebarOpen, showForm, clearAll, handleShowForm, handleCountrySelection }) {
     const [userLoggedIn, setUserLoggedIn] = useState(false); // State to manage user
     const [podcastOpen, setPodcastOpen] = useState(false);
     const [musicOpen, setMusicOpen] = useState(false);
@@ -67,7 +67,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShow
             <div className="container flex h-14 max-w-screen-2xl items-center">
                 <div className="mr-4 hidden md:flex">
 
-                    <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"}`} onClick={handleSidebarToggle} >
+                    <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"} ${showForm ? "hidden" : "inline-flex"}`} onClick={handleSidebarToggle} >
                         <Menu strokeWidth={2}/>
                     </Button>
 
@@ -94,7 +94,7 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShow
                         <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('💯 Featured')}><span className="emoji">💯</span> Featured</Button>
                         <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📍 Essentials')}><span className="emoji">📍</span> Essentials</Button>
                         <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('📸 Social Media')}><span className="emoji">📸</span> Social Media</Button>
-                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('👔 Work')}><span className="emoji">👔</span> Work</Button>
+                        <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('👔 Jobs')}><span className="emoji">👔</span> Work</Button>
                         <Button variant="ghost" className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => handleCountrySelection('🏄‍♀️ Lifestyle')}><span className="emoji">🏄‍♀️</span> Lifestyle</Button>
                     </nav>
 
@@ -114,7 +114,11 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, clearAll, handleShow
                     {userLoggedIn ? ( <Button variant="ghost" className="text-muted-foreground text-xs" onClick={handleLogout}>Sign Out</Button> ) 
                     : ( null )}
 
-                        <Login handleShowForm={handleShowForm} />
+                        {/* <Login handleShowForm={handleShowForm} /> */}
+                        <nav className="flex items-center gap-4 text-sm lg:gap-6">
+                            <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => {handleShowForm('form'); setSidebarOpen(false)}}>Submit A Link</a>
+                        </nav>
+
                        
                         {/* <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>

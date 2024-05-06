@@ -21,7 +21,7 @@
 .card-categories-list .badge-category{
   color: hsl(var(--secondary-foreground) / .9);
   background-color: hsl(var(--secondary) / .7);
-  padding: 12px;
+  padding: 10px 12px;
   font-size: 15px;
 }
 
@@ -68,7 +68,8 @@
 }
 
 .bottom-card{
-  padding-bottom: 0px !important;
+  /* padding-bottom: 0px !important; */
+  margin-top: -1rem;
 }
   
 .badge{
@@ -86,11 +87,12 @@
   }
 
   .badge-wrapper{
-    column-gap: .5rem;
+    /* column-gap: .5rem; */
+    column-gap: 0px;
     flex-wrap: wrap;
-    position: absolute;
+    /* position: absolute;
     right: 14px;
-    bottom: 0px;
+    bottom: -9px; */
   }
 
   .card .badge-category{
@@ -102,8 +104,8 @@
 
     /* background-color: var(--blue-110);
     color: white; */
-    background: hsl(var(--secondary));
-    background-color: rgba(0, 0, 0, 0);
+    /* background: hsl(var(--secondary)); */
+    background: rgba(255,255,255, 0);
     color: hsl(var(--foreground));
     /* border: 1px solid var(--badge-category-border); */
 
@@ -119,7 +121,7 @@
     font-weight: 600 !important;
 
     /* background: hsl(var(--background)); */
-    background: hsl(var(--secondary));
+    background: rgba(255,255,255, 0);
     color: hsl(var(--foreground) / .8);
 
     border: 1px solid var(--input);

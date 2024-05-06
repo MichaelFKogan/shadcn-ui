@@ -94,7 +94,7 @@ export function Card({ data, handleKeywordSelection, handleCountrySelection, han
                                                 </div>
                                                 </a>
 
-                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-3 pb-2`}>
+                                                <div className={`bottom-card ${isSwitchOn ? "block" : "hidden"} px-3 pb-1`}>
                                                     {/* <hr/> */}
                                                     <div className="flex justify-end badge-wrapper">
                                                         {item.category ? <Badge variant="secondary" className="badge badge-category text-xs" onClick={() => handleCategorySelection(item.category)}>{item.category}</Badge> : null}

@@ -220,7 +220,8 @@ export function Form() {
   return (
     <>
 
-<iframe className="airtable-embed" src="https://airtable.com/embed/appHEH5znRgQwPTrY/shrxkdBUnQR24UZWl?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe>
+<iframe src="https://v2-embednotion.com/4fcc9f69c2e641adaba455e4b862c665" style={{width: "100%", height: "500px", border: "2px solid #ccc", borderRadius: "10px", padding: "none"}}></iframe>
+{/* <iframe className="airtable-embed" src="https://airtable.com/embed/appHEH5znRgQwPTrY/shrxkdBUnQR24UZWl?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe> */}
 {/* <iframe className="notion-embed" src="https://mfkogan.notion.site/4fcc9f69c2e641adaba455e4b862c665?v=6169d9b341824f5aaa64e65e0d8dfed3" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: "transparent", border: "1px solid #ccc"}}></iframe> */}
 
       <div className="grid gap-4 py-4">

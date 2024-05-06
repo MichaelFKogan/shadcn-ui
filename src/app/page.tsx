@@ -5,7 +5,7 @@ import { MainNav } from "@/components/MainNav"
 import { Sidebar } from "@/components/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
 import { TabsComponent } from "@/components/TabsComponent";
-import { Form } from "@/components/Form";
+import { NotionTable } from "@/components/NotionTable";
 // import {handleKeywordSelection, handleFirstKeyword, clearKeywords} from "@/utils/KeywordUtils";
 import Script from 'next/script'; // Import next/script component
 import { homepage } from '../data/data'
@@ -24,7 +24,7 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(false);
+const [isSwitchOn, setIsSwitchOn] = useState(true);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
 const [selectedBreadcrumb, setSelectedBreadcrumb] = useState('first');
@@ -391,7 +391,9 @@ const cleanCategoryForSorting = (category) => {
           
           <MainNav 
             handleSidebarToggle={handleSidebarToggle} 
-            sidebarOpen={sidebarOpen} 
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+            showForm={showForm}
             handleKeywordSelection={handleKeywordSelection}
             clearAll={clearAll}
             handleShowForm={handleShowForm}
@@ -408,7 +410,7 @@ const cleanCategoryForSorting = (category) => {
                />
             }
               
-              {showForm && <Form />}
+              {showForm && <NotionTable />}
               {!showForm && 
               
               <TabsComponent 
