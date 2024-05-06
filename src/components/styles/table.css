@@ -17,13 +17,21 @@
 }
 
 .table-container .category div{
-    background: var(--blue-110);
-    color: white;
+    background: hsl(var(--secondary));
+    color: hsl(var(--foreground));
+    /* border: 1px solid var(--blue-110); */
 }
 
 .table-container .tags div{
-    background: hsl(var(--secondary));
-    color: white;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(var(--secondary));
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.table-container .city, .table-container .country, .table-container .continent{
+    font-size: 13px;
 }
 
 /* .th-title{

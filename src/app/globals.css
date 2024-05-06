@@ -9,8 +9,9 @@
       color: #FFFFFF;
       color: #020817;
 
-      --sidebar-background: 0, 0%, 97.6%;
+      /* --sidebar-background: 0, 0%, 97.6%; */
       color: #F9F9F9;
+      --sidebar-background: #F1F5F9;
       --sidebar-foreground: #09090B;
 
       --nav-menu: #09090B;

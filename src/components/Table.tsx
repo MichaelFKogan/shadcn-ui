@@ -136,7 +136,7 @@ const alphanumericSort = (rowA, rowB, columnId) => {
     }),    
     columnHelper.accessor('city', {
         header: 'City',
-        cell: info => (<div className="city text-sm"><a onClick={() => handleCountrySelection(info.row.original.city)}>{info.row.original.city}</a></div>),
+        cell: info => (<div className="city text-xs"><a onClick={() => handleCountrySelection(info.row.original.city)}>{info.row.original.city}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
@@ -144,14 +144,14 @@ const alphanumericSort = (rowA, rowB, columnId) => {
     columnHelper.accessor('country', {
         id: 'country',
         header: 'Country',
-        cell: info => (<div className="country text-sm"><a onClick={() => handleCountrySelection(info.row.original.country)}>{info.row.original.country}</a></div>),
+        cell: info => (<div className="country text-xs"><a onClick={() => handleCountrySelection(info.row.original.country)}>{info.row.original.country}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,
     }),
     columnHelper.accessor('continent', {
         header: 'Continent',
-        cell: info => (<div className="continent text-sm"><a onClick={() => handleCountrySelection(info.row.original.continent)}>{info.row.original.continent}</a></div>),
+        cell: info => (<div className="continent text-xs"><a onClick={() => handleCountrySelection(info.row.original.continent)}>{info.row.original.continent}</a></div>),
         enableSorting: true,
         sortingFn: alphanumericSort,
         size: 60,

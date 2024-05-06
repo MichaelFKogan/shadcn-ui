@@ -24,7 +24,7 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(true);
+const [isSwitchOn, setIsSwitchOn] = useState(false);
 const [sidebarOpen, setSidebarOpen] = useState(true);
 const [hideBanner, setHideBanner] = useState(false);
 const [selectedBreadcrumb, setSelectedBreadcrumb] = useState('first');
@@ -407,8 +407,7 @@ const cleanCategoryForSorting = (category) => {
                 handleBannerToggle={handleBannerToggle}
                />
             }
-
-
+              
               {showForm && <Form />}
               {!showForm && 
               

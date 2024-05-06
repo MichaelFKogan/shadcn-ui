@@ -14,8 +14,8 @@
 }
 
 .card-list .section-title{
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 600;
     background: hsl(var(--muted));
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
