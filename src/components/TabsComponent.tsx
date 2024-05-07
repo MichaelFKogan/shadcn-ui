@@ -9,7 +9,10 @@ import { List } from "@/components/List";
 import { Table } from "@/components/Table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import CountryFilter from "@/components/CountryFilter";
+import CountryBadges from "@/components/CountryBadges";
+import ContinentBadges from "@/components/ContinentBadges";
+import GroupBadges from "@/components/GroupBadges";
+import CityFilter from "@/components/CityFilter";
 
 
 export function TabsComponent({
@@ -62,6 +65,20 @@ export function TabsComponent({
                                 <Label htmlFor="card-badges" className="hover:opacity-20">Show Card Badges</Label>
                             </div> */}
 
+                                {filterKeyword === '' ? ( 
+                                    <>
+                                        <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                        <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null }
+
+                                {filterKeyword === 'Asia' ? ( 
+                                    <>
+                                        <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null }
+                                
+
                             {tableData && tableData.length > 0 ? (
                                 <>
                                     {filterKeyword !== '' ? (
@@ -69,13 +86,13 @@ export function TabsComponent({
 
                                             <div className="country-badges-list mt-2 mb-2">
 
-                                                <CountryFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                                <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
 
                                             </div>
 
                                             <div className="card-categories-list mt-2 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}
@@ -92,14 +109,32 @@ export function TabsComponent({
 
                     <TabsContent value="list">
                         <div id="list-view">
+                        {filterKeyword === '' ? ( 
+                            <>
+                                <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                            </>
+                        ) : null }
+
+                        {filterKeyword === 'Asia' ? ( 
+                            <>
+                                <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                            </>
+                        ) : null }
 
                         {tableData && tableData.length > 0 ? (
                                 <>
-                                    {filterKeyword !== '' ? (
+                                {filterKeyword !== '' ? (
                                         <>
-                                            <div className="card-categories-list mt-4 mb-2">
+                                            <div className="country-badges-list mt-2 mb-2">
+
+                                                <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                            </div>
+
+                                            <div className="card-categories-list mt-2 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
+                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
                                                         {category}
                                                     </Badge>
                                                 ))}
@@ -120,10 +155,46 @@ export function TabsComponent({
                     </TabsContent>
 
                     <TabsContent value="table">
+
+                    {filterKeyword === '' ? ( 
+                        <>
+                            <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                            <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                        </>
+                    ) : null }
+
+                    {filterKeyword === 'Asia' ? ( 
+                        <>
+                            <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                        </>
+                    ) : null }
+
                         {tableData && tableData.length > 0 ? (
+
+                            <>
+                            {filterKeyword !== '' ? (
+                                    <>
+                                        <div className="country-badges-list mt-2 mb-2">
+
+                                            <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                        </div>
+
+                                        <div className="card-categories-list mt-2 mb-2">
+                                            {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
+                                                <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
+                                                    {category}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                    </>
+                                ) : null }
+
+
                             <div id="table-view">
                                 <Table data={tableData} anchor="table-1" handleKeywordSelection={handleKeywordSelection} handleCountrySelection={handleCountrySelection} handleCategorySelection={handleCategorySelection}/>
                             </div>
+                            </>
                         ) : (null)}
                     </TabsContent>
 

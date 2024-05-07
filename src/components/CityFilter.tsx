@@ -1,10 +1,10 @@
 import React from 'react';
-import countriesData from '../data/countriesData';
+import cityData from '../data/cityData';
 import { Badge } from "@/components/ui/badge";
 
-function CountryFilter({ filterKeyword, handleCountrySelection }) {
+function CityFilter({ filterKeyword, handleCountrySelection }) {
 
-    const filteredData = countriesData.filter(item =>
+    const filteredData = cityData.filter(item =>
         item.country.toLowerCase() === filterKeyword.toLowerCase() || item.cities.some(city => city.name.toLowerCase() === filterKeyword.toLowerCase())
     );
 
@@ -23,4 +23,4 @@ function CountryFilter({ filterKeyword, handleCountrySelection }) {
     );
 }
 
-export default CountryFilter;
+export default CityFilter;

@@ -54,8 +54,8 @@
       color: #0F172A;
       --secondary-hover:rgba(223, 232, 241, .8);
 
-      --country-badge-list: #f9f1f5;
-      --country-badge-list-hover: ;
+      --country-badge-list: #f1f1f9;
+      --country-badge-list-hover: #dfdff1;
 
       --muted: 210 40% 96.1%;
       --muted-foreground: 215.4 16.3% 65.1%;
@@ -288,7 +288,7 @@
   }
 
   .breadcrumb{
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .breadcrumb:hover{
