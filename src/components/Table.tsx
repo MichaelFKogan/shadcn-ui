@@ -131,7 +131,7 @@ const alphanumericSort = (rowA, rowB, columnId) => {
     columnHelper.accessor('description', {
         id: 'description',
         header: 'Description',
-        cell: info => (<div className="description text-xs" style={{fontSize: "10px"}}>{info.row.original.description}</div>),
+        cell: info => (<div className="description text-xs">{info.row.original.description}</div>),
         size: 150,
     }),    
     columnHelper.accessor('city', {

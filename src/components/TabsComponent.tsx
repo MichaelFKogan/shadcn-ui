@@ -52,10 +52,10 @@ export function TabsComponent({
                     <TabsContent value="cards">
 
                         <div id="card-view">
-                            <div className="badges-switch flex items-center space-x-2">
+                            {/* <div className="badges-switch flex items-center space-x-2">
                                 <Switch id="card-badges" checked={isSwitchOn} onCheckedChange={handleSwitchChange} />
                                 <Label htmlFor="card-badges" className="hover:opacity-20">Show Card Badges</Label>
-                            </div>
+                            </div> */}
 
                             {tableData && tableData.length > 0 ? (
                                 <>

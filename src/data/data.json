@@ -253,7 +253,7 @@
                 "rank": 2,
                 "category": "📍 Places",
                 "url": "https://nomadlist.com/",
-                "continent": "🌎 Worldwide",
+                "continent": "",
                 "__collections__": {}
             },
             "FnDxt7ik11v3noFRMNVU": {
@@ -308,7 +308,7 @@
                 "__collections__": {}
             },
             "IuPNsF4UyDvEFimbYJiC": {
-                "continent": "🌏 Worldwide",
+                "continent": "",
                 "date": {
                     "__datatype__": "timestamp",
                     "value": {

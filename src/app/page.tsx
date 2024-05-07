@@ -2,6 +2,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import { MainNav } from "@/components/MainNav"
+import { NavMenu } from "@/components/NavMenu"
 import { Sidebar } from "@/components/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
 import { TabsComponent } from "@/components/TabsComponent";
@@ -14,7 +15,7 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
 
-const [filterKeyword, setFilterKeyword] = useState("instagram youtube tiktok reddit blog vlog");
+const [filterKeyword, setFilterKeyword] = useState('');
 const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 const [combinedKeyword, setCombinedKeyword] = useState('');
 
@@ -24,8 +25,8 @@ const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 const [listData, setListData] = useState([]);
 const [tableData, setTableData] = useState([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
-const [isSwitchOn, setIsSwitchOn] = useState(false);
-const [sidebarOpen, setSidebarOpen] = useState(true);
+const [isSwitchOn, setIsSwitchOn] = useState(true);
+const [sidebarOpen, setSidebarOpen] = useState(false);
 const [hideBanner, setHideBanner] = useState(false);
 const [selectedBreadcrumb, setSelectedBreadcrumb] = useState('first');
 
@@ -388,8 +389,7 @@ const cleanCategoryForSorting = (category) => {
 
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className={`right-side-content sm:py-18 relative mx-auto w-full py-16 md:py-24 lg:py-24 space-y-16 ${sidebarOpen ? "lg:pl-56 2xl:pl-64" : "lg:pl-0"}`} style={{ paddingTop: "0px" }}>
-          
-          <MainNav 
+          <NavMenu
             handleSidebarToggle={handleSidebarToggle} 
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
@@ -399,6 +399,16 @@ const cleanCategoryForSorting = (category) => {
             handleShowForm={handleShowForm}
             handleCountrySelection={handleCountrySelection}
           />
+          {/* <MainNav 
+            handleSidebarToggle={handleSidebarToggle} 
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+            showForm={showForm}
+            handleKeywordSelection={handleKeywordSelection}
+            clearAll={clearAll}
+            handleShowForm={handleShowForm}
+            handleCountrySelection={handleCountrySelection}
+          /> */}
           
           <div className="grid space-y-12 md:gap-8 lg:grid-cols-12 lg:gap-16 lg:space-y-0 xl:gap-16" style={{ marginTop: ".25rem" }}>
             <div className="lg:col-span-12 xl:col-span-12 px-3 2xl:px-5 relative">

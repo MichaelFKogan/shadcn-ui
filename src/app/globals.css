@@ -24,6 +24,9 @@
 
       --card-background: #F9FAFb;
 
+      --card-tag: #006adc;;
+      --card-tag-text: #F1F5F9;;
+
       --badge-category-background: #E1EFFE;
       --badge-category-text: #1E429f;
       --badge-category-border: rgba(118, 169, 250, .1);
@@ -138,6 +141,9 @@
       --card-hover: #0d1219;
       color: #020817;
       color: #F8FAFC;
+
+      --card-tag: #F8FAFC;;
+      --card-tag-text: #020817;;
 
       --badge-category-background: rgba(28, 44, 94, 1);
       --badge-category-text: rgba(164, 202, 254, 1);
@@ -273,6 +279,10 @@
   .lucide-chevron-down{
     width: 0.875rem;
     height: 0.875rem;
+  }
+
+  .breadcrumb{
+    font-size: 15px;
   }
 
   .breadcrumb:hover{
