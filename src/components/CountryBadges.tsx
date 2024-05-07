@@ -8,20 +8,23 @@ function CountryBadges({ filterKeyword, handleCountrySelection }) {
     return (
         <div className='group-badges-list my-2'>
                 <ul>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("Thailand") }}>
-                        Thailand
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
+                        ⛩ Asia
                     </Badge>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("Indonesia") }}>
-                        Indonesia
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇹🇭 Thailand") }}>
+                        🇹🇭 Thailand
                     </Badge>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("Japan") }}>
-                        Japan
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇮🇩 Indonesia") }}>
+                        🇮🇩 Indonesia
                     </Badge>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("Korea") }}>
-                        Korea
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇯🇵 Japan") }}>
+                        🇯🇵 Japan
                     </Badge>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("Vietnam") }}>
-                        Vietnam
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇰🇷 Korea") }}>
+                        🇰🇷 Korea
+                    </Badge>
+                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇻🇳 Vietnam") }}>
+                        🇻🇳 Vietnam
                     </Badge>
                 </ul>
         </div>
