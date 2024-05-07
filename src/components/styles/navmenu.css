@@ -1,8 +1,21 @@
-.navigation-menu button{
+.nav-menu button{
     background-color: rgba(255, 255, 255, 0);
 }
 
 nav ul{
     max-height: 800px;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.nav-menu .country, .nav-menu .city, .nav-menu .continent{
+    padding: 4px 12px;
+    border-radius: .375rem;
+}
+
+.nav-menu .continent{
+    cursor: pointer;
+}
+
+.nav-menu .country:hover, .nav-menu .city:hover, .nav-menu .continent:hover{
+    background-color: var(--secondary-hover);
 }

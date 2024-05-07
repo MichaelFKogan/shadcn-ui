@@ -52,6 +52,10 @@
       --secondary-foreground: 222.2 47.4% 11.2%;
       color: #F1F5F9;
       color: #0F172A;
+      --secondary-hover:rgba(223, 232, 241, .8);
+
+      --country-badge-list: #f9f1f5;
+      --country-badge-list-hover: ;
 
       --muted: 210 40% 96.1%;
       --muted-foreground: 215.4 16.3% 65.1%;
@@ -171,6 +175,8 @@
       --secondary-foreground: 210 40% 98%;
       color: #1E293B;
       color: #F8FAFC;
+
+      --secondary-hover: rgba(39,53,76, 1);
 
       --muted: 217.2 32.6% 17.5%;
       --muted-foreground: 215 20.2% 65.1%;

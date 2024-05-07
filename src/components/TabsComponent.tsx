@@ -9,6 +9,9 @@ import { List } from "@/components/List";
 import { Table } from "@/components/Table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import CountryFilter from "@/components/CountryFilter";
+
+
 export function TabsComponent({
     filterKeyword, 
     lastKeyword,
@@ -33,6 +36,8 @@ export function TabsComponent({
     selectedBreadcrumb,
     setSelectedBreadcrumb
 }) {
+
+    
 
     return (
         <>
@@ -61,7 +66,14 @@ export function TabsComponent({
                                 <>
                                     {filterKeyword !== '' ? (
                                         <>
-                                            <div className="card-categories-list mt-4 mb-2">
+
+                                            <div className="country-badges-list mt-2 mb-2">
+
+                                                <CountryFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                            </div>
+
+                                            <div className="card-categories-list mt-2 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
                                                     <Badge key={index} variant="secondary" className="badge badge-category mr-2 mb-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
                                                         {category}

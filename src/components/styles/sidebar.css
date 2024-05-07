@@ -40,7 +40,7 @@
     height: max-content;
   }
 
-.country-click:hover{
+  .sidebar-wrapper .country-click:hover{
   text-decoration: underline;
 }
 

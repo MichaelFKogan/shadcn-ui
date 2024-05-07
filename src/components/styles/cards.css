@@ -20,14 +20,25 @@
 
 .card-categories-list .badge-category{
   color: hsl(var(--secondary-foreground) / .9);
-  background-color: hsl(var(--secondary) / .7);
+  background-color: hsl(var(--secondary));
   padding: 10px 12px;
   font-size: 14px;
 }
 
 .card-categories-list .badge-category:hover{
   color: hsl(var(--secondary-foreground) / 1);
-  background-color: hsl(var(--secondary) / 1);
+  background-color: var(--secondary-hover);
+}
+
+.country-badges-list .badge-category{
+  background-color: var(--country-badge-list);
+  color: hsl(var(--secondary-foreground) / .9);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.country-badges-list .badge-category:hover{
+  background-color: var(--country-badge-list-hover);
 }
 
 .card{

@@ -63,13 +63,13 @@ else{
   setSelectedBreadcrumb('first');
 }
 
-console.log("-----------------------------------------------------");   
-console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
-console.log(`LAST KEYWORD 1: ${lastKeyword}`);
-console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
-console.log(`BREADCRUMB KEYWORD 1: ${breadcrumbKeyword}`);
-console.log(`COMBINED KEYWORDS 1: ${lastKeyword} ${cleanedKeyword}`);
-console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
+// console.log("-----------------------------------------------------");   
+// console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+// console.log(`LAST KEYWORD 1: ${lastKeyword}`);
+// console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+// console.log(`BREADCRUMB KEYWORD 1: ${breadcrumbKeyword}`);
+// console.log(`COMBINED KEYWORDS 1: ${lastKeyword} ${cleanedKeyword}`);
+// console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
 };
 
 
@@ -100,13 +100,13 @@ const handleCountrySelection = (keyword) => {
   setCombinedKeyword('');
   setSelectedBreadcrumb('first');
 
-console.log("-----------------------------------------------------");   
-console.log(`KEYWORD 2: ${keyword}`);    
-console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
-console.log(`LAST KEYWORD 2: ${lastKeyword}`);
-console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
-console.log(`COMBINED KEYWORDS 2: ${lastKeyword} ${cleanedKeyword}`);
-console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
+// console.log("-----------------------------------------------------");   
+// console.log(`KEYWORD 2: ${keyword}`);    
+// console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
+// console.log(`LAST KEYWORD 2: ${lastKeyword}`);
+// console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
+// console.log(`COMBINED KEYWORDS 2: ${lastKeyword} ${cleanedKeyword}`);
+// console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
 };
 
 
@@ -129,12 +129,12 @@ const handleCategorySelection = (keyword) => {
     cleanedKeyword = 'English Teaching'
   }
   
-        console.log("-----------------------------------------------------");   
-        console.log(`CLEANED KEYWORD 3: ${cleanedKeyword}`);        
-        console.log(`LAST KEYWORD 3: ${lastKeyword}`);
-        console.log(`BREADCRUMB KEYWORD 3: ${breadcrumbKeyword}`);
-        console.log(`COMBINED KEYWORDS 3: ${lastKeyword} ${cleanedKeyword}`);
-        console.log(`COMBINED KEYWORDS 3.1: ${combinedKeyword}`);
+        // console.log("-----------------------------------------------------");   
+        // console.log(`CLEANED KEYWORD 3: ${cleanedKeyword}`);        
+        // console.log(`LAST KEYWORD 3: ${lastKeyword}`);
+        // console.log(`BREADCRUMB KEYWORD 3: ${breadcrumbKeyword}`);
+        // console.log(`COMBINED KEYWORDS 3: ${lastKeyword} ${cleanedKeyword}`);
+        // console.log(`COMBINED KEYWORDS 3.1: ${combinedKeyword}`);
 
         // if(cleanedKeyword === combinedKeyword){
         //   setFilterKeyword(lastKeyword);

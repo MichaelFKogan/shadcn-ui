@@ -92,7 +92,15 @@
     }
 }
 
-th, .title, .category, .tags, .city, .country, .continent, .description{
+th, 
+.table-container .title, 
+.table-container .category, 
+.table-container .tags, 
+.table-container .city, 
+.table-container .country, 
+.table-container .continent, 
+.table-container 
+.description{
     padding: 4px 12px;
     overflow: hidden;
 }
