@@ -1,20 +1,20 @@
 // src/components/MainNav.tsx
 'use client'
 import React, { useState, useEffect} from "react";
-import { DarkMode } from "@/components/DarkMode"
-import { MusicPlayer } from "@/components/MusicPlayer"
-import './styles/navmenu.css'
+import { DarkMode } from "@/components/menu/DarkMode"
+import { MusicPlayer } from "@/components/menu/MusicPlayer"
+import '../styles/navmenu.css'
 import { Login } from "@/components/Login"
 // import { MusicPlayerSpotify } from "@/components/MusicPlayerSpotify"
 // import { PodcastPlayer } from "@/components/PodcastPlayer"
 import { Submit } from "@/components/Submit"
 import { Button } from "@/components/ui/button";
-import './styles/main-nav.css'
+import '../styles/main-nav.css'
 import { Menu, TreePalm } from "lucide-react"
 import Link from 'next/link';
 import cn from 'classnames';
 
-import { firebaseApp } from '../lib/firebase'; // Import the firebaseApp, not auth
+import { firebaseApp } from '../../lib/firebase'; // Import the firebaseApp, not auth
 import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
 import { signOut } from 'firebase/auth';
 
@@ -130,9 +130,9 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
             <div className="container flex h-14 max-w-screen-2xl items-center">
                 <div className="mr-4 hidden md:flex">
 
-                    <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"} ${showForm ? "hidden" : "inline-flex"}`} onClick={handleSidebarToggle} >
+                    {/* <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"} ${showForm ? "hidden" : "inline-flex"}`} onClick={handleSidebarToggle} >
                         <Menu strokeWidth={2}/>
-                    </Button>
+                    </Button> */}
 
                     <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
                         {/* <TreePalm strokeWidth={1} /> */}

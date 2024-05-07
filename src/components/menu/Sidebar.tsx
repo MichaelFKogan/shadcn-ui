@@ -7,7 +7,7 @@ import {
   } from "@/components/ui/accordion"
   import { Button } from "@/components/ui/button";
   import { ChevronsLeft } from "lucide-react"
-  import './styles/sidebar.css'
+  import '../styles/sidebar.css'
   
 
 export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebarOpen, handleSidebarToggle}) {

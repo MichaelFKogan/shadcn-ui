@@ -9,10 +9,10 @@ import { List } from "@/components/List";
 import { Table } from "@/components/Table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import CountryBadges from "@/components/CountryBadges";
-import ContinentBadges from "@/components/ContinentBadges";
-import GroupBadges from "@/components/GroupBadges";
-import CityFilter from "@/components/CityFilter";
+import CountryBadges from "@/components/badges/CountryBadges";
+import ContinentBadges from "@/components/badges/ContinentBadges";
+import GroupBadges from "@/components/badges/GroupBadges";
+import CityFilter from "@/components/badges/CityFilter";
 
 
 export function TabsComponent({

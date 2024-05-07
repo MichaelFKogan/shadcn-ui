@@ -1,9 +1,9 @@
 // src/app/page.tsx
 'use client'
 import { useState, useEffect } from "react";
-import { MainNav } from "@/components/MainNav"
-import { NavMenu } from "@/components/NavMenu"
-import { Sidebar } from "@/components/Sidebar";
+import { MainNav } from "@/components/menu/MainNav"
+import { NavMenu } from "@/components/menu/NavMenu"
+import { Sidebar } from "@/components/menu/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
 import { TabsComponent } from "@/components/TabsComponent";
 import { NotionTable } from "@/components/NotionTable";

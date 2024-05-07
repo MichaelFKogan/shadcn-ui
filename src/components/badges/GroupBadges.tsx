@@ -1,7 +1,7 @@
 import React from 'react';
-import countriesData from '../data/citydata';
+import countriesData from '../../data/citydata';
 import { Badge } from "@/components/ui/badge";
-import './styles/group-badges.css'
+import '../styles/group-badges.css'
 
 function GroupBadges({ filterKeyword, handleCountrySelection }) {
 
