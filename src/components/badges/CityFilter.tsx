@@ -12,9 +12,9 @@ function CityFilter({ filterKeyword, handleCountrySelection }) {
         <div>
             {filteredData.map((item, index) => (
                 <ul key={index}>
-                        <Badge variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
+                        {/* <Badge variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
                             ⛩ Asia
-                        </Badge>
+                        </Badge> */}
                     {item.cities.map((city, cityIndex) => (
                         <Badge key={cityIndex} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection(`${city.emoji} ${city.name}`) }}>
                             {city.emoji} {city.name}

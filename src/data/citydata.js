@@ -1,7 +1,6 @@
 // cityData.js
 const cityData = [
     { country: "Thailand", cities: [
-        { emoji: "🇹🇭", name: "Thailand" },
         { emoji: "🛺", name: "Bangkok" },
         { emoji: "🐘", name: "Chiang Mai" },
         { emoji: "🏝", name: "Kho Phangan" }
@@ -13,7 +12,6 @@ const cityData = [
         { emoji: "⛩️", name: "Kyoto" }
     ]},
     { country: "Indonesia", cities: [
-        { emoji: "🇮🇩", name: "Indonesia" },
         { emoji: "🏝", name: "Bali" },
         { emoji: "🐒", name: "Ubud" }
     ]},

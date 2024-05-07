@@ -8,9 +8,6 @@ function CountryBadges({ filterKeyword, handleCountrySelection }) {
     return (
         <div className='group-badges-list my-2'>
                 <ul>
-                    <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
-                        ⛩ Asia
-                    </Badge>
                     <Badge variant="secondary" className="badge group-badge mr-2 text-sm rounded-md" onClick={() => { handleCountrySelection("🇹🇭 Thailand") }}>
                         🇹🇭 Thailand
                     </Badge>

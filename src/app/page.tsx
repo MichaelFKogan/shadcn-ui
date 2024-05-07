@@ -6,7 +6,7 @@ import { NavMenu } from "@/components/menu/NavMenu"
 import { Sidebar } from "@/components/menu/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
 import { TabsComponent } from "@/components/TabsComponent";
-import { NotionTable } from "@/components/NotionTable";
+import { NotionTable } from "@/components/submit/NotionTable";
 // import {handleKeywordSelection, handleFirstKeyword, clearKeywords} from "@/utils/KeywordUtils";
 import Script from 'next/script'; // Import next/script component
 import { homepage } from '../data/data'

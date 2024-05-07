@@ -40,13 +40,14 @@ export function TabsComponent({
     setSelectedBreadcrumb
 }) {
 
-    
+    console.log("FILTER KEYWORD");
+    console.log(filterKeyword);
 
     return (
         <>
 
             <div className="grid space-y-10">
-                <Tabs defaultValue="cards" className="tab-menu mt-4">
+                <Tabs defaultValue="cards" className="tab-menu mt-1">
 
                     <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} combinedKeyword={combinedKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} clearAll={clearAll} handleKeywordSelection={handleKeywordSelection} handleFirstBreadcrumb={handleFirstBreadcrumb} handleCountrySelecttion={handleCountrySelection} handleCategorySelection={handleCategorySelection} selectedBreadcrumb={selectedBreadcrumb} setSelectedBreadcrumb={setSelectedBreadcrumb}/>
 
@@ -65,14 +66,16 @@ export function TabsComponent({
                                 <Label htmlFor="card-badges" className="hover:opacity-20">Show Card Badges</Label>
                             </div> */}
 
-                                {filterKeyword === '' ? ( 
-                                    <>
+
                                         <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                {filterKeyword === '' || filterKeyword === 'Essentials' ? ( 
+                                    <>        
                                         <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                                     </>
                                 ) : null }
 
-                                {filterKeyword === 'Asia' ? ( 
+                                {filterKeyword === 'Asia' || filterKeyword === 'Thailand' || filterKeyword === 'Indonesia' ? ( 
                                     <>
                                         <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                                     </>

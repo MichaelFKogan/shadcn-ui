@@ -1,6 +1,6 @@
 // src/components/Login.tsx
 import React, { useState, useEffect } from 'react';
-import '../app/globals.css';
+import '../../app/globals.css';
 
 export function NotionTable() {
 
