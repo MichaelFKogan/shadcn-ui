@@ -67,38 +67,49 @@ export function TabsComponent({
                             </div> */}
 
 
+                                {filterKeyword === '' || filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn' ? (
+                                <div className='continent-badges-list'>
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                    {/* <p className="w-20 text-sm">Countries</p> */}
                                         <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </ul>
+                                </div>
+                                ) : null}
 
-                                {filterKeyword === '' || filterKeyword === 'Essentials' ? ( 
+                                <div className='continent-badges-list flex items-center gap-x-4'>
+                                    {/* <p className="w-20 text-sm">Countries</p> */}
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                {filterKeyword === 'Asia' ? ( 
+                                    <>       
+                                        <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null}
+
+                                        <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                    </ul>
+                                </div>
+
+                                {filterKeyword === '' || (filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn') ? ( 
                                     <>        
                                         <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                                     </>
                                 ) : null }
-
-                                {filterKeyword === 'Asia' || filterKeyword === 'Thailand' || filterKeyword === 'Indonesia' ? ( 
-                                    <>
-                                        <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                                    </>
-                                ) : null }
                                 
 
-                            {tableData && tableData.length > 0 ? (
+                            {tableData || tableData.length > 0 ? (
                                 <>
                                     {filterKeyword !== '' ? (
                                         <>
-
-                                            <div className="country-badges-list mt-2 mb-2">
-
-                                                <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-
-                                            </div>
-
-                                            <div className="card-categories-list mt-2 mb-2">
-                                                {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
-                                                    <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
-                                                        {category}
-                                                    </Badge>
-                                                ))}
+                                            <div className="card-categories-list mt-2 mb-2 flex items-center gap-x-4">
+                                            {/* <p className="w-20 text-sm">Categories</p> */}
+                                                <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                                    {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
+                                                        <Badge key={index} variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
+                                                            {category}
+                                                        </Badge>
+                                                    ))}
+                                                </ul>
                                             </div>
                                         </>
                                     ) : null
@@ -112,29 +123,40 @@ export function TabsComponent({
 
                     <TabsContent value="list">
                         <div id="list-view">
-                        {filterKeyword === '' ? ( 
-                            <>
-                                <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                                <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                            </>
-                        ) : null }
 
-                        {filterKeyword === 'Asia' ? ( 
-                            <>
-                                <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                            </>
-                        ) : null }
+                        {filterKeyword === '' || filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn' ? (
+                                <div className='continent-badges-list'>
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2">
+                                        <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </ul>
+                                </div>
+                                ) : null}
 
-                        {tableData && tableData.length > 0 ? (
+                                <div className='continent-badges-list'>
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                
+                                {filterKeyword === 'Asia' ? ( 
+                                    <>       
+                                        <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null}
+
+                                        <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                    </ul>
+                                </div>
+
+                                {filterKeyword === '' || (filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn') ? ( 
+                                    <>        
+                                        <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null }
+
+
+                        {tableData || tableData.length > 0 ? (
                                 <>
                                 {filterKeyword !== '' ? (
                                         <>
-                                            <div className="country-badges-list mt-2 mb-2">
-
-                                                <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-
-                                            </div>
-
                                             <div className="card-categories-list mt-2 mb-2">
                                                 {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
                                                     <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>
@@ -149,7 +171,7 @@ export function TabsComponent({
 
                             <div className="list-row space-y-8">
                                 <div className="grid grid-cols-1 gap-5 lg:max-w-none sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                                    {tableData && tableData.length > 0 ? (
+                                    {tableData || tableData.length > 0 ? (
                                         <List data={tableData} cleanCategoryForSorting={cleanCategoryForSorting} />
                                     ) : (null)}
                                 </div>
@@ -159,30 +181,39 @@ export function TabsComponent({
 
                     <TabsContent value="table">
 
-                    {filterKeyword === '' ? ( 
-                        <>
-                            <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                            <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                        </>
-                    ) : null }
+                    {filterKeyword === '' || filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn' ? (
+                                <div className='continent-badges-list'>
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2">
+                                        <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </ul>
+                                </div>
+                                ) : null}
 
-                    {filterKeyword === 'Asia' ? ( 
-                        <>
-                            <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-                        </>
-                    ) : null }
+                                <div className='continent-badges-list'>
+                                    <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                                
+                                {filterKeyword === 'Asia' ? ( 
+                                    <>       
+                                        <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null}
 
-                        {tableData && tableData.length > 0 ? (
+                                        <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+
+                                    </ul>
+                                </div>
+
+                                {filterKeyword === '' || (filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn') ? ( 
+                                    <>        
+                                        <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                                    </>
+                                ) : null }
+
+                        {tableData || tableData.length > 0 ? (
 
                             <>
                             {filterKeyword !== '' ? (
                                     <>
-                                        <div className="country-badges-list mt-2 mb-2">
-
-                                            <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
-
-                                        </div>
-
                                         <div className="card-categories-list mt-2 mb-2">
                                             {Array.from(uniqueCategories).sort((a, b) => cleanCategoryForSorting(a).localeCompare(cleanCategoryForSorting(b))).map((category, index) => (
                                                 <Badge key={index} variant="secondary" className="badge badge-category mr-2 text-sm rounded-md" onClick={() => { handleCategorySelection(`${category}`) }}>

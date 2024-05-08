@@ -1,4 +1,32 @@
-.group-badge{
+.group-badge, .continent-badge, .country-badge, .city-badge, .category-badge{
+    /* width: 165px; */
     padding: 10px 12px !important;
     font-size: 14px !important;
+}
+
+.continent-badges-list{
+    /* max-width: 1300px; */
+}
+
+.group-badge{
+    border-radius: 30px;
+}
+
+/* .country-badge{
+    padding: 5px 0px !important;
+    font-size: 14px !important;
+
+    background: hsl(var(--background)) !important;
+    border: 1px solid hsl(var(--secondary)) !important;
+    border-radius: 0px !important;
+
+    width: 125px;
+}
+
+.country-badges-list ul{
+    max-width: 900px
+} */
+
+.country-badge:hover, .city-badge:hover{
+    background: hsl(var(--secondary)) !important;
 }
