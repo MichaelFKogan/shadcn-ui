@@ -18,9 +18,15 @@
     vertical-align: sub;
 }
 
+.card-categories-list{
+  justify-content: center;
+}
+
 .card-categories-list .badge-category{
   color: hsl(var(--secondary-foreground) / .9);
-  background-color: hsl(var(--secondary));
+  background: rgba(255,255,255, 0);
+  border: 1px solid hsl(var(--secondary));
+  border-radius: 30px;
   padding: 10px 12px;
   font-size: 14px;
 }

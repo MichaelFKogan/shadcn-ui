@@ -9,12 +9,20 @@ function GroupBadges({ filterKeyword, handleCountrySelection }) {
         <div className='group-badges-list my-2 flex items-center gap-x-4'>
             {/* <p className="w-20 text-sm">Categories</p> */}
             <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                    <Badge variant="secondary" className="badge group-badge text-sm rounded-md" onClick={() => { handleCountrySelection("") }}>
+                        Categories
+                    </Badge>
+
+            {filterKeyword !== 'Essentials' ? (
                     <Badge variant="secondary" className="badge group-badge text-sm rounded-md" onClick={() => { handleCountrySelection("💯 Featured") }}>
                         💯 Featured
                     </Badge>
+                ) : null }
                     <Badge variant="secondary" className="badge group-badge text-sm rounded-md" onClick={() => { handleCountrySelection("📍 Essentials") }}>
                         📍 Essentials
                     </Badge>
+                    {filterKeyword !== 'Essentials' ? (
+                    <>
                     <Badge variant="secondary" className="badge group-badge text-sm rounded-md" onClick={() => { handleCountrySelection("📸 Social Media") }}>
                         📸 Social Media
                     </Badge>
@@ -27,6 +35,8 @@ function GroupBadges({ filterKeyword, handleCountrySelection }) {
                     <Badge variant="secondary" className="badge group-badge text-sm rounded-md" onClick={() => { handleCountrySelection("📘 Learn") }}>
                         📘 Learn
                     </Badge>
+                    </>
+                    ) : null }
                 </ul>
         </div>
     );

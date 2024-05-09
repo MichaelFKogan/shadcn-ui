@@ -2,7 +2,19 @@
     background-color: rgba(255, 255, 255, 0);
 }
 
-nav ul{
+.continent-badges-list{
+    max-width: 100%;
+}
+
+.continent-badges-list ul{
+    overflow-x: scroll;
+}
+
+.continent-badges-list ul div{
+    text-wrap: nowrap;
+}
+
+.nav-menu-countries{
     max-height: 90vh;
     overflow-y: auto;
 }

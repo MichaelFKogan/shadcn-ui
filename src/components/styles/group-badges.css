@@ -1,3 +1,8 @@
+/* ul{
+    overflow: scroll;
+    width: calc(-24px + 100vw);
+} */
+
 .group-badge, .continent-badge, .country-badge, .city-badge, .category-badge{
     /* width: 165px; */
     padding: 10px 12px !important;

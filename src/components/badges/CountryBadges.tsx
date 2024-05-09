@@ -7,12 +7,8 @@ function CountryBadges({ filterKeyword, handleCountrySelection }) {
 
     return (
         <>
-            <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
-                ⛩ Asia
-            </Badge>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
-
+    <div className='continent-badges-list'>
+        <ul className="flex gap-x-2 gap-y-2 justify-center items-center">
             <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("🇹🇭 Thailand") }}>
                 🇹🇭 Thailand
             </Badge>
@@ -52,6 +48,8 @@ function CountryBadges({ filterKeyword, handleCountrySelection }) {
             <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("🇮🇳 India") }}>
                 🇮🇳 India
             </Badge>
+        </ul>
+    </div>
         </>
     );
 }

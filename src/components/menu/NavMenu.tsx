@@ -169,7 +169,7 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
 
 {/* MENU 2 */}
 <NavigationMenuItem>
-          <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
+          <NavigationMenuTrigger><span className="menu-emoji mr-2">🗄 </span> Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 
@@ -228,13 +228,14 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
 
 {/* MENU 3 */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger><span className="menu-emoji">⛩ </span> Asia</NavigationMenuTrigger>
+          <NavigationMenuTrigger><span className="menu-emoji mr-2">🌏 </span> Countries</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6">
+<div className="flex nav-menu-countries" >
+            <ul className="grid gap-3 p-6 pr-0">
               
               <li className="row-span-3">
                   <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 pr-1 no-underline outline-none focus:shadow-md"
                   >
                     {/* <Icons.logo className="h-6 w-6" /> */}
                     <div className="mb-2 mt-4 text-lg font-medium">
@@ -275,63 +276,9 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
                                 <hr className="my-2"/>
                   </div>
               </li>              
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-
-
-
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><div><span className="menu-emoji">💃🏻</span> Latin America</div></NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6">
-              
-              <li className="row-span-3">
-                  <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                  >
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                    <div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div>
-                    </div>
-                    <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛺 Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐘 Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🌊 Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇯🇵 Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🗼 Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏯 Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('👘 Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇮🇩 Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏝 Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏄‍♀️ Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐒 Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇰🇷 Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍱 Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🚝 Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇻🇳 Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛵 Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍲 Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇨🇳 China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🥡 Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🧧 Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇭🇰 Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇼 Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('Taipei')}>Taipei</a>
-                                <hr className="my-2"/>
-                  </div>
-              </li>              
-            </ul>
+            </ul>            
+            
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
@@ -339,169 +286,6 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
         </NavigationMenuList>
     </NavigationMenu>
 
-    <NavigationMenu>
-    <NavigationMenuList>
-
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><div><span className="menu-emoji">🇪🇺</span> Europe</div></NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6">
-              
-              <li className="row-span-3">
-                  <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                  >
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                    <div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div>
-                    </div>
-                    <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛺 Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐘 Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🌊 Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇯🇵 Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🗼 Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏯 Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('👘 Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇮🇩 Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏝 Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏄‍♀️ Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐒 Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇰🇷 Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍱 Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🚝 Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇻🇳 Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛵 Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍲 Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇨🇳 China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🥡 Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🧧 Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇭🇰 Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇼 Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('Taipei')}>Taipei</a>
-                                <hr className="my-2"/>
-                  </div>
-              </li>              
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><div><span className="menu-emoji">🕌</span> Middle East</div></NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6">
-              
-              <li className="row-span-3">
-                  <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                  >
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                    <div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div>
-                    </div>
-                    <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛺 Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐘 Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🌊 Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇯🇵 Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🗼 Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏯 Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('👘 Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇮🇩 Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏝 Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏄‍♀️ Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐒 Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇰🇷 Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍱 Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🚝 Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇻🇳 Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛵 Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍲 Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇨🇳 China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🥡 Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🧧 Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇭🇰 Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇼 Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('Taipei')}>Taipei</a>
-                                <hr className="my-2"/>
-                  </div>
-              </li>              
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuTrigger><div><span className="menu-emoji">🌊</span> Oceania</div></NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6">
-              
-              <li className="row-span-3">
-                  <div
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                  >
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                    <div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div>
-                    </div>
-                    <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛺 Bangkok')}><span className="sidebar-emoji">🛺</span> Bangkok</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐘 Chiang Mai')}><span className="sidebar-emoji">🐘</span> Chiang Mai</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🌊 Kho Phangan')}><span className="sidebar-emoji">🌊</span> Kho Phangan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇯🇵 Japan')}><span className="sidebar-emoji">🇯🇵</span> Japan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🗼 Tokyo')}><span className="sidebar-emoji">🗼</span> Tokyo</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏯 Osaka')}><span className="sidebar-emoji">🏯</span> Osaka</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('👘 Kyoto')}><span className="sidebar-emoji">👘</span> Kyoto</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇮🇩 Indonesia')}><span className="sidebar-emoji">🇮🇩</span> Indonesia</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏝 Bali')}><span className="sidebar-emoji">🏝</span> Bali</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🏄‍♀️ Canggu')}><span className="sidebar-emoji">🏄‍♀️</span> Canggu</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🐒 Ubud')}><span className="sidebar-emoji">🐒</span> Ubud</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇰🇷 Korea')}><span className="sidebar-emoji">🇰🇷</span> Korea</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍱 Seoul')}><span className="sidebar-emoji">🍱</span> Seoul</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🚝 Busan')}><span className="sidebar-emoji">🚝</span> Busan</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇻🇳 Vietnam')}><span className="sidebar-emoji">🇻🇳</span> Vietnam</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🛵 Ho Chi Minh City')}><span className="sidebar-emoji">🛵</span> Ho Chi Minh City</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🍲 Hanoi')}><span className="sidebar-emoji">🍲</span> Hanoi</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇨🇳 China')}><span className="sidebar-emoji">🇨🇳</span> China</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🥡 Beijing')}><span className="sidebar-emoji">🥡</span> Beijing</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('🧧 Shanghai')}><span className="sidebar-emoji">🧧</span> Shanghai</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇭🇰 Hong Kong')}><span className="sidebar-emoji">🇭🇰</span> Hong Kong</a>
-                                <hr className="my-2"/>
-                                <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇼 Taiwan')}><span className="sidebar-emoji">🇹🇼</span> Taiwan</a>
-                                <a className="city text-foreground-light block text-sm" onClick={() => handleCountrySelection('Taipei')}>Taipei</a>
-                                <hr className="my-2"/>
-                  </div>
-              </li>              
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-
-      </NavigationMenuList>
-    </NavigationMenu>
 
                 </div>
 
