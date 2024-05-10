@@ -63,19 +63,19 @@ export function TabsComponent({
 
                 <TabsList className="mr-auto">
                     <TabsTrigger value="asia" onClick={() => { handleCountrySelection("⛩ Asia") }}>⛩ Asia</TabsTrigger>
-                    <TabsTrigger value="latinamerica">💃🏻 Latin America</TabsTrigger>
-                    <TabsTrigger value="europe">🇪🇺 Europe</TabsTrigger>
-                    <TabsTrigger value="middleeast">🕌 Middle East</TabsTrigger>
-                    <TabsTrigger value="oceaniad">🌊 Oceania</TabsTrigger>
+                    <TabsTrigger value="latinamerica" onClick={() => { handleCountrySelection("💃🏻 Latin America") }}>💃🏻 Latin America</TabsTrigger>
+                    <TabsTrigger value="europe" onClick={() => { handleCountrySelection("🇪🇺 Europe") }}>🇪🇺 Europe</TabsTrigger>
+                    <TabsTrigger value="middleeast" onClick={() => { handleCountrySelection("🕌 Middle East") }}>🕌 Middle East</TabsTrigger>
+                    <TabsTrigger value="oceaniad" onClick={() => { handleCountrySelection("🌊 Oceania") }}>🌊 Oceania</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="asia">
                     <AsiaCountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                 </TabsContent>
-                <TabsContent value="latinamerica">Change your password here.</TabsContent>
-                <TabsContent value="europe">Make changes to your account here.</TabsContent>
-                <TabsContent value="middleeast">Change your password here.</TabsContent>
-                <TabsContent value="oceania">Change your password here.</TabsContent>
+                <TabsContent value="latinamerica"></TabsContent>
+                <TabsContent value="europe"></TabsContent>
+                <TabsContent value="middleeast"></TabsContent>
+                <TabsContent value="oceania"></TabsContent>
 
             </Tabs>
         </TabsContent>
@@ -84,12 +84,12 @@ export function TabsComponent({
             <Tabs defaultValue="essentials" className="w-full mb-2 categories-tab">
 
                 <TabsList className="mr-auto">
-                    <TabsTrigger value="featured">💯 Featured</TabsTrigger>
+                    <TabsTrigger value="featured" onClick={() => { handleCountrySelection("💯 Featured") }}>💯 Featured</TabsTrigger>
                     <TabsTrigger value="essentials" onClick={() => { handleCountrySelection("📍 Essentials") }}>📍 Essentials</TabsTrigger>
-                    <TabsTrigger value="socialmedia">📸 Social Media</TabsTrigger>
-                    <TabsTrigger value="jobs">👔 Jobs</TabsTrigger> 
-                    <TabsTrigger value="lifestyle">🏄‍♀️ Lifestyle</TabsTrigger>
-                    <TabsTrigger value="learn">📘 Learn</TabsTrigger> 
+                    <TabsTrigger value="socialmedia" onClick={() => { handleCountrySelection("📸 Social Media") }}>📸 Social Media</TabsTrigger>
+                    <TabsTrigger value="jobs" onClick={() => { handleCountrySelection("👔 Jobs") }}>👔 Jobs</TabsTrigger> 
+                    <TabsTrigger value="lifestyle" onClick={() => { handleCountrySelection("🏄‍♀️ Lifestyle") }}>🏄‍♀️ Lifestyle</TabsTrigger>
+                    <TabsTrigger value="learn" onClick={() => { handleCountrySelection("📘 Learn") }}>📘 Learn</TabsTrigger> 
                 </TabsList>
                 
                 <TabsContent value="featured"></TabsContent>

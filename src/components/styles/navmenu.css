@@ -15,13 +15,23 @@
     justify-content: start;   
 }
 
+.sidebar-emoji{
+    /* border: 1px solid var(--gray-60); */
+    /* border-radius: 6px;
+    padding: 2px 4px; */
+}
+
 .continent-badges-list ul div{
     text-wrap: nowrap;
 }
 
 .nav-menu-countries{
     max-height: 90vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+}
+
+.nav-menu-countries .menu-wrapper{
+    flex-wrap: wrap;
 }
 
 .nav-menu .country, .nav-menu .city, .nav-menu .continent{
