@@ -3,11 +3,13 @@ import countriesData from '../../data/citydata';
 import { Badge } from "@/components/ui/badge";
 import '../styles/group-badges.css'
 
-function CountryBadges({ filterKeyword, handleCountrySelection }) {
+function AsiaCountryBadges({ filterKeyword, handleCountrySelection }) {
 
     return (
         <>
-    <div className='continent-badges-list'>
+
+{filterKeyword !== "Thailand" && filterKeyword !== "Bangkok" && filterKeyword !== "Chiang Mai" && filterKeyword !== "Japan" && filterKeyword !== "Indonesia" && filterKeyword !== "Ubud" && filterKeyword !== "Bali" ? 
+    <div className='continent-badges-list'> 
         <ul className="flex gap-x-2 gap-y-2 justify-center items-center">
             <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("🇹🇭 Thailand") }}>
                 🇹🇭 Thailand
@@ -50,8 +52,9 @@ function CountryBadges({ filterKeyword, handleCountrySelection }) {
             </Badge>
         </ul>
     </div>
+    : null }
         </>
     );
 }
 
-export default CountryBadges;
+export default AsiaCountryBadges;

@@ -15,7 +15,7 @@ import jsonData from '../data/data.json';
 
 export default function Home() {
 
-const [filterKeyword, setFilterKeyword] = useState('');
+const [filterKeyword, setFilterKeyword] = useState('Essentials');
 const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
 const [combinedKeyword, setCombinedKeyword] = useState('');
 

@@ -1,0 +1,39 @@
+.categories-countries-tab .tab-menu-options{
+    /* margin: auto; */
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+    justify-content: start;
+}
+
+/* .countries-tab .tab-menu-options, 
+.categories-tab .tab-menu-options{
+    background: hsl(var(--background));
+}
+
+.countries-tab .data-\[state\=active\]\:bg-background[data-state=active],
+.categories-tab .data-\[state\=active\]\:bg-background[data-state=active]{
+    background: hsL(var(--secondary));
+}
+
+.countries-tab .tab-menu-options button:hover, 
+.categories-tab .tab-menu-options button:hover{
+    background: hsL(var(--secondary) / .7);
+} */
+
+.card-categories-list, 
+.city-badges-list{
+    justify-content: start;
+}
+
+.continent-badges-list .country-badge{
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--secondary));
+}
+
+.city-badges-list .city-badge{
+    /* background: var(--blue-950); */
+    background: hsl(var(--secondary) / .4);
+    border: 1px solid hsl(var(--secondary));
+    border-radius: 30px;
+}

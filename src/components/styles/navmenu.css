@@ -7,7 +7,12 @@
 }
 
 .continent-badges-list ul{
-    overflow-x: scroll;
+    overflow-x: auto;
+    justify-content: start;
+}
+
+.city-badges-list ul{
+    justify-content: start;   
 }
 
 .continent-badges-list ul div{
