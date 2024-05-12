@@ -33,7 +33,7 @@ const [selectedBreadcrumb, setSelectedBreadcrumb] = useState('first');
 
 
 // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
-const handleKeywordSelection = (keyword) => {
+const handleKeywordSelection = (keyword: string) => {
 
   // Extend the regex to include regional indicator symbols for flag emojis
   // Remove emojis and replace multiple spaces with a single space, trim leading spaces
@@ -75,7 +75,7 @@ console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
 
 
 // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
-const handleCountrySelection = (keyword) => {
+const handleCountrySelection = (keyword: string) => {
 
   // Extend the regex to include regional indicator symbols for flag emojis
   // Remove emojis and replace multiple spaces with a single space, trim leading spaces
@@ -111,7 +111,7 @@ console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
 
 
   // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
-const handleCategorySelection = (keyword) => {
+const handleCategorySelection = (keyword: string) => {
   // Extend the regex to include regional indicator symbols for flag emojis
   // Remove emojis and replace multiple spaces with a single space, trim leading spaces
   let cleanedKeyword = keyword
@@ -178,7 +178,7 @@ const handleCategorySelection = (keyword) => {
         setCombinedKeyword('');
   }
 
-  const handleFirstBreadcrumb = (keyword) => {
+  const handleFirstBreadcrumb = (keyword: string) => {
 
   // Extend the regex to include regional indicator symbols for flag emojis
   // Remove emojis and replace multiple spaces with a single space, trim leading spaces
@@ -294,7 +294,7 @@ const handleCategorySelection = (keyword) => {
 
 
 
-  const handleBreadcrumbSelection = (keyword) => {
+  const handleBreadcrumbSelection = (keyword: string) => {
     // Extend the regex to include regional indicator symbols for flag emojis
     // Remove emojis and replace multiple spaces with a single space, trim leading spaces
     const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
@@ -304,14 +304,14 @@ const handleCategorySelection = (keyword) => {
     setSecondBreadcrumbKeyword();
   }
 
-  const dynamicTabsSelection = (keyword) => {
+  const dynamicTabsSelection = (keyword: string) => {
     const cleanedKeyword = keyword.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
       .replace(/\s{2,}/g, ' ')
       .replace(/^\s+/g, '');
   }
 
   // SORTS THE CATEGORIES LIST IN ALPHABETICAL ORDER, ACCOUNTING FOR EMOJIS
-const cleanCategoryForSorting = (category) => {
+const cleanCategoryForSorting = (category: string) => {
     // Normalize Unicode characters to a standard form
     category = category.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Strip accents/diacritics
     category = category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F700}-\u{1F77F}\u{1F780}-\u{1F7FF}\u{1F800}-\u{1F8FF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{2300}-\u{23FF}\u{2B50}-\u{2BFF}\u{2C60}-\u{2C7F}\u{2E00}-\u{2E7F}\u{3000}-\u{303F}\u{1F1E6}-\u{1F1FF}]/gu, '')
@@ -333,7 +333,7 @@ const cleanCategoryForSorting = (category) => {
 }
 
 
-  const handleSwitchChange = (newState) => {
+  const handleSwitchChange = (newState: boolean) => {
     setIsSwitchOn(newState);
   };
   const handleSidebarToggle = () => {
@@ -369,7 +369,7 @@ const cleanCategoryForSorting = (category) => {
 
     const [showForm, setShowForm] = useState(false);
 
-    const handleShowForm = (componentName) => {
+    const handleShowForm = (componentName: string) => {
       if (componentName === 'form') {
         setShowForm(true);
       } else {
