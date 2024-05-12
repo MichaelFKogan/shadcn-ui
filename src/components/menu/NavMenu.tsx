@@ -134,10 +134,10 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
               <Menu strokeWidth={2}/>
           </Button> */}
 
-          <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
+          <div className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
             {/* <TreePalm strokeWidth={1} /> */}
             <span className="hidden font-bold sm:inline-block">NomadHub</span>
-          </a>
+          </div>
           {/* 
                     <nav className="flex items-center text-sm main-menu">
 
@@ -224,7 +224,7 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <nav className="flex items-center" style={{ columnGap: "10px" }}>
             <nav className="flex items-center gap-4 text-sm lg:gap-6">
-              <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => { handleShowForm('form'); setSidebarOpen(false) }}>Submit A Link</a>
+              <div className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => { handleShowForm('form'); setSidebarOpen(false) }}>Submit A Link</div>
             </nav>
             <MusicPlayer musicOpen={musicOpen} handleMusicOpen={handleMusicOpen} />
             <DarkMode />
@@ -235,30 +235,30 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
   )
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"
+// const ListItem = React.forwardRef<
+//   React.ElementRef<"a">,
+//   React.ComponentPropsWithoutRef<"a">
+// >(({ className, title, children, ...props }, ref) => {
+//   return (
+//     <li>
+//       <NavigationMenuLink asChild>
+//         <a
+//           ref={ref}
+//           className={cn(
+//             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+//             className
+//           )}
+//           {...props}
+//         >
+//           <div className="text-sm font-medium leading-none">{title}</div>
+//           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+//             {children}
+//           </p>
+//         </a>
+//       </NavigationMenuLink>
+//     </li>
+//   )
+// })
+// ListItem.displayName = "ListItem"
 
 export default NavMenu;

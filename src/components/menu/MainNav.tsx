@@ -115,9 +115,9 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
                     : ( null )}
 
                         {/* <Login handleShowForm={handleShowForm} /> */}
-                        <nav className="flex items-center gap-4 text-sm lg:gap-6">
+                        {/* <nav className="flex items-center gap-4 text-sm lg:gap-6">
                             <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/90" onClick={() => {handleShowForm('form'); setSidebarOpen(false)}}>Submit A Link</a>
-                        </nav>
+                        </nav> */}
 
                        
                         {/* <Button variant="ghost" size="icon" onClick={handlePodcastOpen}>
