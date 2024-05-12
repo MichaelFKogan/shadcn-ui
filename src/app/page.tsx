@@ -453,30 +453,6 @@ const cleanCategoryForSorting = (category) => {
 
         </div>
       </main>
-
-      {/* SMOOTH SCROLL */}
-      <Script> {`
-      // Get all anchor tags
-      const anchorTags = document.querySelectorAll('a[href^="#"]');
-
-      // Loop through each anchor tag and add event listener
-      anchorTags.forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-
-              const targetId = this.getAttribute('href').substring(1); // Remove the '#' from href
-              const targetElement = document.getElementById(targetId);
-
-              if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 60; // Adjust the offset by 100px
-                window.scrollTo({
-                  top: offsetTop,
-                  behavior: 'smooth'
-              });
-              }
-          });
-      });
-      `}</Script>
     </>
   );
 }

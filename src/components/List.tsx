@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import './styles/list.css';
 
+import Image from "next/image";
+
 export function List({ data, cleanCategoryForSorting }) {
     // Group the data by category
     const groupedData = data.reduce((acc, item) => {
@@ -18,7 +20,7 @@ export function List({ data, cleanCategoryForSorting }) {
         <>
             {sortedCategories.map((category, index) => (
 
-                <div className="list-container card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border shadow transition-all hover:shadow-lg">
+                <div key={index} className="list-container card-list bg-surface-100 hover:bg-surface-200 group flex h-full w-full flex-col rounded-lg border shadow transition-all hover:shadow-lg">
                         <h2 id={category.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/ug, '').replace(/\s+/g, '').toLowerCase()} className="category-heading h2 section-title mb-1 border-b-2 px-4 py-2">
                             {category.headingImage && (<img src={"/images/" + category.headingImage} className="section-title__img" />)}
                             {category}
@@ -71,7 +73,7 @@ export function List({ data, cleanCategoryForSorting }) {
                                         <a href={item.url} target="_blank" key={index} className="list__link" style={{ alignItems: "center" }}>
 
                                             <div className="relative h-[22px] min-w-[22px] w-[22px] rounded-md overflow-hidden scale-100 transition-all">
-                                                <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} />
+                                                <Image alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} width={22} height={22} />
                                             </div>
 
                                             <div className="link__text-wrapper">

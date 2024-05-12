@@ -227,7 +227,7 @@ export function Form() {
       <div className="grid gap-4 py-4">
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+            <Label htmlhtmlFor="name" className="text-right">
             Name
             </Label>
             <Input
@@ -238,7 +238,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label htmlhtmlFor="username" className="text-right">
             URL
             </Label>
             <Input
@@ -249,11 +249,11 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            {/* <label for="inputUrl" class="form-label">Category  */}
+            {/* <label htmlFor="inputUrl" className="form-label">Category  */}
             {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
             {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
             {/* </label> */}
-            <Label htmlFor="category" className="text-right">
+            <Label htmlhtmlFor="category" className="text-right">
             Category
             </Label>
 
@@ -270,7 +270,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="tags" className="text-right">
+            <Label htmlhtmlFor="tags" className="text-right">
             Tags
             </Label>
 
@@ -288,7 +288,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="city" className="text-right">
+            <Label htmlhtmlFor="city" className="text-right">
                 City
             </Label>
 
@@ -303,7 +303,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="country" className="text-right">
+            <Label htmlhtmlFor="country" className="text-right">
                 Country
             </Label>
 
@@ -315,7 +315,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="continent" className="text-right">
+            <Label htmlhtmlFor="continent" className="text-right">
                 Continent
             </Label>
 
@@ -327,7 +327,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="dsecription" className="text-right">
+            <Label htmlhtmlFor="dsecription" className="text-right">
                 Description
             </Label>
             <Textarea className="form-control col-span-3" />
@@ -354,7 +354,7 @@ export function Form() {
                 <div className="grid gap-4 py-4">
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
+                        <Label htmlhtmlFor="name" className="text-right">
                         Name
                         </Label>
                         <Input
@@ -365,7 +365,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
+                        <Label htmlhtmlFor="username" className="text-right">
                         URL
                         </Label>
                         <Input
@@ -376,11 +376,11 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        {/* <label for="inputUrl" class="form-label">Category  */}
+                        {/* <label htmlFor="inputUrl" className="form-label">Category  */}
                         {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
                         {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
                         {/* </label> */}
-                        <Label htmlFor="category" className="text-right">
+                        <Label htmlhtmlFor="category" className="text-right">
                         Category
                         </Label>
 
@@ -397,7 +397,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="tags" className="text-right">
+                        <Label htmlhtmlFor="tags" className="text-right">
                         Tags
                         </Label>
 
@@ -415,7 +415,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="city" className="text-right">
+                        <Label htmlhtmlFor="city" className="text-right">
                             City
                         </Label>
 
@@ -430,7 +430,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="city" className="text-right">
+                        <Label htmlhtmlFor="city" className="text-right">
                             City
                         </Label>
 
@@ -445,7 +445,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="country" className="text-right">
+                        <Label htmlhtmlFor="country" className="text-right">
                             Country
                         </Label>
 
@@ -457,7 +457,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="continent" className="text-right">
+                        <Label htmlhtmlFor="continent" className="text-right">
                             Continent
                         </Label>
 
@@ -469,7 +469,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="dsecription" className="text-right">
+                        <Label htmlhtmlFor="dsecription" className="text-right">
                             Description
                         </Label>
                         <Textarea className="form-control col-span-3" />
@@ -501,7 +501,7 @@ export function Form() {
                         </CardHeader> */}
 
                         <CardContent className="mt-6">
-                            <label for="inputName" class="form-label">Name 
+                            <label htmlFor="inputName" className="form-label">Name 
                                 <span className="text-muted-foreground text-xs"> [required]</span>
                             </label>
                             <Input type="text" className="form-control" id="inputName" name="name" value={linkData.name} onChange={handleInputChange} aria-describedby="nameHelp" placeholder="Name" />
@@ -509,7 +509,7 @@ export function Form() {
                         </CardContent>
 
                         <CardContent>
-                            <label for="inputUrl" class="form-label">URL 
+                            <label htmlFor="inputUrl" className="form-label">URL 
                                 <span className="text-muted-foreground text-xs"> [required]</span>
                             </label>
                             <Input type="text" className="form-control" id="inputUrl" name="url" value={linkData.url} onChange={handleInputChange} aria-describedby="urlHelp" placeholder="URL" />
@@ -517,7 +517,7 @@ export function Form() {
                         </CardContent>
 
                         <CardContent>
-                            <label for="inputUrl" class="form-label">Category 
+                            <label htmlFor="inputUrl" className="form-label">Category 
                                 <span className="text-muted-foreground text-xs"> [required]</span>
                                 {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
                             </label>
@@ -525,7 +525,7 @@ export function Form() {
                             <CreatableSelect 
                                 options={categoryGroupedOptions}
                                 // formatGroupLabel={formatGroupLabel}
-                                type="text" class="form-control" id="inputCategory" name="category" 
+                                type="text" className="form-control" id="inputCategory" name="category" 
                                 value={linkData.category.value}
                                 onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
                                 isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
@@ -541,13 +541,13 @@ export function Form() {
 
                         <CardContent>
 
-                            <label for="inputUrl" class="form-label mb-1">Tags</label>
-                                <br/><small className='text-muted-foreground'>Create a tag here if you don't see it in the list</small>
+                            <label htmlhtmlFor="inputUrl" className="form-label mb-1">Tags</label>
+                                <br/><small className="text-muted-foreground">Create a tag here if you don't see it in the list</small>
 
                             <CreatableSelect
                                 options={groupedOptions}
                                 // formatGroupLabel={formatGroupLabel}
-                                type="text" class="form-control" id="inputTags" name="tags"
+                                type="text" className="form-control" id="inputTags" name="tags"
                                 value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
                                 closeMenuOnSelect={false} components={animatedComponents}
                                 defaultValue={[]} isMulti
@@ -559,13 +559,13 @@ export function Form() {
 
                         <CardContent>
 
-                            <label for="inputUrl" class="form-label">City</label>
-                            <br/><small className='text-muted-foreground'>Create a city here if you don't see it in the list</small>
+                            <label htmlhtmlFor="inputUrl" className="form-label">City</label>
+                            <br/><small className="text-muted-foreground">Create a city here if you don't see it in the list</small>
 
                             <CreatableSelect
                                 options={cityGroupedOptions}
                                 // options={cities} 
-                                type="text" class="form-control" id="inputCity" name="city" 
+                                type="text" className="form-control" id="inputCity" name="city" 
                                 value={linkData.city.label}
                                 onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
                                 isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
@@ -574,8 +574,8 @@ export function Form() {
                         </CardContent>
 
                         <CardContent>
-                            <label for="inputUrl" class="form-label">Country</label>
-                                <Select options={countries} type="text" class="form-control" id="inputCountry" name="country" 
+                            <label htmlFor="inputUrl" className="form-label">Country</label>
+                                <Select options={countries} type="text" className="form-control" id="inputCountry" name="country" 
                                 value={linkData.country.label}
                                 onChange={(selectedOption) => handleDropdownChange("country", selectedOption)} 
                                 isClearable={isClearable} placeholder="Add country" aria-describedby="countryHelp" />
@@ -583,8 +583,8 @@ export function Form() {
                         </CardContent>
 
                         <CardContent>
-                            <label for="inputUrl" class="form-label">Continent</label>
-                                <Select options={continents} type="text" class="form-control" id="inputContinent" name="continent" 
+                            <label htmlFor="inputUrl" className="form-label">Continent</label>
+                                <Select options={continents} type="text" className="form-control" id="inputContinent" name="continent" 
                                 value={linkData.continent.value}
                                 onChange={(selectedOption) => handleDropdownChange("continent", selectedOption)} 
                                 isClearable={isClearable} placeholder="Add continent" aria-describedby="continentHelp" />

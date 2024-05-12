@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge"
 import './styles/cards.css'
 import { SquareArrowOutUpRight } from "lucide-react"
 
+import Image from "next/image";
+
 
 export function Card({ data, handleKeywordSelection, handleCountrySelection, handleCategorySelection, isSwitchOn }) {
 
@@ -85,7 +87,7 @@ export function Card({ data, handleKeywordSelection, handleCountrySelection, han
                                                 {/* <SquareArrowOutUpRight /> */}
                                                 <div className="image-text-wrapper flex w-full items-center p-3">
                                                     <div className="relative h-[62px] min-w-[62px] w-[62px] rounded-md overflow-hidden scale-100 transition-all">
-                                                        <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} />
+                                                        <img alt={item.title} loading="lazy" decoding="async" data-nimg="fill" className="bg-surface-100" style={{ position: "absolute", height: "100%", width: "100%", left: "0", top: "0", right: "0", bottom: "0", objectFit: "cover", color: "transparent" }} sizes="100vw" src={imagePath} width={62} height={62} />
                                                     </div>
                                                     <div className="card__text-wrapper ml-4">
                                                         <h3 className="text-foreground-light group-hover:text-foreground mb-2 text-lg font-medium transition-colors">{item.title}</h3>

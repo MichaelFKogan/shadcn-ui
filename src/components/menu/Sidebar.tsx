@@ -8,6 +8,8 @@ import {
   import { Button } from "@/components/ui/button";
   import { ChevronsLeft } from "lucide-react"
   import '../styles/sidebar.css'
+
+  import Image from "next/image";
   
 
 export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebarOpen, handleSidebarToggle}) {
@@ -135,11 +137,11 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                       <AccordionItem value="item-1">
                         <AccordionTrigger><div className=""><span className="sidebar-emoji">📸</span> <span className="country-click" onClick={() => handleCountrySelection('📸 Social Media')}>SOCIAL MEDIA</span></div></AccordionTrigger>
                             <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/tiktok.png" className="accordion-logo"/></span>TikTok</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
+                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/instagram.png" className="accordion-logo" width={20} height={20} /></span>Instagram</div></a>
+                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/tiktok.png" className="accordion-logo" width={20} height={20} /></span>TikTok</div></a>
+                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/facebook.png" className="accordion-logo" width={20} height={20} /></span>Facebook</div></a>
+                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/youtube.png" className="accordion-logo" width={20} height={20} /></span>YouTube</div></a>
+                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/reddit.png" className="accordion-logo" width={20} height={20} /></span>Reddit</div></a>
                               <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📹 Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
                               <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("✍️ Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
                             </AccordionContent>
@@ -213,11 +215,11 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                     <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🗺 Travel Guide")}><span className="sidebar-emoji">🗺</span> Travel Guide</a>
 
                     <h2 className="categories-title text-foreground-lighter mb-2 mt-5 text-sm font-medium border-b-2"><span className="sidebar-emoji">📸</span> Social Media</h2>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/tiktok.png" className="accordion-logo"/></span>TikTok</div></a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
-                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/tiktok.png" className="accordion-logo"/></span>TikTok</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
+                    <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><Image src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
                     <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📹 Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
                     <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("✍️ Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
 

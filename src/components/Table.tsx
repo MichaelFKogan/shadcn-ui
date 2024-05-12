@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { useReactTable, ColumnDef, createColumnHelper, getCoreRowModel, flexRender, getSortedRowModel } from '@tanstack/react-table';
 import './styles/table.css';
 
+import Image from "next/image";
+
 // Define the data type
 type Link = {
     title: string;
@@ -86,7 +88,7 @@ const alphanumericSort = (rowA, rowB, columnId) => {
                 
                 <a href={info.row.original ? info.row.original.url : '#'} target="_blank" className="title list__link" style={{ alignItems: "center", display: "flex", columnGap: "10px" }}>
                     <div className="relative h-[22px] min-w-[22px] w-[22px] rounded-md overflow-hidden scale-100 transition-all">
-                        <img src={imagePath} alt={info.row.original.title} loading="lazy" decoding="async" className="bg-surface-100" sizes="100vw" style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }}/>
+                        <Image src={imagePath} alt={info.row.original.title} loading="lazy" decoding="async" className="bg-surface-100" sizes="100vw" style={{ position: "absolute", height: "100%", width: "100%", inset: "0px", objectFit: "cover", color: "transparent" }} width={22} height={22}/>
                     </div>
                     <div className="link__text-wrapper">
                         <h3 className="text-foreground-light group-hover:text-foreground mb-0 text-sm font-medium transition-colors">{info.row.original ? info.row.original.title : 'Default Title'}</h3>
@@ -120,7 +122,7 @@ const alphanumericSort = (rowA, rowB, columnId) => {
             return (
                 <div className="tags text-sm">
                     {tags.length > 0 ? tags.map((tag, index) => (
-                        <Badge variant="outline"  onClick={() => handleKeywordSelection(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
+                        <Badge key={index} variant="outline"  onClick={() => handleKeywordSelection(tag.trim())}>{tag.trim()}</Badge> // Render each tag within a Badge
                     )) : null} 
                 </div>
             );

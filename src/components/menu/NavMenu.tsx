@@ -130,9 +130,9 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
 
-          {/* <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"} ${showForm ? "hidden" : "inline-flex"}`} onClick={handleSidebarToggle} >
+          <Button variant="ghost" size="icon" className={`hamburger-menu mr-5 ${sidebarOpen ? "collapsed" : "inline-flex"} ${showForm ? "hidden" : "inline-flex"}`} onClick={handleSidebarToggle} >
               <Menu strokeWidth={2}/>
-          </Button> */}
+          </Button>
 
           <div className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
             {/* <TreePalm strokeWidth={1} /> */}

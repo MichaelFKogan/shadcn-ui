@@ -1,10 +1,32 @@
-import { useState, useEffect } from "react";
+// src/app/utils/keywordUtils.tsx
+import { useState } from "react";
 
-const [filterKeyword, setFilterKeyword] = useState('');
-const [lastKeyword, setLastKeyword] = useState('');  // State to track the last keyword
-const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
-const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
-const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
+export function useKeywordState(initialValue: string) {
+    const [filterKeyword, setFilterKeyword] = useState(initialValue);
+    const [lastKeyword, setLastKeyword] = useState('');
+    const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
+    const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
+    const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
+
+    return {
+        filterKeyword,
+        setFilterKeyword,
+        lastKeyword,
+        setLastKeyword,
+        continentBreadcrumbKeyword,
+        setContinentBreadcrumbKeyword,
+        breadcrumbKeyword,
+        setBreadcrumbKeyword,
+        secondBreadcrumbKeyword,
+        setSecondBreadcrumbKeyword
+    };
+}
+
+// const [filterKeyword, setFilterKeyword] = useState('');
+// const [lastKeyword, setLastKeyword] = useState(''); 
+// const [continentBreadcrumbKeyword, setContinentBreadcrumbKeyword] = useState('');
+// const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
+// const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
   
   // TOGGLING AND FILTERING KEYWORDS WHEN SELECTED
   export function handleKeywordSelection(keyword: string): void {

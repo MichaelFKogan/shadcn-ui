@@ -1,6 +1,6 @@
 .main-wrapper{
     height: 210px;
-    border: 1px dashed var(--blue-110);
+    /* border: 1px dashed var(--blue-110); */
     padding: 1rem;
 }
 
