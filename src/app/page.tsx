@@ -401,7 +401,7 @@ const cleanCategoryForSorting = (category: string) => {
 
       flake.style.width = `${randomSize}px`;
       flake.style.height = `${randomSize}px`;
-      flake.style.opacity = randomOpacity;
+      flake.style.opacity = randomOpacity.toString(); // Convert randomOpacity to a string
       flake.style.animationDuration = `${randomDuration}s`;
       flake.style.animationDelay = `${randomDelay}s`;
       flake.style.left = `${randomLeft}%`;
