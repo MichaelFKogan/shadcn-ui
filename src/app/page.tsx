@@ -22,7 +22,7 @@ const [combinedKeyword, setCombinedKeyword] = useState('');
 const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
 const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 
-const [listData, setListData] = useState([]);
+const [listData, setListData] = useState<{ category: string; links: any[]; }[]>([]);
 const [tableData, setTableData] = useState<{ title: string; description: string; url: string; image: string; category: string; tags: string; city: string; country: string; continent: string; }[]>([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
 const [isSwitchOn, setIsSwitchOn] = useState(true);
