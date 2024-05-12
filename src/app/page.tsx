@@ -232,7 +232,7 @@ const handleCategorySelection = (keyword: string) => {
       })
       .map((link) => ({
         title: link.name,
-        description: link.description || '',
+        description: link.description ?? '', // Use nullish coalescing to provide a default value
         url: link.url,
         image: 'default.png',
         category: link.category,
