@@ -71,10 +71,10 @@ export function MainNav({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
                         <Menu strokeWidth={2}/>
                     </Button>
 
-                    <a className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
+                    <div className="mr-6 flex items-center space-x-2 logo-text" onClick={() => { handleShowForm('home'); clearAll(); }}>
                         {/* <TreePalm strokeWidth={1} /> */}
                         <span className="hidden font-bold sm:inline-block">NomadHub</span>
-                    </a>
+                    </div>
 
                     {/* <nav className="flex items-center gap-4 text-sm lg:gap-6">
                         <a className="text-sm transition-colors hover:text-foreground/80 text-foreground/60" onClick={() => handleShoworm('form')}><Login /></a>
