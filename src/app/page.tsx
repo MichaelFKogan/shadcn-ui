@@ -227,7 +227,7 @@ const handleCategorySelection = (keyword: string) => {
             return acc;
           }, '');
           // Ensure case-insensitive search for each keyword
-          return keywords.every(keyword => allText?.toLowerCase().includes(keyword)); // Use optional chaining here
+          return keywords.every(keyword => typeof allText === 'string' && allText.toLowerCase().includes(keyword)); // Check if allText is a string before applying toLowerCase()
         });
       })
       .map((link) => ({
