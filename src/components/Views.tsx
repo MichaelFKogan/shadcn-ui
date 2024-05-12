@@ -25,7 +25,6 @@ export function Views({
     combinedKeyword,
     breadcrumbKeyword, 
     secondBreadcrumbKeyword, 
-    continentBreadcrumbKeyword, 
     setBreadcrumbKeyword, 
     setSecondBreadcrumbKeyword, 
     clearKeywords,
