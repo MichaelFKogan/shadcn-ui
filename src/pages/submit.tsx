@@ -215,7 +215,7 @@ export default function Submit() {
         <div className='page-wrapper container'>
         <h1 className="">Submit A Link</h1>
 
-        <form class="add-link-form" onSubmit={handleSubmit}>
+        <form className="add-link-form" onSubmit={handleSubmit}>
 
             <Card className="mt-6 p-10">
             {/* <CardHeader>
@@ -224,7 +224,7 @@ export default function Submit() {
             </CardHeader> */}
 
             <CardContent className="mt-6">
-                <label for="inputName" class="form-label">Name 
+                <label htmlFor="inputName" className="form-label">Name 
                     <span className="text-muted-foreground text-xs"> [required]</span>
                 </label>
                 <Input type="text" className="form-control" id="inputName" name="name" value={linkData.name} onChange={handleInputChange} aria-describedby="nameHelp" placeholder="Name" />
@@ -232,7 +232,7 @@ export default function Submit() {
             </CardContent>
 
             <CardContent>
-                <label for="inputUrl" class="form-label">URL 
+                <label htmlFor="inputUrl" className="form-label">URL 
                     <span className="text-muted-foreground text-xs"> [required]</span>
                 </label>
                 <Input type="text" className="form-control" id="inputUrl" name="url" value={linkData.url} onChange={handleInputChange} aria-describedby="urlHelp" placeholder="URL" />
@@ -240,7 +240,7 @@ export default function Submit() {
             </CardContent>
 
             <CardContent>
-                <label for="inputUrl" class="form-label">Category 
+                <label htmlFor="inputUrl" className="form-label">Category 
                     <span className="text-muted-foreground text-xs"> [required]</span>
                     {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
                 </label>
@@ -248,7 +248,7 @@ export default function Submit() {
                 <CreatableSelect 
                     options={categoryGroupedOptions}
                     // formatGroupLabel={formatGroupLabel}
-                    type="text" class="form-control" id="inputCategory" name="category" 
+                    type="text" className="form-control" id="inputCategory" name="category" 
                     value={linkData.category.value}
                     onChange={(selectedOption) => handleDropdownChange("category", selectedOption)} 
                     isClearable={isClearable} placeholder="Add or create category" aria-describedby="categoryHelp"
@@ -264,13 +264,13 @@ export default function Submit() {
             
             <CardContent>
 
-                <label for="inputUrl" class="form-label mb-1">Tags</label>
+                <label htmlFor="inputUrl" className="form-label mb-1">Tags</label>
                     <br/><small className='text-muted-foreground'>Create a tag here if you don't see it in the list</small>
 
                 <CreatableSelect
                     options={groupedOptions}
                     // formatGroupLabel={formatGroupLabel}
-                    type="text" class="form-control" id="inputTags" name="tags"
+                    type="text" className="form-control" id="inputTags" name="tags"
                     value={linkData.tags.map(tag => ({ value: tag, label: tag }))}
                     closeMenuOnSelect={false} components={animatedComponents}
                     defaultValue={[]} isMulti
@@ -282,13 +282,13 @@ export default function Submit() {
 
             <CardContent>
 
-                <label for="inputUrl" class="form-label">City</label>
+                <label htmlFor="inputUrl" className="form-label">City</label>
                 <br/><small className='text-muted-foreground'>Create a city here if you don't see it in the list</small>
 
                 <CreatableSelect
                     options={cityGroupedOptions}
                     // options={cities} 
-                    type="text" class="form-control" id="inputCity" name="city" 
+                    type="text" className="form-control" id="inputCity" name="city" 
                     value={linkData.city.label}
                     onChange={(selectedOption) => handleDropdownChange("city", selectedOption)} 
                     isClearable={isClearable} placeholder="Add city" aria-describedby="cityHelp" />
@@ -297,8 +297,8 @@ export default function Submit() {
             </CardContent>
 
             <CardContent>
-                <label for="inputUrl" class="form-label">Country</label>
-                    <Select options={countries} type="text" class="form-control" id="inputCountry" name="country" 
+                <label htmlFor="inputUrl" className="form-label">Country</label>
+                    <Select options={countries} type="text" className="form-control" id="inputCountry" name="country" 
                     value={linkData.country.label}
                     onChange={(selectedOption) => handleDropdownChange("country", selectedOption)} 
                     isClearable={isClearable} placeholder="Add country" aria-describedby="countryHelp" />
@@ -306,8 +306,8 @@ export default function Submit() {
             </CardContent>
 
             <CardContent>
-                <label for="inputUrl" class="form-label">Continent</label>
-                    <Select options={continents} type="text" class="form-control" id="inputContinent" name="continent" 
+                <label htmlFor="inputUrl" className="form-label">Continent</label>
+                    <Select options={continents} type="text" className="form-control" id="inputContinent" name="continent" 
                     value={linkData.continent.value}
                     onChange={(selectedOption) => handleDropdownChange("continent", selectedOption)} 
                     isClearable={isClearable} placeholder="Add continent" aria-describedby="continentHelp" />

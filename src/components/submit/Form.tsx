@@ -227,7 +227,7 @@ export function Form() {
       <div className="grid gap-4 py-4">
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="name" className="text-right">
+            <Label htmlFor="name" className="text-right">
             Name
             </Label>
             <Input
@@ -238,7 +238,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="username" className="text-right">
+            <Label htmlFor="username" className="text-right">
             URL
             </Label>
             <Input
@@ -253,7 +253,7 @@ export function Form() {
             {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
             {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
             {/* </label> */}
-            <Label htmlhtmlFor="category" className="text-right">
+            <Label htmlFor="category" className="text-right">
             Category
             </Label>
 
@@ -270,7 +270,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="tags" className="text-right">
+            <Label htmlFor="tags" className="text-right">
             Tags
             </Label>
 
@@ -288,7 +288,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="city" className="text-right">
+            <Label htmlFor="city" className="text-right">
                 City
             </Label>
 
@@ -303,7 +303,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="country" className="text-right">
+            <Label htmlFor="country" className="text-right">
                 Country
             </Label>
 
@@ -315,7 +315,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="continent" className="text-right">
+            <Label htmlFor="continent" className="text-right">
                 Continent
             </Label>
 
@@ -327,7 +327,7 @@ export function Form() {
         </div>
 
         <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlhtmlFor="dsecription" className="text-right">
+            <Label htmlFor="dsecription" className="text-right">
                 Description
             </Label>
             <Textarea className="form-control col-span-3" />
@@ -354,7 +354,7 @@ export function Form() {
                 <div className="grid gap-4 py-4">
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="name" className="text-right">
+                        <Label htmlFor="name" className="text-right">
                         Name
                         </Label>
                         <Input
@@ -365,7 +365,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="username" className="text-right">
+                        <Label htmlFor="username" className="text-right">
                         URL
                         </Label>
                         <Input
@@ -380,7 +380,7 @@ export function Form() {
                         {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
                         {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
                         {/* </label> */}
-                        <Label htmlhtmlFor="category" className="text-right">
+                        <Label htmlFor="category" className="text-right">
                         Category
                         </Label>
 
@@ -397,7 +397,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="tags" className="text-right">
+                        <Label htmlFor="tags" className="text-right">
                         Tags
                         </Label>
 
@@ -415,7 +415,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="city" className="text-right">
+                        <Label htmlFor="city" className="text-right">
                             City
                         </Label>
 
@@ -430,7 +430,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="city" className="text-right">
+                        <Label htmlFor="city" className="text-right">
                             City
                         </Label>
 
@@ -445,7 +445,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="country" className="text-right">
+                        <Label htmlFor="country" className="text-right">
                             Country
                         </Label>
 
@@ -457,7 +457,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="continent" className="text-right">
+                        <Label htmlFor="continent" className="text-right">
                             Continent
                         </Label>
 
@@ -469,7 +469,7 @@ export function Form() {
                     </div>
 
                     <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlhtmlFor="dsecription" className="text-right">
+                        <Label htmlFor="dsecription" className="text-right">
                             Description
                         </Label>
                         <Textarea className="form-control col-span-3" />
@@ -541,7 +541,7 @@ export function Form() {
 
                         <CardContent>
 
-                            <label htmlhtmlFor="inputUrl" className="form-label mb-1">Tags</label>
+                            <label htmlFor="inputUrl" className="form-label mb-1">Tags</label>
                                 <br/><small className="text-muted-foreground">Create a tag here if you don't see it in the list</small>
 
                             <CreatableSelect
@@ -559,7 +559,7 @@ export function Form() {
 
                         <CardContent>
 
-                            <label htmlhtmlFor="inputUrl" className="form-label">City</label>
+                            <label htmlFor="inputUrl" className="form-label">City</label>
                             <br/><small className="text-muted-foreground">Create a city here if you don't see it in the list</small>
 
                             <CreatableSelect
