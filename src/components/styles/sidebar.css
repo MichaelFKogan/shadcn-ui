@@ -15,6 +15,7 @@
   position: relative;
   scrollbar-color: hsl(var(--border) / .6) hsl(var(--border) / 0);
   scrollbar-width: thin;
+  scrollbar-gutter: stable;
   /* background-color: var(--sidebar); */
 }
 
@@ -64,7 +65,15 @@
   }
 
   .accordion button{
-    padding: .25rem .50rem;
+    padding: .75rem 1rem;
+  }
+
+  .accordion a{
+    padding: .6rem 1.75rem;
+  }
+
+  .countries a{
+    padding: .4rem 1.75rem;
   }
 
   .accordion .city, .categories-accordion a{

@@ -39,7 +39,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
 
                     <Accordion type="single" collapsible>
                         <AccordionItem value="item-1">
-                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>ASIA</span></div></AccordionTrigger>
+                        <AccordionTrigger><div><span className="sidebar-emoji">⛩</span> <span className="country-click" onClick={() => handleCountrySelection('⛩ Asia')}>Asia</span></div></AccordionTrigger>
                             <AccordionContent>
                                 <hr className="mx-7 my-2"/>
                                 <a className="country text-foreground-light block text-sm" onClick={() => handleCountrySelection('🇹🇭 Thailand')}><span className="sidebar-emoji">🇹🇭</span> Thailand</a>
@@ -79,25 +79,25 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger><div><span className="sidebar-emoji">💃🏻</span> LATIN AMERICA</div></AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">💃🏻</span> Latin America</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
-                            <AccordionTrigger><div><span className="sidebar-emoji">🇪🇺</span> EUROPE</div></AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🇪🇺</span> Europe</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
-                            <AccordionTrigger><div><span className="sidebar-emoji">🕌</span> MIDDLE EAST</div></AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🕌</span> Middle East</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-5">
-                            <AccordionTrigger><div><span className="sidebar-emoji">🌊</span> OCEANIA</div></AccordionTrigger>
+                            <AccordionTrigger><div><span className="sidebar-emoji">🌊</span> Oceania</div></AccordionTrigger>
                             <AccordionContent>
                             Yes. It adheres to the WAI-ARIA design pattern.
                             </AccordionContent>
@@ -105,103 +105,19 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                     </Accordion>
                   </div>
                 </div>
-                <hr className="mx-7 my-2"/>
 
-                {/* <hr className="mx-7 my-2 mt-16"/> */}
-                <div className="hidden lg:block">
 
-                <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-medium border-b-2 mt-16">COUNTRIES</h2>
-                  <div className="countries-accordion accordion space-y-1">
-                    <Accordion type="single" collapsible>
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger><div className=""><span className="sidebar-emoji">📍</span> <span className="country-click" onClick={() => handleCountrySelection('📍 Essentials')}>ESSENTIALS</span></div></AccordionTrigger>
-                            <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("✈️ Flights")}><span className="sidebar-emoji">✈️</span> Flights</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🗺 Maps")}><span className="sidebar-emoji">🗺</span> Maps</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🛌 Accomodation")}><span className="sidebar-emoji">🛌</span> Accomodation</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("😷 Health Insurance")}><span className="sidebar-emoji">😷</span> Health Insurance</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🛂 Visa")}><span className="sidebar-emoji">🛂</span> Visa</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🗺 Travel Guide")}><span className="sidebar-emoji">🗺</span> Travel Guide</a>
-                            </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
+                <div className="hidden lg:block mb-32">
 
-                <hr className="mx-7 my-2"/>
-                <div className="hidden lg:block">
-                  <div className="countries-accordion accordion space-y-1">
-                    <Accordion type="single" collapsible>
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger><div className=""><span className="sidebar-emoji">📸</span> <span className="country-click" onClick={() => handleCountrySelection('📸 Social Media')}>SOCIAL MEDIA</span></div></AccordionTrigger>
-                            <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Instagram")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/instagram.png" className="accordion-logo"/></span>Instagram</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("TikTok")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/tiktok.png" className="accordion-logo"/></span>TikTok</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Facebook")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/facebook.png" className="accordion-logo"/></span>Facebook</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("YouTube")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/youtube.png" className="accordion-logo"/></span>YouTube</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("Reddit")}><div className="flex items-center"><span className="sidebar-emoji"><img src="./images/reddit.png" className="accordion-logo"/></span>Reddit</div></a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📹 Vlog")}><span className="sidebar-emoji">📹</span> Vlog</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("✍️ Blog")}><span className="sidebar-emoji">✍️</span> Blog</a>
-                            </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger><div className="countries-title text-foreground-lighter mb-2 text-sm font-medium border-b-2"><span className="sidebar-emoji">📍</span> <span className="country-click" onClick={() => handleCountrySelection('📍 Essentials')}>ESSENTIALS</span></div></AccordionTrigger>
+                        <AccordionContent>
+                        </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
 
-                <hr className="mx-7 my-2"/>
-                <div className="hidden lg:block">
-                  <div className="countries-accordion accordion space-y-1">
-                    <Accordion type="single" collapsible>
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger><div className=""><span className="sidebar-emoji">👔</span> <span className="country-click" onClick={() => handleCountrySelection('👔 Work')}>WORK</span></div></AccordionTrigger>
-                            <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("👔 Jobs")}><span className="sidebar-emoji">👔</span> Jobs</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🔤 English Teaching")}><span className="sidebar-emoji">👩‍🏫</span> English Teaching</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("💵 Finance")}><span className="sidebar-emoji">💵</span> Finance</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📊 Productivity")}><span className="sidebar-emoji">📊</span> Productivity</a>
-                            </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
 
-                <hr className="mx-7 my-2"/>
-                <div className="hidden lg:block">
-                  <div className="countries-accordion accordion space-y-1">
-                    <Accordion type="single" collapsible>
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger><div className=""><span className="sidebar-emoji">🏄‍♀️</span> <span className="country-click" onClick={() => handleCountrySelection('🏄‍♀️ Lifestyle')}>LIFESTYLE</span></div></AccordionTrigger>
-                            <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📱 Apps")}><span className="sidebar-emoji">📱</span> Apps</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("⌚️ Products")}><span className="sidebar-emoji">⌚️</span> Products</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🧍‍♀️ Solo")}><span className="sidebar-emoji">🧍‍♀️</span> Solo Travel</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🧍‍♂️ Expat")}><span className="sidebar-emoji">🧍‍♂️</span> Expat</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("👫 Couple")}><span className="sidebar-emoji">👫</span> Couple</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🎒 Backpacker")}><span className="sidebar-emoji">🎒</span> Backpacker</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🚐 Van Life")}><span className="sidebar-emoji">🚐</span> Van Life</a>
-                            </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
-
-                <hr className="mx-7 my-2"/>
-                <div className="hidden lg:block mb-56">
-                  <div className="countries-accordion accordion space-y-1">
-                    <Accordion type="single" collapsible>
-                      <AccordionItem value="item-1">
-                        <AccordionTrigger><div className=""><span className="sidebar-emoji">📘</span> <span className="country-click" onClick={() => handleCountrySelection('📘 Learn')}>LEARN</span></div></AccordionTrigger>
-                            <AccordionContent>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("🎙 Podcast")}><span className="sidebar-emoji">🎙</span> Podcast</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📘 Course")}><span className="sidebar-emoji"></span> Course</a>
-                              <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📄 Article")}><span className="sidebar-emoji"></span> Article</a>
-                            </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </div>
-                </div>
-
-                {/* <div className="hidden lg:block mb-32 mt-5">
                   <h2 className="categories-title essentials text-foreground-lighter mt-5 mb-2 text-sm font-medium border-b-2" onClick={() => handleCountrySelection('📍 Essentials')}><span className="sidebar-emoji">📍</span> Essentials</h2>
                   <div className="categories">
                     
@@ -242,7 +158,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                     <a className="text-foreground-light block text-sm" onClick={() => handleCountrySelection("📄 Article")}><span className="sidebar-emoji"></span> Article</a>
 
                   </div>
-                </div> */}
+                </div>
 
                 {/* <div className="space-y-4">
                   <div className="text-foreground-lighter mb-2 text-sm">Explore more</div>
