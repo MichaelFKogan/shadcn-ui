@@ -230,17 +230,36 @@ const handleCategorySelection = (keyword: string) => {
           return keywords.every(keyword => typeof allText === 'string' && allText.toLowerCase().includes(keyword)); // Check if allText is a string before applying toLowerCase()
         });
       })
-      .map((link) => ({
-        title: link.name,
-        description: link.description ?? '', // Use nullish coalescing to provide a default value
-        url: link.url,
-        image: 'default.png',
-        category: link.category,
-        tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
-        city: link.city,
-        country: link.country,
-        continent: link.continent
-      }))
+      .map((link) => {
+        if ('description' in link) {
+          return {
+            title: link.name,
+            description: link.description || '', // Use optional chaining here if needed
+            url: link.url,
+            image: 'default.png',
+            category: link.category,
+            tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+            city: link.city,
+            country: link.country,
+            continent: link.continent
+          };
+        } else {
+          // Handle the case where 'description' does not exist on 'link'
+          return {
+            title: link.name,
+            description: '', // Provide a default value
+            url: link.url,
+            image: 'default.png',
+            category: link.category,
+            tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+            city: link.city,
+            country: link.country,
+            continent: link.continent
+          };
+        }
+      })
+      
+      
       .sort((a, b) => a.category.localeCompare(b.category));
 
     setTableData(linksData);
