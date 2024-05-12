@@ -13,6 +13,8 @@
     scrollbar-color: hsl(var(--border) / .6) hsl(var(--border) / 0);
     scrollbar-width: thin;
     padding-bottom: 4px;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
 }
 
 .city-badges-list ul{

@@ -111,14 +111,20 @@ export function TabsComponent({
                 <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
                 {filterKeyword === '' ? ( 
                 <>
-                    <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                    {/* <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} /> */}
                 </>
                 ) : null}
+
+
+
                 {filterKeyword === 'Asia' ? ( 
                 <>       
-                    <AsiaCountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                    {/* <AsiaCountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} /> */}
                 </>
             ) : null}
+
+
+            
                 </ul>
             </div>
 
@@ -131,21 +137,21 @@ export function TabsComponent({
                 </>
             ) : null} */}
 
-                    <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                    {/* <CityFilter filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} /> */}
 
                 </ul>
             </div>
 
-            {/* {filterKeyword === '' || (filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn') ? ( 
+            {/* {filterKeyword === '' || (filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn') ? (  */}
                 <>        
-                    <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                    {/* <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} /> */}
                 </>
-            ) : null } */}
+            {/* ) : null } */}
 
 
-            {filterKeyword === '' ? (
+            {/* {filterKeyword === '' || filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn' ? (
                 <>
-                <div className="card-categories-list mb-2 flex items-center gap-x-4">
+                <div className="card-categories-list flex items-center gap-x-4">
                     <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
                         <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("💯 Featured") }}>
                             💯 Featured
@@ -168,7 +174,7 @@ export function TabsComponent({
                     </ul>
                 </div>
                 </>
-             ) : null}
+             ) : null} */}
 
 
             {filterKeyword !== '' ? (

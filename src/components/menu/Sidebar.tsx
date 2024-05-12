@@ -105,12 +105,12 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                     </Accordion>
                   </div>
                 </div>
-                <hr className="mx-7 my-2"/>
+                <hr className="mx-4 my-2"/>
 
                 {/* <hr className="mx-7 my-2 mt-16"/> */}
                 <div className="hidden lg:block">
 
-                <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-medium border-b-2 mt-16">COUNTRIES</h2>
+                <h2 className="countries-title text-foreground-lighter mb-2 text-sm font-medium border-b-2 mt-16">CATEGORIES</h2>
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
                       <AccordionItem value="item-1">
@@ -128,7 +128,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                   </div>
                 </div>
 
-                <hr className="mx-7 my-2"/>
+                <hr className="mx-4 my-2"/>
                 <div className="hidden lg:block">
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
@@ -148,7 +148,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                   </div>
                 </div>
 
-                <hr className="mx-7 my-2"/>
+                <hr className="mx-4 my-2"/>
                 <div className="hidden lg:block">
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
@@ -165,7 +165,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                   </div>
                 </div>
 
-                <hr className="mx-7 my-2"/>
+                <hr className="mx-4 my-2"/>
                 <div className="hidden lg:block">
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>
@@ -185,7 +185,7 @@ export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebar
                   </div>
                 </div>
 
-                <hr className="mx-7 my-2"/>
+                <hr className="mx-4 my-2"/>
                 <div className="hidden lg:block mb-56">
                   <div className="countries-accordion accordion space-y-1">
                     <Accordion type="single" collapsible>

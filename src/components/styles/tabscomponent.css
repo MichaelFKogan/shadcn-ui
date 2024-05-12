@@ -1,8 +1,23 @@
 .main-wrapper{
-    /* height: 275px;
+    /* height: 375px;
     border: 1px dashed var(--blue-110);
     padding: 1rem; */
 }
+
+.views-tab{
+    position: relative;
+}
+
+.views-tab .tab-menu-options{
+    position: absolute;
+    right: 0px;
+    top: -40px;
+
+    margin-left: auto;
+    display: flex;
+    width: max-content;
+  }
+
 
 .categories-countries-tab .tab-menu-options{
     /* margin: auto; */

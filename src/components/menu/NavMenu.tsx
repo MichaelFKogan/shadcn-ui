@@ -153,34 +153,13 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
 
 
 
-          <NavigationMenu>
+          {/* <NavigationMenu>
             <NavigationMenuList>
 
-
-              {/* MENU 1 */}
-
-
-              {/* <Button variant="ghost" className="ml-auto mr-3" onClick={clearAll()}>
-            💯 All
-        </Button> */}
-
-
-
-
-              {/* MENU 2 */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger><span className="menu-emoji mr-2">🗄 </span> Categories</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-
-                    {/* {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                >
-                  {component.description}
-                </ListItem>
-              ))} */}
 
                     <div onClick={() => handleCountrySelection('💯 Featured')}>
                       <ListItem title="💯 Featured">
@@ -218,14 +197,18 @@ export function NavMenu({ handleSidebarToggle, sidebarOpen, setSidebarOpen, show
                       </ListItem>
                     </div>
 
-
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-
             </NavigationMenuList>
           </NavigationMenu>
+
+          <Button variant="ghost" onClick={() => handleCountrySelection('⛩ Asia')}>⛩ Asia</Button>
+          <Button variant="ghost" onClick={() => handleCountrySelection('💃🏻 Latin America')}>💃🏻 Latin America</Button>
+          <Button variant="ghost" onClick={() => handleCountrySelection('🇪🇺 Europe')}>🇪🇺 Europe</Button>
+          <Button variant="ghost" onClick={() => handleCountrySelection('🕌 Middle East')}>🕌 Middle East</Button>
+          <Button variant="ghost" onClick={() => handleCountrySelection('🌊 Oceania')}>🌊 Oceania</Button> */}
 
 
         </div>

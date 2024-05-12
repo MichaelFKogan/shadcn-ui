@@ -65,11 +65,16 @@
   }
 
   .accordion button{
-    padding: .75rem 1rem;
+    padding: .75rem .75rem;
+    margin: 0rem .5rem;
   }
 
   .accordion a{
-    padding: .6rem 1.75rem;
+    padding: .6rem 1.5rem;
+  }
+
+  .country-click{
+    /* font-size: 12px; */
   }
 
   .countries a{

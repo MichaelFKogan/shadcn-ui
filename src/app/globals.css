@@ -289,17 +289,6 @@
     -webkit-line-clamp: 3;
   }
 
-  .views-tab .tab-menu-options{
-    /* float: right;
-    position: sticky;
-    top: 57px;
-    z-index: 2; */
-
-    margin-left: auto;
-    display: flex;
-    width: max-content;
-  }
-
   .lucide-chevron-down{
     width: 0.875rem;
     height: 0.875rem;
