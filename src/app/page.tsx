@@ -5,7 +5,7 @@ import { MainNav } from "@/components/menu/MainNav"
 import { NavMenu } from "@/components/menu/NavMenu"
 import { Sidebar } from "@/components/menu/Sidebar";
 import { HeroBanner } from "@/components/HeroBanner";
-import { TabsComponent } from "@/components/TabsComponent";
+import { Views } from "@/components/Views";
 import { NotionTable } from "@/components/submit/NotionTable";
 // import {handleKeywordSelection, handleFirstKeyword, clearKeywords} from "@/utils/KeywordUtils";
 import Script from 'next/script'; // Import next/script component
@@ -63,13 +63,13 @@ else{
   setSelectedBreadcrumb('first');
 }
 
-// console.log("-----------------------------------------------------");   
-// console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
-// console.log(`LAST KEYWORD 1: ${lastKeyword}`);
-// console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
-// console.log(`BREADCRUMB KEYWORD 1: ${breadcrumbKeyword}`);
-// console.log(`COMBINED KEYWORDS 1: ${lastKeyword} ${cleanedKeyword}`);
-// console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
+console.log("-----------------------------------------------------");   
+console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+console.log(`LAST KEYWORD 1: ${lastKeyword}`);
+console.log(`CLEANED KEYWORD 1: ${cleanedKeyword}`);        
+console.log(`BREADCRUMB KEYWORD 1: ${breadcrumbKeyword}`);
+console.log(`COMBINED KEYWORDS 1: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`COMBINED KEYWORDS 1.1: ${combinedKeyword}`);
 };
 
 
@@ -100,13 +100,13 @@ const handleCountrySelection = (keyword) => {
   setCombinedKeyword('');
   setSelectedBreadcrumb('first');
 
-// console.log("-----------------------------------------------------");   
-// console.log(`KEYWORD 2: ${keyword}`);    
-// console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
-// console.log(`LAST KEYWORD 2: ${lastKeyword}`);
-// console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
-// console.log(`COMBINED KEYWORDS 2: ${lastKeyword} ${cleanedKeyword}`);
-// console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
+console.log("-----------------------------------------------------");   
+console.log(`KEYWORD 2: ${keyword}`);    
+console.log(`CLEANED KEYWORD 2: ${cleanedKeyword}`);        
+console.log(`LAST KEYWORD 2: ${lastKeyword}`);
+console.log(`BREADCRUMB KEYWORD 2: ${breadcrumbKeyword}`);
+console.log(`COMBINED KEYWORDS 2: ${lastKeyword} ${cleanedKeyword}`);
+console.log(`COMBINED KEYWORDS 2.1: ${combinedKeyword}`);
 };
 
 
@@ -423,7 +423,7 @@ const cleanCategoryForSorting = (category) => {
               {showForm && <NotionTable />}
               {!showForm && 
               
-              <TabsComponent 
+              <Views 
                 filterKeyword={filterKeyword} 
                 lastKeyword={lastKeyword}
                 combinedKeyword={combinedKeyword}

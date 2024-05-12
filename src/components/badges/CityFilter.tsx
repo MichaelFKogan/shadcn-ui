@@ -14,7 +14,7 @@ function CityFilter({ filterKeyword, handleCountrySelection }) {
                 <>
                     {item.cities.map((city, cityIndex) => (
                         <>
-                            <Badge key={cityIndex} variant="secondary" className="badge city-badge text-sm rounded-md" onClick={() => { handleCountrySelection(`${city.emoji} ${city.name}`) }}>
+                            <Badge key={cityIndex} variant="secondary" className="badge city-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection(`${city.emoji} ${city.name}`) }}>
                                 {city.emoji} {city.name}
                             </Badge>
                         </>

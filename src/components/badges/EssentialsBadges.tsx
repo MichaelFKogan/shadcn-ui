@@ -7,19 +7,21 @@ function EssentialsBadges({ filterKeyword, handleCountrySelection }) {
 
     return (
         <>
-
-{filterKeyword !== "Essentials" ?
-    <div className='continent-badges-list'> 
-        <ul className="flex gap-x-2 gap-y-2 justify-center items-center">
-            <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("🏠 Accomodation") }}>
+            <Badge variant="secondary" className="badge country-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection("🏠 Accomodation") }}>
                 🏠 Accomodation
             </Badge>
-            <Badge variant="secondary" className="badge country-badge text-sm rounded-md" onClick={() => { handleCountrySelection("✈️ Flights") }}>
+            <Badge variant="secondary" className="badge country-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection("✈️ Flights") }}>
                 ✈️ Flights
             </Badge>
-        </ul>
-    </div>
-    : null }
+            <Badge variant="secondary" className="badge country-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection("😷 Health Insurance") }}>
+                😷 Health Insurance
+            </Badge>
+            <Badge variant="secondary" className="badge country-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection("🗺 Maps") }}>
+                🗺 Maps
+            </Badge>
+            <Badge variant="secondary" className="badge country-badge text-sm rounded-md mr-2" onClick={() => { handleCountrySelection("🛂 Visa") }}>
+                🛂 Visa
+            </Badge>
         </>
     );
 }
