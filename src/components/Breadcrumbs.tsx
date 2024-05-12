@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Slash } from "lucide-react"
 
 
-export function Breadcrumbs({ handleKeywordSelection, handleFirstBreadcrumb, handleCategorySelection, filterKeyword, lastKeyword, combinedKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords, clearAll, selectedBreadcrumb, setSelectedBreadcrumb }) {
+export function Breadcrumbs({ handleFirstBreadcrumb, handleCategorySelection, filterKeyword, lastKeyword, combinedKeyword, breadcrumbKeyword, secondBreadcrumbKeyword, continentBreadcrumbKeyword, setBreadcrumbKeyword, setSecondBreadcrumbKeyword, clearKeywords, clearAll, selectedBreadcrumb, setSelectedBreadcrumb }) {
 
   return (
     <Breadcrumb>
@@ -60,7 +60,7 @@ export function Breadcrumbs({ handleKeywordSelection, handleFirstBreadcrumb, han
               <BreadcrumbLink
                 className={`breadcrumb second-breadcrumb ${selectedBreadcrumb === 'second' ? 'selected' : ''}`}
                 onClick={() => {
-                  handleKeywordSelection(combinedKeyword);
+                  // handleKeywordSelection(combinedKeyword);
                   setSelectedBreadcrumb('second');
                 }}
               >

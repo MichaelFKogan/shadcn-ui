@@ -58,7 +58,7 @@ export function Views({
         setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} 
         clearKeywords={clearKeywords} 
         clearAll={clearAll} 
-        handleKeywordSelection={handleKeywordSelection} 
+        // handleKeywordSelection={handleKeywordSelection} 
         handleFirstBreadcrumb={handleFirstBreadcrumb} 
         handleCountrySelection={handleCountrySelection} 
         handleCategorySelection={handleCategorySelection} 

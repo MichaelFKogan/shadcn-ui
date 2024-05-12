@@ -31,7 +31,6 @@ export function ViewsNavigation({
     setSecondBreadcrumbKeyword, 
     clearKeywords,
     clearAll,
-    handleKeywordSelection,
     handleFirstBreadcrumb,
     handleCountrySelection,
     handleCategorySelection,
