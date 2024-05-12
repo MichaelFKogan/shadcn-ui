@@ -283,51 +283,54 @@ const handleCategorySelection = (keyword: string) => {
 
 
 
-  // SORTING BY CATEGORY FOR LIST
-  useEffect(() => {
-    const categoryMap: { [key: string]: any[] } = {}; // Explicit type for categoryMap
+// SORTING BY CATEGORY FOR LIST
+useEffect(() => {
+  const categoryMap: { [key: string]: any[] } = {}; // Explicit type for categoryMap
 
-    // Convert the object of links into an array of links
-    const linksArray = Object.values(jsonData.__collections__.Links);
+  // Convert the object of links into an array of links
+  const linksArray = Object.values(jsonData.__collections__.Links);
 
-    linksArray.forEach(link => {
-      const category = link.category || 'Uncategorized'; // Fallback for any links without a category
-      if (!categoryMap[category]) {
-        categoryMap[category] = [];
-      }
+  linksArray.forEach(link => {
+    const category = link.category || 'Uncategorized'; // Fallback for any links without a category
+    if (!categoryMap[category]) {
+      categoryMap[category] = [];
+    }
 
-      // Use type guards to narrow down the type of link
-      if ('description' in link) {
-        categoryMap[category].push({
-          title: link.name,
-          description: link.description || '',
-          url: link.url,
-          image: 'default.png', // Assuming default image path, update this as necessary
-          tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
-          city: link.city,
-          country: link.country,
-          continent: link.continent
-        });
-      } else {
-        categoryMap[category].push({
-          title: link.name,
-          description: '', // Provide a default value
-          url: link.url,
-          image: 'default.png', // Assuming default image path, update this as necessary
-          tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
-          city: link.city,
-          country: link.country,
-          continent: link.continent
-        });
-      }
-    });
+    // Use type guards to narrow down the type of link
+    if ('description' in link) {
+      categoryMap[category].push({
+        title: link.name,
+        description: link.description || '',
+        url: link.url,
+        image: 'default.png', // Assuming default image path, update this as necessary
+        tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+        city: link.city,
+        country: link.country,
+        continent: link.continent
+      });
+    } else {
+      categoryMap[category].push({
+        title: link.name,
+        description: '', // Provide a default value
+        url: link.url,
+        image: 'default.png', // Assuming default image path, update this as necessary
+        tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+        city: link.city,
+        country: link.country,
+        continent: link.continent
+      });
+    }
+  });
 
-    // Sort categories alphabetically
-    const sortedCategories = Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB));
+  // Sort categories alphabetically
+  const sortedCategories = Object.entries(categoryMap)
+    .sort(([catA], [catB]) => catA.localeCompare(catB))
+    .map(([category, links]) => ({ category, links }));
 
-    // Update the state with the sorted categories
-    setListData(sortedCategories);
-  }, [jsonData]); // Ensure dependency on jsonData to recompute on data change
+  // Update the state with the sorted categories
+  setListData(sortedCategories);
+}, [jsonData]); // Ensure dependency on jsonData to recompute on data change
+
 
 
 
