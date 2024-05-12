@@ -1,4 +1,4 @@
-// src/components/Login.tsx
+// src/components/Form.tsx
 import React, { useState, useEffect } from 'react';
 import './styles/form.css'
 import '../app/globals.css';
@@ -251,7 +251,7 @@ export function Form() {
         <div className="grid grid-cols-4 items-center gap-4">
             {/* <label htmlFor="inputUrl" className="form-label">Category  */}
             {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
-            {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+            {/* <br/><small className='text-muted-foreground'>Create a category here if you don&apos;t see it in the list</small> */}
             {/* </label> */}
             <Label htmlFor="category" className="text-right">
             Category
@@ -378,7 +378,7 @@ export function Form() {
                     <div className="grid grid-cols-4 items-center gap-4">
                         {/* <label htmlFor="inputUrl" className="form-label">Category  */}
                         {/* <span className="text-muted-foreground text-xs"> [required]</span> */}
-                        {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+                        {/* <br/><small className='text-muted-foreground'>Create a category here if you don&apos;t see it in the list</small> */}
                         {/* </label> */}
                         <Label htmlFor="category" className="text-right">
                         Category
@@ -519,7 +519,7 @@ export function Form() {
                         <CardContent>
                             <label htmlFor="inputUrl" className="form-label">Category 
                                 <span className="text-muted-foreground text-xs"> [required]</span>
-                                {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+                                {/* <br/><small className='text-muted-foreground'>Create a category here if you don&apos;t see it in the list</small> */}
                             </label>
 
                             <CreatableSelect 
@@ -542,7 +542,7 @@ export function Form() {
                         <CardContent>
 
                             <label htmlFor="inputUrl" className="form-label mb-1">Tags</label>
-                                <br/><small className="text-muted-foreground">Create a tag here if you don't see it in the list</small>
+                                <br/><small className="text-muted-foreground">Create a tag here if you don&apos;t see it in the list</small>
 
                             <CreatableSelect
                                 options={groupedOptions}
@@ -560,7 +560,7 @@ export function Form() {
                         <CardContent>
 
                             <label htmlFor="inputUrl" className="form-label">City</label>
-                            <br/><small className="text-muted-foreground">Create a city here if you don't see it in the list</small>
+                            <br/><small className="text-muted-foreground">Create a city here if you don&apos;t see it in the list</small>
 
                             <CreatableSelect
                                 options={cityGroupedOptions}

@@ -242,7 +242,7 @@ export default function Submit() {
             <CardContent>
                 <label htmlFor="inputUrl" className="form-label">Category 
                     <span className="text-muted-foreground text-xs"> [required]</span>
-                    {/* <br/><small className='text-muted-foreground'>Create a category here if you don't see it in the list</small> */}
+                    {/* <br/><small className='text-muted-foreground'>Create a category here if you don&apos;t see it in the list</small> */}
                 </label>
 
                 <CreatableSelect 
@@ -265,7 +265,7 @@ export default function Submit() {
             <CardContent>
 
                 <label htmlFor="inputUrl" className="form-label mb-1">Tags</label>
-                    <br/><small className='text-muted-foreground'>Create a tag here if you don't see it in the list</small>
+                    <br/><small className='text-muted-foreground'>Create a tag here if you don&apos;t see it in the list</small>
 
                 <CreatableSelect
                     options={groupedOptions}
@@ -283,7 +283,7 @@ export default function Submit() {
             <CardContent>
 
                 <label htmlFor="inputUrl" className="form-label">City</label>
-                <br/><small className='text-muted-foreground'>Create a city here if you don't see it in the list</small>
+                <br/><small className='text-muted-foreground'>Create a city here if you don&apos;t see it in the list</small>
 
                 <CreatableSelect
                     options={cityGroupedOptions}
