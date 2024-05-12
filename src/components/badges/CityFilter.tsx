@@ -1,5 +1,5 @@
 import React from 'react';
-import cityData from '../../data/cityData';
+import cityData from '../../data/citydata';
 import { Badge } from "@/components/ui/badge";
 
 function CityFilter({ filterKeyword, handleCountrySelection }) {
