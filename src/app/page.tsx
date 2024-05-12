@@ -307,9 +307,13 @@ const handleCategorySelection = (keyword: string) => {
       });
     });
 
-    // Sort categories alphabetically and update the state
-    setListData(Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB)));
-  }, [filterKeyword]); // Ensure dependency on jsonData to recompute on data change
+    // Sort categories alphabetically
+    const sortedCategories = Object.entries(categoryMap).sort(([catA], [catB]) => catA.localeCompare(catB));
+
+    // Update the state with the sorted categories
+    setListData(sortedCategories);
+  }, [jsonData]); // Ensure dependency on jsonData to recompute on data change
+
 
 
 
