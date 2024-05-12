@@ -9,6 +9,10 @@
 .continent-badges-list ul{
     overflow-x: auto;
     justify-content: start;
+    position: relative;
+    scrollbar-color: hsl(var(--border) / .6) hsl(var(--border) / 0);
+    scrollbar-width: thin;
+    padding-bottom: 4px;
 }
 
 .city-badges-list ul{

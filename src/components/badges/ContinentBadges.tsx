@@ -1,16 +1,13 @@
 import React from 'react';
 import countriesData from '../../data/citydata';
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import '../styles/group-badges.css'
 
 function ContinentBadges({ filterKeyword, handleCountrySelection }) {
 
     return (
         <>
-
-            <Badge variant="secondary" className="badge continent-badge text-sm rounded-md" onClick={() => { handleCountrySelection("") }}>
-                🌏 Countries
-            </Badge>
             <Badge variant="secondary" className="badge continent-badge text-sm rounded-md" onClick={() => { handleCountrySelection("⛩ Asia") }}>
                 ⛩ Asia
             </Badge>

@@ -8,6 +8,7 @@ import { Card } from "@/components/Card";
 import { List } from "@/components/List";
 import { Table } from "@/components/Table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button";
 
 import AsiaCountryBadges from "@/components/badges/AsiaCountryBadges";
 import ContinentBadges from "@/components/badges/ContinentBadges";
@@ -48,10 +49,11 @@ export function TabsComponent({
     return (
         <>
 
+<div className="main-wrapper">
 
 <Breadcrumbs filterKeyword={filterKeyword} lastKeyword={lastKeyword} combinedKeyword={combinedKeyword} breadcrumbKeyword={breadcrumbKeyword} secondBreadcrumbKeyword={secondBreadcrumbKeyword} setBreadcrumbKeyword={setBreadcrumbKeyword} setSecondBreadcrumbKeyword={setSecondBreadcrumbKeyword} clearKeywords={clearKeywords} clearAll={clearAll} handleKeywordSelection={handleKeywordSelection} handleFirstBreadcrumb={handleFirstBreadcrumb} handleCountrySelecttion={handleCountrySelection} handleCategorySelection={handleCategorySelection} selectedBreadcrumb={selectedBreadcrumb} setSelectedBreadcrumb={setSelectedBreadcrumb}/>
 
-<Tabs defaultValue="categories" className="categories-countries-tab w-full">
+{/* <Tabs defaultValue="categories" className="categories-countries-tab w-full">
 
     <TabsList className="mr-auto">
         <TabsTrigger value="categories" onClick={() => { clearAll() }}>🗄 Categories</TabsTrigger>
@@ -100,25 +102,32 @@ export function TabsComponent({
                 <TabsContent value="learn"></TabsContent>
             </Tabs>
         </TabsContent>
-</Tabs>
+</Tabs> */}
 
 
 
 
-            {/* {filterKeyword === '' || filterKeyword === 'Featured' || filterKeyword === 'Essentials' || filterKeyword === 'Social Media' || filterKeyword === 'Jobs' || filterKeyword === 'Lifestyle' || filterKeyword === 'Learn' ? (
             <div className='continent-badges-list'>
                 <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                {filterKeyword === '' ? ( 
+                <>
                     <ContinentBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                </>
+                ) : null}
+                {filterKeyword === 'Asia' ? ( 
+                <>       
+                    <AsiaCountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                </>
+            ) : null}
                 </ul>
             </div>
-            ) : null} */}
 
             <div className='city-badges-list flex justify-start items-center gap-x-4 mb-2'>
                 {/* <p className="w-20 text-sm">Countries</p> */}
                 <ul className="flex flex-wrap gap-x-2 gap-y-2 justify-center items-center">
             {/* {filterKeyword === 'Asia' ? ( 
                 <>       
-                    <CountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
+                    <AsiaCountryBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                 </>
             ) : null} */}
 
@@ -132,6 +141,35 @@ export function TabsComponent({
                     <GroupBadges filterKeyword={filterKeyword} handleCountrySelection={handleCountrySelection} />
                 </>
             ) : null } */}
+
+
+            {filterKeyword === '' ? (
+                <>
+                <div className="card-categories-list mb-2 flex items-center gap-x-4">
+                    <ul className="flex flex-wrap gap-x-2 gap-y-2 items-center">
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("💯 Featured") }}>
+                            💯 Featured
+                        </Badge>
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("📍 Essentials") }}>
+                            📍 Essentials
+                        </Badge>
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("📸 Social Media") }}>
+                            📸 Social Media
+                        </Badge>
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("👔 Work") }}>
+                            👔 Work
+                        </Badge>
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("🏄‍♂️ Social Media") }}>
+                            🏄‍♂️ Lifestyle
+                        </Badge>
+                        <Badge variant="secondary" className="badge badge-category category-badge text-sm rounded-md" onClick={() => { handleCategorySelection("📘 Learn") }}>
+                            📘 Learn
+                        </Badge>
+                    </ul>
+                </div>
+                </>
+             ) : null}
+
 
             {filterKeyword !== '' ? (
                 <>
@@ -147,12 +185,11 @@ export function TabsComponent({
                         </ul>
                     </div>
                 </>
-            ) : null
-            }
+             ) : null}
 
 
 
-
+</div>
 
 
 

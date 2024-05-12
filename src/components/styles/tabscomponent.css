@@ -1,3 +1,9 @@
+.main-wrapper{
+    /* height: 275px;
+    border: 1px dashed var(--blue-110);
+    padding: 1rem; */
+}
+
 .categories-countries-tab .tab-menu-options{
     /* margin: auto; */
     justify-content: center;
@@ -35,5 +41,6 @@
     /* background: var(--blue-950); */
     background: hsl(var(--secondary) / .4);
     border: 1px solid hsl(var(--secondary));
+    padding: 10px 12px !important;
     border-radius: 30px;
 }
