@@ -336,6 +336,7 @@ useEffect(() => {
 
 
 
+
   const handleBreadcrumbSelection = (keyword: string) => {
     // Extend the regex to include regional indicator symbols for flag emojis
     // Remove emojis and replace multiple spaces with a single space, trim leading spaces
