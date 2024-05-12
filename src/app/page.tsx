@@ -23,7 +23,7 @@ const [breadcrumbKeyword, setBreadcrumbKeyword] = useState('');
 const [secondBreadcrumbKeyword, setSecondBreadcrumbKeyword] = useState('');
 
 const [listData, setListData] = useState([]);
-const [tableData, setTableData] = useState([]);
+const [tableData, setTableData] = useState<{ title: string; description: string; url: string; image: string; category: string; tags: string; city: string; country: string; continent: string; }[]>([]);
 const [uniqueCategories, setUniqueCategories] = useState(new Set());
 const [isSwitchOn, setIsSwitchOn] = useState(true);
 const [sidebarOpen, setSidebarOpen] = useState(true);
