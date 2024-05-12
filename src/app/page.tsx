@@ -344,7 +344,7 @@ useEffect(() => {
       .replace(/\s{2,}/g, ' ') // Replace multiple spaces with a single space
       .replace(/^\s+/g, ''); // Trim leading spaces only
 
-    setSecondBreadcrumbKeyword();
+    setSecondBreadcrumbKeyword(keyword);
   }
 
   const dynamicTabsSelection = (keyword: string) => {
