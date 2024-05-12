@@ -295,16 +295,31 @@ const handleCategorySelection = (keyword: string) => {
       if (!categoryMap[category]) {
         categoryMap[category] = [];
       }
-      categoryMap[category].push({
-        title: link.name,
-        description: link.description || '',
-        url: link.url,
-        image: 'default.png', // Assuming default image path, update this as necessary
-        tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
-        city: link.city,
-        country: link.country,
-        continent: link.continent
-      });
+
+      // Use type guards to narrow down the type of link
+      if ('description' in link) {
+        categoryMap[category].push({
+          title: link.name,
+          description: link.description || '',
+          url: link.url,
+          image: 'default.png', // Assuming default image path, update this as necessary
+          tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+          city: link.city,
+          country: link.country,
+          continent: link.continent
+        });
+      } else {
+        categoryMap[category].push({
+          title: link.name,
+          description: '', // Provide a default value
+          url: link.url,
+          image: 'default.png', // Assuming default image path, update this as necessary
+          tags: Array.isArray(link.tags) ? link.tags.join(', ') : '',
+          city: link.city,
+          country: link.country,
+          continent: link.continent
+        });
+      }
     });
 
     // Sort categories alphabetically
