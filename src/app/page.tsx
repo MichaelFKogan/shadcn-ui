@@ -285,7 +285,7 @@ const handleCategorySelection = (keyword: string) => {
 
   // SORTING BY CATEGORY FOR LIST
   useEffect(() => {
-    const categoryMap = {};
+    const categoryMap: { [key: string]: any[] } = {}; // Explicit type for categoryMap
 
     // Convert the object of links into an array of links
     const linksArray = Object.values(jsonData.__collections__.Links);
@@ -313,6 +313,7 @@ const handleCategorySelection = (keyword: string) => {
     // Update the state with the sorted categories
     setListData(sortedCategories);
   }, [jsonData]); // Ensure dependency on jsonData to recompute on data change
+
 
 
 
