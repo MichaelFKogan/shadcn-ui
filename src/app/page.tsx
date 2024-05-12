@@ -386,9 +386,10 @@ const cleanCategoryForSorting = (category: string) => {
     setHideBanner(!hideBanner);
   };
 
-  // SNOWFLAKE EFFECT
-  useEffect(() => {
-    const container = document.getElementById('snow-container');
+// SNOWFLAKE EFFECT
+useEffect(() => {
+  const container = document.getElementById('snow-container');
+  if (container) {
     for (let i = 0; i < 4; i++) {
       let flake = document.createElement('div');
       flake.className = 'snowflake';
@@ -408,7 +409,9 @@ const cleanCategoryForSorting = (category: string) => {
 
       container.appendChild(flake);
     }
-  }, []);  // Empty dependency array means this runs once on component mount
+  }
+}, []);  // Empty dependency array means this runs once on component mount
+
 
     const [showForm, setShowForm] = useState(false);
 
