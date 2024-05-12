@@ -12,7 +12,7 @@ import {
   import Image from "next/image";
   
 
-export function Sidebar({handleKeywordSelection, handleCountrySelection, sidebarOpen, handleSidebarToggle}) {
+export function Sidebar({handleCountrySelection, sidebarOpen, handleSidebarToggle}) {
 
     return (
       <>

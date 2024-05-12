@@ -427,7 +427,6 @@ useEffect(() => {
     <>
 
       <Sidebar
-        handleKeywordSelection={handleKeywordSelection} 
         handleCountrySelection={handleCountrySelection} 
         sidebarOpen={sidebarOpen} 
         handleSidebarToggle={handleSidebarToggle} 
@@ -440,7 +439,6 @@ useEffect(() => {
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
             showForm={showForm}
-            handleKeywordSelection={handleKeywordSelection}
             clearAll={clearAll}
             handleShowForm={handleShowForm}
             handleCountrySelection={handleCountrySelection}
